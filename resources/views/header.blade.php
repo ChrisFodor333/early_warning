@@ -30,7 +30,8 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-	<link rel='stylesheet' id='font-awesome-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='post-css'  href='/early_warning/assets/post-680.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
 <link rel='stylesheet' id='regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='owl-carousel-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/owl.carousel.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='tf-style-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/tf-style.css?ver=5.7.2' type='text/css' media='all' />
@@ -147,10 +148,10 @@ body { color:#666!important}
 <script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.2.5' id='font-awesome-4-shim-js'></script>
 <link rel="https://api.w.org/" href="/early_warning/wp-json/" /><link rel="alternate" type="application/json" href="/early_warning/wp-json/wp/v2/pages/1141" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/early_warning/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/early_warning/assets/inc/wlwmanifest.xml" />
-<meta name="generator" content="WordPress 5.7.2" />
+
 <link rel="canonical" href="/early_warning/" />
 <link rel='shortlink' href='/early_warning/' />
-<link rel="shortcut icon" href="/early_warning/assets/content/themes/finance/icon/favicon.png" /><meta name="generator" content="Powered by Slider Revolution 6.5.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="shortcut icon" href="/early_warning/assets/content/themes/finance/icon/favicon.png" />
 <script type="text/javascript">function setREVStartSize(e){
 			//window.requestAnimationFrame(function() {
 				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;

@@ -74,7 +74,10 @@ businesses to find <br> comprehensive solutions
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
 								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
-							>Our Company
+							>
+							<a href="<?php echo url('/model'); ?>">
+							Predikčný model
+							</a>
 							</rs-layer><!--
 
 							--><rs-layer
@@ -147,7 +150,10 @@ businesses to find <br> comprehensive solutions
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
 								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
-							>Our Company
+							>
+							<a href="<?php echo url('/model'); ?>">
+							Predikčný model
+							</a>
 							</rs-layer><!--
 
 							--><rs-layer
@@ -214,12 +220,16 @@ businesses to find <br> comprehensive solutions
 								data-text="s:14;l:20;fw:700;"
 								data-padding="t:14;r:26;b:14;l:26;"
 								data-border="bor:3px,3px,3px,3px;"
+
 								data-frame_0="x:-50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
 								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
-							>Our Company
+							>
+							<a href="<?php echo url('/model'); ?>">
+							Predikčný model
+						  </a>
 							</rs-layer><!--
 
 							--><rs-layer

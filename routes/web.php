@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');
