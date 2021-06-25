@@ -10,13 +10,13 @@
         <div class="row">
             <div class="col-md-12 page-title-container">
                                     <div class="page-title-heading">
-                        <h1 class="title">Formulár</h1>
+                        <h1 class="title">Input Form</h1>
                     </div><!-- /.page-title-captions -->
 
 
 		<div class="breadcrumb-trail breadcrumbs">
 			<span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning" title="test" rel="home">Home</a></span>
-			 <span class="sep">></span> <span class="trail-end">Formulár</span>
+			 <span class="sep">></span> <span class="trail-end">Input form</span>
 		</div>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
@@ -100,6 +100,7 @@
 
 		<div className="mf-input-wrapper">
 
+      <label> TEST TEST </label>
 			<input
 				type="number"
 				className="mf-input "
