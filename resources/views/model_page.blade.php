@@ -29,40 +29,7 @@
 							<div class="elementor-section-wrap">
 							<section class="elementor-section elementor-top-section elementor-element elementor-element-45fa9822 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="45fa9822" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-713f6456" data-id="713f6456" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-21e41deb elementor-widget elementor-widget-heading" data-id="21e41deb" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Address</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-1acd5810 elementor-widget elementor-widget-heading" data-id="1acd5810" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">PO Box 16122 Collins Street West,Victoria 8007
-Australia
 
-
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-127f92b9 elementor-widget elementor-widget-heading" data-id="127f92b9" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Phone number
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7412dba4 elementor-widget elementor-widget-heading" data-id="7412dba4" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Call us: 190 140 2468</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-258e188c elementor-widget elementor-widget-heading" data-id="258e188c" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">E-mail address
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-544625ee elementor-widget elementor-widget-heading" data-id="544625ee" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">support@themesflat.com</h2>		</div>
-				</div>
-					</div>
-		</div>
 				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4b17909a" data-id="4b17909a" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-554a8463 elementor-widget elementor-widget-metform" data-id="554a8463" data-element_type="widget" data-widget_type="metform.default">
@@ -72,15 +39,15 @@ Australia
 
 			<div class="elementor-widget-container">
 
-		<div
-			id="metform-wrap-554a8463-680"
-			class="mf-form-wrapper"
-			data-form-id="680"
-			data-action="/early_warning/wp-json/metform/v1/entries/insert/680"
-			data-wp-nonce="32d47e4fb4"
-			data-form-nonce="9d4375ef3e"
-			data-stop-vertical-effect=""
-			></div>
+        <div
+    			id="metform-wrap-554a8463-680"
+    			class="mf-form-wrapper"
+    			data-form-id="680"
+    			data-action="/early_warning/wp-json/metform/v1/entries/insert/680"
+    			data-wp-nonce="32d47e4fb4"
+    			data-form-nonce="9d4375ef3e"
+    			data-stop-vertical-effect=""
+    			></div>
 
 
 		<!-----------------------------
@@ -134,7 +101,7 @@ Australia
 		<div className="mf-input-wrapper">
 
 			<input
-				type="text"
+				type="number"
 				className="mf-input "
 				id="mf-input-text-13c1826"
 				name="mf-text"
