@@ -18,3 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');
+
+Route::get('/services', 'App\\Http\\Controllers\HomeController@services_page')->name('services');
+
+Route::get('/riskmanagement', 'App\\Http\\Controllers\HomeController@risk_page')->name('risk');
+
+Route::get('/portfolio', 'App\\Http\\Controllers\HomeController@portfolio_page')->name('portfolio');
+
+Route::get('/news', 'App\\Http\\Controllers\HomeController@news_page')->name('news');
+
+Route::get('/contact', 'App\\Http\\Controllers\HomeController@contact_page')->name('contact');
+
+Route::get('/team', 'App\\Http\\Controllers\HomeController@team_page')->name('team');
+
+Route::get('/overview', 'App\\Http\\Controllers\HomeController@overview_page')->name('overview');

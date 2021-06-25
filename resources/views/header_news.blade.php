@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -6,14 +7,14 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="/early_warning/xmlrpc.php">
 
-<title>Early Warning Slovakia</title>
+<title>Blog &#8211; test</title>
 <meta name='robots' content='noindex, nofollow' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="test &raquo; Feed" href="/early_warning/feed/" />
 <link rel="alternate" type="application/rss+xml" title="test &raquo; Comments Feed" href="/early_warning/comments/feed/" />
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/early_warning\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2"}};
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-test\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2"}};
 			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
@@ -30,7 +31,6 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='post-css'  href='/early_warning/assets/post-680.css' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
 <link rel='stylesheet' id='regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='owl-carousel-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/owl.carousel.css?ver=5.7.2' type='text/css' media='all' />
@@ -128,30 +128,12 @@ body { color:#666!important}
 <![endif]-->
 <link rel='stylesheet' id='animate-css'  href='/early_warning/assets/content/themes/finance/css/animate.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='responsive-css'  href='/early_warning/assets/content/themes/finance/css/responsive.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.11.0' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-animations-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.2.5' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-frontend-css'  href='/early_warning/assets/content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.5' type='text/css' media='all' />
-<style id='elementor-frontend-inline-css' type='text/css'>
-@font-face{font-family:eicons;src:url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
-</style>
-<link rel='stylesheet' id='elementor-post-24-css'  href='/early_warning/assets/content/uploads/elementor/css/post-24.css?ver=1624468838' type='text/css' media='all' />
-<link rel='stylesheet' id='metform-css-formpicker-control-editor-css'  href='/early_warning/assets/content/plugins/metform/controls/assets/css/form-picker-editor.css?ver=1.0.0' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-post-1141-css'  href='/early_warning/assets/content/uploads/elementor/css/post-1141.css?ver=1624468839' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-5-all-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.2.5' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-4-shim-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.2.5' type='text/css' media='all' />
-<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.1' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.1' type='text/css' media='all' />
 <script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 <script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.2.5' id='font-awesome-4-shim-js'></script>
-<link rel="https://api.w.org/" href="/early_warning/wp-json/" /><link rel="alternate" type="application/json" href="/early_warning/wp-json/wp/v2/pages/1141" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/early_warning/xmlrpc.php?rsd" />
+<link rel="https://api.w.org/" href="/early_warning/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/early_warning/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/early_warning/assets/inc/wlwmanifest.xml" />
-
-<link rel="canonical" href="/early_warning/" />
-<link rel='shortlink' href='/early_warning/' />
-<link rel="shortcut icon" href="/early_warning/assets/content/themes/finance/icon/favicon.png" />
+<meta name="generator" content="WordPress 5.7.2" />
+<link rel="shortcut icon" href="/early_warning/assets/content/themes/finance/icon/favicon.png" /><meta name="generator" content="Powered by Slider Revolution 6.5.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 <script type="text/javascript">function setREVStartSize(e){
 			//window.requestAnimationFrame(function() {
 				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
@@ -199,7 +181,7 @@ body { color:#666!important}
 		  };</script>
 </head>
 
-<body class="home page-template page-template-tpl page-template-elementor-front-page page-template-tplelementor-front-page-php page page-id-1141 has-topbar header_sticky wide sidebar-right elementor-default elementor-kit-24 elementor-page elementor-page-1141">
+<body class="blog has-topbar header_sticky wide sidebar-right elementor-default elementor-kit-24">
 
 <div class="themesflat-boxed">
 	<!-- Preloader -->
@@ -244,17 +226,19 @@ body { color:#666!important}
 		</a>
 	</div>
 <!--
-          <div class="show-search">
-            <a href="#"><i class="fa fa-search"></i></a>
-            </div>
--->
+                      <div class="show-search">
+                        <a href="#"><i class="fa fa-search"></i></a>
+                    </div>
+
+									-->
+
                     <div class="nav-wrap">
     <div class="btn-menu">
         <span></span>
     </div><!-- //mobile menu button -->
 
-    <nav id="mainnav" class="mainnav" role="navigation">
-        <ul id="menu-main" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a href="<?php echo url('/'); ?>">Home</a>
+		<nav id="mainnav" class="mainnav" role="navigation">
+				<ul id="menu-main" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a href="<?php echo url('/'); ?>">Home</a>
 </li>
 <li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a href="#">About</a></li>
 <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29"><a href="<?php echo url('/services'); ?>">Services</a>

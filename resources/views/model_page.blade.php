@@ -10,13 +10,13 @@
         <div class="row">
             <div class="col-md-12 page-title-container">
                                     <div class="page-title-heading">
-                        <h1 class="title">Contact 01</h1>
+                        <h1 class="title">Formulár</h1>
                     </div><!-- /.page-title-captions -->
 
 
 		<div class="breadcrumb-trail breadcrumbs">
 			<span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning" title="test" rel="home">Home</a></span>
-			 <span class="sep">></span> <span class="trail-end">Contact 01</span>
+			 <span class="sep">></span> <span class="trail-end">Formulár</span>
 		</div>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
@@ -251,7 +251,7 @@ Australia
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-646f2c8a" data-id="646f2c8a" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-		
+
 					</div>
 		</div>
 							</div>

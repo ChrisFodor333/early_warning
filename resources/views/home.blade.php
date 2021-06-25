@@ -75,7 +75,7 @@ businesses to find <br> comprehensive solutions
 								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
-							<a href="<?php echo url('/model'); ?>">
+							<a href="<?php echo url('/model'); ?>" style="color: white;">
 							Predikčný model
 							</a>
 							</rs-layer><!--
@@ -94,8 +94,11 @@ businesses to find <br> comprehensive solutions
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
 								data-frame_hover="c:#fffcfc;bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
-								style="z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
-							>Get in Touch
+								style="margin-left: 50px;z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+							>
+							<a href="<?php echo url('/model'); ?>" style="color: white;">
+							Iná informácia
+							</a>
 							</rs-layer><!--
 -->						</rs-slide>
 						<rs-slide data-key="rs-2" data-title="Slide" data-thumb="/early_warning/assets/content/uploads/2021/06/slider-1.jpg" data-in="o:0;" data-out="a:false;">
@@ -151,7 +154,7 @@ businesses to find <br> comprehensive solutions
 								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
-							<a href="<?php echo url('/model'); ?>">
+						  <a href="<?php echo url('/model'); ?>" style="color: white;">
 							Predikčný model
 							</a>
 							</rs-layer><!--
@@ -170,8 +173,11 @@ businesses to find <br> comprehensive solutions
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
 								data-frame_hover="c:#fffcfc;bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
-								style="z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
-							>Get in Touch
+								style="margin-left: 50px;z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+							>
+							<a href="<?php echo url('/model'); ?>" style="color: white;">
+							Iná informácia
+							</a>
 							</rs-layer><!--
 -->						</rs-slide>
 						<rs-slide data-key="rs-3" data-title="Slide" data-thumb="/early_warning/assets/content/uploads/2021/06/1-2.jpg" data-in="o:0;" data-out="a:false;">
@@ -210,7 +216,9 @@ businesses to find <br> comprehensive solutions
 businesses to find <br> comprehensive solutions
 							</rs-layer><!--
 
-							--><rs-layer
+							-->
+
+							<rs-layer
 								id="slider-1-slide-3-layer-3"
 								class="button-slide rev-btn"
 								data-type="button"
@@ -227,12 +235,12 @@ businesses to find <br> comprehensive solutions
 								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
-							<a href="<?php echo url('/model'); ?>">
+							<a href="<?php echo url('/model'); ?>" style="color: white;">
 							Predikčný model
 						  </a>
-							</rs-layer><!--
+							</rs-layer>
 
-							--><rs-layer
+						<rs-layer
 								id="slider-1-slide-3-layer-4"
 								class="button-slide-color rev-btn"
 								data-type="button"
@@ -246,8 +254,12 @@ businesses to find <br> comprehensive solutions
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
 								data-frame_hover="c:#fffcfc;bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
-								style="z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
-							>Get in Touch
+								style="margin-left: 50px;z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+							>
+							<a href="<?php echo url('/model'); ?>" style="color: white;">
+							Iná informácia
+							</a>
+							</rs-layer>
 							</rs-layer><!--
 -->						</rs-slide>
 					</rs-slides>
