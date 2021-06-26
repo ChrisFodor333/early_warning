@@ -162,6 +162,33 @@
       </div>
       </div>
 
+      <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+      <div className="elementor-widget-container">
+
+  <div className="mf-input-wrapper">
+
+    <input
+      type="text"
+      className="mf-input "
+      id="mf-input-text-d5f534d"
+      name="mf-text"
+      placeholder="${ parent.decodeEntities(`Subject`) } "
+                onInput=${parent.handleChange}
+        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+              />
+
+            <${validation.ErrorMessage}
+        errors=${validation.errors}
+        name="mf-text"
+        as=${html`<span className="mf-error-message"></span>`}
+        />
+
+        </div>
+
+      </div>
+      </div>
+
         </div>
   </div>
 
@@ -251,6 +278,35 @@
 
           </div>
           </div>
+
+          <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div className="elementor-widget-container">
+
+        <div className="mf-input-wrapper">
+
+        <input
+          type="text"
+          className="mf-input "
+          id="mf-input-text-d5f534d"
+          name="mf-text"
+          placeholder="${ parent.decodeEntities(`Subject`) } "
+                    onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                  />
+
+                <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="mf-text"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
+            </div>
+
+          </div>
+          </div>
+
+
 
             </div>
   </div>
