@@ -41,5 +41,11 @@ class HomeController extends Controller
           return view('overview');
       }
 
+      public function results_page() {
+          return view('results');
+      }
+
+
+
 
 }

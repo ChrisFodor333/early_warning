@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 Route::get('/', function () {
     return view('home');
 });
 
 Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');
+Route::post('/model', 'App\\Http\\Controllers\ModelController@calculate')->name('calculate');
 
 Route::get('/services', 'App\\Http\\Controllers\HomeController@services_page')->name('services');
 
@@ -32,3 +36,5 @@ Route::get('/contact', 'App\\Http\\Controllers\HomeController@contact_page')->na
 Route::get('/team', 'App\\Http\\Controllers\HomeController@team_page')->name('team');
 
 Route::get('/overview', 'App\\Http\\Controllers\HomeController@overview_page')->name('overview');
+
+Route::get('/results', 'App\\Http\\Controllers\HomeController@results_page')->name('results');
