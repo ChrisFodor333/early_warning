@@ -36,5 +36,3 @@ Route::get('/contact', 'App\\Http\\Controllers\HomeController@contact_page')->na
 Route::get('/team', 'App\\Http\\Controllers\HomeController@team_page')->name('team');
 
 Route::get('/overview', 'App\\Http\\Controllers\HomeController@overview_page')->name('overview');
-
-Route::get('/results', 'App\\Http\\Controllers\HomeController@results_page')->name('results');

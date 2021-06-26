@@ -41,18 +41,14 @@
     id="metform-wrap-554a8463-680"
     class="mf-form-wrapper"
     data-form-id="680"
-    data-action="{{  action('App\\Http\\Controllers\HomeController@results_page')  }}"
+    data-action="{{  action('App\\Http\\Controllers\ModelController@calculate')  }}"
     data-wp-nonce="c96f8ba55c"
     data-form-nonce="1637a76403"
     data-stop-vertical-effect=""
     ></div>
 
 
-  <!-----------------------------
-    * controls_data : find the the props passed indie of data attribute
-    * parent.submit_response_message : contains the markup of error or success message
-    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-  --------------------------- -->
+
 
       <script type="text" class="mf-template">
 
@@ -99,6 +95,9 @@
       <div className="elementor-widget-container">
 
   <div className="mf-input-wrapper">
+
+
+
 
     <input
       type="text"
