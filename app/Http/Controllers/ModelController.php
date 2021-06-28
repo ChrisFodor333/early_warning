@@ -38,7 +38,7 @@ class ModelController extends Controller
   $x3 = $ebit / $totalassets;
   $x4 = $equity / $totalliabilities;
   $x5 = $totalrevenues / $totalassets;
-  $altman = (0.717 * $x1) + (0.847 * $x2) + (3,107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
+  $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
   $data['altman'] =  $altman;
 
 
