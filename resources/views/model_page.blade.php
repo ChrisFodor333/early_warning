@@ -100,19 +100,19 @@
 
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-13c1826"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Name`) } "
+      name="total-assets"
+      placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":50,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['total-assets'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="total-assets"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
@@ -125,10 +125,10 @@
 
   <div className="mf-input-wrapper">
 
-    <input type="email"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="mf-email" placeholder="${ parent.decodeEntities(`Email`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['mf-email'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","emailMessage":"Please enter a valid Email address","minLength":10,"maxLength":100,"type":"by_character_length","required":true,"expression":"null"}, el)}
+    <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="working-capital" placeholder="${ parent.decodeEntities(`Working Capital`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['working-capital'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
       />
 
-        <${validation.ErrorMessage} errors=${validation.errors} name="mf-email" as=${html`<span className="mf-error-message"></span>`}
+        <${validation.ErrorMessage} errors=${validation.errors} name="working-capital" as=${html`<span className="mf-error-message"></span>`}
       />
 
         </div>
@@ -141,19 +141,19 @@
   <div className="mf-input-wrapper">
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-d5f534d"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Subject`) } "
+      name="earnings-before-tax"
+      placeholder="${ parent.decodeEntities(`Earnings Before Tax`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['earnings-before-tax'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="earnings-before-tax"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
@@ -168,19 +168,19 @@
   <div className="mf-input-wrapper">
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-d5f534d"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Subject`) } "
+      name="operating-profit"
+      placeholder="${ parent.decodeEntities(`Operating Profit`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['operating-profit'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="operating-profit"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
@@ -217,19 +217,19 @@
 
 
         <input
-          type="text"
+          type="number"
           className="mf-input "
           id="mf-input-text-13c1826"
-          name="mf-text"
-          placeholder="${ parent.decodeEntities(`Name`) } "
+          name="retained-earnings"
+          placeholder="${ parent.decodeEntities(`Retained Earnings`) } "
                     onInput=${parent.handleChange}
-            aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":50,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            aria-invalid=${validation.errors['retained-earnings'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                   />
 
                 <${validation.ErrorMessage}
             errors=${validation.errors}
-            name="mf-text"
+            name="retained-earnings"
             as=${html`<span className="mf-error-message"></span>`}
             />
 
@@ -242,10 +242,10 @@
 
         <div className="mf-input-wrapper">
 
-        <input type="email"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="mf-email" placeholder="${ parent.decodeEntities(`Email`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['mf-email'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","emailMessage":"Please enter a valid Email address","minLength":10,"maxLength":100,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="total-liabilities" placeholder="${ parent.decodeEntities(`Total Liabilities`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['total-liabilities'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
           />
 
-            <${validation.ErrorMessage} errors=${validation.errors} name="mf-email" as=${html`<span className="mf-error-message"></span>`}
+            <${validation.ErrorMessage} errors=${validation.errors} name="total-liabilities" as=${html`<span className="mf-error-message"></span>`}
           />
 
             </div>
@@ -258,19 +258,19 @@
         <div className="mf-input-wrapper">
 
         <input
-          type="text"
+          type="number"
           className="mf-input "
           id="mf-input-text-d5f534d"
-          name="mf-text"
-          placeholder="${ parent.decodeEntities(`Subject`) } "
+          name="short-term-liabilities"
+          placeholder="${ parent.decodeEntities(`Short-term Liabilities`) } "
                     onInput=${parent.handleChange}
-            aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            aria-invalid=${validation.errors['short-term-liabilities'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                   />
 
                 <${validation.ErrorMessage}
             errors=${validation.errors}
-            name="mf-text"
+            name="short-term-liabilities"
             as=${html`<span className="mf-error-message"></span>`}
             />
 
@@ -285,19 +285,19 @@
         <div className="mf-input-wrapper">
 
         <input
-          type="text"
+          type="number"
           className="mf-input "
           id="mf-input-text-d5f534d"
-          name="mf-text"
-          placeholder="${ parent.decodeEntities(`Subject`) } "
+          name="inventories"
+          placeholder="${ parent.decodeEntities(`Inventories`) } "
                     onInput=${parent.handleChange}
-            aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            aria-invalid=${validation.errors['inventories'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                   />
 
                 <${validation.ErrorMessage}
             errors=${validation.errors}
-            name="mf-text"
+            name="inventories"
             as=${html`<span className="mf-error-message"></span>`}
             />
 
@@ -336,19 +336,19 @@ display: none;
 
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-13c1826"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Name`) } "
+      name="ebit"
+      placeholder="${ parent.decodeEntities(`EBIT`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":50,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['ebit'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="ebit"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
@@ -361,10 +361,10 @@ display: none;
 
     <div className="mf-input-wrapper">
 
-    <input type="email"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="mf-email" placeholder="${ parent.decodeEntities(`Email`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['mf-email'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","emailMessage":"Please enter a valid Email address","minLength":10,"maxLength":100,"type":"by_character_length","required":true,"expression":"null"}, el)}
+    <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="interest-expenses" placeholder="${ parent.decodeEntities(`Interest Expenses`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['interest-expenses'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
       />
 
-        <${validation.ErrorMessage} errors=${validation.errors} name="mf-email" as=${html`<span className="mf-error-message"></span>`}
+        <${validation.ErrorMessage} errors=${validation.errors} name="interest-expenses" as=${html`<span className="mf-error-message"></span>`}
       />
 
         </div>
@@ -377,19 +377,19 @@ display: none;
     <div className="mf-input-wrapper">
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-d5f534d"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Subject`) } "
+      name="sales"
+      placeholder="${ parent.decodeEntities(`Sales`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['sales'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="sales"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
@@ -426,19 +426,19 @@ display: block;
 
 
   <input
-    type="text"
+    type="number"
     className="mf-input "
     id="mf-input-text-13c1826"
-    name="mf-text"
-    placeholder="${ parent.decodeEntities(`Name`) } "
+    name="equity"
+    placeholder="${ parent.decodeEntities(`Equity`) } "
               onInput=${parent.handleChange}
-      aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":50,"type":"by_character_length","required":true,"expression":"null"}, el)}
+      aria-invalid=${validation.errors['equity'] ? 'true' : 'false'}
+      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
           <${validation.ErrorMessage}
       errors=${validation.errors}
-      name="mf-text"
+      name="equity"
       as=${html`<span className="mf-error-message"></span>`}
       />
 
@@ -451,10 +451,10 @@ display: block;
 
   <div className="mf-input-wrapper">
 
-  <input type="email"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="mf-email" placeholder="${ parent.decodeEntities(`Email`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['mf-email'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","emailMessage":"Please enter a valid Email address","minLength":10,"maxLength":100,"type":"by_character_length","required":true,"expression":"null"}, el)}
+  <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="current-assets" placeholder="${ parent.decodeEntities(`Current Assets`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['current-assets'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
     />
 
-      <${validation.ErrorMessage} errors=${validation.errors} name="mf-email" as=${html`<span className="mf-error-message"></span>`}
+      <${validation.ErrorMessage} errors=${validation.errors} name="current-assets" as=${html`<span className="mf-error-message"></span>`}
     />
 
       </div>
@@ -467,19 +467,19 @@ display: block;
   <div className="mf-input-wrapper">
 
   <input
-    type="text"
+    type="number"
     className="mf-input "
     id="mf-input-text-d5f534d"
-    name="mf-text"
-    placeholder="${ parent.decodeEntities(`Subject`) } "
+    name="cash-flow"
+    placeholder="${ parent.decodeEntities(`Cash Flow`) } "
               onInput=${parent.handleChange}
-      aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+      aria-invalid=${validation.errors['cash-flow'] ? 'true' : 'false'}
+      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
           <${validation.ErrorMessage}
       errors=${validation.errors}
-      name="mf-text"
+      name="cash-flow"
       as=${html`<span className="mf-error-message"></span>`}
       />
 
@@ -519,16 +519,16 @@ display: none;
       type="text"
       className="mf-input "
       id="mf-input-text-13c1826"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Name`) } "
+      name="total-revenues"
+      placeholder="${ parent.decodeEntities(`Total Revenues`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":50,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['total-revenues'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="total-revenues"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
@@ -541,10 +541,10 @@ display: none;
 
     <div className="mf-input-wrapper">
 
-    <input type="email"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="mf-email" placeholder="${ parent.decodeEntities(`Email`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['mf-email'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","emailMessage":"Please enter a valid Email address","minLength":10,"maxLength":100,"type":"by_character_length","required":true,"expression":"null"}, el)}
+    <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="current-liabilities" placeholder="${ parent.decodeEntities(`Current Liabilities`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['current-liabilities'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
       />
 
-        <${validation.ErrorMessage} errors=${validation.errors} name="mf-email" as=${html`<span className="mf-error-message"></span>`}
+        <${validation.ErrorMessage} errors=${validation.errors} name="current-liabilities" as=${html`<span className="mf-error-message"></span>`}
       />
 
         </div>
@@ -557,19 +557,19 @@ display: none;
     <div className="mf-input-wrapper">
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-d5f534d"
-      name="mf-text"
-      placeholder="${ parent.decodeEntities(`Subject`) } "
+      name="liabilites-cash"
+      placeholder="${ parent.decodeEntities(`Liabilities - Cash`) } "
                 onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":20,"maxLength":300,"type":"by_character_length","required":true,"expression":"null"}, el)}
+        aria-invalid=${validation.errors['liabilites-cash'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":9999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
             <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="mf-text"
+        name="liabilites-cash"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
