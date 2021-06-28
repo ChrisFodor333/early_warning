@@ -40,7 +40,15 @@ class ModelController extends Controller
   $x5 = $totalrevenues / $totalassets;
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
   $data['altman'] =  $altman;
+  $altmancolor = "";
+  if($altman < 1.2)
+      $altmancolor = "red";
+  if($altman > 2.9)
+      $altmancolor = "green";
+  if($altman >= 1.2 && $altman <= 2.9)
+      $altmancolor = "orange";
 
+  $data['altmancolor'] =  $altmancolor;
 
   // IN05
   $y1 = $totalassets / $totalliabilities;
@@ -52,6 +60,16 @@ class ModelController extends Controller
   $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
   $data['in05'] =  $in05;
 
+  $in05color = "";
+  if($in05 < 0.9)
+      $in05color = "red";
+  if($in05 > 1.6)
+      $in05color = "green";
+  if($in05 >= 0.9 && $in05 <= 1.6)
+      $in05color = "orange";
+
+  $data['in05color'] =  $in05color;
+
   // TAFFLER
   $t1 = $earningsbeforetax / $shorttermliabilities;
   $t2 = $currentassets / $totalliabilities;
@@ -61,6 +79,16 @@ class ModelController extends Controller
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
   $data['taffler'] =  $taffler;
 
+  $tafflercolor = "";
+  if($taffler < 0.2)
+      $tafflercolor = "red";
+  if($taffler > 0.3)
+      $tafflercolor = "green";
+  if($taffler >= 0.2 && $taffler <= 0.3)
+      $tafflercolor = "orange";
+
+  $data['tafflercolor'] =  $tafflercolor;
+
   // QUICK TEST
   $b1 = $equity / $totalassets;
   $b2 = $liabilitescash /$cashflow;
@@ -69,6 +97,19 @@ class ModelController extends Controller
 
   $quicktest = $b1 + $b2 + $b3 + $b4;
   $data['quicktest'] =  $quicktest;
+
+
+
+  $quicktestcolor = "";
+  if($quicktest < 9.0)
+      $quicktestcolor = "green";
+  if($quicktest > 15.0)
+      $quicktestcolor = "red";
+  if($quicktest >= 9.0 && $quicktest <= 15.0)
+      $quicktestcolor = "orange";
+
+  $data['quicktestcolor'] =  $quicktestcolor;
+
 
   // INDEX BONITY
   $l1 = $cashflow / $totalliabilities;
@@ -80,6 +121,16 @@ class ModelController extends Controller
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
   $data['bonity'] =  $bonity;
+
+  $bonitycolor = "";
+  if($bonity < -1.0)
+      $bonitycolor = "red";
+  if($bonity > 1.0)
+      $bonitycolor = "green";
+  if($bonity >= -1.0 && $bonity <= 1.0)
+      $bonitycolor = "orange";
+
+  $data['bonitycolor'] =  $bonitycolor;
 
 
   // RETURN VIEW
