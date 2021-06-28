@@ -1,5 +1,5 @@
 @include('header')
 
-<h1> HELLO THERE </h1>
+<h1> <?php echo $totalassets; ?> </h1>
 
 @include('model_footer')
