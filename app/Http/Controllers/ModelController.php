@@ -99,7 +99,7 @@ class ModelController extends Controller
   $data['quicktest'] =  $quicktest;
 
 
-
+/*
   $quicktestcolor = "";
   if($quicktest < 9.0)
       $quicktestcolor = "green";
@@ -109,7 +109,16 @@ class ModelController extends Controller
       $quicktestcolor = "orange";
 
   $data['quicktestcolor'] =  $quicktestcolor;
+*/
+$quicktestcolor = "";
+if($quicktest < 4.0)
+    $quicktestcolor = "green";
+if($quicktest > 20.0)
+    $quicktestcolor = "red";
+if($quicktest >= 4.0 && $quicktest <= 20.0)
+    $quicktestcolor = "orange";
 
+$data['quicktestcolor'] =  $quicktestcolor;
 
   // INDEX BONITY
   $l1 = $cashflow / $totalliabilities;
