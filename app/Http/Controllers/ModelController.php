@@ -32,6 +32,15 @@ class ModelController extends Controller
   $currentliabilities = Request::get('current-liabilities');
   $liabilitescash = Request::get('liabilites-cash');
 
+  if($totalassets == 0) $totalassets = 1;
+  if($totalliabilities == 0) $totalliabilities = 1;
+  if($interestexpenses == 0) $interestexpenses = 1;
+  if($currentliabilities == 0) $currentliabilities = 1;
+  if($shorttermliabilities == 0) $shorttermliabilities= 1;
+  if($sales == 0) $sales = 1;
+  if($cashflow == 0) $cashflow= 1;
+
+
   // ALTMAN
   $x1 = $workingcapital / $totalassets;
   $x2 = $retainedearnings / $totalassets;
@@ -94,7 +103,7 @@ class ModelController extends Controller
 
   // QUICK TEST
   $b1 = $equity / $totalassets;
-  $b2 = $liabilitescash /$cashflow;
+  $b2 = $liabilitescash / $cashflow;
   $b3 = $cashflow / $sales;
   $b4 = $ebit / $totalassets;
 
