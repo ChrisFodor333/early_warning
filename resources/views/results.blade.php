@@ -20,6 +20,35 @@
   height: 150px;
 }
 
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  border-radius: 3px 3px 3px 3px;
+
+}
+.success-msg {
+  color: white;
+  background-color: #009879;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+
+
 .styled-table thead tr {
     background-color: #009879;
     color: #ffffff;
@@ -85,5 +114,22 @@
         </tr>
     </tbody>
 </table>
+
+
+<div class="success-msg" style="display: <?php echo $greenwarning;?>;">
+  <i class="fa fa-check"></i>
+  According to the information provided your company is out of danger. No financial distress has been detected.
+</div>
+
+<div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
+  <i class="fa fa-warning"></i>
+  According to the information provided your company is in first degree financial distress.
+</div>
+
+<div class="error-msg" style="display: <?php echo $redwarning;?>;">
+  <i class="fa fa-times-circle"></i>
+  According to the information provided your company is in <?php echo $distress; ?> degree financial distress.
+</div>
+
 
 @include('model_footer')

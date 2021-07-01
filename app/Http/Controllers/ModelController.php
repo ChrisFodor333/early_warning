@@ -11,7 +11,9 @@ class ModelController extends Controller
   public function calculate(Request $request) {
 
 
-
+  $green = 0;
+  $orange = 0;
+  $red = 0;
 
   // DATA FROM THE FORM
   $totalassets = Request::get('total-assets');
@@ -51,12 +53,18 @@ class ModelController extends Controller
   $altman = number_format($altman,2);
   $data['altman'] =  $altman;
   $altmancolor = "";
-  if($altman < 1.2)
+  if($altman < 1.2) {
       $altmancolor = "red";
-  if($altman > 2.9)
+      $red++;
+    }
+  if($altman > 2.9) {
       $altmancolor = "#00c373";
-  if($altman >= 1.2 && $altman <= 2.9)
+      $green++;
+    }
+  if($altman >= 1.2 && $altman <= 2.9) {
       $altmancolor = "orange";
+      $orange++;
+    }
 
   $data['altmancolor'] =  $altmancolor;
 
@@ -72,12 +80,18 @@ class ModelController extends Controller
   $data['in05'] =  $in05;
 
   $in05color = "";
-  if($in05 < 0.9)
+  if($in05 < 0.9) {
       $in05color = "red";
-  if($in05 > 1.6)
+      $red++;
+    }
+  if($in05 > 1.6) {
       $in05color = "#00c373";
-  if($in05 >= 0.9 && $in05 <= 1.6)
+      $green++;
+    }
+  if($in05 >= 0.9 && $in05 <= 1.6) {
       $in05color = "orange";
+      $orange++;
+    }
 
   $data['in05color'] =  $in05color;
 
@@ -92,12 +106,18 @@ class ModelController extends Controller
   $data['taffler'] =  $taffler;
 
   $tafflercolor = "";
-  if($taffler < 0.2)
+  if($taffler < 0.2) {
       $tafflercolor = "red";
-  if($taffler > 0.3)
+      $red++;
+    }
+  if($taffler > 0.3) {
       $tafflercolor = "#00c373";
-  if($taffler >= 0.2 && $taffler <= 0.3)
+      $green++;
+    }
+  if($taffler >= 0.2 && $taffler <= 0.3) {
       $tafflercolor = "orange";
+      $orange++;
+    }
 
   $data['tafflercolor'] =  $tafflercolor;
 
@@ -124,12 +144,18 @@ class ModelController extends Controller
 */
 
 $quicktestcolor = "";
-if($quicktest < 4.0)
+if($quicktest < 4.0) {
     $quicktestcolor = "#00c373";
-if($quicktest > 20.0)
+    $green++;
+  }
+if($quicktest > 20.0) {
     $quicktestcolor = "red";
-if($quicktest >= 4.0 && $quicktest <= 20.0)
+    $red++;
+  }
+if($quicktest >= 4.0 && $quicktest <= 20.0) {
     $quicktestcolor = "orange";
+    $orange++;
+  }
 
 $data['quicktestcolor'] =  $quicktestcolor;
 
@@ -146,12 +172,18 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $data['bonity'] =  $bonity;
 
   $bonitycolor = "";
-  if($bonity < -1.0)
+  if($bonity < -1.0) {
       $bonitycolor = "red";
-  if($bonity > 1.0)
+      $red++;
+    }
+  if($bonity > 1.0) {
       $bonitycolor = "#00c373";
-  if($bonity >= -1.0 && $bonity <= 1.0)
+      $green++;
+    }
+  if($bonity >= -1.0 && $bonity <= 1.0) {
       $bonitycolor = "orange";
+      $orange++;
+    }
 
   $data['bonitycolor'] =  $bonitycolor;
 
@@ -160,6 +192,34 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $binkertcolor = "orange";
   $data['binkert'] =  $binkert;
   $data['binkertcolor'] =  $binkertcolor;
+
+  $greenwarning = "none";
+  $orangewarning = "none";
+  $redwarning = "none";
+
+  $distress = "";
+
+  if($red > $green && $red > $orange) {
+    $redwarning = "block";
+    if($red <= 4)
+      $distress = "second";
+    else
+      $distress = "third";
+  }
+
+  if($orange > $green && $orange > $red) {
+      $orangewarning = "block";
+  }
+
+  if($green > $orange && $green > $red) {
+      $greenwarning = "block";
+  }
+
+
+  $data['greenwarning'] = $greenwarning;
+  $data['orangewarning'] = $orangewarning;
+  $data['redwarning'] = $redwarning;
+  $data['distress'] = $distress;
 
 
   // RETURN VIEW
