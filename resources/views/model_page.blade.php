@@ -73,6 +73,49 @@
 
 
     return html`
+
+    <div id="content" class="page-wrap sidebar-right">
+      <div class="container content-wrapper">
+        <div class="row row-wrapper">
+      <div data-elementor-type="wp-page" data-elementor-id="1158" class="elementor elementor-1158" data-elementor-settings="[]">
+                <div class="elementor-section-wrap">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-7111f67f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7111f67f" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-532fc1af" data-id="532fc1af" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                  <section class="elementor-section elementor-inner-section elementor-element elementor-element-1a4a255c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1a4a255c" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7d25e2c8" data-id="7d25e2c8" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                  <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container">
+        <h2 class="elementor-heading-title elementor-size-default">Current Year</h2>		</div>
+          </div>
+          <div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
+          <div class="elementor-widget-container">
+            <div class="elementor-divider">
+        <span class="elementor-divider-separator">
+              </span>
+      </div>
+          </div>
+          </div>
+            </div>
+      </div>
+                </div>
+      </section>
+            </div>
+      </div>
+                </div>
+      </section>
+              </div>
+            </div>
+
+              </div><!-- /.row -->
+          </div><!-- /.container -->
+      </div><!-- #content -->
+
+
+
       <form
         className="metform-form-content"
         method="post"
@@ -791,7 +834,7 @@ display: none;
           </div>
         </div>
 
-        <!-- YEAR 3 -->
+        <!-- YEAR 2 -->
         <br />
         <div data-elementor-type="wp-post" data-elementor-id="680" className="elementor elementor-680" data-elementor-settings="[]">
         <div className="elementor-section-wrap">
@@ -812,7 +855,7 @@ display: none;
         type="number"
         className="mf-input "
         id="mf-input-text-13c1826"
-        name="total-assets"
+        name="equity2"
         placeholder="${ parent.decodeEntities(`Equity`) } "
           onInput=${parent.handleChange}
         aria-invalid=${validation.errors['equity2'] ? 'true' : 'false'}
@@ -919,6 +962,49 @@ display: none;
         <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+        <div className="elementor-widget-container">
+
+        <div className="mf-input-wrapper">
+
+        <style>
+        .mobile {
+        display: none;
+        }
+        @media (max-width: 500px) {
+        .mobile {
+        display: block;
+        }
+        }
+
+        </style>
+
+
+        <br class="mobile" />
+
+
+        <input
+        type="number"
+        className="mf-input "
+        id="mf-input-text-13c1826"
+        name="longtermliabilities2"
+        placeholder="${ parent.decodeEntities(`Long-term Liabilites`) } "
+          onInput=${parent.handleChange}
+        aria-invalid=${validation.errors['longtermliabilities2'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+        />
+
+        <${validation.ErrorMessage}
+        errors=${validation.errors}
+        name="longtermliabilities2"
+        as=${html`<span className="mf-error-message"></span>`}
+        />
+
+        </div>
+
+        </div>
+        </div>
+
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
         <div className="elementor-widget-container">
 
