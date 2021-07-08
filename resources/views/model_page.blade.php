@@ -559,7 +559,7 @@ display: none;
 
 
     <input
-      type="text"
+      type="number"
       className="mf-input "
       id="mf-input-text-13c1826"
       name="total-revenues"
@@ -1123,7 +1123,7 @@ display: none;
 
 
         <input
-        type="text"
+        type="number"
         className="mf-input "
         id="mf-input-text-13c1826"
         name="total-revenues2"
@@ -1419,7 +1419,7 @@ display: none;
 
 
         <input
-        type="text"
+        type="number"
         className="mf-input "
         id="mf-input-text-13c1826"
         name="total-liabilities3"
