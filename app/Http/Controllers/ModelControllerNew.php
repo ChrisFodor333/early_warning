@@ -15,46 +15,61 @@ class ModelControllerNew extends Controller
   $orange = 0;
   $red = 0;
 
-  // DATA FROM THE FORM
-  $totalassets = Request::get('total-assets');
-  $workingcapital = Request::get('working-capital');
-  $earningsbeforetax = Request::get('earnings-before-tax');
-  $operatingprofit = Request::get('operating-profit');
-  $retainedearnings = Request::get('retained-earnings');
-  $totalliabilities = Request::get('total-liabilities');
-  $shorttermliabilities = Request::get('short-term-liabilities');
-  $inventories = Request::get('inventories');
-  $ebit = Request::get('ebit');
-  $interestexpenses = Request::get('interest-expenses');
-  $sales = Request::get('sales');
-  $equity = Request::get('equity');
-  $currentassets = Request::get('current-assets');
-  $cashflow = Request::get('cash-flow');
-  $totalrevenues = Request::get('total-revenues');
-  $currentliabilities = Request::get('current-liabilities');
-  $liabilitescash = Request::get('liabilites-cash');
+  // DATA FROM THE FORM - CURRENT YEAR
+  $aad4 = Request::get('total-assets');
+  $isd4 = Request::get('revenue-merch');
+  $isd21 = Request::get('amortization');
+  $isd62 = Request::get('profit-loss-before-tax');
+  $laed27 = Request::get('provisions');
 
-  // YEAR 1
-  $liabilites1 = Request::get('liabilites1');
-  $assets1 = Request::get('assets1');
+  $aad33 = Request::get('current-assets');
+  $isd7 = Request::get('production');
+  $isd22 = Request::get('revenue-sale');
+  $isd64 = Request::get('profit-loss-after-tax');
+  $laed44 = Request::get('current-liabilities');
 
-  // YEAR 2
-  $equity2 = Request::get('equity2');
-  $longtermassets2 = Request::get('longtermassets2');
-  $eat2 = Request::get('eat2');
-  $sales2 = Request::get('sales2');
-  $totalrevenues2 = Request::get('total-revenues2');
-  $addedvalue2 = Request::get('added-value');
-  $reserves2 = Request::get('reserves2');
-  $longtermliabilities2 = Request::get('longtermliabilities2');
+  $aad34 = Request::get('inventory');
+  $isd8 = Request::get('revenue-p-s');
+  $isd25 = Request::get('operating-income');
+  $laed5 = Request::get('equity');
+  $laed59 = Request::get('ad');
 
-  // YEAR 3
-  $totalassets3 = Request::get('total-assets3');
-  $totalassets3previous = Request::get('totalassets3-previous');
-  $equity3 = Request::get('equity3');
-  $equity3previous = Request::get('equity3-previous');
-  $totalliabilities3 = Request::get('total-liabilities3');
-  $totalliabilites3prev = Request::get('total-liabilites3-prev');
+  $aad58 = Request::get('financial-accounts');
+  $isd9 = Request::get('internal-inventory');
+  $isd31 = Request::get('securities-shares');
+  $laed23 = Request::get('retained-earnings');
+
+  $aad64 = Request::get('ad-total');
+  $isd10 = Request::get('own-work-cap');
+  $isd42 = Request::get('interest-expense');
+  $laed26 = Request::get('liabilities');
+
+  // LAST YEAR
+  $ise4= Request::get('revenue-merch2');
+  $ise22 = Request::get('revenue-sale2');
+  $aae14= Request::get('ppe2');
+  $laee57= Request::get('long-term-bank-loans2');
+
+  $ise7= Request::get('production2');
+  $ise30 = Request::get('securities-shares2');
+  $aae24 = Request::get('non-current-assets2');
+
+  $ise9 = Request::get('internalinventory2');
+  $ise64 = Request::get('profit-loss-after-tax2');
+  $laee5 = Request::get('equity2');
+
+  $ise10 = Request::get('ownwork2');
+  $aae4 = Request::get('totalassets2');
+  $laee27 = Request::get('provisions2');
+
+  $ise14 = Request::get('addedvalue2');
+  $aae6 = Request::get('noncurrentassets2');
+  $laee32 = Request::get('noncurrentliabilities2');
+
+  // THE YEAR BEFORE
+  $aaf33 = Request::get('assets1');
+  $laef44 = Request::get('liabilities1');
+
 
   $x1 = 0; $x2 = 0; $x3 = 0; $x4 = 0; $x5 = 0; $altman = 0;
   $altmancolor = "";
@@ -64,11 +79,13 @@ class ModelControllerNew extends Controller
     $altman = "N/A";
     $altmancolor = "orange";
   } else {
+
   $x1 = $workingcapital / $totalassets;
   $x2 = $retainedearnings / $totalassets;
   $x3 = $ebit / $totalassets;
   $x4 = $equity / $totalliabilities;
   $x5 = $totalrevenues / $totalassets;
+
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
   $altman = number_format($altman,2);
   if($altman < 1.2) {
