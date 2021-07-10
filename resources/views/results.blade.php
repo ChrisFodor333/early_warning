@@ -50,7 +50,7 @@
 
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #164289;
     color: #ffffff;
     text-align: left;
 }
@@ -70,7 +70,7 @@
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #164289;
 }
 
 .styled-table tbody tr.active-row {

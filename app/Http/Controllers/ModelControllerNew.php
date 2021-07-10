@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use Request;
 
-class ModelController extends Controller
+class ModelControllerNew extends Controller
 {
 
   public function calculate(Request $request) {
@@ -198,7 +198,7 @@ if($quicktest >= 4.0 && $quicktest <= 20.0) {
     $quicktestcolor = "orange";
     $orange++;
   } */
-} 
+}
 $data['quicktest'] =  $quicktest;
 $data['quicktestcolor'] =  $quicktestcolor;
 

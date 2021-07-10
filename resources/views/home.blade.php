@@ -39,8 +39,8 @@
 								data-frame_1_mask="u:t;"
 								data-frame_999="o:0;e:nothing;st:w;sR:7600;"
 								style="z-index:5;font-family:Poppins;"
-							>We help businesses <br>
-innovate and grow
+							>Early Warning <br>
+Slovakia
 							</rs-layer><!--
 
 							--><rs-layer
@@ -76,7 +76,7 @@ businesses to find <br> comprehensive solutions
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">
-							Predikčný model
+							Prediction model
 							</a>
 							</rs-layer><!--
 
@@ -155,7 +155,7 @@ businesses to find <br> comprehensive solutions
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 						  <a href="<?php echo url('/model'); ?>" style="color: white;">
-							Predikčný model
+							Prediction model
 							</a>
 							</rs-layer><!--
 
@@ -236,7 +236,7 @@ businesses to find <br> comprehensive solutions
 								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">
-							Predikčný model
+							Prediction model
 						  </a>
 							</rs-layer>
 
