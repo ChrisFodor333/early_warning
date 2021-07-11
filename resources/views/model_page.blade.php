@@ -18,7 +18,7 @@
   .tt1 .tooltiptext {
   visibility: hidden;
   width: 250px;
-  background-color: #009879;
+  background-color: #164289;
   color: #fff;
   text-align: center;
   border-radius: 6px;

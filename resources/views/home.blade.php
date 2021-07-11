@@ -1,5 +1,10 @@
 @include('header')
 	<!-- Page Title -->
+<style>
+  a {
+
+	}
+</style>
 
 	<div id="content" class="page-wrap sidebar-right">
 		<div class="container content-wrapper">
@@ -72,8 +77,8 @@ businesses to find <br> comprehensive solutions
 								data-frame_0="x:-50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
-								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
-								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+								data-frame_hover="bgc:#ebc24c;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
+								style="z-index:7;background-color:#164289;font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">
 							Prediction model
@@ -93,7 +98,7 @@ businesses to find <br> comprehensive solutions
 								data-frame_0="x:50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
-								data-frame_hover="c:#fffcfc;bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
+								data-frame_hover="c:#fffcfc;bgc:#ebc24c;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="margin-left: 50px;z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">
@@ -151,8 +156,8 @@ businesses to find <br> comprehensive solutions
 								data-frame_0="x:-50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
-								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
-								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+								data-frame_hover="bgc:#ebc24c;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
+								style="z-index:7;background-color:#164289;font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 						  <a href="<?php echo url('/model'); ?>" style="color: white;">
 							Prediction model
@@ -172,7 +177,7 @@ businesses to find <br> comprehensive solutions
 								data-frame_0="x:50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
-								data-frame_hover="c:#fffcfc;bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
+								data-frame_hover="c:#fffcfc;bgc:#ebc24c;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="margin-left: 50px;z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">
@@ -232,8 +237,8 @@ businesses to find <br> comprehensive solutions
 								data-frame_0="x:-50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
-								data-frame_hover="bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
-								style="z-index:7;background-color:rgba(24,186,96,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
+								data-frame_hover="bgc:#ebc24c;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
+								style="z-index:7;background-color:#164289;font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">
 							Prediction model
@@ -253,7 +258,7 @@ businesses to find <br> comprehensive solutions
 								data-frame_0="x:50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
 								data-frame_999="o:0;e:nothing;st:w;sR:6600;"
-								data-frame_hover="c:#fffcfc;bgc:#18ba60;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
+								data-frame_hover="c:#fffcfc;bgc:#ebc24c;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;e:none;"
 								style="margin-left: 50px;z-index:8;background-color:rgba(46,54,58,1);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"
 							>
 							<a href="<?php echo url('/model'); ?>" style="color: white;">

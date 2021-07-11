@@ -193,7 +193,7 @@ window.RS_MODULES.type = 'compiled';
 <script type="text/javascript">
 if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
 </script>
-<link rel='stylesheet' id='elementor-post-137-css'  href='/early_warning/assets/content/uploads/elementor/css/post-137.css?ver=1624468839' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-137-css'  href='/early_warning/assets/content/uploads/elementor/css/post-137.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-222-css'  href='/early_warning/assets/content/uploads/elementor/css/post-222.css?ver=1624468839' type='text/css' media='all' />
 <link rel='stylesheet' id='rs-plugin-settings-css'  href='/early_warning/assets/content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.2' type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>

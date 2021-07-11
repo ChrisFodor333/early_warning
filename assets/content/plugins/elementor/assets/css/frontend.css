@@ -58,7 +58,7 @@
       .dialog-type-lightbox .dialog-buttons-wrapper > .dialog-button.dialog-ok {
         color: #b01b1b; }
       .dialog-type-lightbox .dialog-buttons-wrapper > .dialog-button.dialog-take_over {
-        color: #39b54a; }
+        color: #164289; }
       .dialog-type-lightbox .dialog-buttons-wrapper > .dialog-button:active {
         background-color: rgba(230, 233, 236, 0.5); }
       .dialog-type-lightbox .dialog-buttons-wrapper > .dialog-button::-moz-focus-inner {
@@ -180,7 +180,7 @@
       width: initial;
       font-size: 15px; }
       .elementor-templates-modal .dialog-buttons-wrapper .elementor-button-success:hover {
-        background-color: #39b54a; }
+        background-color: #164289; }
 
 .elementor-templates-modal .dialog-message {
   height: 750px;

@@ -29,7 +29,7 @@
     font-size: 13px;
     line-height: 24px;
     font-weight: 600;
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff !important;
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
@@ -50,7 +50,7 @@
 }
 
 .flat-button.color-theme:hover {
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff !important;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .btn-cons a:hover {
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff;
 }
 
@@ -139,7 +139,7 @@
     content: "";
     bottom: -20px;
     left: 0;
-    background-color: #18ba60;
+    background-color: #164289;
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
             border-radius: 2px;
@@ -185,7 +185,7 @@
     bottom: -20px;
     left: 50%;
     margin-left: -25px;
-    background-color: #18ba60;
+    background-color: #164289;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -329,7 +329,7 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
-    background-color: #18ba60;
+    background-color: #164289;
     text-transform: uppercase;
     color: #fff;
     webkit-border-radius: 4px;
@@ -374,7 +374,7 @@
 }
 
 .flat-imagebox.style-2 .flat-imagebox-header .flat-imagebox-title a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-imagebox.style-2 .flat-imagebox-header .flat-imagebox-title {
@@ -420,7 +420,7 @@
     font-weight: 600;
     background-color: transparent !important;
     text-transform: lowercase;
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-imagebox.style-2 .flat-imagebox-button a:hover {
@@ -452,7 +452,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #18ba60;
+    background-color: #164289;
     width: 100%;
     height: 100%;
     opacity: 0.4;
@@ -542,7 +542,7 @@
 }
 
 .flat-imagebox.style-3 .flat-imagebox-header .flat-imagebox-title a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-imagebox.style-3 .flat-imagebox-header .flat-imagebox-title a:hover {
@@ -616,7 +616,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #18ba60;
+    background-color: #164289;
     width: 100%;
     height: 100%;
     opacity: 0.4;
@@ -637,7 +637,7 @@
 }
 
 .flat-imagebox.style-3 .flat-imagebox-image:before {
-    background-color: #18ba60;
+    background-color: #164289;
     content: "";
     position: absolute;
     left: 50%;
@@ -702,7 +702,7 @@
 }
 
 .flat-imagebox.services-grid .flat-imagebox-header .flat-imagebox-title a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-imagebox.services-grid .flat-imagebox-header .flat-imagebox-title {
@@ -742,7 +742,7 @@
     font-weight: 600;
     background-color: transparent !important;
     text-transform: capitalize;
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-imagebox.services-grid .flat-imagebox-button a:hover {
@@ -776,7 +776,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #18ba60;
+    background-color: #164289;
     width: 100%;
     height: 100%;
     opacity: 0.4;
@@ -837,7 +837,7 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
-    background-color: #18ba60;
+    background-color: #164289;
     text-transform: uppercase;
     color: #fff;
     webkit-border-radius: 4px;
@@ -909,7 +909,7 @@
 /* Icon Style Circle */
 .flat-iconbox.circle .flat-iconbox-icon {
     border-radius: 50%;
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff;
 }
 
@@ -920,10 +920,10 @@
 /* Icon Style Circle Out Line */
 .flat-iconbox.circle-outlined .flat-iconbox-icon {
     border-radius: 50%;
-    border-color: #18ba60;
+    border-color: #164289;
     border-style: solid;
     border-width: 2px;
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-iconbox.circle-outlined:hover .flat-iconbox-icon {
@@ -936,7 +936,7 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff;
 }
 
@@ -949,10 +949,10 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    border-color: #18ba60;
+    border-color: #164289;
     border-style: solid;
     border-width: 2px;
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-iconbox.outlined:hover .flat-iconbox-icon {
@@ -962,7 +962,7 @@
 
 /* Icon Style Square */
 .flat-iconbox.square .flat-iconbox-icon {
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff;
 }
 
@@ -972,10 +972,10 @@
 
 /* Icon Style square-outlined */
 .flat-iconbox.square-outlined .flat-iconbox-icon {
-    border-color: #18ba60;
+    border-color: #164289;
     border-style: solid;
     border-width: 2px;
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-iconbox.square-outlined:hover .flat-iconbox-icon {
@@ -1027,11 +1027,11 @@
 
 .flat-iconbox.flat-iconbox-style2:hover .flat-iconbox-icon {
     background-color: transparent;
-    border: 1px solid #18ba60;
+    border: 1px solid #164289;
 }
 
 .flat-iconbox.flat-iconbox-style2:hover .flat-iconbox-icon span {
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-iconbox.flat-iconbox-style2 .flat-iconbox-header .flat-iconbox-icon span {
@@ -1069,7 +1069,7 @@
 
 .flat-iconbox.style-3 .flat-iconbox-header .flat-iconbox-icon span {
     font-size: 60px;
-    color: #18ba60;
+    color: #164289;
 }
 
 
@@ -1113,7 +1113,7 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
-    background-color: #18ba60;
+    background-color: #164289;
     text-transform: uppercase;
     color: #fff;
     webkit-border-radius: 4px;
@@ -1267,7 +1267,7 @@
 }
 
 .blog-shortcode article h2 a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 .blog-shortcode.blog-grid {
@@ -1288,7 +1288,7 @@
     bottom: -5px;
     left: 30px;
     position: absolute;
-    background-color: #18ba60;
+    background-color: #164289;
     webkit-transition: all 0.2s ease-in-out 0s;
     -moz-transition: all 0.2s ease-in-out 0s;
     -ms-transition: all 0.2s ease-in-out 0s;
@@ -1385,7 +1385,7 @@
 }
 
 .blog-shortcode article:hover .entry-meta {
-    background-color: #18ba60;
+    background-color: #164289;
 }
 
 .blog-shortcode article .featured-post {
@@ -1478,7 +1478,7 @@
 
 .blog-shortcode article .read-more a:hover {
     padding: 0 43px 0 27px;
-    background-color: #18ba60;
+    background-color: #164289;
     color: #fff;
 }
 
@@ -1523,7 +1523,7 @@
 }
 
 .blog-shortcode .entry-category ul li a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 /* 1 columns */
@@ -1593,7 +1593,7 @@
 /* blog-home3 */
 .blog-shortcode.blog-home3 article .read-more a {
     background-color: transparent;
-    color: #18ba60;
+    color: #164289;
     padding: 0 0;
     font-size: 14px;
     font-weight: 600;
@@ -1622,7 +1622,7 @@
 .blog-shortcode.blog-home3 article .read-more a:after {
     content: "\f30f";
     font-family: "Ionicons";
-    color: #18ba60;
+    color: #164289;
     font-size: 18px;
     position: absolute;
     right: -20px;
@@ -1666,7 +1666,7 @@
 .portfolio-filter li.active a:after {
     width: 100%;
     height: 3px;
-    background-color: #18ba60;
+    background-color: #164289;
     content: "";
     left: 0;
     bottom: 0;
@@ -1676,7 +1676,7 @@
 .portfolio-filter li a:after {
     width: 0;
     height: 3px;
-    background-color: #18ba60;
+    background-color: #164289;
     content: "";
     left: 0;
     bottom: 0;
@@ -1703,7 +1703,7 @@
 }
 
 .portfolio-filter li a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 /* Portfolio */
@@ -1767,7 +1767,7 @@
 }
 
 .flat-portfolio .item .title-post a:hover {
-    color: #18ba60;
+    color: #164289;
 }
 
 .flat-portfolio .item .category-post a {
@@ -1919,7 +1919,7 @@
 
 .flat-portfolio .portfolio-gallery .item .title-post a:hover,
 .flat-portfolio .portfolio-gallery .item .category-post a:hover {
-    color: #18ba60;
+    color: #164289;
     text-decoration: underline;
 }
 
@@ -1954,7 +1954,7 @@
 
 .wrap-client-slide .owl-theme .owl-controls .owl-nav div.owl-prev:hover:before,
 .wrap-client-slide .owl-theme .owl-controls .owl-nav div.owl-next:hover:before {
-    color: #18ba60;
+    color: #164289;
 }
 
 .client-slide.owl-theme .owl-controls .owl-nav div.owl-prev {
@@ -2363,7 +2363,7 @@ h2.title.center:after {
 }
 
 .flat-progress .progress-animate {
-    background-color: #18ba60;
+    background-color: #164289;
     height: 10px;
     width: 0;
     border-radius: 5px;
@@ -2425,7 +2425,7 @@ h2.title.center:after {
 }
 
 .page-template-tpl .vc_toggle_active .vc_toggle_title {
-    background-color: #18ba60;
+    background-color: #164289;
 }
 
 .vc_toggle_title {
@@ -2483,7 +2483,7 @@ h2.title.center:after {
     color: #fff;
     font-size: 20px;
     top: 0;
-    background-color: #18ba60;
+    background-color: #164289;
     border-radius: 50%;
     position: absolute;
     width: 60px;
@@ -2538,11 +2538,11 @@ h2.title.center:after {
 }
 
 .testimonial-slider.style-1.owl-theme .owl-dots .owl-dot span:hover {
-    background: #18ba60;
+    background: #164289;
 }
 
 .testimonial-slider.style-1.owl-theme .owl-dots .owl-dot.active span:before {
-    border-color: #18ba60;
+    border-color: #164289;
 }
 
 .testimonial-slider.style-1.owl-theme .owl-dots .owl-dot span:before {
@@ -2604,7 +2604,7 @@ h2.title.center:after {
 .testimonial-slider.style-2 .testimonial-author .author-info {
     font-family: "Poppins",sans-serif;
     font-weight: 200;
-    color: #18ba60;
+    color: #164289;
     line-height: 18px;
 }
 
@@ -2631,8 +2631,8 @@ h2.title.center:after {
 }
 
 .testimonial-slider.style-2.owl-theme.owl-theme .owl-controls .owl-nav [class*=owl-]:hover {
-    background-color: #18ba60;
-    border: 3px solid #18ba60;
+    background-color: #164289;
+    border: 3px solid #164289;
 }
 
 .testimonial-slider.style-2.owl-theme .owl-controls .owl-nav div.owl-prev:hover:before,
@@ -2698,7 +2698,7 @@ h2.title.center:after {
     border-radius: 3px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    background-color: #18ba60;
+    background-color: #164289;
 }
 
 .flat-team .box-readmore a:hover {
