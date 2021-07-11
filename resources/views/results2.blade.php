@@ -258,7 +258,7 @@ onclick="window.print();">
 								<div class="elementor-element elementor-element-3199350c elementor-widget elementor-widget-image" data-id="3199350c" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
           <div class="con">
-					<img id="rcorners1" src="<?php echo $altmancolor2; ?>" title="orange.jpg" alt="orange.jpg" />
+					<img id="rcorners1" src="<?php echo $altmancolor2; ?>" title="background.jpg" alt="background.jpg" />
           <div class="centered"><?php echo $altman; ?></div>
         </div>
                             	</div>
@@ -278,7 +278,7 @@ onclick="window.print();">
 								<div class="elementor-element elementor-element-19073a40 elementor-widget elementor-widget-image" data-id="19073a40" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
           <div class="con">
-          <img id="rcorners1" src="<?php echo $indexcolor2; ?>" title="green.jpg" alt="green.jpg" />
+          <img id="rcorners1" src="<?php echo $indexcolor2; ?>" title="background.jpg" alt="background.jpg" />
           <div class="centered"><?php echo $in05; ?></div>
         </div>
                               </div>
@@ -297,7 +297,7 @@ onclick="window.print();">
 								<div class="elementor-element elementor-element-1a8aef45 elementor-widget elementor-widget-image" data-id="1a8aef45" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
           <div class="con">
-          <img id="rcorners1" src="<?php echo $quicktestcolor2; ?>" title="red.jpg" alt="red.jpg" />
+          <img id="rcorners1" src="<?php echo $quicktestcolor2; ?>" title="background.jpg" alt="background.jpg" />
           <div class="centered"><?php echo $quicktest; ?></div>
         </div>
                               </div>
@@ -322,7 +322,7 @@ onclick="window.print();">
             <div class="elementor-element elementor-element-3199350c elementor-widget elementor-widget-image" data-id="3199350c" data-element_type="widget" data-widget_type="image.default">
     <div class="elementor-widget-container">
       <div class="con">
-      <img id="rcorners1" src="<?php echo $indexcolor2; ?>" title="orange.jpg" alt="orange.jpg" />
+      <img id="rcorners1" src="<?php echo $indexcolor2; ?>" title="background.jpg" alt="background.jpg" />
       <div class="centered"><?php echo $bonity; ?></div>
     </div>
                           </div>
@@ -342,7 +342,7 @@ onclick="window.print();">
             <div class="elementor-element elementor-element-19073a40 elementor-widget elementor-widget-image" data-id="19073a40" data-element_type="widget" data-widget_type="image.default">
     <div class="elementor-widget-container">
       <div class="con">
-      <img id="rcorners1" src="<?php echo $tafflercolor2; ?>" title="green.jpg" alt="green.jpg" />
+      <img id="rcorners1" src="<?php echo $tafflercolor2; ?>" title="background.jpg" alt="background.jpg" />
       <div class="centered"><?php echo $taffler; ?></div>
     </div>
                           </div>
@@ -361,7 +361,7 @@ onclick="window.print();">
             <div class="elementor-element elementor-element-1a8aef45 elementor-widget elementor-widget-image" data-id="1a8aef45" data-element_type="widget" data-widget_type="image.default">
     <div class="elementor-widget-container">
       <div class="con">
-      <img id="rcorners1" src="<?php echo $binkertcolor2; ?>" title="red.jpg" alt="red.jpg" />
+      <img id="rcorners1" src="<?php echo $binkertcolor2; ?>" title="background.jpg" alt="background.jpg" />
       <div class="centered"><?php echo $binkert; ?></div>
     </div>
                           </div>
