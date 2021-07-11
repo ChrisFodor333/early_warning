@@ -108,14 +108,76 @@ input[type=image] {
 }
 
 </style>
-<body>
+
+<div class="page-title pagetitle_style_2">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 page-title-container">
+                                    <div class="page-title-heading">
+                        <h1 class="title">Results</h1>
+                    </div><!-- /.page-title-captions -->
+
+
+		<div class="breadcrumb-trail breadcrumbs">
+			<span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning/" title="test" rel="home">Home</a></span>
+			 <span class="sep">></span> <span class="trail-end">Results</span>
+		</div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.page-title -->
 <div style="float:right;">
 <input type="image" value="PRINT"  src="/early_warning/assets/content/print.png"
 onmouseover="this.src='/early_warning/assets/content/printblack.png';"
 onmouseout="this.src='/early_warning/assets/content/print.png';;"
 onclick="window.print();">
 </div>
-<br /> <br /> <br /> <br />
+<div class="container" >
+  <div class="row row-wrapper">
+<div data-elementor-type="wp-page" data-elementor-id="1163" class="elementor elementor-1163" data-elementor-settings="[]">
+          <div class="elementor-section-wrap">
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-17fd2eaa elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="17fd2eaa" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4db0081d" data-id="4db0081d" data-element_type="column">
+  <div class="elementor-widget-wrap elementor-element-populated">
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-1315ff0d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1315ff0d" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+      <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4466babb" data-id="4466babb" data-element_type="column">
+  <div class="elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-element elementor-element-56c7fb24 elementor-widget elementor-widget-heading" data-id="56c7fb24" data-element_type="widget" data-widget_type="heading.default">
+    <div class="elementor-widget-container">
+  <h2 class="elementor-heading-title elementor-size-default">The Results of the Model</h2>		</div>
+    </div>
+    <div class="elementor-element elementor-element-78a60114 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="78a60114" data-element_type="widget" data-widget_type="divider.default">
+    <div class="elementor-widget-container">
+      <div class="elementor-divider">
+  <span class="elementor-divider-separator">
+        </span>
+</div>
+    </div>
+    </div>
+    <div class="elementor-element elementor-element-7b14ce94 elementor-widget elementor-widget-heading" data-id="7b14ce94" data-element_type="widget" data-widget_type="heading.default">
+    <div class="elementor-widget-container">
+  <h2 class="elementor-heading-title elementor-size-default">Here you can find the results of the model based on the values from the input form.</h2>		</div>
+    </div>
+
+      </div>
+</div>
+          </div>
+</section>
+</div>
+      </div>
+</div>
+          </div>
+</section>
+        </div>
+      </div>
+
+        </div><!-- /.row -->
+
+<body>
+
 <table class="styled-table" id="results">
     <thead>
         <tr>
@@ -172,14 +234,6 @@ onclick="window.print();">
   Not all information has been filled when sending the data, which can result in the lower accuracy of the model.
 </div>
 </body>
-<script>
-function printContent(el){
-var restorepage = $('body').html();
-var printcontent = $('#' + el).clone();
-$('body').empty().html(printcontent);
-window.print();
-$('body').html(restorepage);
-}
-</script>
+
 
 @include('model_footer')

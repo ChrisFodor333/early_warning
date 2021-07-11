@@ -406,24 +406,33 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $greenwarning = "none";
   $orangewarning = "none";
   $redwarning = "none";
-
   $distress = "";
 
-  if($red > $green && $red > $orange) {
-    $redwarning = "block";
-    if($red <= 4)
-      $distress = "second";
-    else
-      $distress = "third";
-  }
 
-  if($orange > $green && $orange > $red) {
+
+    if($red <= 2) {
       $orangewarning = "block";
+      $redwarning = "none";
+    }
+    if($red > 2 && $red <= 4) {
+      $distress = "second";
+      $redwarning = "block";
+      $orangewarning = "none";
+    }
+    if($red > 4) {
+      $distress = "third";
+      $redwarning = "block";
+      $orangewarning = "none";
+    }
+
+
+  if($red == 0) {
+      $greenwarning = "block";
+      $orangewarning = "none";
+      $redwarning = "none";
+
   }
 
-  if($green > $orange && $green > $red) {
-      $greenwarning = "block";
-  }
 
   $nadisplay = "none";
   if($nacount > 0) {
@@ -431,6 +440,45 @@ $data['quicktestcolor'] =  $quicktestcolor;
   } else {
     $nadisplay = "none";
   }
+
+  if($altmancolor == "#00c373")
+    $altmancolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+  else
+    $altmancolor2 = "/early_warning/assets/content/uploads/2020/11/".$altmancolor.".jpg";
+
+  if($in05color == "#00c373")
+      $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+  else
+      $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/".$in05color.".jpg";
+
+  if($tafflercolor == "#00c373")
+      $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+  else
+      $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/".$tafflercolor.".jpg";
+
+  if($bonitycolor == "#00c373")
+      $bonitycolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+  else
+      $bonitycolor2 = "/early_warning/assets/content/uploads/2020/11/".$bonitycolor.".jpg";
+
+  if($quicktestcolor == "#00c373")
+      $quicktestcolor2= "/early_warning/assets/content/uploads/2020/11/green.jpg";
+  else
+      $quicktestcolor2 = "/early_warning/assets/content/uploads/2020/11/".$quicktestcolor.".jpg";
+
+  if($binkertcolor == "#00c373")
+      $binkertcolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+  else
+      $binkertcolor2 = "/early_warning/assets/content/uploads/2020/11/".$binkertcolor.".jpg";
+
+
+
+  $data['altmancolor2'] = $altmancolor2;
+  $data['indexcolor2'] = $indexcolor2;
+  $data['tafflercolor2'] = $tafflercolor2;
+  $data['bonitycolor2'] = $bonitycolor2;
+  $data['quicktestcolor2'] = $quicktestcolor2;
+  $data['binkertcolor2'] = $binkertcolor2;
 
   $data['greenwarning'] = $greenwarning;
   $data['orangewarning'] = $orangewarning;
@@ -440,7 +488,9 @@ $data['quicktestcolor'] =  $quicktestcolor;
 
 
   // RETURN VIEW
-  return view('results',$data);
+  //return view('results',$data);
+  // ALTERNATIVE
+  return view('results2',$data);
   }
 
 }
