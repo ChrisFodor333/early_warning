@@ -1,6 +1,29 @@
 @include('header')
 
-<style>
+<style type="text/css" media="print">
+        header
+        {
+            display: none;
+        }
+        footer {
+           display: none;
+        }
+
+        input {
+          display: none;
+        }
+        head {
+          display:none;
+        }
+        .bottom {
+          display: none;
+        }
+        .container {
+          display: none;
+        }
+    </style>
+
+<style id="tablestyle">
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -78,9 +101,22 @@
     /*color: #009879; */
 }
 
-</style>
+input[type=image] {
+  margin: 20px;
+  width: 70px;
+  height: 70px;
+}
 
-<table class="styled-table">
+</style>
+<body>
+<div style="float:right;">
+<input type="image" value="PRINT"  src="/early_warning/assets/content/print.png"
+onmouseover="this.src='/early_warning/assets/content/printblack.png';"
+onmouseout="this.src='/early_warning/assets/content/print.png';;"
+onclick="window.print();">
+</div>
+<br /> <br /> <br /> <br />
+<table class="styled-table" id="results">
     <thead>
         <tr>
             <th>CREDIT SCORING</th>
@@ -131,5 +167,19 @@
   According to the information provided your company is in <?php echo $distress; ?> degree financial distress.
 </div>
 
+<div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
+  <i class="fa fa-warning"></i>
+  Not all information has been filled when sending the data, which can result in the lower accuracy of the model.
+</div>
+</body>
+<script>
+function printContent(el){
+var restorepage = $('body').html();
+var printcontent = $('#' + el).clone();
+$('body').empty().html(printcontent);
+window.print();
+$('body').html(restorepage);
+}
+</script>
 
 @include('model_footer')

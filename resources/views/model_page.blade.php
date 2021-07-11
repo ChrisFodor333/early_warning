@@ -18,7 +18,7 @@
   .tt1 .tooltiptext {
   visibility: hidden;
   width: 250px;
-  background-color: #164289;
+  background-color: #009879;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -90,7 +90,7 @@ display: none;
     id="metform-wrap-554a8463-680"
     class="mf-form-wrapper"
     data-form-id="680"
-    data-action="{{  action('App\\Http\\Controllers\ModelController@calculate')  }}"
+    data-action="{{  action('App\\Http\\Controllers\ModelControllerNew@calculate')  }}"
     data-wp-nonce="c96f8ba55c"
     data-form-nonce="1637a76403"
     data-stop-vertical-effect=""
@@ -1014,7 +1014,7 @@ display: none;
           <label>Long-term Bank Loans</label>
           <span class="tooltiptext">Cell E57 in Liabilities and Equity</span>
           </div>
-        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loans`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loan`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
         />
 
         <${validation.ErrorMessage} errors=${validation.errors} name="long-term-bank-loans2" as=${html`<span className="mf-error-message"></span>`}
@@ -1261,7 +1261,7 @@ display: none;
 
         <div class="tt1">
         <label>Total Assets</label>
-        <span class="tooltiptext">Cell E64 in Income Statement</span>
+        <span class="tooltiptext">Cell E4 in Assets</span>
         </div>
 
         <input
@@ -1362,7 +1362,7 @@ display: none;
         <div className="mf-input-wrapper">
 
         <div class="tt1">
-        <label>Non-current Assets</label>
+        <label>Intangible Assets</label>
         <span class="tooltiptext">Cell E6 in Assets</span>
         </div>
 
@@ -1371,7 +1371,7 @@ display: none;
         className="mf-input "
         id="mf-input-text-13c1826"
         name="noncurrentassets2"
-        placeholder="${ parent.decodeEntities(`Non-current Assets`) } "
+        placeholder="${ parent.decodeEntities(`Intangible Assets`) } "
           onInput=${parent.handleChange}
         aria-invalid=${validation.errors['noncurrentassets2'] ? 'true' : 'false'}
         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}

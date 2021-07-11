@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');
-Route::post('/model', 'App\\Http\\Controllers\ModelController@calculate')->name('calculate');
+Route::post('/model', 'App\\Http\\Controllers\ModelControllerNew@calculate')->name('calculate');
 
 Route::get('/services', 'App\\Http\\Controllers\HomeController@services_page')->name('services');
 
