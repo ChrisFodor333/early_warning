@@ -74,12 +74,12 @@ class ModelControllerComplex extends Controller
   $laee23 = Request::get('');
   $laee57 = Request::get('');
 
-  $aae33;
-  $ise7;
-  $ise21;
-  $ise42;
-  $laee26;
-  $laee59;
+  $aae33 = Request::get('');
+  $ise7 = Request::get('');
+  $ise21 = Request::get('');
+  $ise42 = Request::get('');
+  $laee26 = Request::get('');
+  $laee59 = Request::get('');
 
   // THE YEAR BEFORE
 
