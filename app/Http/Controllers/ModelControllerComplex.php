@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use Request;
 
-class ModelControllerNew extends Controller
+class ModelControllerComplex extends Controller
 {
 
   public function calculate(Request $request) {
@@ -68,8 +68,37 @@ class ModelControllerNew extends Controller
   $laee32 = Request::get('noncurrentliabilities2');
 
   // THE YEAR BEFORE
-  $aaf33 = Request::get('assets1');
-  $laef44 = Request::get('liabilities1');
+
+  $aaf4 = Request::get('total-assets1');
+  $isf4 = Request::get('revenue-merch1');
+  $isf21 = Request::get('amortization1');
+  $isf62 = Request::get('profit-loss-before-tax1');
+  $laef27 = Request::get('provisions1');
+
+  $aaf33 = Request::get('current-assets1');
+  $isf7 = Request::get('production1');
+  $isf22 = Request::get('revenue-sale1');
+  $isf64 = Request::get('profit-loss-after-tax1');
+  $laef44 = Request::get('current-liabilities1');
+
+  $aaf34 = Request::get('inventory1');
+  $isf8 = Request::get('revenue-p-s1');
+  $isf25 = Request::get('operating-income1');
+  $laef5 = Request::get('equity1');
+  $laef59 = Request::get('ad1');
+
+  $aaf58 = Request::get('financial-accounts1');
+  $isf9 = Request::get('internal-inventory1');
+  $isf31 = Request::get('securities-shares1');
+  $laef23 = Request::get('retained-earnings1');
+
+  $aaf64 = Request::get('ad-total1');
+  $isf10 = Request::get('own-work-cap1');
+  $isf42 = Request::get('interest-expense1');
+  $laef26 = Request::get('liabilities1');
+
+
+
 
 
   $x1 = 0; $x2 = 0; $x3 = 0; $x4 = 0; $x5 = 0; $altman = 0;

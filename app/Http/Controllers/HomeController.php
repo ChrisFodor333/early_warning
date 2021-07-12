@@ -12,6 +12,10 @@ class HomeController extends Controller
           return view('model_page');
       }
 
+      public function complex_model_page() {
+          return view('complex_model_page');
+      }
+
 
       public function services_page() {
           return view('services');
@@ -41,7 +45,7 @@ class HomeController extends Controller
           return view('overview');
       }
 
-    
+
 
 
 
