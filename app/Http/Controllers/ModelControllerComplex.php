@@ -46,26 +46,40 @@ class ModelControllerComplex extends Controller
   $laed26 = Request::get('liabilities');
 
   // LAST YEAR
-  $ise4= Request::get('revenue-merch2');
-  $ise22 = Request::get('revenue-sale2');
-  $aae14= Request::get('ppe2');
-  $laee57= Request::get('long-term-bank-loans2');
+  $aae4 = Request::get('');
+  $aae34 = Request::get('');
+  $ise8 = Request::get('');
+  $ise22 = Request::get('');
+  $ise62 = Request::get('');
+  $laee27 = Request::get('');
 
-  $ise7= Request::get('production2');
-  $ise30 = Request::get('securities-shares2');
-  $aae24 = Request::get('non-current-assets2');
+  $aae6 = Request::get('');
+  $aae58 = Request::get('');
+  $ise9 = Request::get('');
+  $ise25 = Request::get('');
+  $ise64 = Request::get('');
+  $laee32 = Request::get('');
 
-  $ise9 = Request::get('internalinventory2');
-  $ise64 = Request::get('profit-loss-after-tax2');
-  $laee5 = Request::get('equity2');
+  $aae14 = Request::get('');
+  $aae64 = Request::get('');
+  $ise10 = Request::get('');
+  $ise30 = Request::get('');
+  $laee5 = Request::get('');
+  $laee44 = Request::get('');
 
-  $ise10 = Request::get('ownwork2');
-  $aae4 = Request::get('totalassets2');
-  $laee27 = Request::get('provisions2');
+  $aae24 = Request::get('');
+  $ise4 = Request::get('');
+  $ise14 = Request::get('');
+  $ise31 = Request::get('');
+  $laee23 = Request::get('');
+  $laee57 = Request::get('');
 
-  $ise14 = Request::get('addedvalue2');
-  $aae6 = Request::get('noncurrentassets2');
-  $laee32 = Request::get('noncurrentliabilities2');
+  $aae33;
+  $ise7;
+  $ise21;
+  $ise42;
+  $laee26;
+  $laee59;
 
   // THE YEAR BEFORE
 
