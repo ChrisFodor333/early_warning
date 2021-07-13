@@ -397,7 +397,7 @@ onclick="window.print();">
 
 <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data, which can result in the lower accuracy of the model.
+  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model.
 </div>
 
 
@@ -468,7 +468,7 @@ onclick="window.print();">
 
     <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
       <i class="fa fa-warning"></i>
-      Not all information has been filled when sending the data, which can result in the lower accuracy of the model.
+      Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model.
     </div>
   </div>
 
