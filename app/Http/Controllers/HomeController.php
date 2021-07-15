@@ -25,6 +25,10 @@ class HomeController extends Controller
           return view('risk_management');
       }
 
+      public function about_page() {
+          return view('risk_management');
+      }
+
       public function portfolio_page() {
           return view('portfolio');
       }

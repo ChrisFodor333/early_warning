@@ -9,13 +9,13 @@
         <div class="row">
             <div class="col-md-12 page-title-container">
                                     <div class="page-title-heading">
-                        <h1 class="title">Risk Management</h1>
+                        <h1 class="title">About</h1>
                     </div><!-- /.page-title-captions -->
 
 
 		<div class="breadcrumb-trail breadcrumbs">
 			<span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning/" title="test" rel="home">Home</a></span>
-			 <span class="sep">></span> <span class="trail-end">Risk Management</span>
+			 <span class="sep">></span> <span class="trail-end">About</span>
 		</div>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
@@ -29,12 +29,15 @@
 							<section class="elementor-section elementor-top-section elementor-element elementor-element-397c8d3b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="397c8d3b" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-58435d90" data-id="58435d90" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
+
+
+
+      <div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-5061bd01 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5061bd01" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Risk Management</span>
+										<span class="elementor-icon-list-text">About</span>
 									</li>
 						</ul>
 				</div>
@@ -93,7 +96,8 @@
 						</ul>
 				</div>
 				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-4c7a9dbd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4c7a9dbd" data-element_type="section">
+<!--
+        <section class="elementor-section elementor-inner-section elementor-element elementor-element-4c7a9dbd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4c7a9dbd" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-75a1673b" data-id="75a1673b" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -135,7 +139,9 @@
 		</div>
 							</div>
 		</section>
+    -->
 					</div>
+
 		</div>
 				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-358be33a" data-id="358be33a" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -145,34 +151,36 @@
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-5476ad2b elementor-widget elementor-widget-heading" data-id="5476ad2b" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Retirement Planning</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">DANUBECHANCE2.0</h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-666860f1 elementor-widget elementor-widget-heading" data-id="666860f1" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+			<h2 class="elementor-heading-title elementor-size-default">
+   DanubeChance2.0 will deliver innovative policy designs, give formerly bankrupt entrepreneurs a second chance in the Danube region.
+
 
 </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-676b93ad elementor-widget elementor-widget-heading" data-id="676b93ad" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Business Planning
+			<h2 class="elementor-heading-title elementor-size-default">Embracing failure to facilitate second-chance entrepreneurship in the Danube region
 </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-1349bd36 elementor-widget elementor-widget-heading" data-id="1349bd36" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-
-
+			<h2 class="elementor-heading-title elementor-size-default">DanubeChance2.0 aims to facilitate improved policy learning between policymakers and government agencies; research institutes and universities; financially distressed enterprises currently involved in insolvency procedures, or entrepreneurs who have already gone bankrupt but ready for a fresh re-start; business accelerators; and the public.
 </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-17c96498 elementor-widget elementor-widget-heading" data-id="17c96498" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Risk Management
+			<h2 class="elementor-heading-title elementor-size-default">Specific objectives of the project
 </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-10f0f30d elementor-widget elementor-widget-heading" data-id="10f0f30d" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">
+        The project will provide a path for more legitimate entrepreneurs whose first businesses have failed to re-enter the market through delivering 130 hours of "blended" learning experiences at the ”’Trial and Error‘ Re-Design Transnational Academy”, and the launch of the first "Business Re-Structuring Initiative", which will provide business acceleration support for approximately 60 legitimate entrepreneurs whose first projects failed.
+      </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-337940ff elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="337940ff" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
@@ -180,32 +188,17 @@
 							<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<i aria-hidden="true" class="fas fa-check"></i>						</span>
-										<span class="elementor-icon-list-text">Lorem ipsum dolor sit amet, consectetur </span>
+										<span class="elementor-icon-list-text">Promoting restructuring measures</span>
 									</li>
 								<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<i aria-hidden="true" class="fas fa-check"></i>						</span>
-										<span class="elementor-icon-list-text">Lorem ipsum dolor sit amet, consectetur </span>
+										<span class="elementor-icon-list-text">Awareness-raising of second chance entrepreneurial opportunities</span>
 									</li>
 								<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<i aria-hidden="true" class="fas fa-check"></i>						</span>
-										<span class="elementor-icon-list-text">Lorem ipsum dolor sit amet, consectetur </span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="fas fa-check"></i>						</span>
-										<span class="elementor-icon-list-text">Lorem ipsum dolor sit amet, consectetur </span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="fas fa-check"></i>						</span>
-										<span class="elementor-icon-list-text">Lorem ipsum dolor sit amet, consectetur </span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<i aria-hidden="true" class="fas fa-check"></i>						</span>
-										<span class="elementor-icon-list-text">Lorem ipsum dolor sit amet, consectetur </span>
+										<span class="elementor-icon-list-text">Enabling a supporting ecosystem for honest restarters</span>
 									</li>
 						</ul>
 				</div>
@@ -233,9 +226,15 @@
 															<span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
 								<span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
 														</span>
-												<a class="elementor-accordion-title" href="">Strategy Development</a>
+												<a class="elementor-accordion-title" href="">Budget in Euro</a>
 					</div>
-					<div id="elementor-tab-content-1951" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1951"><p>Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p></div>
+					<div id="elementor-tab-content-1951" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1951">
+            <p>
+            Overall: 1822550 <br />
+            ERDF Contribution: 1241425 <br />
+            IPA Contribution: 176587,5 <br />
+            ENI Contribution: 131155
+          </p></div>
 				</div>
 							<div class="elementor-accordion-item">
 					<div id="elementor-tab-title-1952" class="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-1952" aria-expanded="false">
@@ -243,9 +242,9 @@
 															<span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
 								<span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
 														</span>
-												<a class="elementor-accordion-title" href="">Strategic Plan Development</a>
+												<a class="elementor-accordion-title" href="">Start date</a>
 					</div>
-					<div id="elementor-tab-content-1952" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1952"><p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>
+					<div id="elementor-tab-content-1952" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1952"><p>01-07-2018</p></div>
 				</div>
 							<div class="elementor-accordion-item">
 					<div id="elementor-tab-title-1953" class="elementor-tab-title" data-tab="3" role="tab" aria-controls="elementor-tab-content-1953" aria-expanded="false">
@@ -253,10 +252,31 @@
 															<span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
 								<span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
 														</span>
-												<a class="elementor-accordion-title" href="">Strategic Plan Execution</a>
+												<a class="elementor-accordion-title" href="">End date</a>
 					</div>
-					<div id="elementor-tab-content-1953" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1953"><p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>
+					<div id="elementor-tab-content-1953" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1953"><p>30-06-2021</p></div>
 				</div>
+        <div class="elementor-accordion-item">
+    <div id="elementor-tab-title-1954" class="elementor-tab-title" data-tab="4" role="tab" aria-controls="elementor-tab-content-1954" aria-expanded="false">
+                    <span class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+                        <span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
+          <span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
+                      </span>
+                  <a class="elementor-accordion-title" href="">Priority</a>
+    </div>
+    <div id="elementor-tab-content-1954" class="elementor-tab-content elementor-clearfix" data-tab="4" role="tabpanel" aria-labelledby="elementor-tab-title-1954"><p>Innovative and socially responsible Danube region</p></div>
+  </div>
+
+  <div class="elementor-accordion-item">
+<div id="elementor-tab-title-1955" class="elementor-tab-title" data-tab="5" role="tab" aria-controls="elementor-tab-content-1955" aria-expanded="false">
+              <span class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+                  <span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
+    <span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
+                </span>
+            <a class="elementor-accordion-title" href="">Specific objective</a>
+</div>
+<div id="elementor-tab-content-1955" class="elementor-tab-content elementor-clearfix" data-tab="5" role="tabpanel" aria-labelledby="elementor-tab-title-1955"><p>Increase competences for business and social innovation</p></div>
+</div>
 								</div>
 				</div>
 				</div>
@@ -264,46 +284,7 @@
 		</div>
 							</div>
 		</section>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6793b1c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6793b1c8" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-76496fc0" data-id="76496fc0" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-21221606 elementor-widget elementor-widget-heading" data-id="21221606" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Research beyond the business plan
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-2afc8b67 elementor-widget elementor-widget-heading" data-id="2afc8b67" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-
-
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-4ffd30bb elementor-widget elementor-widget-heading" data-id="4ffd30bb" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-4ca4338c elementor-widget elementor-widget-heading" data-id="4ca4338c" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-
-
-</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-6c4b51f4 elementor-widget elementor-widget-heading" data-id="6c4b51f4" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-
-
-</h2>		</div>
-				</div>
-					</div>
-		</div>
-							</div>
-		</section>
+				<br />
 					</div>
 		</div>
 							</div>
@@ -314,5 +295,5 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- #content -->
-
+			<br /> 			<br />
 @include('model_footer')

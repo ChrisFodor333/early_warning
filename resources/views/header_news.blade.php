@@ -240,11 +240,13 @@ body { color:#666!important}
 		<nav id="mainnav" class="mainnav" role="navigation">
 				<ul id="menu-main" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a href="<?php echo url('/'); ?>">Home</a>
 </li>
-<li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a href="#">About</a></li>
+<li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a href="<?php echo url('/about'); ?>">About</a></li>
 <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29"><a href="<?php echo url('/services'); ?>">Services</a>
+<!--
 <ul class="sub-menu">
 	<li id="menu-item-1707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1707"><a href="<?php echo url('/riskmanagement'); ?>">Risk Management</a></li>
 </ul>
+-->
 </li>
 <li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/portfolio'); ?>">Portfolio</a>
 </li>

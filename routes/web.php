@@ -29,6 +29,7 @@ Route::post('/complexmodel', 'App\\Http\\Controllers\ModelControllerComplex@calc
 Route::get('/services', 'App\\Http\\Controllers\HomeController@services_page')->name('services');
 
 Route::get('/riskmanagement', 'App\\Http\\Controllers\HomeController@risk_page')->name('risk');
+Route::get('/about', 'App\\Http\\Controllers\HomeController@about_page')->name('about');
 
 Route::get('/portfolio', 'App\\Http\\Controllers\HomeController@portfolio_page')->name('portfolio');
 
