@@ -456,6 +456,8 @@ $data['quicktestcolor'] =  $quicktestcolor;
   else
       $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/".$in05color.".jpg";
 
+
+
   if($tafflercolor == "#00c373")
       $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
   else

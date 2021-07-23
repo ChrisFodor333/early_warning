@@ -322,7 +322,7 @@ onclick="window.print();">
             <div class="elementor-element elementor-element-3199350c elementor-widget elementor-widget-image" data-id="3199350c" data-element_type="widget" data-widget_type="image.default">
     <div class="elementor-widget-container">
       <div class="con">
-      <img id="rcorners1" src="<?php echo $indexcolor2; ?>" title="background.jpg" alt="background.jpg" />
+      <img id="rcorners1" src="<?php echo $bonitycolor2; ?>" title="background.jpg" alt="background.jpg" />
       <div class="centered"><?php echo $bonity; ?></div>
     </div>
                           </div>

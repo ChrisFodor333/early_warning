@@ -512,7 +512,7 @@ $data['in05color1'] =  $in05color;
   $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
   $quicktestcolor = "";
 
-  $totalassetsQT1 = $aad4;
+  $totalassets = $aad4;
   $cashflow = ($isd64 + $isd21);
   $sales = ($isd4 + $isd8);
 

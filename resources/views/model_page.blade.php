@@ -556,16 +556,16 @@ display: none;
       type="number"
       className="mf-input "
       id="mf-input-text-13c1826"
-      name="production2"
+      name="production"
       placeholder="${ parent.decodeEntities(`Production`) } "
             onInput=${parent.handleChange}
-      aria-invalid=${validation.errors['production2'] ? 'true' : 'false'}
+      aria-invalid=${validation.errors['production'] ? 'true' : 'false'}
       ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
         <${validation.ErrorMessage}
       errors=${validation.errors}
-      name="production2"
+      name="production"
       as=${html`<span className="mf-error-message"></span>`}
       />
 
@@ -687,16 +687,16 @@ display: none;
     type="number"
     className="mf-input "
     id="mf-input-text-13c1826"
-    name="provisions2"
+    name="provisions"
     placeholder="${ parent.decodeEntities(`Provisions`) } "
       onInput=${parent.handleChange}
-    aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false'}
+    aria-invalid=${validation.errors['provisions'] ? 'true' : 'false'}
     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
     />
 
     <${validation.ErrorMessage}
     errors=${validation.errors}
-    name="provisions2"
+    name="provisions"
     as=${html`<span className="mf-error-message"></span>`}
     />
 
