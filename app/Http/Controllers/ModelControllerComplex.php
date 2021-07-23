@@ -632,7 +632,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
 $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
 $quicktestcolor = "";
 
-$totalassetsQT1 = $aae4;
+$totalassets = $aae4;
 $cashflow = ($ise64 + $ise21);
 $sales = ($ise4 + $ise8);
 
@@ -752,7 +752,7 @@ $data['quicktestcolor2'] =  $quicktestcolor;
 $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
 $quicktestcolor = "";
 
-$totalassetsQT1 = $aaf4;
+$totalassets = $aaf4;
 $cashflow = ($isf64 + $isf21);
 $sales = ($isf4 + $isf8);
 
