@@ -20,6 +20,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::get('/pro-admin/login', array('uses' => 'App\\Http\\Controllers\AdminController@showlogin'));
+Route::post('/pro-admin/', array('uses' => 'App\\Http\\Controllers\AdminController@dologin'));
+Route::get('/pro-admin/', array('uses' => 'App\\Http\\Controllers\AdminController@dashboard'));
+
 Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');
 Route::post('/model', 'App\\Http\\Controllers\ModelControllerNew@calculate')->name('calculate');
 
