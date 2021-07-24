@@ -193,7 +193,7 @@
                 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Number of respondents</span>
+                <span class="info-box-text">Number of Respondents</span>
                 <span class="info-box-number">
                   10
                 </span>

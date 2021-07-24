@@ -15,7 +15,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="/early_warning/assets/admin/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition dark-mode login-page">
 <div class="login-box">
   <div class="login-logo">
     <a href="/early_warning/assets/admin/index2.html"><b>Danube Chance 2.0</b><br />Financial Tool</a>
