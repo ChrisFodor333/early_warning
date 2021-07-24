@@ -48,6 +48,10 @@ display: none;
 }
 }
 
+ h6 {
+   margin-left: 15px;
+ }
+
   </style>
 
 
@@ -123,59 +127,191 @@ display: none;
 
     return html`
 
-    <div id="content" class="page-wrap sidebar-right">
-      <div class="container content-wrapper">
-        <div class="row row-wrapper">
-      <div data-elementor-type="wp-page" data-elementor-id="1158" class="elementor elementor-1158" data-elementor-settings="[]">
-                <div class="elementor-section-wrap">
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-7111f67f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7111f67f" data-element_type="section">
-              <div class="elementor-container elementor-column-gap-default">
-            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-532fc1af" data-id="532fc1af" data-element_type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                  <section class="elementor-section elementor-inner-section elementor-element elementor-element-1a4a255c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1a4a255c" data-element_type="section">
-              <div class="elementor-container elementor-column-gap-default">
-            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7d25e2c8" data-id="7d25e2c8" data-element_type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                  <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-        <h2 class="elementor-heading-title elementor-size-default">Current Year</h2>		</div>
-          </div>
-          <div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
-          <div class="elementor-widget-container">
-            <div class="elementor-divider">
-        <span class="elementor-divider-separator">
-              </span>
-      </div>
-          </div>
-          </div>
-            </div>
-      </div>
-                </div>
-      </section>
-            </div>
-      </div>
-                </div>
-      </section>
-              </div>
-            </div>
-
-              </div><!-- /.row -->
-          </div><!-- /.container -->
-      </div><!-- #content -->
-
-
+    <h6>Hover Over the Input Labels to Get a Hint on Where You Can Find The Required Data (This Only Works for the Residents of <img src="/early_warning/assets/inc/sk2.png"/> )</h6>
 
       <form
         className="metform-form-content"
         method="post"
-
-
         >
 
         ${ is_dummy_markup ? message_position === 'top' ? parent.dummy_markup(message_successIcon, message_proClass) : '' : ''}
         ${is_dummy_markup ? ' ' :  message_position === 'top' ? parent.submit_response_message`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
 
         ${!state.formHide ? html`
+
+
+          <div id="content" class="page-wrap sidebar-right">
+            <div class="container content-wrapper">
+              <div class="row row-wrapper">
+
+            <div data-elementor-type="wp-page" data-elementor-id="1158" class="elementor elementor-1158" data-elementor-settings="[]">
+                      <div class="elementor-section-wrap">
+                      <section class="elementor-section elementor-top-section elementor-element elementor-element-7111f67f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7111f67f" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-532fc1af" data-id="532fc1af" data-element_type="column">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-1a4a255c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1a4a255c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7d25e2c8" data-id="7d25e2c8" data-element_type="column">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">Company Details</h2>		</div>
+                </div>
+                <div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
+                <div class="elementor-widget-container">
+                  <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+                    </span>
+            </div>
+                </div>
+                </div>
+                  </div>
+            </div>
+                      </div>
+            </section>
+                  </div>
+            </div>
+                      </div>
+            </section>
+                    </div>
+                  </div>
+
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- #content -->
+
+
+            <!-- COMPANY INPUTS -->
+            <div data-elementor-type="wp-post" data-elementor-id="680" className="elementor elementor-680" data-elementor-settings="[]">
+            <div className="elementor-section-wrap">
+            <section className="elementor-section elementor-top-section elementor-element elementor-element-2b9bfa1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2b9bfa1" data-element_type="section">
+            <div className="elementor-container elementor-column-gap-default">
+            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+            <div className="elementor-widget-wrap elementor-element-populated">
+            <!-- IMPORTANT -->
+            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="elementor-widget-container">
+
+            <div className="mf-input-wrapper">
+              <div class="tt1">
+              <label>Company Name</label>
+              <span class="tooltiptext">Enter the Name of Your Company</span>
+              </div>
+            <input
+            type="text"
+            className="mf-input "
+            id="mf-input-text-13c1826"
+            name="companyname"
+            placeholder="${ parent.decodeEntities(`Company Name`) } "
+              onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['companyname'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
+            <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="companyname"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
+            </div>
+
+            </div>
+            </div>
+
+
+            </div>
+            </div>
+
+            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+            <div className="elementor-widget-wrap elementor-element-populated">
+            <!-- IMPORTANT -->
+                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="elementor-widget-container">
+
+            <div className="mf-input-wrapper">
+
+
+
+            <br class="mobile" />
+            <div class="tt1">
+            <label>Current Year</label>
+            <span class="tooltiptext">Enter the Year You Want to Use as the Current Year</span>
+            </div>
+            <input
+            type="number"
+            className="mf-input "
+            min="1900"
+            max="2099"
+            step="1"
+            id="mf-input-text-13c1826"
+            name="currentyear"
+            placeholder="${ parent.decodeEntities(`Current Year`) } "
+                  onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['currentyear'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1900,"maxLength":2099,"type":"by_character_length","required":false,"expression":"null"}, el)}
+                />
+
+              <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="currentyear"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
+            </div>
+
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+            </div>
+            </div>
+
+
+          <div id="content" class="page-wrap sidebar-right">
+            <div class="container content-wrapper">
+              <div class="row row-wrapper">
+            <div data-elementor-type="wp-page" data-elementor-id="1158" class="elementor elementor-1158" data-elementor-settings="[]">
+                      <div class="elementor-section-wrap">
+                      <section class="elementor-section elementor-top-section elementor-element elementor-element-7111f67f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7111f67f" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-532fc1af" data-id="532fc1af" data-element_type="column">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-1a4a255c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1a4a255c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7d25e2c8" data-id="7d25e2c8" data-element_type="column">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">Current Year</h2>		</div>
+                </div>
+                <div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
+                <div class="elementor-widget-container">
+                  <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+                    </span>
+            </div>
+                </div>
+                </div>
+                  </div>
+            </div>
+                      </div>
+            </section>
+                  </div>
+            </div>
+                      </div>
+            </section>
+                    </div>
+                  </div>
+
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- #content -->
+
+
               <div data-elementor-type="wp-post" data-elementor-id="680" className="elementor elementor-680" data-elementor-settings="[]">
             <div className="elementor-section-wrap">
             <section className="elementor-section elementor-top-section elementor-element elementor-element-2b9bfa1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2b9bfa1" data-element_type="section">
@@ -185,6 +321,12 @@ display: none;
       <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
       <div className="elementor-widget-container">
+
+
+
+
+
+
 
   <div className="mf-input-wrapper">
 

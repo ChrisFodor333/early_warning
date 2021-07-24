@@ -182,9 +182,9 @@ onclick="window.print();">
     <thead>
         <tr>
             <th>CREDIT SCORING</th>
-            <th><?php echo date("Y"); ?></th>
-            <th><?php echo date('Y', strtotime('-1 year')); ?></th>
-            <th><?php echo date('Y', strtotime('-2 year')); ?></th>
+            <th><?php echo $currentyear; ?></th>
+            <th><?php echo $currentyear-1; ?></th>
+            <th><?php echo $currentyear-2; ?></th>
         </tr>
     </thead>
     <tbody>
@@ -228,22 +228,22 @@ onclick="window.print();">
 
 <div class="success-msg" style="display: <?php echo $greenwarning;?>;">
   <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo date("Y"); ?>
+  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo $currentyear; ?>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
   <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress in the year of <?php echo date("Y"); ?>.
+  According to the information provided your company is in first degree financial distress in the year of <?php echo $currentyear; ?>.
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning;?>;">
   <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress; ?> degree financial distress in the year of <?php echo date("Y"); ?>.
+  According to the information provided your company is in <?php echo $distress; ?> degree financial distress in the year of <?php echo $currentyear; ?>.
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo date("Y"); ?>.
+  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo $currentyear; ?>.
 </div>
 
 
@@ -252,22 +252,22 @@ onclick="window.print();">
 
 <div class="success-msg" style="display: <?php echo $greenwarning2;?>;">
   <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo date('Y', strtotime('-1 year')); ?>.
+  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo $currentyear-1; ?>.
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning2;?>;">
   <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress in the year of <?php echo date('Y', strtotime('-1 year')); ?>.
+  According to the information provided your company is in first degree financial distress in the year of <?php echo $currentyear-1; ?>.
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning2;?>;">
   <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress2; ?> degree financial distress in the year of <?php echo date('Y', strtotime('-1 year')); ?>.
+  According to the information provided your company is in <?php echo $distress2; ?> degree financial distress in the year of <?php echo $currentyear-1; ?>.
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay2;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo date('Y', strtotime('-1 year')); ?>.
+  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo $currentyear-1; ?>.
 </div>
 
 
@@ -278,22 +278,22 @@ onclick="window.print();">
 
 <div class="success-msg" style="display: <?php echo $greenwarning1;?>;">
   <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo date('Y', strtotime('-2 year')); ?>.
+  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo $currentyear-2; ?>.
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning1;?>;">
   <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress in the year of <?php echo date('Y', strtotime('-2 year')); ?>.
+  According to the information provided your company is in first degree financial distress in the year of <?php echo $currentyear-2; ?>.
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning1;?>;">
   <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress1; ?> degree financial distress in the year of <?php echo date('Y', strtotime('-2 year')); ?>.
+  According to the information provided your company is in <?php echo $distress1; ?> degree financial distress in the year of <?php echo $currentyear-2; ?>.
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay1;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo date('Y', strtotime('-2 year')); ?>.
+  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo $currentyear-2; ?>.
 </div>
 
 

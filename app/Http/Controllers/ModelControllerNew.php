@@ -16,6 +16,11 @@ class ModelControllerNew extends Controller
   $red = 0;
   $nacount = 0;
 
+  //COMPANY DETAILS
+  $company = Request::get('companyname');
+  $currentyear = Request::get('currentyear');
+  $data['currentyear'] =  $currentyear;
+
   // DATA FROM THE FORM - CURRENT YEAR
   $aad4 = Request::get('total-assets');
   $isd4 = Request::get('revenue-merch');

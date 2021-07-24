@@ -28,6 +28,11 @@ class ModelControllerComplex extends Controller
   $red1 = 0;
   $nacount1 = 0;
 
+  //COMPANY DETAILS
+  $company = Request::get('companyname');
+  $currentyear = Request::get('currentyear');
+  $data['currentyear'] =  $currentyear;
+
   // DATA FROM THE FORM - CURRENT YEAR
   $aad4 = Request::get('total-assets');
   $isd4 = Request::get('revenue-merch');
