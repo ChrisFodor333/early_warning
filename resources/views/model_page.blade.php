@@ -1,9 +1,5 @@
 @include('header')
 
-<!-- Page Title -->
-
-
-
 <style>
 
  label {
@@ -51,9 +47,6 @@ display: none;
 h6 {
   margin-left: 15px;
 }
-
-
-
   </style>
 
 
@@ -70,7 +63,7 @@ h6 {
 
   <div class="breadcrumb-trail breadcrumbs">
     <span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning/" title="Home" rel="home">Home</a></span>
-     <span class="sep">></span> <span class="trail-end">Input Form</span>
+     <span class="sep">></span> <span class="trail-end" id="inpform">Input Form</span>
   </div>
           </div>
       </div><!-- /.row -->
@@ -105,15 +98,21 @@ h6 {
 
 
 
-      <script type="text" class="mf-template">
+    <script class="mf-template">
+
+
+    function myfunction() {
+      document.querySelector('#curyeartext').innerHTML = document.querySelector('#curyear').value;
+      document.querySelector('#lastyear').innerHTML = document.querySelector('#curyear').value-1;
+      document.querySelector('#yearbefore').innerHTML = document.querySelector('#curyear').value-2;
+    }
+
 
     function controls_data (value){
       let currentWrapper = "mf-response-props-id-680";
       let currentEl = document.getElementById(currentWrapper);
-
       return currentEl ? currentEl.dataset[value] : false
     }
-
 
     let is_edit_mode = '' ? true : false;
     let message_position = controls_data('messageposition') || 'top';
@@ -127,12 +126,11 @@ h6 {
     let is_dummy_markup = is_edit_mode && message_editSwitch ? true : false;
 
 
-    return html`
-    <h6>Hover Over the Input Labels to Get a Hint on Where You Can Find The Required Data (This Only Works for the Residents of <img src="/early_warning/assets/inc/sk2.png"/> )</h6>
 
 
 
-
+    let page = html`
+    <h6 id="infoheading">Hover Over the Input Labels to Get a Hint on Where You Can Find The Required Data (This Only Works for the Residents of <img src="/early_warning/assets/inc/sk2.png"/> )</h6>
 
       <form
         className="metform-form-content"
@@ -216,6 +214,14 @@ h6 {
             ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
+            <input
+            type="hidden"
+            className="mf-input"
+            id="mf-input-text-13c1826"
+            name="_token"
+            value="{{ csrf_token() }}"
+            />
+
             <${validation.ErrorMessage}
             errors=${validation.errors}
             name="companyname"
@@ -252,19 +258,11 @@ h6 {
             min="1900"
             max="2099"
             step="1"
-            id="mf-input-text-13c1826"
+            id="curyear"
             name="currentyear"
             placeholder="${ parent.decodeEntities(`Current Year`) } "
-                  onInput=${parent.handleChange}
-            aria-invalid=${validation.errors['currentyear'] ? 'true' : 'false'}
-            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":1900,"maxLength":2099,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            onInput=${myfunction}
                 />
-
-              <${validation.ErrorMessage}
-            errors=${validation.errors}
-            name="currentyear"
-            as=${html`<span className="mf-error-message"></span>`}
-            />
 
             </div>
 
@@ -324,7 +322,9 @@ h6 {
               <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-              <h2 class="elementor-heading-title elementor-size-default">Current Year</h2>		</div>
+              <h2 id="curyeartext">Current Year</h2>
+            </div>
+
                 </div>
                 <div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
                 <div class="elementor-widget-container">
@@ -1084,7 +1084,7 @@ h6 {
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Last Year</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default" id="lastyear">Last Year</h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
@@ -1618,7 +1618,7 @@ h6 {
       			<div class="elementor-widget-wrap elementor-element-populated">
       								<div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
       				<div class="elementor-widget-container">
-      			<h2 class="elementor-heading-title elementor-size-default">The Year Before</h2>		</div>
+      			<h2 class="elementor-heading-title elementor-size-default" id="yearbefore">The Year Before</h2>		</div>
       				</div>
       				<div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
       				<div class="elementor-widget-container">
@@ -1772,8 +1772,12 @@ h6 {
         ${is_dummy_markup ? ' ' : message_position === 'bottom' ? parent.submit_response_message`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
 
       </form>
-    `
+      `
+
+      return page;
   </script>
+
+
 
         </div>
   </div>
@@ -1790,6 +1794,8 @@ h6 {
           </div><!-- /.row -->
       </div><!-- /.container -->
   </div><!-- #content -->
+
+
 
 
 @include('model_footer')
