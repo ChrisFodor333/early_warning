@@ -1,6 +1,8 @@
 <!-- Footer -->
 <footer class="footer ">
 <div class="container">
+
+<!--
     <div class="row">
         <div class="col-md-12">
             <div class="flat-before-footer">
@@ -10,9 +12,10 @@
 <div><div class="icon"><i class="fa fa-map-marker"></i></div>PO Box 16122 Collins Street West
 Victoria 8007 Australia</div>
 </div></div></aside>
-            </div><!-- /.flat-before-footer -->
-        </div><!-- /.col-md-12 -->
-    </div><!-- /.row -->
+            </div>
+        </div>
+    </div>
+  -->
 
     <div class="row">
         <div class="footer-widgets">
@@ -20,18 +23,20 @@ Victoria 8007 Australia</div>
                            <div class="col-md-4">
             <div id="text-3" class="widget widget_text">			<div class="textwidget"><div class="textwidget">
 <p class="desc">
-Lorem ipsum dolor sit consectetur adipiscing elit<br />
-sed do eiusmod tempor incididunt ut labore et<br />
-dolore magna veniam aliqua.Ut enim ad minim veniam</p>
+DanubeChance2.0 will deliver innovative policy designs, give formerly bankrupt entrepreneurs a second chance in the Danube region.
+</p>
 <p class="desc">
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+DanubeChance2.0 aims to facilitate improved policy learning between policymakers and government agencies; research institutes and universities; financially distressed enterprises currently involved in insolvency procedures, or entrepreneurs who have already gone bankrupt but ready for a fresh re-start; business accelerators; and the public.
+</p>
 </div>
 </div>
 </div>                    </div><!-- /.col-md- -->
 
                             <div class="col-md-4">
-            <div id="nav_menu-1" class="widget widget_nav_menu"><div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210"><a href="#">About Us</a></li>
-<li id="menu-item-1211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211"><a href="#">Home</a></li>
+<div id="nav_menu-1" class="widget widget_nav_menu"><div class="menu-footer-container"><ul id="menu-footer" class="menu">
+<li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210"><a href="<?php echo url('/about'); ?>">About Us</a></li>
+<li id="menu-item-1211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211"><a href="<?php echo url('/news'); ?>">About project</a></li>
+<!--
 <li id="menu-item-1212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1212"><a href="#">Advertise</a></li>
 <li id="menu-item-1213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213"><a href="#">Testimonials</a></li>
 <li id="menu-item-1214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1214"><a href="#">Terms &#038; Conditions</a></li>
@@ -41,9 +46,11 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1218"><a href="#">Careers</a></li>
 <li id="menu-item-1219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1219"><a href="#">Corporate Client</a></li>
 <li id="menu-item-1220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1220"><a href="#">Shop</a></li>
-</ul></div></div>                    </div><!-- /.col-md- -->
-
-                            <div class="col-md-4">
+-->
+</ul></div></div>
+</div><!-- /.col-md- -->
+<!--
+<div class="col-md-4">
             <div id="text-4" class="widget widget_text">			<div class="textwidget"><div class="mf-form-shortcode">
 <div
 id="metform-wrap-222-222"
@@ -55,96 +62,11 @@ data-form-nonce="9d4375ef3e"
 data-stop-vertical-effect=""
 ></div>
 
-
-<!-----------------------------
-* controls_data : find the the props passed indie of data attribute
-* parent.submit_response_message : contains the markup of error or success message
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
---------------------------- -->
-
-<script type="text" class="mf-template">
-
-function controls_data (value){
-let currentWrapper = "mf-response-props-id-222";
-let currentEl = document.getElementById(currentWrapper);
-
-return currentEl ? currentEl.dataset[value] : false
-}
-
-
-let is_edit_mode = '' ? true : false;
-let message_position = controls_data('messageposition') || 'top';
-
-
-let message_successIcon = controls_data('successicon') || '';
-let message_errorIcon = controls_data('erroricon') || '';
-let message_editSwitch = controls_data('editswitchopen') === 'yes' ? true : false;
-let message_proClass = controls_data('editswitchopen') === 'yes' ? 'mf_pro_activated' : '';
-
-let is_dummy_markup = is_edit_mode && message_editSwitch ? true : false;
-
-
-return html`
-<form
-className="metform-form-content"
-onSubmit=${ validation.handleSubmit( parent.handleFormSubmit ) }
-
->
-
-${ is_dummy_markup ? message_position === 'top' ? parent.dummy_markup(message_successIcon, message_proClass) : '' : ''}
-${is_dummy_markup ? ' ' :  message_position === 'top' ? parent.submit_response_message`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
-
-${!state.formHide ? html`
-    <div data-elementor-type="wp-post" data-elementor-id="222" className="elementor elementor-222" data-elementor-settings="[]">
-  <div className="elementor-section-wrap">
-  <section className="elementor-section elementor-top-section elementor-element elementor-element-b71ff8d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b71ff8d" data-element_type="section">
-<div className="elementor-container elementor-column-gap-default">
-<div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3efd623" data-id="3efd623" data-element_type="column">
-<div className="elementor-widget-wrap elementor-element-populated">
-    <div className="elementor-element elementor-element-e07088d elementor-widget elementor-widget-mf-email" data-id="e07088d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-<div className="elementor-widget-container">
-
-<div className="mf-input-wrapper">
-  <label className="mf-input-label" htmlFor="mf-input-email-e07088d">
-${ parent.decodeEntities(`Email address:`) } 					<span className="mf-input-required-indicator"></span>
-</label>
-
-<input type="email"  defaultValue="" className="mf-input " id="mf-input-email-e07088d" name="mf-email" placeholder="${ parent.decodeEntities(`Your email address`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['mf-email'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","emailMessage":"Please enter a valid Email address","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)}
-/>
-
-<${validation.ErrorMessage} errors=${validation.errors} name="mf-email" as=${html`<span className="mf-error-message"></span>`}
-/>
-
-</div>
-
-</div>
-</div>
-<div className="elementor-element elementor-element-636141d mf-btn--left elementor-widget elementor-widget-mf-button" data-id="636141d" data-element_type="widget" data-widget_type="mf-button.default">
-<div className="elementor-widget-container">
-<div className="mf-btn-wraper " data-mf-form-conditional-logic-requirement="">
-  <button type="submit" className="metform-btn metform-submit-btn " id="">
-<span>${ parent.decodeEntities(`SUBMIT`) } </span>
-</button>
-  </div>
 </div>
 </div>
 </div>
 </div>
-  </div>
-</section>
-</div>
-</div>
-  ` : ''}
-${is_dummy_markup ? message_position === 'bottom' ? parent.dummy_markup(message_successIcon, message_proClass) : '' : ''}
-${is_dummy_markup ? ' ' : message_position === 'bottom' ? parent.submit_response_message`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
-
-</form>
-`
-</script>
-
-</div>
-</div>
-</div>                    </div><!-- /.col-md- -->
+-->
 
 
         </div><!-- /.footer-widgets -->
@@ -158,14 +80,16 @@ ${is_dummy_markup ? ' ' : message_position === 'bottom' ? parent.submit_response
 <div class="row">
     <div class="col-md-12">
         <div class="copyright">
-            <p>Copyright 2017 Finance. Theme by Themesflat.</p>                    </div>
+            <p>Copyright 2021 Danube Chance 2.0. Financial Tool.</p>                    </div>
 
-                            <div class="widget widget-custom-menu">
-            <ul id="menu-bottom" class="menu"><li id="menu-item-1221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221"><a href="#">Home</a></li>
+<!--
+<div class="widget widget-custom-menu">
+<ul id="menu-bottom" class="menu"><li id="menu-item-1221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1221"><a href="#">Home</a></li>
 <li id="menu-item-1222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1222"><a href="#">My Blog</a></li>
 <li id="menu-item-1223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1223"><a href="#">My Home</a></li>
 </ul>
-        </div>
+</div>
+-->
 
 
                                 <!-- Go Top -->

@@ -6,7 +6,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="/early_warning/xmlrpc.php">
 
-<title>Early Warning Slovakia</title>
+<title>Danube Chance Financial Tool</title>
 <meta name='robots' content='noindex, nofollow' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
@@ -217,15 +217,17 @@ body { color:#666!important}
         <div class="row">
         	<div class="col-md-6">
             <div class="custom-info">
-            <ul><li class="phone"><i class="fa fa-phone"></i>Call us: +61 3 8376 6284</li>
+                <ul><li class="phone">DanubeChance 2.0 Financial Tool</li>
+									<!--
             	<li class="mail"><i class="fa fa-envelope"></i>Email: support24-7@gmail.com</li>
+						-->
             </ul>
             </div>            </div><!-- /.col-md-7 -->
 
             <div class="col-md-6 text-right">
             <div class="info-top-right">
             <span><i class="fa fa-question-circle"></i>Have any questions?</span>
-            <a class="appoinment" href="#">Get An Appointment</a>
+            <a class="appoinment" href="<?php echo url('/team'); ?>">Contact our Partners</a>
             </div>
 
             </div><!-- /.col-md-6 -->
@@ -244,48 +246,39 @@ body { color:#666!important}
 			<img class="site-logo" src="/early_warning/assets/content/themes/finance/images/logo.png" alt="test" width="175" height="50" data-retina="/early_warning/assets/content/uploads/2021/06/logo@2x.png" data-logo_site="/early_warning/assets/content/themes/finance/images/logo.png" data-logo_sticky="/early_warning/assets/content/themes/finance/images/logo.png" data-site_retina_logo_sticky="/early_warning/assets/content/themes/finance/images/logo@2x.png" data-retina_base="/early_warning/assets/content/uploads/2021/06/logo@2x.png" />
 		</a>
 	</div>
-<!--
-          <div class="show-search">
-            <a href="#"><i class="fa fa-search"></i></a>
-            </div>
--->
                     <div class="nav-wrap">
     <div class="btn-menu">
         <span></span>
     </div><!-- //mobile menu button -->
 
-    <nav id="mainnav" class="mainnav" role="navigation">
+<nav id="mainnav" class="mainnav" role="navigation">
         <ul id="menu-main" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a href="<?php echo url('/'); ?>">Home</a>
 </li>
-<li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a href="<?php echo url('/about'); ?>">About</a></li>
-<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29"><a href="<?php echo url('/services'); ?>">Services</a>
+<li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a href="<?php echo url('/model'); ?>">Basic Model</a>
+</li>
+<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29"><a href="<?php echo url('/complexmodel'); ?>">Complex Model</a>
 	<!--
 <ul class="sub-menu">
 	<li id="menu-item-1707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1707"><a href="<?php echo url('/riskmanagement'); ?>">Risk Management</a></li>
 </ul>
 -->
 </li>
-<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/portfolio'); ?>">Portfolio</a>
+<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/about'); ?>">About</a>
 </li>
-<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/news'); ?>">News</a>
+<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/news'); ?>">About project</a>
 </li>
-<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="<?php echo url('/contact'); ?>">Contact</a>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="<?php echo url('/team'); ?>">Partners</a>
 </li>
+<!--
 <li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a href="<?php echo url('/team'); ?>">Our Team</a></li>
 <li id="menu-item-1705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1705"><a href="/early_warning/overview/">Overview</a></li>
-</ul>    </nav><!-- #site-navigation -->
+-->
+</ul>
+</nav><!-- #site-navigation -->
 </div><!-- /.nav-wrap -->
 
 
                 </div><!-- /.header-wrap -->
-                <div class="submenu top-search widget_search">
-                    <form role="search" method="get" class="search-form" action="/early_warning/">
-				<label>
-					<span class="screen-reader-text">Search for:</span>
-					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
-				</label>
-				<input type="submit" class="search-submit" value="Search" />
-			</form>                </div>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
