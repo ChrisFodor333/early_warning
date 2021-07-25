@@ -33,7 +33,7 @@
               <div class="info-box-content">
                 <span class="info-box-text">Number of Respondents</span>
                 <span class="info-box-number">
-                  10
+                  <?php echo $total; ?>
                 </span>
               </div>
               <!-- /.info-box-content -->
@@ -47,7 +47,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Out of Financial Distress</span>
-                <span class="info-box-number">4</span>
+                <span class="info-box-number">  <?php echo $nodistress; ?></span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -64,7 +64,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">In Financial Distress</span>
-                <span class="info-box-number">6</span>
+                <span class="info-box-number"><?php echo $distress; ?></span>
               </div>
               <!-- /.info-box-content -->
             </div>

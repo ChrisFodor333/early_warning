@@ -47,6 +47,15 @@ Route::post('/pro-admin/edited/',[  'as' => 'updates',
         'uses' =>'App\\Http\\Controllers\AdminController@edit_validator']);
 
 
+Route::get('/pro-admin/basictable', 'App\\Http\\Controllers\AdminController@basic_index');
+Route::get('/pro-admin/basictable/data', 'App\\Http\\Controllers\AdminController@basictable');
+
+Route::get('/pro-admin/complextable', 'App\\Http\\Controllers\AdminController@complex_index');
+Route::get('/pro-admin/complextable/data', 'App\\Http\\Controllers\AdminController@complextable');
+
+Route::get('/pro-admin/charts', 'App\\Http\\Controllers\AdminController@chart');
+
+
 // END OF ADMIN STUFF
 
 Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');

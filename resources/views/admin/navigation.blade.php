@@ -60,9 +60,9 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/charts/chartjs.html" class="nav-link">
+              <a href="<?php echo url('/pro-admin/charts'); ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>ChartJS</p>
+                <p>Model Usage</p>
               </a>
             </li>
 
@@ -80,23 +80,18 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/tables/simple.html" class="nav-link">
+              <a href="<?php echo url('/pro-admin/basictable'); ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Simple Tables</p>
+                <p>Basic Model</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/tables/data.html" class="nav-link">
+              <a href="<?php echo url('/pro-admin/complextable'); ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>DataTables</p>
+                <p>Complex Model</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="pages/tables/jsgrid.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>jsGrid</p>
-              </a>
-            </li>
+
           </ul>
         </li>
         <li class="nav-header">USER ACTIONS</li>
