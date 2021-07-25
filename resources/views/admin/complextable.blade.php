@@ -45,9 +45,9 @@
              <!-- /.card-header -->
              <div class="card-body">
                <!-- TABLE -->
-               <table  id=usertable class="table table-striped table-hover">
+               <table  id=usertable class="table table-striped table-hover" style="font-size: 10px;">
                                            <thead>
-                                           <tr style="font-size: 14px;">
+                                           <tr>
                                                <th>Company Name</th>
                                                <th>Current Year</th>
                                                <th>Datetime</th>

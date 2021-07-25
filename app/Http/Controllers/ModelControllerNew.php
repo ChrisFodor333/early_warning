@@ -2,8 +2,10 @@
 
 
 namespace App\Http\Controllers;
-
-use Request;
+use Illuminate\Http\Request;
+use Requests;
+use App\Models\Basic;
+use App\Models\Complex;
 
 class ModelControllerNew extends Controller
 {
@@ -17,64 +19,66 @@ class ModelControllerNew extends Controller
   $nacount = 0;
 
   //COMPANY DETAILS
-  $company = Request::get('companyname');
-  $currentyear = Request::get('currentyear');
+  $company = request()->get('companyname');
+  $currentyear = request()->get('currentyear');
   $data['currentyear'] =  $currentyear;
 
+
+
   // DATA FROM THE FORM - CURRENT YEAR
-  $aad4 = Request::get('total-assets');
-  $isd4 = Request::get('revenue-merch');
-  $isd21 = Request::get('amortization');
-  $isd62 = Request::get('profit-loss-before-tax');
-  $laed27 = Request::get('provisions');
+  $aad4 = request()->get('total-assets');
+  $isd4 = request()->get('revenue-merch');
+  $isd21 = request()->get('amortization');
+  $isd62 = request()->get('profit-loss-before-tax');
+  $laed27 = request()->get('provisions');
 
-  $aad33 = Request::get('current-assets');
-  $isd7 = Request::get('production');
-  $isd22 = Request::get('revenue-sale');
-  $isd64 = Request::get('profit-loss-after-tax');
-  $laed44 = Request::get('current-liabilities');
+  $aad33 = request()->get('current-assets');
+  $isd7 = request()->get('production');
+  $isd22 = request()->get('revenue-sale');
+  $isd64 = request()->get('profit-loss-after-tax');
+  $laed44 = request()->get('current-liabilities');
 
-  $aad34 = Request::get('inventory');
-  $isd8 = Request::get('revenue-p-s');
-  $isd25 = Request::get('operating-income');
-  $laed5 = Request::get('equity');
-  $laed59 = Request::get('ad');
+  $aad34 = request()->get('inventory');
+  $isd8 = request()->get('revenue-p-s');
+  $isd25 = request()->get('operating-income');
+  $laed5 = request()->get('equity');
+  $laed59 = request()->get('ad');
 
-  $aad58 = Request::get('financial-accounts');
-  $isd9 = Request::get('internal-inventory');
-  $isd31 = Request::get('securities-shares');
-  $laed23 = Request::get('retained-earnings');
+  $aad58 = request()->get('financial-accounts');
+  $isd9 = request()->get('internal-inventory');
+  $isd31 = request()->get('securities-shares');
+  $laed23 = request()->get('retained-earnings');
 
-  $aad64 = Request::get('ad-total');
-  $isd10 = Request::get('own-work-cap');
-  $isd42 = Request::get('interest-expense');
-  $laed26 = Request::get('liabilities');
+  $aad64 = request()->get('ad-total');
+  $isd10 = request()->get('own-work-cap');
+  $isd42 = request()->get('interest-expense');
+  $laed26 = request()->get('liabilities');
 
   // LAST YEAR
-  $ise4= Request::get('revenue-merch2');
-  $ise22 = Request::get('revenue-sale2');
-  $aae14= Request::get('ppe2');
-  $laee57= Request::get('long-term-bank-loans2');
+  $ise4= request()->get('revenue-merch2');
+  $ise22 = request()->get('revenue-sale2');
+  $aae14= request()->get('ppe2');
+  $laee57= request()->get('long-term-bank-loans2');
 
-  $ise7= Request::get('production2');
-  $ise30 = Request::get('securities-shares2');
-  $aae24 = Request::get('non-current-assets2');
+  $ise7= request()->get('production2');
+  $ise30 = request()->get('securities-shares2');
+  $aae24 = request()->get('non-current-assets2');
 
-  $ise9 = Request::get('internalinventory2');
-  $ise64 = Request::get('profit-loss-after-tax2');
-  $laee5 = Request::get('equity2');
+  $ise9 = request()->get('internalinventory2');
+  $ise64 = request()->get('profit-loss-after-tax2');
+  $laee5 = request()->get('equity2');
 
-  $ise10 = Request::get('ownwork2');
-  $aae4 = Request::get('totalassets2');
-  $laee27 = Request::get('provisions2');
+  $ise10 = request()->get('ownwork2');
+  $aae4 = request()->get('totalassets2');
+  $laee27 = request()->get('provisions2');
 
-  $ise14 = Request::get('addedvalue2');
-  $aae6 = Request::get('noncurrentassets2');
-  $laee32 = Request::get('noncurrentliabilities2');
+  $ise14 = request()->get('addedvalue2');
+  $aae6 = request()->get('noncurrentassets2');
+  $laee32 = request()->get('noncurrentliabilities2');
 
   // THE YEAR BEFORE
-  $aaf33 = Request::get('assets1');
-  $laef44 = Request::get('liabilities1');
+  $aaf33 = request()->get('assets1');
+  $laef44 = request()->get('liabilities1');
 
 
   $x1 = 0; $x2 = 0; $x3 = 0; $x4 = 0; $x5 = 0; $altman = 0;
@@ -413,21 +417,24 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $redwarning = "none";
   $distress = "";
 
+  $result = "";
 
-
-    if($red <= 2) {
+    if($red != 0 && $red <= 2) {
       $orangewarning = "block";
       $redwarning = "none";
+      $result = "First Degree Financial Distress";
     }
     if($red > 2 && $red <= 4) {
       $distress = "second";
       $redwarning = "block";
       $orangewarning = "none";
+      $result = "Second Degree Financial Distress";
     }
     if($red > 4) {
       $distress = "third";
       $redwarning = "block";
       $orangewarning = "none";
+      $result = "Third Degree Financial Distress";
     }
 
 
@@ -435,12 +442,14 @@ $data['quicktestcolor'] =  $quicktestcolor;
       $greenwarning = "block";
       $orangewarning = "none";
       $redwarning = "none";
+      $result = "No Financial Distress";
   }
 
   if($nacount == 6) {
     $greenwarning = "none";
     $orangewarning = "none";
     $redwarning = "none";
+    $result = "Invalid Data";
   }
 
 
@@ -497,6 +506,21 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $data['redwarning'] = $redwarning;
   $data['distress'] = $distress;
   $data['nadisplay'] = $nadisplay;
+
+  // ADD TO DATABASE
+  $basic =  new Basic;
+
+  $basic->company_name = $company;
+  $basic->current_year = $currentyear;
+  $basic->altman= $altman;
+  $basic->in05 = $in05;
+  $basic->quicktest = $quicktest;
+  $basic->bonity = $bonity;
+  $basic->taffler = $taffler;
+  $basic->binkert = $binkert;
+  $basic->result = $result;
+
+  $basic->save();
 
 
   // RETURN VIEW

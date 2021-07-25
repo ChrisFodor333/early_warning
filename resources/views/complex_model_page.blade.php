@@ -209,6 +209,7 @@ display: none;
             className="mf-input "
             id="mf-input-text-13c1826"
             name="companyname"
+            required
             placeholder="${ parent.decodeEntities(`Company Name`) } "
               onInput=${parent.handleChange}
             aria-invalid=${validation.errors['companyname'] ? 'true' : 'false'}
@@ -261,6 +262,7 @@ display: none;
             step="1"
             id="curyear"
             name="currentyear"
+            required
             placeholder="${ parent.decodeEntities(`Current Year`) } "
             onInput=${myfunction}
             />

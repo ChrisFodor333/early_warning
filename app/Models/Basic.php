@@ -14,7 +14,7 @@ class Basic extends Model
 
 
     protected $fillable = [
-        'company_name','current_year','altman','in05','quicktest','bonity','taffler', 'binkert', 'result', 'date'
+        'company_name','current_year','altman','in05','quicktest','bonity','taffler', 'binkert', 'result'
     ];
 
 

@@ -208,6 +208,7 @@ h6 {
             className="mf-input "
             id="mf-input-text-13c1826"
             name="companyname"
+            required
             placeholder="${ parent.decodeEntities(`Company Name`) } "
               onInput=${parent.handleChange}
             aria-invalid=${validation.errors['companyname'] ? 'true' : 'false'}
@@ -260,6 +261,7 @@ h6 {
             step="1"
             id="curyear"
             name="currentyear"
+            required
             placeholder="${ parent.decodeEntities(`Current Year`) } "
             onInput=${myfunction}
                 />

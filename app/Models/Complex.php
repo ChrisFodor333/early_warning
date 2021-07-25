@@ -32,8 +32,7 @@ class Complex extends Model
         'taffler2',
         'taffler3',
         'binkert',
-        'result',
-        'date'
+        'result'
     ];
 
 
