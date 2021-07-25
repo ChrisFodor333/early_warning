@@ -18,7 +18,7 @@
 <body class="hold-transition dark-mode login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="/early_warning/assets/admin/index2.html"><b>Danube Chance 2.0</b><br />Financial Tool</a>
+  <b>Danube Chance 2.0</b><br />Financial Tool
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -27,7 +27,7 @@
 
       <form action="<?php echo url('/pro-admin/'); ?>" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" name="email" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" name="password" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -43,13 +43,16 @@
           </div>
         </div>
         <div class="row">
+
           <div class="col-8">
+            <!--
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
                 Remember Me
               </label>
             </div>
+          -->
           </div>
           <!-- /.col -->
           <div class="col-4">
@@ -57,6 +60,11 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
           </div>
           <!-- /.col -->
+          <p>
+                        {{ $errors->first('no') }}
+                        {{ $errors->first('email') }}
+                        {{ $errors->first('password') }}
+        </p>
         </div>
       </form>
 
