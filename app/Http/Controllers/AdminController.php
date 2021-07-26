@@ -29,10 +29,10 @@ class AdminController extends Controller
             if(session()->has('admin')) {
 
               $basic_nodistress = DB::table('basic')->where('result','LIKE','No %')->count();
-              $basic_distress = DB::table('basic')->where('result','NOT LIKE','No %')->count();
+              $basic_distress = DB::table('basic')->where('result','LIKE','% Degree %')->count();
 
               $complex_nodistress = DB::table('complex')->where('result1','LIKE','No %')->count();
-              $complex_distress = DB::table('complex')->where('result1','NOT LIKE','No %')->count();
+              $complex_distress = DB::table('complex')->where('result1','LIKE','% Degree %')->count();
 
               $total1 = DB::table('basic')->count();
               $total2 = DB::table('complex')->count();
@@ -319,7 +319,7 @@ class AdminController extends Controller
           if(session()->has('admin')) {
               $chart = Lava::DataTable();
               $basic_nodistress = DB::table('basic')->where('result','LIKE','No %')->count();
-              $basic_distress = DB::table('basic')->where('result','NOT LIKE','No %')->count();
+              $basic_distress = DB::table('basic')->where('result','LIKE','% Degree %')->count();
 
               $total = DB::table('basic')->count();
 
@@ -409,7 +409,7 @@ class AdminController extends Controller
 
                 $chartcomplex = Lava::DataTable();
                 $complex_nodistress = DB::table('complex')->where('result1','LIKE','No %')->count();
-                $complex_distress = DB::table('complex')->where('result1','NOT LIKE','No %')->count();
+                $complex_distress = DB::table('complex')->where('result1','LIKE','% Degree %')->count();
 
 
                 $totalcomplex = DB::table('complex')->count();

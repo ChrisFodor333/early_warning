@@ -267,7 +267,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title  elementor-size-default"> Altman's Z Score</h2>		</div>
+			<h2 class="elementor-heading-title  elementor-size-default">Parameter 1</h2>		</div>
 				</div>
       </div>
 
@@ -287,7 +287,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-9019ec0 elementor-widget elementor-widget-heading" data-id="9019ec0" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title elementor-size-default">Index 05</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Parameter 2</h2>		</div>
       </div>
 				</div>
 					</div>
@@ -306,7 +306,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-6f21d3b1 elementor-widget elementor-widget-heading" data-id="6f21d3b1" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
               <div class="modelname">
-			<h2 class="elementor-heading-title elementor-size-default">Quick Test</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Parameter 3</h2>		</div>
     </div>
 				</div>
 
@@ -331,7 +331,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
     <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default"> Index Bonity</h2>		</div>
+  <h2 class="elementor-heading-title elementor-size-default">Parameter 4</h2>		</div>
     </div>
   </div>
 
@@ -351,7 +351,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-9019ec0 elementor-widget elementor-widget-heading" data-id="9019ec0" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
     <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Taffler's Z score</h2>		</div>
+  <h2 class="elementor-heading-title elementor-size-default">Parameter 5</h2>		</div>
   </div>
     </div>
       </div>
@@ -370,7 +370,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-6f21d3b1 elementor-widget elementor-widget-heading" data-id="6f21d3b1" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
           <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Binkert's Model</h2>		</div>
+  <h2 class="elementor-heading-title elementor-size-default">Parameter 6</h2>		</div>
 </div>
     </div>
 

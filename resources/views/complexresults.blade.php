@@ -189,37 +189,37 @@ onclick="window.print();">
     </thead>
     <tbody>
         <tr>
-            <td>Altman's Z Score</td>
+            <td>Parameter 1</td>
             <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $altmancolor; ?>; color:white;"><?php echo $altman; ?></span></td>
             <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $altmancolor2; ?>; color:white;"><?php echo $altman2; ?></span></td>
             <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $altmancolor1; ?>; color:white;"><?php echo $altman1; ?></span></td>
         </tr>
         <tr class="active-row">
-            <td>Index 05</td>
+            <td>Parameter 2</td>
             <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $in05color; ?>; color:white;"><?php echo $in05; ?></span></td>
             <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $in05color2; ?>; color:white;"><?php echo $in052; ?></span></td>
             <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $in05color1; ?>; color:white;"><?php echo $in051; ?></span></td>
         </tr>
         <tr>
-            <td>Quick Test</td>
+            <td>Parameter 3</td>
               <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $quicktestcolor; ?>; color:white;"><?php echo $quicktest; ?></span></td>
               <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $quicktestcolor2; ?>; color:white;"><?php echo $quicktest2; ?></span></td>
               <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $quicktestcolor1; ?>; color:white;"><?php echo $quicktest1; ?></span></td>
         </tr>
         <tr class="active-row">
-            <td>Index Bonity</td>
+            <td>Parameter 4</td>
       <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $bonitycolor; ?>; color:white;"><?php echo $bonity; ?></span></td>
       <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $bonitycolor2; ?>; color:white;"><?php echo $bonity2; ?></span></td>
       <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $bonitycolor1; ?>; color:white;"><?php echo $bonity1; ?></span></td>
         </tr>
         <tr>
-            <td>Taffler's Z score </td>
+            <td>Parameter 5</td>
           <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $tafflercolor; ?>; color:white;"><?php echo $taffler; ?></span></td>
           <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $tafflercolor2; ?>; color:white;"><?php echo $taffler2; ?></span></td>
           <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $tafflercolor1; ?>; color:white;"><?php echo $taffler1; ?></span></td>
         </tr>
         <tr class="active-row">
-            <td>Binkert's Model</td>
+            <td>Parameter 6</td>
           <td colspan="3" style="color:white;"><span id="rcorners1" style="background-color: <?php echo $binkertcolor; ?>; color:white;"><?php echo $binkert; ?></span></td>
         </tr>
     </tbody>
