@@ -14,7 +14,7 @@
 
 
 		<div class="breadcrumb-trail breadcrumbs">
-			<span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning/" title="test" rel="home">Home</a></span>
+			<span class="trail-browse"></span> <span class="trail-begin"><a href="<?php echo url('/'); ?>" title="test" rel="home">Home</a></span>
 			 <span class="sep">></span> <span class="trail-end">About</span>
 		</div>
             </div><!-- /.col-md-12 -->
@@ -254,7 +254,7 @@
 														</span>
 												<a class="elementor-accordion-title" href="">End date</a>
 					</div>
-					<div id="elementor-tab-content-1953" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1953"><p>30-06-2021</p></div>
+					<div id="elementor-tab-content-1953" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-1953"><p>31-12-2021</p></div>
 				</div>
         <div class="elementor-accordion-item">
     <div id="elementor-tab-title-1954" class="elementor-tab-title" data-tab="4" role="tab" aria-controls="elementor-tab-content-1954" aria-expanded="false">

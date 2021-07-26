@@ -14,7 +14,7 @@
 
 
   <div class="breadcrumb-trail breadcrumbs">
-    <span class="trail-browse"></span> <span class="trail-begin"><a href="/early_warning/" title="test" rel="home">Home</a></span>
+    <span class="trail-browse"></span> <span class="trail-begin"><a href="<?php echo url('/'); ?>" title="test" rel="home">Home</a></span>
      <span class="sep">></span> <a href="#" title="Portfolios">Portfolios</a>
      <span class="sep">></span> <span class="trail-end">Portfolios</span>
   </div>
