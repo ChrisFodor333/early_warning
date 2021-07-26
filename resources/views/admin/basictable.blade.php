@@ -47,10 +47,10 @@
                <!-- TABLE -->
                <table  id=usertable class="table table-striped table-hover">
                                            <thead>
-                                           <tr>
+                                           <tr style="cursor: pointer;">
+                                               <th>Number</th>
                                                <th>Company Name</th>
                                                <th>Current Year</th>
-                                               <th>Datetime</th>
                                                <th>Altman</th>
                                                <th>Index 05</th>
                                                <th>Quick Test</th>
@@ -106,9 +106,9 @@
             serverSide: true,
             ajax: '{{ url('pro-admin/basictable/data') }}',
             columns: [
+                { data: 'id_basic', name: 'id_basic' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'current_year', name: '	current_year' },
-                { data: 'date', name: 'date' },
                 { data: 'altman', name: 'altman' },
                 { data: 'in05', name: 'in05' },
                 { data: 'quicktest', name: 'quicktest' },

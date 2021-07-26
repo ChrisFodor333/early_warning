@@ -47,10 +47,10 @@
                <!-- TABLE -->
                <table  id=usertable class="table table-striped table-hover" style="font-size: 10px;">
                                            <thead>
-                                           <tr>
+                                            <tr style="cursor: pointer;">
+                                               <th>Number</th>
                                                <th>Company Name</th>
                                                <th>Current Year</th>
-                                               <th>Datetime</th>
                                                <th>Altman (Year 1)</th>
                                                <th>Altman (Year 2)</th>
                                                <th>Altman (Year 3)</th>
@@ -114,9 +114,9 @@
             serverSide: true,
             ajax: '{{ url('pro-admin/complextable/data') }}',
             columns: [
+                { data: 'id_complex', name: 'id_complex' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'current_year', name: '	current_year' },
-                { data: 'date', name: 'date' },
                 { data: 'altman1', name: 'altman1' },
                 { data: 'altman2', name: 'altman2' },
                 { data: 'altman3', name: 'altman3' },

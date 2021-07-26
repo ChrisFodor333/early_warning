@@ -223,7 +223,7 @@ body { color:#666!important}
             <div class="col-md-12">
                 <div class="header-wrap clearfix">
                     	<div id="logo" class="logo" style="margin-top: 21px; margin-bottom: 21px;" data-width="175" data-height="50">
-		<a href="/early_warning/" title="Interreg">
+		<a href="<?php echo url('/'); ?>" title="Interreg">
 			<img class="site-logo" src="/early_warning/assets/content/themes/finance/images/logo.png" alt="test" width="175" height="50" data-retina="/early_warning/assets/content/uploads/2021/06/logo@2x.png" data-logo_site="/early_warning/assets/content/themes/finance/images/logo.png" data-logo_sticky="/early_warning/assets/content/themes/finance/images/logo.png" data-site_retina_logo_sticky="/early_warning/assets/content/themes/finance/images/logo@2x.png" data-retina_base="/early_warning/assets/content/uploads/2021/06/logo@2x.png" />
 		</a>
 	</div>
