@@ -1,7 +1,20 @@
 @include('header')
 
 
+<style>
+  img {
+      -webkit-filter: brightness(100%);
+  }
 
+  img:hover {
+      -webkit-filter: brightness(70%);
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+  }
+  </style>
 <!-- Page title -->
 <div class="page-title pagetitle_style_2">
     <div class="overlay"></div>
@@ -62,7 +75,7 @@
 								<div class="elementor-element elementor-element-3199350c elementor-widget elementor-widget-image" data-id="3199350c" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
           <a href="https://ifka.hu/">
-					<img src="/early_warning/assets/content/uploads/2020/11/partner1.png" title="partner1.png" alt="partner1.png" />
+					<img src="/early_warning/assets/content/uploads/2020/11/partner1.png"  alt="partner1.png" />
             </a>
                             														</div>
 				</div>
@@ -75,7 +88,7 @@
 								<div class="elementor-element elementor-element-19073a40 elementor-widget elementor-widget-image" data-id="19073a40" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
             <a href="https://www.steinbeis-europa.de/">
-															<img src="/early_warning/assets/content/uploads/2020/11/partner2.png" title="partner2.png" alt="partner2.png" />
+															<img src="/early_warning/assets/content/uploads/2020/11/partner2.png"  alt="partner2.png" />
                 </a>
               	</div>
 				</div>
@@ -86,7 +99,7 @@
 								<div class="elementor-element elementor-element-1a8aef45 elementor-widget elementor-widget-image" data-id="1a8aef45" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
           <a href="https://www.utcluj.ro/">
-															<img src="/early_warning/assets/content/uploads/2020/11/partner3.png" title="partner3.png" alt="partner3.png" />
+															<img src="/early_warning/assets/content/uploads/2020/11/partner3.png"  alt="partner3.png" />
           </a>
                             		</div>
 				</div>
@@ -97,7 +110,7 @@
 								<div class="elementor-element elementor-element-684b66b9 elementor-widget elementor-widget-image" data-id="684b66b9" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
             <a href="https://www.zsi.at/">
-															<img src="/early_warning/assets/content/uploads/2020/11/partner4.png" title="partner4.png" alt="partner4.png" />
+															<img src="/early_warning/assets/content/uploads/2020/11/partner4.png"  alt="partner4.png" />
             </a>
                             							</div>
 				</div>
@@ -125,7 +138,7 @@
                       <div class="elementor-element elementor-element-3199350c elementor-widget elementor-widget-image" data-id="3199350c" data-element_type="widget" data-widget_type="image.default">
               <div class="elementor-widget-container">
                 <a href="https://uksk.sk/">
-                                    <img src="/early_warning/assets/content/uploads/2020/11/partner5.png" title="partner5.png" alt="partner5.png" />
+                                    <img src="/early_warning/assets/content/uploads/2020/11/partner5.png"  alt="partner5.png" />
                 </a>
                                   										</div>
               </div>
@@ -138,7 +151,7 @@
                       <div class="elementor-element elementor-element-19073a40 elementor-widget elementor-widget-image" data-id="19073a40" data-element_type="widget" data-widget_type="image.default">
               <div class="elementor-widget-container">
                 <a href="http://www.czposijek.hr/">
-                                    <img src="/early_warning/assets/content/uploads/2020/11/partner6.png" title="partner6.png" alt="partner6.png" />
+                                    <img src="/early_warning/assets/content/uploads/2020/11/partner6.png"  alt="partner6.png" />
                 </a>
                                   						</div>
               </div>
@@ -149,7 +162,7 @@
                       <div class="elementor-element elementor-element-1a8aef45 elementor-widget elementor-widget-image" data-id="1a8aef45" data-element_type="widget" data-widget_type="image.default">
               <div class="elementor-widget-container">
                 <a href="https://www.pbn.hu/">
-                                    <img src="/early_warning/assets/content/uploads/2020/11/partner7.png" title="partner7.png" alt="partner7.png" />
+                                    <img src="/early_warning/assets/content/uploads/2020/11/partner7.png"  alt="partner7.png" />
                 </a>
                                   	</div>
               </div>
@@ -160,7 +173,7 @@
                       <div class="elementor-element elementor-element-684b66b9 elementor-widget elementor-widget-image" data-id="684b66b9" data-element_type="widget" data-widget_type="image.default">
               <div class="elementor-widget-container">
                 <a href="https://www.p-tech.si/">
-                                    <img src="/early_warning/assets/content/uploads/2020/11/partner8.png" title="partner8.png" alt="partner8.png" />
+                                    <img src="/early_warning/assets/content/uploads/2020/11/partner8.png"  alt="partner8.png" />
                 </a>
                                   			</div>
               </div>
@@ -190,7 +203,7 @@
             								<div class="elementor-element elementor-element-3199350c elementor-widget elementor-widget-image" data-id="3199350c" data-element_type="widget" data-widget_type="image.default">
             				<div class="elementor-widget-container">
                       <a href="https://www.rars-msp.org/">
-            															<img src="/early_warning/assets/content/uploads/2020/11/partner9.png" title="partner9.png" alt="partner9.png" />
+            															<img src="/early_warning/assets/content/uploads/2020/11/partner9.png"  alt="partner9.png" />
                       </a>
                                         						</div>
             				</div>
@@ -203,7 +216,7 @@
             								<div class="elementor-element elementor-element-19073a40 elementor-widget elementor-widget-image" data-id="19073a40" data-element_type="widget" data-widget_type="image.default">
             				<div class="elementor-widget-container">
                       <a href="https://pks.rs/">
-            															<img src="/early_warning/assets/content/uploads/2020/11/partner10.png" title="partner10.png" alt="partner10.png" />
+            															<img src="/early_warning/assets/content/uploads/2020/11/partner10.png"  alt="partner10.png" />
                       </a>
                                         								</div>
             				</div>
@@ -214,7 +227,7 @@
             								<div class="elementor-element elementor-element-1a8aef45 elementor-widget elementor-widget-image" data-id="1a8aef45" data-element_type="widget" data-widget_type="image.default">
             				<div class="elementor-widget-container">
                       <a href="https://www.odimm.md/">
-            															<img src="/early_warning/assets/content/uploads/2020/11/partner11.png" title="partner11.png" alt="partner11.png" />
+            															<img src="/early_warning/assets/content/uploads/2020/11/partner11.png"  alt="partner11.png" />
                      </a>
                                         										</div>
             				</div>
@@ -225,7 +238,7 @@
             								<div class="elementor-element elementor-element-684b66b9 elementor-widget elementor-widget-image" data-id="684b66b9" data-element_type="widget" data-widget_type="image.default">
             				<div class="elementor-widget-container">
                       <a href="http://www.impeer.od.ua/">
-            															<img src="/early_warning/assets/content/uploads/2020/11/partner12.png" title="partner12.png" alt="partner12.png" />
+            															<img src="/early_warning/assets/content/uploads/2020/11/partner12.png"  alt="partner12.png" />
                       </a>
                                         								</div>
             				</div>
