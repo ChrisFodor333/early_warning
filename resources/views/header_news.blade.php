@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+
+	<style>
+
+	@media (max-width: 700px) {
+	.mymobile {
+	  margin-left: 30px;
+	}
+	}
+	</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -198,7 +207,7 @@ body { color:#666!important}
         <div class="row">
         	<div class="col-md-6">
             <div class="custom-info">
-            <ul><li class="phone">DanubeChance 2.0 Financial Tool</li>
+            <ul><li class="phone mymobile">DanubeChance 2.0 Financial Tool</li>
 							<!--
             	<li class="mail"><i class="fa fa-envelope"></i>Email: support24-7@gmail.com</li>
 						-->
@@ -207,7 +216,7 @@ body { color:#666!important}
 
             <div class="col-md-6 text-right">
             <div class="info-top-right">
-            <span><i class="fa fa-question-circle"></i>Have any questions?</span>
+            <span class="mymobile"><i class="fa fa-question-circle"></i>Have any questions?</span>
             <a class="appoinment" href="<?php echo url('/team'); ?>">Contact our Partners</a>
             </div>
 

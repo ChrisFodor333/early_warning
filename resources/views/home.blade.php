@@ -1,10 +1,6 @@
 @include('header')
 	<!-- Page Title -->
-<style>
-  a {
 
-	}
-</style>
 
 	<div id="content" class="page-wrap sidebar-right">
 		<div class="container content-wrapper">
@@ -91,9 +87,9 @@ businesses to find <br> comprehensive solutions
 								data-type="button"
 								data-color="rgba(255,255,255,1)"
 								data-rsp_ch="on"
-								data-xy="x:168px;y:466px;"
+								data-xy="x:200px;y:466px;"
 								data-text="s:14;l:20;fw:700;"
-								data-padding="t:15;r:30;b:15;l:30;"
+								data-padding="t:14;r:26;b:14;l:26;"
 								data-border="bor:3px,3px,3px,3px;"
 								data-frame_0="x:50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
@@ -170,9 +166,9 @@ businesses to find <br> comprehensive solutions
 								data-type="button"
 								data-color="rgba(255,255,255,1)"
 								data-rsp_ch="on"
-								data-xy="x:168px;y:466px;"
+								data-xy="x:200px;y:466px;"
 								data-text="s:14;l:20;fw:700;"
-								data-padding="t:15;r:30;b:15;l:30;"
+								data-padding="t:14;r:26;b:14;l:26;"
 								data-border="bor:3px,3px,3px,3px;"
 								data-frame_0="x:50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
@@ -252,9 +248,9 @@ businesses to find <br> comprehensive solutions
 								data-type="button"
 								data-color="rgba(255, 255, 255, 1)"
 								data-rsp_ch="on"
-								data-xy="x:595px;y:398px;"
+								data-xy="x:630px;y:398px;"
 								data-text="s:14;l:20;fw:700;"
-								data-padding="t:15;r:30;b:15;l:30;"
+								data-padding="t:14;r:26;b:14;l:26;"
 								data-border="bor:3px,3px,3px,3px;"
 								data-frame_0="x:50px;"
 								data-frame_1="st:1500;sp:900;sR:1500;"
