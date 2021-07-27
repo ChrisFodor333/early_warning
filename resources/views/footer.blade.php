@@ -118,61 +118,61 @@ window.RS_MODULES.type = 'compiled';
 if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
 </script>
 <link rel='stylesheet' id='elementor-post-137-css'  href='/early_warning/assets/content/uploads/elementor/css/post-137.css' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-post-222-css'  href='/early_warning/assets/content/uploads/elementor/css/post-222.css?ver=1624468839' type='text/css' media='all' />
-<link rel='stylesheet' id='rs-plugin-settings-css'  href='/early_warning/assets/content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-222-css'  href='/early_warning/assets/content/uploads/elementor/css/post-222.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='/early_warning/assets/content/plugins/revslider/public/assets/css/rs6.css' type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 .custom.tparrows{background:transparent; border:2px solid #fff; background:rgba(0,0,0,0) !important}
 #rev_slider_1_1_wrapper .custom.tparrows{cursor:pointer;background:#000;background:rgba(0,0,0,0.5);width:40px;height:40px;position:absolute;display:block;z-index:1000}#rev_slider_1_1_wrapper .custom.tparrows.rs-touchhover{background:#000}#rev_slider_1_1_wrapper .custom.tparrows:before{font-family:'revicons';font-size:15px;color:#fff;display:block;line-height:40px;text-align:center}#rev_slider_1_1_wrapper .custom.tparrows.tp-leftarrow:before{content:'\e824'}#rev_slider_1_1_wrapper .custom.tparrows.tp-rightarrow:before{content:'\e825'}
 </style>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/owl.carousel.min.js?ver=5.7.2' id='owl-carousel-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/imagesloaded.pkgd.min.js?ver=5.7.2' id='imagesloaded-pkgd-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/jquery.isotope.min.js?ver=5.7.2' id='jquery-isotope-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/tf-main.js?ver=5.7.2' id='tf-main-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.5.2' id='tp-tools-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.5.2' id='revmin-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/metform/public/assets/js/htm.js?ver=1.4.9' id='htm-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/lodash.min.js?ver=4.17.19' id='lodash-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/owl.carousel.min.js' id='owl-carousel-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/imagesloaded.pkgd.min.js' id='imagesloaded-pkgd-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/jquery.isotope.min.js?' id='jquery-isotope-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/tf-main.js' id='tf-main-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/revslider/public/assets/js/rbtools.min.js' id='tp-tools-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/revslider/public/assets/js/rs6.min.js' id='revmin-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/metform/public/assets/js/htm.js' id='htm-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/lodash.min.js' id='lodash-js'></script>
 <script type='text/javascript' id='lodash-js-after'>
 window.lodash = _.noConflict();
 </script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
 <script type='text/javascript' id='wp-polyfill-js-after'>
-( 'fetch' in window ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+( 'fetch' in window ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-fetch.min.js"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-node-contains.min.js"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-dom-rect.min.js"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-url.min.js"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-formdata.min.js"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-element-closest.min.js"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="/early_warning/assets/inc/js/dist/vendor/wp-polyfill-object-fit.min.js"></scr' + 'ipt>' );
 </script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/react.min.js?ver=16.13.1' id='react-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/react-dom.min.js?ver=16.13.1' id='react-dom-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/dist/escape-html.min.js?ver=318abfb97a58ba13225ff74699ad73d4' id='wp-escape-html-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/dist/element.min.js?ver=ade78933fc78fc95c1988dda7ccc9fb3' id='wp-element-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/react.min.js' id='react-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/dist/vendor/react-dom.min.js' id='react-dom-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/dist/escape-html.min.js' id='wp-escape-html-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/dist/element.min.js' id='wp-element-js'></script>
 <script type='text/javascript' id='metform-app-js-extra'>
 /* <![CDATA[ */
 var mf = {"postType":"page","restURI":"http:\/\/early_warning\/wp-json\/metform\/v1\/forms\/views\/"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/metform/public/assets/js/app.js?ver=1.4.9' id='metform-app-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.flexslider-min.js?ver=2.5.0' id='themesflat-flexslider-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/html5shiv.js?ver=1.3.0' id='html5-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/respond.min.js?ver=1.3.0' id='respond-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.easing.js?ver=1.3' id='easing-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery-waypoints.js?ver=1.3' id='waypoints-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/matchMedia.js?ver=1.2' id='match-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.fitvids.js?ver=1.1' id='fitvids-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.magnific-popup.min.js?ver=1.1' id='popup-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/owl.carousel.js?ver=2.0.0' id='carousel-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/main.js?ver=2.0.4' id='themesflat-main-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/wp-embed.min.js?ver=5.7.2' id='wp-embed-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.2.5' id='elementor-webpack-runtime-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.2.5' id='elementor-frontend-modules-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.2.5' id='share-link-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/metform/public/assets/js/app.js' id='metform-app-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.flexslider-min.js' id='themesflat-flexslider-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/html5shiv.js' id='html5-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/respond.min.js' id='respond-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.easing.js' id='easing-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery-waypoints.js' id='waypoints-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/matchMedia.js' id='match-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.fitvids.js' id='fitvids-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.magnific-popup.min.js' id='popup-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/owl.carousel.js' id='carousel-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/main.js' id='themesflat-main-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/webpack.runtime.min.js' id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/frontend-modules.min.js' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/jquery/ui/core.min.js' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/swiper/swiper.min.js' id='swiper-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/share-link/share-link.min.js' id='share-link-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/dialog/dialog.min.js' id='elementor-dialog-js'></script>
 <script type='text/javascript' id='elementor-frontend-js-before'>
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1365,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1620,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"direction":"min","is_enabled":false}}},"version":"3.2.5","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":"http:\/\/early_warning\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1141,"title":"test%20%E2%80%93%20Len%20%C4%8Fal%C5%A1ia%20WordPress%20str%C3%A1nka","excerpt":"","featuredImage":false}};
 </script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/frontend.min.js?ver=3.2.5' id='elementor-frontend-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.2.5' id='preloaded-modules-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/metform/controls/assets/js/form-picker-editor.js?ver=1.4.9' id='metform-js-formpicker-control-editor-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/frontend.min.js' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/preloaded-modules.min.js' id='preloaded-modules-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/metform/controls/assets/js/form-picker-editor.js' id='metform-js-formpicker-control-editor-js'></script>
 <script type="text/javascript">
 var	tpj = jQuery;
 

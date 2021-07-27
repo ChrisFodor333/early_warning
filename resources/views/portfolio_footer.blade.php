@@ -131,7 +131,7 @@ window.RS_MODULES.type = 'compiled';
 <script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/owl.carousel.min.js?ver=5.7.2' id='owl-carousel-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/imagesloaded.pkgd.min.js?ver=5.7.2' id='imagesloaded-pkgd-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/jquery.isotope.min.js?ver=5.7.2' id='jquery-isotope-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/tf-main.js?ver=5.7.2' id='tf-main-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/js/tf-main.js' id='tf-main-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.5.2' id='tp-tools-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.5.2' id='revmin-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/metform/public/assets/js/htm.js?ver=1.4.9' id='htm-js'></script>
@@ -161,8 +161,8 @@ var mf = {"postType":"portfolios","restURI":"http:\/\/localhost\/wp-test\/wp-jso
 <script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/matchMedia.js?ver=1.2' id='match-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.fitvids.js?ver=1.1' id='fitvids-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/jquery.magnific-popup.min.js?ver=1.1' id='popup-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/owl.carousel.js?ver=2.0.0' id='carousel-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/main.js?ver=2.0.4' id='themesflat-main-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/owl.carousel.js' id='carousel-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/themes/finance/js/main.js' id='themesflat-main-js'></script>
 <script type='text/javascript' src='/early_warning/assets/inc/js/wp-embed.min.js?ver=5.7.2' id='wp-embed-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.2.5' id='font-awesome-4-shim-js'></script>
 <script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.2.5' id='elementor-webpack-runtime-js'></script>

@@ -22,18 +22,18 @@
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="test &raquo; Feed" href="/early_warning/feed/" />
 <link rel="alternate" type="application/rss+xml" title="test &raquo; Comments Feed" href="/early_warning/comments/feed/" />
-<link rel='stylesheet' id='font-awesome-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
-<link rel='stylesheet' id='regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='owl-carousel-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/owl.carousel.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='tf-style-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/tf-style.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-css'  href='/early_warning/assets/content/themes/finance/css/bootstrap.css?ver=1' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-block-library-css'  href='/early_warning/assets/inc/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='metform-ui-css'  href='/early_warning/assets/content/plugins/metform/public/assets/css/metform-ui.css?ver=1.4.9' type='text/css' media='all' />
-<link rel='stylesheet' id='metform-style-css'  href='/early_warning/assets/content/plugins/metform/public/assets/css/style.css?ver=1.4.9' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/owl.carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tf-style-css'  href='/early_warning/assets/content/plugins/themesflat-addons-elementor/assets/css/tf-style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='/early_warning/assets/content/themes/finance/css/bootstrap.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='/early_warning/assets/inc/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='metform-ui-css'  href='/early_warning/assets/content/plugins/metform/public/assets/css/metform-ui.css' type='text/css' media='all' />
+<link rel='stylesheet' id='metform-style-css'  href='/early_warning/assets/content/plugins/metform/public/assets/css/style.css' type='text/css' media='all' />
 <link rel='stylesheet' id='themesflat-theme-slug-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A400%7CPoppins%3A600%7CPoppins%3A600' type='text/css' media='all' />
-<link rel='stylesheet' id='themesflat-main-css'  href='/early_warning/assets/content/themes/finance/css/main.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='themesflat-shortcodes-elementor-css'  href='/early_warning/assets/content/themes/finance/css/shortcodes-elementor.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='themesflat-style-css'  href='/early_warning/assets/content/themes/finance/style.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='themesflat-main-css'  href='/early_warning/assets/content/themes/finance/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='themesflat-shortcodes-elementor-css'  href='/early_warning/assets/content/themes/finance/css/shortcodes-elementor.css' type='text/css' media='all' />
+<link rel='stylesheet' id='themesflat-style-css'  href='/early_warning/assets/content/themes/finance/style.css' type='text/css' media='all' />
 <style id='themesflat-style-inline-css' type='text/css'>
 .page-title { background-image: url(/early_warning/assets/content/themes/finance/images/page-title.jpg) ; }
 body,button,input,select,textarea { font-family:Poppins ; }
@@ -112,32 +112,32 @@ body { color:#666!important}
 .bottom .copyright p,.bottom #menu-bottom li a { color:#e5e5e5;}
 
 </style>
-<link rel='stylesheet' id='font-fontawesome-css'  href='/early_warning/assets/content/themes/finance/css/font-awesome.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='font-ionicons-css'  href='/early_warning/assets/content/themes/finance/css/ionicons.min.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='flexslider-css'  href='/early_warning/assets/content/themes/finance/css/flexslider.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-fontawesome-css'  href='/early_warning/assets/content/themes/finance/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-ionicons-css'  href='/early_warning/assets/content/themes/finance/css/ionicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='/early_warning/assets/content/themes/finance/css/flexslider.css' type='text/css' media='all' />
 <!--[if lte IE 9]>
 <link rel='stylesheet' id='ie9-css'  href='/early_warning/assets/content/themes/finance/css/ie.css?ver=5.7.2' type='text/css' media='all' />
 <![endif]-->
-<link rel='stylesheet' id='animate-css'  href='/early_warning/assets/content/themes/finance/css/animate.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='responsive-css'  href='/early_warning/assets/content/themes/finance/css/responsive.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.11.0' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-animations-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.2.5' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-frontend-css'  href='/early_warning/assets/content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href='/early_warning/assets/content/themes/finance/css/animate.css' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='/early_warning/assets/content/themes/finance/css/responsive.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/animations/animations.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='/early_warning/assets/content/plugins/elementor/assets/css/frontend.min.css' type='text/css' media='all' />
 <style id='elementor-frontend-inline-css' type='text/css'>
 @font-face{font-family:eicons;src:url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(/early_warning/assets/content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
 </style>
-<link rel='stylesheet' id='elementor-post-24-css'  href='/early_warning/assets/content/uploads/elementor/css/post-24.css?ver=1624468838' type='text/css' media='all' />
-<link rel='stylesheet' id='metform-css-formpicker-control-editor-css'  href='/early_warning/assets/content/plugins/metform/controls/assets/css/form-picker-editor.css?ver=1.0.0' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-post-1141-css'  href='/early_warning/assets/content/uploads/elementor/css/post-1141.css?ver=1624468839' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-5-all-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.2.5' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-4-shim-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-24-css'  href='/early_warning/assets/content/uploads/elementor/css/post-24.css' type='text/css' media='all' />
+<link rel='stylesheet' id='metform-css-formpicker-control-editor-css'  href='/early_warning/assets/content/plugins/metform/controls/assets/css/form-picker-editor.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1141-css'  href='/early_warning/assets/content/uploads/elementor/css/post-1141.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/all.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.1' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.1' type='text/css' media='all' />
-<script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
-<script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.2.5' id='font-awesome-4-shim-js'></script>
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='/early_warning/assets/content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js' id='font-awesome-4-shim-js'></script>
 <link rel="https://api.w.org/" href="/early_warning/wp-json/" /><link rel="alternate" type="application/json" href="/early_warning/wp-json/wp/v2/pages/1141" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/early_warning/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/early_warning/assets/inc/wlwmanifest.xml" />
 

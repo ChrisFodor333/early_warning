@@ -49,7 +49,7 @@ img.emoji {
 <link rel='stylesheet' id='metform-ui-css'  href='/early_warning/assets/content/plugins/metform/public/assets/css/metform-ui.css?ver=1.4.9' type='text/css' media='all' />
 <link rel='stylesheet' id='metform-style-css'  href='/early_warning/assets/content/plugins/metform/public/assets/css/style.css?ver=1.4.9' type='text/css' media='all' />
 <link rel='stylesheet' id='themesflat-theme-slug-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A400%7CPoppins%3A600%7CPoppins%3A600' type='text/css' media='all' />
-<link rel='stylesheet' id='themesflat-main-css'  href='/early_warning/assets/content/themes/finance/css/main.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='themesflat-main-css'  href='/early_warning/assets/content/themes/finance/css/main.css' type='text/css' media='all' />
 <link rel='stylesheet' id='themesflat-shortcodes-elementor-css'  href='/early_warning/assets/content/themes/finance/css/shortcodes-elementor.css?ver=5.7.2' type='text/css' media='all' />
 <link rel='stylesheet' id='themesflat-style-css'  href='/early_warning/assets/content/themes/finance/style.css?ver=5.7.2' type='text/css' media='all' />
 <style id='themesflat-style-inline-css' type='text/css'>
@@ -136,7 +136,7 @@ body { color:#666!important}
 <link rel='stylesheet' id='ie9-css'  href='/early_warning/assets/content/themes/finance/css/ie.css?ver=5.7.2' type='text/css' media='all' />
 <![endif]-->
 <link rel='stylesheet' id='animate-css'  href='/early_warning/assets/content/themes/finance/css/animate.css?ver=5.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='responsive-css'  href='/early_warning/assets/content/themes/finance/css/responsive.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='/early_warning/assets/content/themes/finance/css/responsive.css' type='text/css' media='all' />
 <script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 <script type='text/javascript' src='/early_warning/assets/inc/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <link rel="https://api.w.org/" href="/early_warning/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/early_warning/xmlrpc.php?rsd" />

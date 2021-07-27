@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-12 page-title-container">
                                     <div class="page-title-heading">
-                        <h1 class="title">Team Grid</h1>
+                        <h1 class="title">Our Partners</h1>
                     </div><!-- /.page-title-captions -->
 
 
