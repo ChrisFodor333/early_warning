@@ -19,6 +19,8 @@
 <!-- AdminLTE App -->
 <script src="/early_warning/assets/admin/dist/js/adminlte.js"></script>
 
+
+
 <!-- DataTables  & Plugins -->
 <script src="/early_warning/assets/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="/early_warning/assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>

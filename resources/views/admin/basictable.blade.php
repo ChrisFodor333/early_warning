@@ -45,7 +45,7 @@
              <!-- /.card-header -->
              <div class="card-body">
                <!-- TABLE -->
-               <table  id=usertable class="table table-striped table-hover">
+               <table  id=usertable class="table table-striped table-hover display responsive nowrap">
                                            <thead>
                                            <tr style="cursor: pointer;">
                                                <th>Number</th>
@@ -104,6 +104,8 @@
 
 
             serverSide: true,
+            responsive: true,
+            autoWidth: false,
             ajax: '{{ url('pro-admin/basictable/data') }}',
             columns: [
                 { data: 'id_basic', name: 'id_basic' },

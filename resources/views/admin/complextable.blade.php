@@ -5,12 +5,14 @@
 
 
 
+
     <style>
         .btn {
           background-color: #007bff;
           color: white;
           margin-bottom: 20px;
         }
+
 
     </style>
 
@@ -43,7 +45,7 @@
                <h3 class="card-title">Basic Model Table</h3>
              </div>
              <!-- /.card-header -->
-             <div class="card-body">
+             <div class="card-body table-responsive">
                <!-- TABLE -->
                <table  id=usertable class="table table-striped table-hover" style="font-size: 10px;">
                                            <thead>
@@ -139,6 +141,8 @@
             ],
 
             stateSave: true,
+            responsive: true,
+            autoWidth: false,
 
             language: {
                 search: "Search:",
