@@ -208,7 +208,10 @@ body { color:#666!important}
         <div class="row">
         	<div class="col-md-6">
             <div class="custom-info">
-                <ul ><li class="phone mymobile">DanubeChance 2.0 Financial Tool</li>
+                <ul >
+                  <a href="<?php echo url('/'); ?>">
+    							<li class="phone mymobile">DanubeChance 2.0 Financial Tool</li>
+    						  </a>
 									<!--
             	<li class="mail"><i class="fa fa-envelope"></i>Email: support24-7@gmail.com</li>
 						-->
@@ -233,7 +236,7 @@ body { color:#666!important}
             <div class="col-md-12">
                 <div class="header-wrap clearfix">
                     	<div id="logo" class="logo" style="margin-top: 21px; margin-bottom: 21px;" data-width="175" data-height="50">
-		<a href="<?php echo url('/'); ?>" title="Interreg">
+		<a href="http://www.interreg-danube.eu/approved-projects/danubechance2-0" title="Interreg">
 			<img class="site-logo" src="/early_warning/assets/content/themes/finance/images/logo.png" alt="test" width="175" height="50" data-retina="/early_warning/assets/content/uploads/2021/06/logo@2x.png" data-logo_site="/early_warning/assets/content/themes/finance/images/logo.png" data-logo_sticky="/early_warning/assets/content/themes/finance/images/logo.png" data-site_retina_logo_sticky="/early_warning/assets/content/themes/finance/images/logo@2x.png" data-retina_base="/early_warning/assets/content/uploads/2021/06/logo@2x.png" />
 		</a>
 	</div>
@@ -254,9 +257,9 @@ body { color:#666!important}
 </ul>
 -->
 </li>
-<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/about'); ?>">About</a>
+<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/about'); ?>">About project</a>
 </li>
-<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/news'); ?>">About project</a>
+<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/news'); ?>">About</a>
 </li>
 <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="<?php echo url('/team'); ?>">Partners</a>
 </li>

@@ -267,7 +267,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title  elementor-size-default">Parameter 1</h2>		</div>
+			<h2 class="elementor-heading-title  elementor-size-default">Scoring Parameter 1</h2>		</div>
 				</div>
       </div>
 
@@ -287,7 +287,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-9019ec0 elementor-widget elementor-widget-heading" data-id="9019ec0" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title elementor-size-default">Parameter 2</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 2</h2>		</div>
       </div>
 				</div>
 					</div>
@@ -306,7 +306,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-6f21d3b1 elementor-widget elementor-widget-heading" data-id="6f21d3b1" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
               <div class="modelname">
-			<h2 class="elementor-heading-title elementor-size-default">Parameter 3</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 3</h2>		</div>
     </div>
 				</div>
 
@@ -331,7 +331,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
     <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Parameter 4</h2>		</div>
+  <h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 4</h2>		</div>
     </div>
   </div>
 
@@ -351,7 +351,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-9019ec0 elementor-widget elementor-widget-heading" data-id="9019ec0" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
     <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Parameter 5</h2>		</div>
+  <h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 5</h2>		</div>
   </div>
     </div>
       </div>
@@ -370,7 +370,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-6f21d3b1 elementor-widget elementor-widget-heading" data-id="6f21d3b1" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
           <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Parameter 6</h2>		</div>
+  <h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 6</h2>		</div>
 </div>
     </div>
 
@@ -424,27 +424,27 @@ onclick="window.print();">
         </thead>
         <tbody>
             <tr>
-                <td>Altman's Z Score</td>
+                <td>Scoring Parameter 1</td>
                 <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $altmancolor; ?>; color:white;"><?php echo $altman; ?></span></td>
             </tr>
             <tr class="active-row">
-                <td>Index 05</td>
+                <td>Scoring Parameter 2</td>
                 <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $in05color; ?>; color:white;"><?php echo $in05; ?></span></td>
             </tr>
             <tr>
-                <td>Quick Test</td>
+                <td>Scoring Parameter 3</td>
                   <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $quicktestcolor; ?>; color:white;"><?php echo $quicktest; ?></span></td>
             </tr>
             <tr class="active-row">
-                <td>Index Bonity</td>
+                <td>Scoring Parameter 4</td>
           <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $bonitycolor; ?>; color:white;"><?php echo $bonity; ?></span></td>
             </tr>
             <tr>
-                <td>Taffler's Z score </td>
+                <td>Scoring Parameter 5</td>
               <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $tafflercolor; ?>; color:white;"><?php echo $taffler; ?></span></td>
             </tr>
             <tr class="active-row">
-                <td>Binkert's Model</td>
+                <td>Scoring Parameter 6</td>
               <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $binkertcolor; ?>; color:white;"><?php echo $binkert; ?></span></td>
             </tr>
         </tbody>
