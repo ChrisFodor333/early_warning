@@ -33,8 +33,8 @@ DanubeChance2.0 aims to facilitate improved policy learning between policymakers
 <div class="col-md-4">
 <div id="nav_menu-1" class="widget widget_nav_menu"><div class="menu-footer-container">
 <ul id="menu-footer" class="menu">
-  <li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210"><a href="<?php echo url('/about'); ?>">About Us</a></li>
-  <li id="menu-item-1211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211"><a href="<?php echo url('/news'); ?>">About project</a></li>
+  <li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210"><a href="<?php echo url('/aboutproject'); ?>">About project</a></li>
+  <li id="menu-item-1211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211"><a href="<?php echo url('/about'); ?>">About</a></li>
 <!--
 <li id="menu-item-1212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1212"><a href="#">Advertise</a></li>
 <li id="menu-item-1213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213"><a href="#">Testimonials</a></li>
@@ -48,24 +48,15 @@ DanubeChance2.0 aims to facilitate improved policy learning between policymakers
 -->
 </ul></div></div>                    </div><!-- /.col-md- -->
 
-<!--
-  <div class="col-md-4">
- <div id="text-4" class="widget widget_text">			<div class="textwidget"><div class="mf-form-shortcode">
- <div
-   id="metform-wrap-222-222"
-   class="mf-form-wrapper"
-   data-form-id="222"
-   data-action="/early_warning/wp-json/metform/v1/entries/insert/222"
-   data-wp-nonce="32d47e4fb4"
-   data-form-nonce="9d4375ef3e"
-   data-stop-vertical-effect=""
-   ></div>
+<div class="col-md-4">
+            <div id="text-4" class="widget widget_text">			<div class="textwidget"><div class="mf-form-shortcode">
+<span style="font-size: 11px; margin-left: 15px;">Programme co-funded by European Union funds (ERDF, IPA, ENI)</span> <br /> <br />
+<img src="/early_warning/assets/content/themes/finance/images/fund.png" title="logo" alt="logo" />
 
- </div>
 </div>
- </div>
 </div>
--->
+</div>
+</div>
 
 
                  </div><!-- /.footer-widgets -->

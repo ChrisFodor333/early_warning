@@ -25,7 +25,7 @@ class HomeController extends Controller
           return view('risk_management');
       }
 
-      public function about_page() {
+      public function aboutproject_page() {
           return view('risk_management');
       }
 
@@ -33,7 +33,7 @@ class HomeController extends Controller
           return view('portfolio');
       }
 
-      public function news_page() {
+      public function about_page() {
           return view('news');
       }
 

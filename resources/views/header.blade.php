@@ -257,9 +257,9 @@ body { color:#666!important}
 </ul>
 -->
 </li>
-<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/about'); ?>">About project</a>
+<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/aboutproject'); ?>">About project</a>
 </li>
-<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/news'); ?>">About</a>
+<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/about'); ?>">About</a>
 </li>
 <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="<?php echo url('/team'); ?>">Partners</a>
 </li>

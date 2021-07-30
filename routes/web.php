@@ -67,11 +67,11 @@ Route::post('/complexmodel', 'App\\Http\\Controllers\ModelControllerComplex@calc
 Route::get('/services', 'App\\Http\\Controllers\HomeController@services_page')->name('services');
 
 Route::get('/riskmanagement', 'App\\Http\\Controllers\HomeController@risk_page')->name('risk');
-Route::get('/about', 'App\\Http\\Controllers\HomeController@about_page')->name('about');
+Route::get('/aboutproject', 'App\\Http\\Controllers\HomeController@aboutproject_page')->name('aboutproject');
 
 Route::get('/portfolio', 'App\\Http\\Controllers\HomeController@portfolio_page')->name('portfolio');
 
-Route::get('/news', 'App\\Http\\Controllers\HomeController@news_page')->name('news');
+Route::get('/about', 'App\\Http\\Controllers\HomeController@about_page')->name('about');
 
 Route::get('/contact', 'App\\Http\\Controllers\HomeController@contact_page')->name('contact');
 

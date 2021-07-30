@@ -230,10 +230,10 @@
 					</div>
 					<div id="elementor-tab-content-1951" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1951">
             <p>
-            Overall: 1822550 <br />
-            ERDF Contribution: 1241425 <br />
-            IPA Contribution: 176587,5 <br />
-            ENI Contribution: 131155
+            Overall: 1 822 550 €<br />
+            ERDF Contribution: 1 241 425 €<br />
+            IPA Contribution: 176 587,50 €<br />
+            ENI Contribution: 131 155 €
           </p></div>
 				</div>
 							<div class="elementor-accordion-item">
