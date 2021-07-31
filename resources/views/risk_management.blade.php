@@ -1,7 +1,11 @@
 @include('header')
 
 <!-- Page Title -->
-
+<style>
+a:hover {
+  color:white;
+}
+</style>
 <!-- Page title -->
 <div class="page-title pagetitle_style_2">
     <div class="overlay"></div>
@@ -37,7 +41,7 @@
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">About</span>
+									<a href="<?php echo url('/team'); ?>"><span class="elementor-icon-list-text">Partners</span></a>
 									</li>
 						</ul>
 				</div>
@@ -46,56 +50,24 @@
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Accumulation</span>
+										<a href="http://www.interreg-danube.eu/approved-projects/danubechance2-0"><span class="elementor-icon-list-text">More Info About Project</span></a>
 									</li>
 						</ul>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-3751b0b6 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3751b0b6" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-					<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Taxation</span>
-									</li>
-						</ul>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-12a79fc6 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="12a79fc6" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-					<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Business Planning</span>
-									</li>
-						</ul>
-				</div>
-				</div>
+
+
 				<div class="elementor-element elementor-element-6f921ba6 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6f921ba6" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Estate Planning</span>
+										<a href="<?php echo url('/about'); ?>"><span class="elementor-icon-list-text">About Financial Model</span></a>
 									</li>
 						</ul>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-66fcea67 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="66fcea67" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-					<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Home Transparent Header</span>
-									</li>
-						</ul>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-6883a9c8 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6883a9c8" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-					<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text">Home One Page</span>
-									</li>
-						</ul>
-				</div>
-				</div>
+
+
 <!--
         <section class="elementor-section elementor-inner-section elementor-element elementor-element-4c7a9dbd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4c7a9dbd" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
@@ -151,12 +123,14 @@
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-5476ad2b elementor-widget elementor-widget-heading" data-id="5476ad2b" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">DANUBECHANCE2.0</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">DANUBECHANCE 2.0</h2>
+      <h6>Embracing failure to facilitate second-chance entrepreneurship in the Danube region</h6>
+    		</div>
 				</div>
 				<div class="elementor-element elementor-element-666860f1 elementor-widget elementor-widget-heading" data-id="666860f1" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">
-   DanubeChance2.0 will deliver innovative policy designs, give formerly bankrupt entrepreneurs a second chance in the Danube region.
+   The DanubeChance2.0 project aims to enable the creation of business environment that helps entrepreneurs save viable business and create more companies in the Danube region.
 
 
 </h2>		</div>
@@ -168,7 +142,9 @@
 				</div>
 				<div class="elementor-element elementor-element-1349bd36 elementor-widget elementor-widget-heading" data-id="1349bd36" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">DanubeChance2.0 aims to facilitate improved policy learning between policymakers and government agencies; research institutes and universities; financially distressed enterprises currently involved in insolvency procedures, or entrepreneurs who have already gone bankrupt but ready for a fresh re-start; business accelerators; and the public.
+			<h2 class="elementor-heading-title elementor-size-default">
+        The project aims to facilitate improved policy learning between policymakers and government agencies, research institutes and universities, financial distressed enterprises
+        currently involved in insolvency procedures, or entrepreneurs who have already gone bankrupt, but ready to for a fresh re-start, business accelerators and the public.
 </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-17c96498 elementor-widget elementor-widget-heading" data-id="17c96498" data-element_type="widget" data-widget_type="heading.default">
@@ -179,7 +155,7 @@
 				<div class="elementor-element elementor-element-10f0f30d elementor-widget elementor-widget-heading" data-id="10f0f30d" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">
-        The project will provide a path for more legitimate entrepreneurs whose first businesses have failed to re-enter the market through delivering 130 hours of "blended" learning experiences at the ”’Trial and Error‘ Re-Design Transnational Academy”, and the launch of the first "Business Re-Structuring Initiative", which will provide business acceleration support for approximately 60 legitimate entrepreneurs whose first projects failed.
+        The project provides a path for more legitimate entrepreneurs whose first businesses have failed to re-enter the market through delivering 130 hours of "blended" learning experiences at the ”’Trial and Error‘ Re-Design Transnational Academy”, and the launch of the two "Business Re-Structuring Initiatives", which provide business acceleration support for approximately 60 legitimate entrepreneurs whose first projects failed.
       </h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-337940ff elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="337940ff" data-element_type="widget" data-widget_type="icon-list.default">

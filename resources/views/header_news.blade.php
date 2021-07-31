@@ -235,11 +235,11 @@ body { color:#666!important}
         <div class="row">
             <div class="col-md-12">
                 <div class="header-wrap clearfix">
-                    	<div id="logo" class="logo" style="margin-top: 21px; margin-bottom: 21px;" data-width="175" data-height="50">
-		<a href="http://www.interreg-danube.eu/approved-projects/danubechance2-0" title="Interreg">
-			<img class="site-logo" src="/early_warning/assets/content/themes/finance/images/logo.png" alt="test" width="175" height="50" data-retina="/early_warning/assets/content/uploads/2021/06/logo@2x.png" data-logo_site="/early_warning/assets/content/themes/finance/images/logo.png" data-logo_sticky="/early_warning/assets/content/themes/finance/images/logo.png" data-site_retina_logo_sticky="/early_warning/assets/content/themes/finance/images/logo@2x.png" data-retina_base="/early_warning/assets/content/uploads/2021/06/logo@2x.png" />
-		</a>
-	</div>
+									<div id="logo" class="logo" style="margin-top: 21px; margin-bottom: 21px;" data-width="263" data-height="75">
+<a href="http://www.interreg-danube.eu/approved-projects/danubechance2-0" title="Interreg">
+	<img class="site-logo" src="/early_warning/assets/content/themes/finance/images/logo.png" alt="test" width="263" height="75" data-retina="/early_warning/assets/content/uploads/2021/06/logo@2x.png" data-logo_site="/early_warning/assets/content/themes/finance/images/logo.png" data-logo_sticky="/early_warning/assets/content/themes/finance/images/logo.png" data-site_retina_logo_sticky="/early_warning/assets/content/themes/finance/images/logo@2x.png" data-retina_base="/early_warning/assets/content/uploads/2021/06/logo@2x.png" />
+</a>
+</div>
 <!--
                       <div class="show-search">
                         <a href="#"><i class="fa fa-search"></i></a>

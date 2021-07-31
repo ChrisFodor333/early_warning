@@ -1,7 +1,11 @@
 <!-- Footer -->
 <footer class="footer ">
 <div class="container">
-
+  <style>
+  div {
+     text-align: justify;
+  }
+  </style>
 <!--
     <div class="row">
         <div class="col-md-12">
@@ -23,10 +27,11 @@ Victoria 8007 Australia</div>
           <div class="col-md-4">
             <div id="text-3" class="widget widget_text">			<div class="textwidget"><div class="textwidget">
 <p class="desc">
-DanubeChance2.0 will deliver innovative policy designs, give formerly bankrupt entrepreneurs a second chance in the Danube region.
+  The DanubeChance2.0 project aims to enable the creation of business environment that helps entrepreneurs save viable business and create more companies in the Danube region.
 </p>
 <p class="desc">
-DanubeChance2.0 aims to facilitate improved policy learning between policymakers and government agencies; research institutes and universities; financially distressed enterprises currently involved in insolvency procedures, or entrepreneurs who have already gone bankrupt but ready for a fresh re-start; business accelerators; and the public.
+  The DanubeChance2.0 project aims to facilitate improved policy learning between policymakers and government agencies, research institutes and universities, financial distressed enterprises
+  currently involved in insolvency procedures, or entrepreneurs who have already gone bankrupt, but ready to for a fresh re-start, business accelerators and the public.
 </p>
 </div>
 </div>

@@ -119,8 +119,8 @@ businesses to find <br> comprehensive solutions
 								data-frame_1_mask="u:t;"
 								data-frame_999="o:0;e:nothing;st:w;sR:7600;"
 								style="z-index:5;font-family:Poppins;"
-							>Danube Chance 2.0 <br>
-Financial Tool
+							>Early Identification of <br>
+Financial Difficulties
 							</rs-layer><!--
 
 							--><rs-layer
@@ -190,7 +190,7 @@ businesses to find <br> comprehensive solutions
 								data-type="text"
 								data-color="rgba(255, 255, 255, 1)"
 								data-rsp_ch="on"
-								data-xy="x:153px;y:196px;"
+								data-xy="x:300px;y:196px;"
 								data-text="s:58;l:60;fw:600;"
 								data-frame_0="y:-100%;o:1;"
 								data-frame_0_mask="u:t;"
@@ -198,7 +198,7 @@ businesses to find <br> comprehensive solutions
 								data-frame_1_mask="u:t;"
 								data-frame_999="o:0;e:nothing;st:w;sR:7600;"
 								style="z-index:5;font-family:Poppins;"
-							>Danube Chance 2.0 Financial Tool
+							>Guidance for Companies
 
 							</rs-layer><!--
 
@@ -317,9 +317,9 @@ businesses to find <br> comprehensive solutions
 			</div>
 						<div class="elementor-icon-box-content">
 				<h4 class="elementor-icon-box-title">
-					<span >Accumulation</span>
+					<span >Project Objectives</span>
 				</h4>
-								<p class="elementor-icon-box-description">Donec lacinia mi rutrum sagittis consequat. Donec sagittis, tellus sodales sollicitudin commodo</p>
+								<p class="elementor-icon-box-description">Deliver innovative policy designs, give formerly bankrupt entrepreneurs a second chance in the Danube region.<br /> <br /></p>
 							</div>
 		</div>
 				</div>
@@ -337,9 +337,9 @@ businesses to find <br> comprehensive solutions
 			</div>
 						<div class="elementor-icon-box-content">
 				<h4 class="elementor-icon-box-title">
-					<span >Mutual Funds</span>
+					<span>Specific Objective</span>
 				</h4>
-								<p class="elementor-icon-box-description">Donec lacinia mi rutrum sagittis consequat. Donec sagittis, tellus sodales sollicitudin commodo</p>
+								<p class="elementor-icon-box-description">Increase competences for business and social innovation <br /> <br /> <br /></p>
 							</div>
 		</div>
 				</div>
@@ -357,9 +357,9 @@ businesses to find <br> comprehensive solutions
 			</div>
 						<div class="elementor-icon-box-content">
 				<h4 class="elementor-icon-box-title">
-					<span >Risk Management</span>
+					<span>Project Duration</span>
 				</h4>
-								<p class="elementor-icon-box-description">Donec lacinia mi rutrum sagittis consequat. Donec sagittis, tellus sodales sollicitudin commodo</p>
+								<p class="elementor-icon-box-description">July 2018 - December 2021 <br /> <br /> <br /> <br /></p>
 							</div>
 		</div>
 				</div>
@@ -381,9 +381,9 @@ businesses to find <br> comprehensive solutions
 			</div>
 						<div class="elementor-icon-box-content">
 				<h4 class="elementor-icon-box-title">
-					<span >Estate Planning</span>
+					<span>Project Aim</span>
 				</h4>
-								<p class="elementor-icon-box-description">Donec lacinia mi rutrum sagittis consequat. Donec sagittis, tellus sodales sollicitudin commodo</p>
+								<p class="elementor-icon-box-description">To enable the creation of business environment that helps entrepreneurs save viable business and create more companies in the Danube region</p>
 							</div>
 		</div>
 				</div>
@@ -401,9 +401,9 @@ businesses to find <br> comprehensive solutions
 			</div>
 						<div class="elementor-icon-box-content">
 				<h3 class="elementor-icon-box-title">
-					<span >Retirement Planning</span>
+					<span>Priority</span>
 				</h3>
-								<p class="elementor-icon-box-description">Donec lacinia mi rutrum sagittis consequat. Donec sagittis, tellus sodales sollicitudin commodo</p>
+								<p class="elementor-icon-box-description">Innovative and socially responsible Danube region <br /> <br /> <br /></p>
 							</div>
 		</div>
 				</div>
@@ -421,9 +421,9 @@ businesses to find <br> comprehensive solutions
 			</div>
 						<div class="elementor-icon-box-content">
 				<h4 class="elementor-icon-box-title">
-					<span >Business Planning</span>
+					<span>Project Consortium</span>
 				</h4>
-								<p class="elementor-icon-box-description">Donec lacinia mi rutrum sagittis consequat. Donec sagittis, tellus sodales sollicitudin commodo</p>
+								<p class="elementor-icon-box-description">12 partners from 11 countries <br /> <br /> <br /></p>
 							</div>
 		</div>
 				</div>
