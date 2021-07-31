@@ -400,7 +400,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
     $red++;
   }
 
-  if($binkert < 4.35 && $binkert > -4.35)
+  if($binkert < 4.35 && $binkert > -4.35) {
     $binkertcolor = "orange";
     $orange++;
   }

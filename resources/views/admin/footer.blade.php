@@ -34,6 +34,9 @@
 <script src="/early_warning/assets/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="/early_warning/assets/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="/early_warning/assets/admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdn.datatables.net/datetime/1.1.0/js/dataTables.dateTime.min.js"></script>
 <!-- AdminLTE App -->
 
 <!-- PAGE PLUGINS -->

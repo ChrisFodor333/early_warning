@@ -2,7 +2,7 @@
          <div class="container">
 
            <style>
-           div {
+           .desc {
               text-align: justify;
            }
            </style>

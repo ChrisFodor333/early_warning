@@ -45,10 +45,20 @@
              <!-- /.card-header -->
              <div class="card-body">
                <!-- TABLE -->
+               <table border="0" cellspacing="5" cellpadding="5">
+        <tbody><tr>
+            <td>Minimum date:</td>
+            <td><input type="date" id="datepicker_from" name="datepicker_from"></td>
+        </tr>
+        <tr>
+            <td>Maximum date:</td>
+            <td><input type="date" id="datepicker_to" name="datepicker_to"></td>
+        </tr>
+    </tbody></table>
                <table  id=usertable class="table table-striped table-hover display responsive nowrap">
                                            <thead>
                                            <tr style="cursor: pointer;">
-                                               <th>Number</th>
+                                               <th>DateTime</th>
                                                <th>Company Name</th>
                                                <th>Current Year</th>
                                                <th>Altman</th>
@@ -58,6 +68,8 @@
                                                <th>Taffler's Z Score</th>
                                                <th>Binkert's Model</th>
                                                <th>Result</th>
+                                               <th>Overview</th>
+                                               <th>Delete</th>
                                            </tr>
                                            </thead>
                                            <tbody>
@@ -87,6 +99,8 @@
         $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn';
         $('#usertable').DataTable({
 
+
+
             dom: 'Blfrtip',
             lengthMenu: [[10, 25, 50,100,200,300,400], [10, 25, 50,100,200,300,400]],
             buttons: [
@@ -108,7 +122,7 @@
             autoWidth: false,
             ajax: '{{ url('pro-admin/basictable/data') }}',
             columns: [
-                { data: 'id_basic', name: 'id_basic' },
+                { data: 'date', name: 'date' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'current_year', name: '	current_year' },
                 { data: 'altman', name: 'altman' },
@@ -118,6 +132,8 @@
                 { data: 'taffler', name: 'taffler' },
                 { data: 'binkert', name: 'binkert' },
                 { data: 'result', name: 'result' },
+                { data: 'overview', name: 'overview' },
+                { data: 'delete', name: 'delete' },
             ],
 
             stateSave: true,
@@ -138,7 +154,11 @@
         });
 
     });
-
 </script>
+
+
+
+
+
 </body>
 </html>

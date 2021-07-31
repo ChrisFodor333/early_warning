@@ -40,7 +40,7 @@ class AdminController extends Controller
               $data['total'] = $total1 + $total2;
               $data['nodistress'] = $basic_nodistress + $complex_nodistress;
               $data['distress'] = $basic_distress + $complex_distress;
-              return view('admin/adminpage',$data);
+              return view('admiN/Adminpage',$data);
             } else {
               return view('admin/login');
             }
@@ -87,6 +87,38 @@ class AdminController extends Controller
         }
     }
 
+
+    public function deletebasic($id) {
+
+        if(session()->has('admin')) {
+            if ($id == null) {
+                return abort(404);
+            }
+            $user = Basic::find($id);
+
+            $user->delete();
+            return redirect('/pro-admin/basictable');
+        } else {
+            return view('admin/login');
+        }
+    }
+
+    public function deletecomplex($id) {
+
+        if(session()->has('admin')) {
+            if ($id == null) {
+                return abort(404);
+            }
+            $user = Complex::find($id);
+
+            $user->delete();
+            return redirect('/pro-admin/complextable');
+        } else {
+            return view('admin/login');
+        }
+    }
+
+
       public function showaddAdmin() {
         if(session()->has('admin')) {
             return view('admin/register_admin');
@@ -94,6 +126,8 @@ class AdminController extends Controller
             return view('admin/login');
         }
       }
+
+
 
 
       public function usertable()
@@ -123,8 +157,15 @@ class AdminController extends Controller
               $basic = Basic::select('*');
               return Datatables::of($basic)
               ->addColumn('date', function ($row) {
-                  return $row->created_at;
+                  return substr($row->created_at->format('d/m/Y'),0,10);
               })
+              ->addColumn('overview', function($row) {
+                  return '<a  href="'. url('/pro-admin/'). '/overviewbasic/'. $row->id_basic .'" class="mybutton">Overview</a>';
+              })
+              ->addColumn('delete', function ($row) {
+                  return '<a href="'. url('/pro-admin/'). '/deletebasic/'. $row->id_basic .'" class="mybutton">Delete</a>';
+              })
+              ->rawColumns(['delete' => 'delete','overview' => 'overview'])
               ->make(true);
           }
 
@@ -133,18 +174,287 @@ class AdminController extends Controller
                 $complex = Complex::select('*');
                 return Datatables::of($complex)
                 ->addColumn('date', function ($row) {
-                    return $row->created_at;
+                      return substr($row->created_at->format('d/m/Y'),0,10);
                 })
+                ->addColumn('overview', function($row) {
+                    return '<a  href="'. url('/pro-admin/'). '/overviewcomplex/'. $row->id_complex .'" class="mybutton">Overview</a>';
+                })
+                ->addColumn('delete', function ($row) {
+                    return '<a href="'. url('/pro-admin/'). '/deletecomplex/'. $row->id_complex .'" class="mybutton">Delete</a>';
+                })
+                ->rawColumns(['delete' => 'delete','overview' => 'overview'])
                 ->make(true);
             }
 
 
         public function user_index() {
             if(session()->has('admin')) {
-                return view('admin/admin_userstable');
+                return view('admiN/Admin_userstable');
             } else {
                 return view('admin/login');
             }
+        }
+
+
+        public function overviewbasic($id) {
+          if(session()->has('admin')) {
+              if ($id == null) {
+                  return abort(404);
+              }
+
+             $basic = Basic::find($id);
+             $altman = $basic->altman;
+             $in05 =   $basic->in05;
+             $quicktest = $basic->quicktest;
+             $bonity = $basic->bonity;
+             $taffler = $basic->taffler;
+             $binkert = $basic->binkert;
+             $result = $basic->result;
+
+             $nacount = 0;
+
+             $data['altman'] = $altman;
+             $data['in05'] = $in05;
+             $data['quicktest'] = $quicktest;
+             $data['bonity'] = $bonity;
+             $data['taffler'] = $taffler;
+             $data['binkert'] = $binkert;
+             $data['result'] = $result;
+
+             $altmancolor = "";
+             $in05color = "";
+             $tafflercolor = "";
+             $quicktestcolor = "";
+             $bonitycolor = "";
+             $binkertcolor = "";
+
+
+             $red = 0; $orange = 0; $green = 0;
+
+             if($altman < 1.2) {
+                 $altmancolor = "red";
+                 $red++;
+               }
+             if($altman > 2.9) {
+                 $altmancolor = "#00c373";
+                 $green++;
+               }
+             if($altman >= 1.2 && $altman <= 2.9) {
+                 $altmancolor = "orange";
+                 $orange++;
+               }
+             if($altman == "N/A")
+                 $altmancolor = "orange";
+
+             if($in05 < 0.9) {
+                     $in05color = "red";
+                     $red++;
+                   }
+             if($in05 > 1.6) {
+                     $in05color = "#00c373";
+                     $green++;
+                   }
+             if($in05 >= 0.9 && $in05 <= 1.6) {
+                     $in05color = "orange";
+                     $orange++;
+                   }
+             if($in05 == "N/A")
+               $in05color = "orange";
+
+
+             if($taffler < 0.2) {
+                 $tafflercolor = "red";
+                 $red++;
+               }
+             if($taffler > 0.3) {
+                 $tafflercolor = "#00c373";
+                 $green++;
+               }
+             if($taffler >= 0.2 && $taffler <= 0.3) {
+                 $tafflercolor = "orange";
+                 $orange++;
+               }
+
+             if($taffler == "N/A")
+                 $tafflercolor = "orange";
+
+
+             if($quicktest < 9.0) {
+                 $quicktestcolor = "#00c373";
+                 $green++;
+               }
+             if($quicktest > 15.0) {
+                 $quicktestcolor = "red";
+                 $red++;
+               }
+             if($quicktest >= 9.0 && $quicktest <= 15.0) {
+                 $quicktestcolor = "orange";
+                 $orange++;
+               }
+
+             if($quicktest == "N/A")
+                 $quicktestcolor = "orange";
+
+
+             if($bonity < -1.0) {
+                 $bonitycolor = "red";
+                 $red++;
+               }
+             if($bonity > 1.0) {
+                 $bonitycolor = "#00c373";
+                 $green++;
+               }
+             if($bonity >= -1.0 && $bonity <= 1.0) {
+                 $bonitycolor = "orange";
+                 $orange++;
+               }
+
+             if($bonity == "N/A")
+               $bonitycolor = "orange";
+
+               if($binkert > 4.35) {
+                 $binkertcolor = "#00c373";
+                 $green++;
+               }
+
+               if($binkert < -4.35) {
+                 $binkertcolor = "red";
+                 $red++;
+               }
+
+               if($binkert < 4.35 && $binkert > -4.35) {
+                 $binkertcolor = "orange";
+                 $orange++;
+               }
+
+               if($binkert == "N/A")
+                   $binkertcolor = "orange";
+
+
+               $data['altmancolor'] = $altmancolor;
+               $data['in05color'] = $in05color;
+               $data['tafflercolor'] = $tafflercolor;
+               $data['quicktestcolor'] = $quicktestcolor;
+               $data['bonitycolor'] = $bonitycolor;
+               $data['binkertcolor'] = $binkertcolor;
+
+
+               $greenwarning = "none";
+               $orangewarning = "none";
+               $redwarning = "none";
+               $distress = "";
+
+               $result = "";
+
+                 if($red != 0 && $red <= 2) {
+                   $orangewarning = "block";
+                   $redwarning = "none";
+                   $result = "First Degree Financial Distress";
+                 }
+                 if($red > 2 && $red <= 4) {
+                   $distress = "second";
+                   $redwarning = "block";
+                   $orangewarning = "none";
+                   $result = "Second Degree Financial Distress";
+                 }
+                 if($red > 4) {
+                   $distress = "third";
+                   $redwarning = "block";
+                   $orangewarning = "none";
+                   $result = "Third Degree Financial Distress";
+                 }
+
+
+               if($red == 0 && $green > 0) {
+                   $greenwarning = "block";
+                   $orangewarning = "none";
+                   $redwarning = "none";
+                   $result = "No Financial Distress";
+               }
+
+               if($nacount == 6) {
+                 $greenwarning = "none";
+                 $orangewarning = "none";
+                 $redwarning = "none";
+                 $result = "Invalid Data";
+               }
+
+
+               $nadisplay = "none";
+               if($nacount > 0) {
+                 $nadisplay = "block";
+               } else {
+                 $nadisplay = "none";
+               }
+
+               if($altmancolor == "#00c373")
+                 $altmancolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                 $altmancolor2 = "/early_warning/assets/content/uploads/2020/11/".$altmancolor.".jpg";
+
+               if($in05color == "#00c373")
+                   $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/".$in05color.".jpg";
+
+
+
+               if($tafflercolor == "#00c373")
+                   $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/".$tafflercolor.".jpg";
+
+               if($bonitycolor == "#00c373")
+                   $bonitycolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $bonitycolor2 = "/early_warning/assets/content/uploads/2020/11/".$bonitycolor.".jpg";
+
+               if($quicktestcolor == "#00c373")
+                   $quicktestcolor2= "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $quicktestcolor2 = "/early_warning/assets/content/uploads/2020/11/".$quicktestcolor.".jpg";
+
+               if($binkertcolor == "#00c373")
+                   $binkertcolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $binkertcolor2 = "/early_warning/assets/content/uploads/2020/11/".$binkertcolor.".jpg";
+
+
+
+               $data['altmancolor2'] = $altmancolor2;
+               $data['indexcolor2'] = $indexcolor2;
+               $data['tafflercolor2'] = $tafflercolor2;
+               $data['bonitycolor2'] = $bonitycolor2;
+               $data['quicktestcolor2'] = $quicktestcolor2;
+               $data['binkertcolor2'] = $binkertcolor2;
+
+               $data['greenwarning'] = $greenwarning;
+               $data['orangewarning'] = $orangewarning;
+               $data['redwarning'] = $redwarning;
+               $data['distress'] = $distress;
+               $data['nadisplay'] = $nadisplay;
+
+
+               return view('admin/overview',$data);
+
+
+          } //session
+           else {
+              return view('admin/login');
+          }
+        }
+
+        public function overviewcomplex($id) {
+          if(session()->has('admin')) {
+              if ($id == null) {
+                  return abort(404);
+              }
+              $complex = Complex::find($id);
+
+              return redirect('/pro-admin/overview');
+          } else {
+              return view('admin/login');
+          }
         }
 
 
@@ -164,14 +474,14 @@ class AdminController extends Controller
 
 
     if ($validator->fails()) {
-        return Redirect::to('/pro-admin/addadmin')
+        return Redirect::to('/pro-admiN/Addadmin')
             ->withErrors($validator) // send back all errors to the login form
             ->withInput(Requests::except('password')); // send back the input (not the password) so that we can repopulate the form
     } else {
         $email = Requests::get('email');
 
         if($this->check_email($email)) {
-            return Redirect::to('/pro-admin/addadmin')
+            return Redirect::to('/pro-admiN/Addadmin')
                 ->withErrors(['email' => 'Email Address Already Exists in the Database'])
                 ->withInput(Requests::except('password')); // send back the input (not the password) so that we can repopulate the form
         }
@@ -294,7 +604,7 @@ class AdminController extends Controller
             }
             }
 
-          return view('admin/adminpage');
+          return view('admiN/Adminpage');
       }
 
 

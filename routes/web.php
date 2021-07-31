@@ -42,6 +42,24 @@ Route::get('/pro-admin/delete/{id}', [
     'as' => 'delete', 'uses' => 'App\\Http\\Controllers\AdminController@delete'
 ]);
 
+Route::get('/pro-admin/deletebasic/{id}', [
+    'as' => 'deletebasic', 'uses' => 'App\\Http\\Controllers\AdminController@deletebasic'
+]);
+
+Route::get('/pro-admin/deletecomplex/{id}', [
+    'as' => 'deletecomplex', 'uses' => 'App\\Http\\Controllers\AdminController@deletecomplex'
+]);
+
+Route::get('/pro-admin/overviewcomplex/{id}', [
+    'as' => 'overviewbcomplex', 'uses' => 'App\\Http\\Controllers\AdminController@overviewcomplex'
+]);
+
+Route::get('/pro-admin/overviewbasic/{id}', [
+    'as' => 'overviewbasic', 'uses' => 'App\\Http\\Controllers\AdminController@overviewbasic'
+]);
+
+
+
 Route::get('/pro-admin/edit/{id}','App\\Http\\Controllers\AdminController@edit');
 Route::post('/pro-admin/edited/',[  'as' => 'updates',
         'uses' =>'App\\Http\\Controllers\AdminController@edit_validator']);

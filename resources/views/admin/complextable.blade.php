@@ -50,7 +50,7 @@
                <table  id=usertable class="table table-striped table-hover" style="font-size: 10px;">
                                            <thead>
                                             <tr style="cursor: pointer;">
-                                               <th>Number</th>
+                                               <th>DateTime</th>
                                                <th>Company Name</th>
                                                <th>Current Year</th>
                                                <th>Altman (Year 1)</th>
@@ -72,6 +72,8 @@
                                                <th>Result (Year 1)</th>
                                                <th>Result (Year 2)</th>
                                                <th>Result (Year 3)</th>
+                                               <th>Overiew</th>
+                                               <th>Delete</th>
                                            </tr>
                                            </thead>
                                            <tbody>
@@ -116,7 +118,7 @@
             serverSide: true,
             ajax: '{{ url('pro-admin/complextable/data') }}',
             columns: [
-                { data: 'id_complex', name: 'id_complex' },
+                { data: 'date', name: 'date' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'current_year', name: '	current_year' },
                 { data: 'altman1', name: 'altman1' },
@@ -138,6 +140,8 @@
                 { data: 'result1', name: 'result1' },
                 { data: 'result2', name: 'result2' },
                 { data: 'result3', name: 'result3' },
+                { data: 'overview', name: 'overview' },
+                { data: 'delete', name: 'delete' },
             ],
 
             stateSave: true,
