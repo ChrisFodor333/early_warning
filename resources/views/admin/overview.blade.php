@@ -63,15 +63,46 @@
         }
 
         .container {
+          display: block;
+          text-align: center;
+          color: white;
+
+        }
+
+        .noprint  {
           display: none;
         }
 
 
+        .elementor-size-default {
+          margin-left: -60px;
+        }
+
+        .centered {
+          color: black;
+          --webkit-print-color-adjust: exact;
+        }
+
+        html {
+          background-color: white;
+        }
+
+        #content {
+          background-color: white;
+
+        }
+
+
+        h2 {
+          color: black;
+        }
 
     </style>
 
 
 <style>
+
+
 
 #printOnly {
     display: none;
@@ -183,8 +214,9 @@
   background-color: transparent;
   border: 1px solid transparent;
   margin-right: 10px;
-  margin-left: 85px;
+  margin-left: 75px;
   margin-bottom: 1px;
+  color: white;
   float:left;
 }
 
@@ -260,7 +292,7 @@ onclick="window.print();">
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-56c7fb24 elementor-widget elementor-widget-heading" data-id="56c7fb24" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">The Results of the Model</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default noprint">The Results of the Model</h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-78a60114 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="78a60114" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
@@ -272,7 +304,7 @@ onclick="window.print();">
 				</div>
 				<div class="elementor-element elementor-element-7b14ce94 elementor-widget elementor-widget-heading" data-id="7b14ce94" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Here you can find the results of the model based on the values from the input form.</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default noprint">Here you can find the results of the model based on the values from the input form.</h2>		</div>
 				</div>
 
 					</div>
@@ -297,7 +329,8 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title  elementor-size-default">Scoring Parameter 1</h2>		</div>
+			<h2 class="elementor-heading-title  elementor-size-default">Scoring Parameter 1</h2>
+    </div>
 				</div>
       </div>
 

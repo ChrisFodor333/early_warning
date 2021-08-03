@@ -1,5 +1,7 @@
 <!-- Main Footer -->
-<footer class="main-footer">
+<footer class="main-footer" style="position: fixed;
+    bottom: 0;
+    width: 100%;">
   <strong>Copyright &copy; 2021 Danube Chance 2.0 Financial Tool.</strong>
   All rights reserved.
   <div class="float-right d-none d-sm-inline-block">
