@@ -65,7 +65,7 @@
             name="_token"
             value="{{ csrf_token() }}"
             /></td>
-            <td><input type="submit" id="submit" name="submit" value="Filter" class="btn" style="float:right;"></td>
+            <td><input type="submit" id="submit" name="submit" value="Filtrovať" class="btn" style="float:right;"></td>
         </tr>
     </tbody></table>
   </form>
@@ -128,7 +128,7 @@
             serverSide: true,
 
             ajax: {
-               url: "{{ url('pro-admin/complextable/data') }}",
+               url: "{{ url('pro-admin/filteredcomplextable/data') }}",
                method: 'get',
            },
 

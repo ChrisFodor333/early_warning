@@ -67,7 +67,7 @@
     font-family: sans-serif;
     min-width: 400px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -265,7 +265,9 @@ input[type=image] {
         </tr>
         <tr class="active-row">
             <td>Scoring Parameter 6</td>
-          <td colspan="3" style="color:white;"><span id="rcorners1" style="background-color: <?php echo $binkertcolor; ?>; color:white;"><?php echo $binkert; ?></span></td>
+                <td style="color:white;"></td>
+          <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $binkertcolor; ?>; color:white;"><?php echo $binkert; ?></span></td>
+          <td style="color:white;"></td>
         </tr>
     </tbody>
 </table>

@@ -78,6 +78,11 @@ Route::post('/pro-admin/filteredbasictable', 'App\\Http\\Controllers\FilterContr
 Route::get('/pro-admin/filteredbasictable/data/', [
     'as' => 'basicajax', 'uses' => 'App\\Http\\Controllers\FilterController@basicajax'
 ]);
+
+Route::post('/pro-admin/filteredcomplextable', 'App\\Http\\Controllers\FilterController@filtercomplex')->name('filtercomplex');
+Route::get('/pro-admin/filteredcomplextable/data/', [
+    'as' => 'complexajax', 'uses' => 'App\\Http\\Controllers\FilterController@complexajax'
+]);
 // END OF ADMIN STUFF
 
 Route::get('/model', 'App\\Http\\Controllers\HomeController@model_page')->name('model_page');
