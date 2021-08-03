@@ -109,7 +109,7 @@
 
 	<aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">FINANCIAL TOOLS</h3>
 			<ul>
-					<li class="cat-item cat-item-4"><a href="<?php echo url('/model'); ?>">Basic model</a></li>
+					<li class="cat-item cat-item-4"><a href="<?php echo url('/model'); ?>">Basic Model</a></li>
 	<li class="cat-item cat-item-5"><a href="<?php echo url('/complexmodel'); ?>">Complex Model</a></li>
 			</ul>
 			</aside>

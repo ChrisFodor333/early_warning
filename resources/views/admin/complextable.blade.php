@@ -54,24 +54,12 @@
                                                <th>Company Name</th>
                                                <th>Current Year</th>
                                                <th>Altman (Year 1)</th>
-                                               <th>Altman (Year 2)</th>
-                                               <th>Altman (Year 3)</th>
                                                <th>Index 05 (Year 1)</th>
-                                               <th>Index 05 (Year 2)</th>
-                                               <th>Index 05 (Year 3)</th>
                                                <th>Quick Test (Year 1)</th>
-                                               <th>Quick Test (Year 2)</th>
-                                               <th>Quick Test (Year 3)</th>
                                                <th>Index Bonity (Year 1)</th>
-                                               <th>Index Bonity (Year 2)</th>
-                                               <th>Index Bonity (Year 3)</th>
                                                <th>Taffler's Z Score (Year 1)</th>
-                                               <th>Taffler's Z Score (Year 2)</th>
-                                               <th>Taffler's Z Score (Year 3)</th>
                                                <th>Binkert's Model</th>
                                                <th>Result (Year 1)</th>
-                                               <th>Result (Year 2)</th>
-                                               <th>Result (Year 3)</th>
                                                <th>Overiew</th>
                                                <th>Delete</th>
                                            </tr>
@@ -108,7 +96,7 @@
             buttons: [
                 { extend: 'excel', text: 'Export to Excel',
                     exportOptions: {
-                        columns: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+                        columns: [0,1,2,3,4,5,6,7,8,9]
                     }
                 }
 
@@ -116,30 +104,25 @@
 
 
             serverSide: true,
-            ajax: '{{ url('pro-admin/complextable/data') }}',
+
+            ajax: {
+               url: "{{ url('pro-admin/complextable/data') }}",
+               method: 'get',
+           },
+
+
+
             columns: [
                 { data: 'date', name: 'date' },
                 { data: 'company_name', name: 'company_name' },
                 { data: 'current_year', name: '	current_year' },
                 { data: 'altman1', name: 'altman1' },
-                { data: 'altman2', name: 'altman2' },
-                { data: 'altman3', name: 'altman3' },
                 { data: 'in051', name: 'in051' },
-                { data: 'in052', name: 'in052' },
-                { data: 'in053', name: 'in053' },
                 { data: 'quicktest1', name: 'quicktest1' },
-                { data: 'quicktest2', name: 'quicktest2' },
-                { data: 'quicktest3', name: 'quicktest3' },
                 { data: 'bonity1', name: 'bonity1' },
-                { data: 'bonity2', name: 'bonity2' },
-                { data: 'bonity3', name: 'bonity3' },
                 { data: 'taffler1', name: 'taffler1' },
-                { data: 'taffler2', name: 'taffler2' },
-                { data: 'taffler3', name: 'taffler3' },
                 { data: 'binkert', name: 'binkert' },
                 { data: 'result1', name: 'result1' },
-                { data: 'result2', name: 'result2' },
-                { data: 'result3', name: 'result3' },
                 { data: 'overview', name: 'overview' },
                 { data: 'delete', name: 'delete' },
             ],

@@ -66,7 +66,6 @@
           display: block;
           text-align: center;
           color: white;
-
         }
 
         .noprint  {
@@ -78,10 +77,12 @@
           margin-left: -60px;
         }
 
+        /*
         .centered {
           color: black;
           --webkit-print-color-adjust: exact;
         }
+        */
 
         html {
           background-color: white;
@@ -91,7 +92,9 @@
           background-color: white;
 
         }
-
+        body {
+          background-color: white;
+        }
 
         h2 {
           color: black;
@@ -109,8 +112,17 @@
 }
 
 @media print {
+
+
+
     #printOnly {
-        display: block;
+        display: none;
+        text-align: center;
+        color: black;
+        background-color: white;
+    }
+    .styled-table th {
+      text-align: center;
     }
 }
 
@@ -121,6 +133,8 @@
     font-family: sans-serif;
     min-width: 400px;
     width: 1100px;
+    background-color: white;
+    color: black;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -128,7 +142,7 @@
 
 .styled-table thead tr {
     background-color: #164289;
-    color: #ffffff;
+    color: black;
     text-align: left;
 }
 
@@ -142,9 +156,6 @@
     border-bottom: 1px solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #164289;
@@ -268,10 +279,10 @@ input[type=image] {
     </div><!-- /.container -->
 </div><!-- /.page-title -->
 <div style="float:right;">
-<input type="image" value="PRINT"  src="/early_warning/assets/content/print.png"
-onmouseover="this.src='/early_warning/assets/content/printblack.png';"
-onmouseout="this.src='/early_warning/assets/content/print.png';;"
-onclick="window.print();">
+  <input type="image" value="PRINT"  src="/early_warning/assets/content/printwhite.png"
+  onmouseover="this.src='/early_warning/assets/content/print.png';"
+  onmouseout="this.src='/early_warning/assets/content/printwhite.png';;"
+  onclick="window.print();">
 </div>
 
 
@@ -292,7 +303,7 @@ onclick="window.print();">
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-56c7fb24 elementor-widget elementor-widget-heading" data-id="56c7fb24" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default noprint">The Results of the Model</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default noprint"></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-78a60114 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="78a60114" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
@@ -304,7 +315,7 @@ onclick="window.print();">
 				</div>
 				<div class="elementor-element elementor-element-7b14ce94 elementor-widget elementor-widget-heading" data-id="7b14ce94" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default noprint">Here you can find the results of the model based on the values from the input form.</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default noprint"></h2>		</div>
 				</div>
 
 					</div>
@@ -475,6 +486,63 @@ onclick="window.print();">
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- #content -->
+    <div id="printOnly">
 
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>CREDIT SCORING</th>
+                <th>VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Scoring Parameter 1</td>
+                <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $altmancolor; ?>; color:white;"><?php echo $altman; ?></span></td>
+            </tr>
+            <tr class="active-row">
+                <td>Scoring Parameter 2</td>
+                <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $in05color; ?>; color:white;"><?php echo $in05; ?></span></td>
+            </tr>
+            <tr>
+                <td>Scoring Parameter 3</td>
+                  <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $quicktestcolor; ?>; color:white;"><?php echo $quicktest; ?></span></td>
+            </tr>
+            <tr class="active-row">
+                <td>Scoring Parameter 4</td>
+          <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $bonitycolor; ?>; color:white;"><?php echo $bonity; ?></span></td>
+            </tr>
+            <tr>
+                <td>Scoring Parameter 5</td>
+              <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $tafflercolor; ?>; color:white;"><?php echo $taffler; ?></span></td>
+            </tr>
+            <tr class="active-row">
+                <td>Scoring Parameter 6</td>
+              <td style="color:white;"><span id="rcorners1" style="background-color: <?php echo $binkertcolor; ?>; color:white;"><?php echo $binkert; ?></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="success-msg" style="display: <?php echo $greenwarning;?>;">
+      <i class="fa fa-check"></i>
+      According to the information provided your company is out of danger. No financial distress has been detected.
+    </div>
+
+    <div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
+      <i class="fa fa-warning"></i>
+      According to the information provided your company is in first degree financial distress.
+    </div>
+
+    <div class="error-msg" style="display: <?php echo $redwarning;?>;">
+      <i class="fa fa-times-circle"></i>
+      According to the information provided your company is in <?php echo $distress; ?> degree financial distress.
+    </div>
+
+    <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
+      <i class="fa fa-warning"></i>
+      Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model.
+    </div>
+    </div>
 
  @include('admin/footer')
