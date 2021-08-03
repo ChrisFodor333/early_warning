@@ -132,7 +132,7 @@
             serverSide: true,
             responsive: true,
             autoWidth: false,
-            ajax: '{{ url('pro-admin/basictable/data') }}',
+            ajax: '{{ url('pro-admin/filteredbasictable/data') }}',
             columns: [
                 { data: 'date', name: 'date' },
                 { data: 'company_name', name: 'company_name' },
