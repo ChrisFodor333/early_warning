@@ -67,7 +67,7 @@
     font-family: sans-serif;
     min-width: 400px;
     width: 100%;
-    text-align: justify;
+    text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -162,12 +162,6 @@ input[type=image] {
                                     <div class="page-title-heading">
                         <h1 class="title">Results</h1>
                     </div><!-- /.page-title-captions -->
-
-
-		<div class="breadcrumb-trail breadcrumbs">
-			<span class="trail-browse"></span> <span class="trail-begin"><a href="<?php echo url('/'); ?>" title="Home" rel="home">Home</a></span>
-			 <span class="sep">></span> <span class="trail-end">Results</span>
-		</div>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
