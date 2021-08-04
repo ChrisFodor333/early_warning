@@ -124,6 +124,15 @@ h6 {
           document.querySelector('#tt17').innerHTML = "Row 46 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Row 49 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 56 in Income Statement";
+
+          //Doubles
+          document.querySelector('#tt2a').innerHTML = "Row 033 in Balance Sheet";
+          document.querySelector('#tt6a').innerHTML = "Row 080 in Balance Sheet";
+          document.querySelector('#tt9a').innerHTML = "Row 136 in Balance Sheet";
+          document.querySelector('#tt10a').innerHTML = "Row 122 in Balance Sheet";
+          document.querySelector('#tt12a').innerHTML = "Row 03 in Income Statement";
+          document.querySelector('#tt15a').innerHTML = "Row 08 in Income Statement";
+
         } else {
           document.querySelector('#tt2').innerHTML = "Row 030 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 031 in Balance Sheet";
@@ -438,7 +447,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Equity</label>
-    <span class="tooltiptext" id="tt6">Row 067 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt6">Row 080 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -467,7 +476,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Accruals/Deferrals</label>
-    <span class="tooltiptext" id="tt11">Row 121 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt11">Row 141 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -517,7 +526,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Interest Expense</label>
-    <span class="tooltiptext" id="tt18">Row 39 in Income Statement</span>
+    <span class="tooltiptext" id="tt18">Row 49 in Income Statement</span>
     </div>
   <input
     type="number"
@@ -557,7 +566,7 @@ h6 {
 
   <div class="tt1">
   <label>Current Assets</label>
-  <span class="tooltiptext" id="tt2">Row 030 in Balance Sheet</span>
+  <span class="tooltiptext" id="tt2">Row 033 in Balance Sheet</span>
   </div>
         <input
           type="number"
@@ -586,7 +595,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Retained Earnings</label>
-          <span class="tooltiptext" id="tt7">Row 085 in Balance Sheet</span>
+          <span class="tooltiptext" id="tt7">Row 098 in Balance Sheet</span>
           </div>
         <input
           type="number"
@@ -615,7 +624,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Revenue (Merchandise)</label>
-          <span class="tooltiptext" id="tt12">Row 01 in Income Statement</span>
+          <span class="tooltiptext" id="tt12a">Row 03 in Income Statement</span>
           </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
@@ -631,27 +640,27 @@ h6 {
           <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
           <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
+            <div className="mf-input-wrapper">
           <div class="tt1">
-          <label>Amortization</label>
-          <span class="tooltiptext" id="tt14">Row 18 in Income Statement</span>
+          <label>Revenue from Sale</label>
+          <span class="tooltiptext" id="tt15a">Row 08 in Income Statement</span>
           </div>
-          <input
-            type="number"
-            className="mf-input "
-            id="mf-input-text-d5f534d"
-            name="amortization"
-            placeholder="${ parent.decodeEntities(`Amortization`) } "
-                      onInput=${parent.handleChange}
-              aria-invalid=${validation.errors['amortization'] ? 'true' : 'false'}
-              ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
-                    />
+        <input
+          type="number"
+          className="mf-input "
+          id="mf-input-text-d5f534d"
+          name="revenue-sale"
+          placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "
+                    onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['revenue-sale'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                  />
 
-                  <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="amortization"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+                <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="revenue-sale"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
 
             </div>
 
@@ -665,7 +674,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Profit/Loss Before Tax</label>
-          <span class="tooltiptext" id="tt19">Row 59 in Income Statement</span>
+          <span class="tooltiptext" id="tt19">Row 56 in Income Statement</span>
           </div>
           <input
             type="number"
@@ -709,7 +718,7 @@ h6 {
 
 <div class="tt1">
 <label>Inventory</label>
-<span class="tooltiptext" id="tt3">Row 031 in Balance Sheet</span>
+<span class="tooltiptext" id="tt3">Row 034 in Balance Sheet</span>
 </div>
 
     <input
@@ -739,7 +748,7 @@ h6 {
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Liabilities</label>
-      <span class="tooltiptext" id="tt8">Row 088 in Balance Sheet</span>
+      <span class="tooltiptext" id="tt8">Row 101 in Balance Sheet</span>
       </div>
     <input
       type="number"
@@ -797,29 +806,29 @@ h6 {
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
       <div className="elementor-widget-container">
 
-    <div className="mf-input-wrapper">
-      <div class="tt1">
-      <label>Revenue from Sale</label>
-      <span class="tooltiptext" id="tt15">Row 19 in Income Statement</span>
-      </div>
-    <input
-      type="number"
-      className="mf-input "
-      id="mf-input-text-d5f534d"
-      name="revenue-sale"
-      placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "
-                onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['revenue-sale'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
-              />
+        <div className="mf-input-wrapper">
+          <div class="tt1">
+          <label>Other Operating Income</label>
+          <span class="tooltiptext" id="tt16">Row 09 in Income Statement</span>
+          </div>
+        <input
+          type="number"
+          className="mf-input "
+          id="mf-input-text-d5f534d"
+          name="operating-income"
+          placeholder="${ parent.decodeEntities(`Operating Income`) } "
+                    onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['operating-income'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                  />
 
-            <${validation.ErrorMessage}
-        errors=${validation.errors}
-        name="revenue-sale"
-        as=${html`<span className="mf-error-message"></span>`}
-        />
+                <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="operating-income"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
 
-        </div>
+            </div>
 
       </div>
       </div>
@@ -870,7 +879,7 @@ h6 {
 
 <div class="tt1">
 <label>Financial Accounts</label>
-<span class="tooltiptext" id="tt4">Row 055 in Balance Sheet</span>
+<span class="tooltiptext" id="tt4">Row 071 in Balance Sheet</span>
 </div>
   <input
     type="number"
@@ -896,30 +905,29 @@ h6 {
     <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
     <div className="elementor-widget-container">
 
-  <div className="mf-input-wrapper">
-    <div class="tt1">
-    <label>Provisions</label>
-    <span class="tooltiptext" id="tt9">Row 089 in Balance Sheet</span>
-    </div>
+      <div className="mf-input-wrapper">
+        <div class="tt1">
+        <label>Current Liabilities</label>
+        <span class="tooltiptext" id="tt10">Row 122 in Balance Sheet</span>
+        </div>
+      <input
+        type="number"
+        className="mf-input "
+        id="mf-input-text-d5f534d"
+        name="current-liabilities"
+        placeholder="${ parent.decodeEntities(`Current Liabilities`) } "
+                  onInput=${parent.handleChange}
+          aria-invalid=${validation.errors['current-liabilities'] ? 'true' : 'false'}
+          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                />
 
-    <input
-    type="number"
-    className="mf-input "
-    id="mf-input-text-13c1826"
-    name="provisions"
-    placeholder="${ parent.decodeEntities(`Provisions`) } "
-      onInput=${parent.handleChange}
-    aria-invalid=${validation.errors['provisions'] ? 'true' : 'false'}
-    ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
-    />
+              <${validation.ErrorMessage}
+          errors=${validation.errors}
+          name="current-liabilities"
+          as=${html`<span className="mf-error-message"></span>`}
+          />
 
-    <${validation.ErrorMessage}
-    errors=${validation.errors}
-    name="provisions"
-    as=${html`<span className="mf-error-message"></span>`}
-    />
-
-      </div>
+          </div>
 
   </div>
     </div>
@@ -945,29 +953,29 @@ h6 {
     <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
     <div className="elementor-widget-container">
 
-  <div className="mf-input-wrapper">
-    <div class="tt1">
-    <label>Other Operating Income</label>
-    <span class="tooltiptext" id="tt16">Row 22 in Income Statement</span>
-    </div>
-  <input
-    type="number"
-    className="mf-input "
-    id="mf-input-text-d5f534d"
-    name="operating-income"
-    placeholder="${ parent.decodeEntities(`Operating Income`) } "
-              onInput=${parent.handleChange}
-      aria-invalid=${validation.errors['operating-income'] ? 'true' : 'false'}
-      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
-            />
+      <div className="mf-input-wrapper">
+              <div class="tt1">
+              <label>Amortization</label>
+              <span class="tooltiptext" id="tt14">Row 21 in Income Statement</span>
+              </div>
+              <input
+                type="number"
+                className="mf-input "
+                id="mf-input-text-d5f534d"
+                name="amortization"
+                placeholder="${ parent.decodeEntities(`Amortization`) } "
+                          onInput=${parent.handleChange}
+                  aria-invalid=${validation.errors['amortization'] ? 'true' : 'false'}
+                  ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                        />
 
-          <${validation.ErrorMessage}
-      errors=${validation.errors}
-      name="operating-income"
-      as=${html`<span className="mf-error-message"></span>`}
-      />
+                      <${validation.ErrorMessage}
+                  errors=${validation.errors}
+                  name="amortization"
+                  as=${html`<span className="mf-error-message"></span>`}
+                  />
 
-      </div>
+                </div>
 
     </div>
     </div>
@@ -990,7 +998,7 @@ h6 {
 
 <div class="tt1">
 <label>Accruals/Deferrals Total</label>
-<span class="tooltiptext" id="tt5">Row 061 in Balance Sheet</span>
+<span class="tooltiptext" id="tt5">Row 074 in Balance Sheet</span>
 </div>
     <input
       type="number"
@@ -1016,29 +1024,31 @@ h6 {
       <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
       <div className="elementor-widget-container">
 
-    <div className="mf-input-wrapper">
-      <div class="tt1">
-      <label>Current Liabilities</label>
-      <span class="tooltiptext" id="tt10">Row 106 in Balance Sheet</span>
-      </div>
-    <input
-      type="number"
-      className="mf-input "
-      id="mf-input-text-d5f534d"
-      name="current-liabilities"
-      placeholder="${ parent.decodeEntities(`Current Liabilities`) } "
-                onInput=${parent.handleChange}
-        aria-invalid=${validation.errors['current-liabilities'] ? 'true' : 'false'}
-        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
-              />
+        <div className="mf-input-wrapper">
+        <div class="tt1">
+        <label>Provisions</label>
+        <span class="tooltiptext" id="tt9">Row 136 in Balance Sheet</span>
+        </div>
 
-            <${validation.ErrorMessage}
+        <input
+        type="number"
+        className="mf-input "
+        id="mf-input-text-13c1826"
+        name="provisions"
+        placeholder="${ parent.decodeEntities(`Provisions`) } "
+          onInput=${parent.handleChange}
+        aria-invalid=${validation.errors['provisions'] ? 'true' : 'false'}
+        ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+        />
+
+        <${validation.ErrorMessage}
         errors=${validation.errors}
-        name="current-liabilities"
+        name="provisions"
         as=${html`<span className="mf-error-message"></span>`}
         />
 
-        </div>
+          </div>
+
 
     </div>
       </div>
@@ -1067,7 +1077,7 @@ h6 {
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Securities and Shares</label>
-      <span class="tooltiptext" id="tt17">Row 28 in Income Statement</span>
+      <span class="tooltiptext" id="tt17">Row 46 in Income Statement</span>
       </div>
     <input
       type="number"
@@ -1198,30 +1208,24 @@ h6 {
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
         <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
-          <div class="tt1">
-          <label>Provisions</label>
-          <span class="tooltiptext" id="tt9">Row 089 in Balance Sheet</span>
+          <div className="mf-input-wrapper">
+            <div class="tt1">
+            <label>Non-current Liabilities</label>
+            <span class="tooltiptext">Row 094 in Balance Sheet</span>
+            </div>
+
+            <input
+            type="number"
+            className="mf-input "
+            id="mf-input-text-13c1826"
+            name="noncurrentliabilities2"
+            placeholder="${ parent.decodeEntities(`Non-current Liabilities`) } "
+              onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['noncurrentliabilities2'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
           </div>
-
-          <input
-          type="number"
-          className="mf-input "
-          id="mf-input-text-13c1826"
-          name="provisions2"
-          placeholder="${ parent.decodeEntities(`Provisions`) } "
-            onInput=${parent.handleChange}
-          aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false'}
-          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
-          />
-
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="provisions2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
-
-        </div>
 
         </div>
         </div>
@@ -1332,24 +1336,19 @@ h6 {
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
         <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
-          <div class="tt1">
-          <label>Non-current Liabilities</label>
-          <span class="tooltiptext">Row 094 in Balance Sheet</span>
-          </div>
+          <div className="mf-input-wrapper">
 
-          <input
-          type="number"
-          className="mf-input "
-          id="mf-input-text-13c1826"
-          name="noncurrentliabilities2"
-          placeholder="${ parent.decodeEntities(`Non-current Liabilities`) } "
-            onInput=${parent.handleChange}
-          aria-invalid=${validation.errors['noncurrentliabilities2'] ? 'true' : 'false'}
-          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            <div class="tt1">
+            <label>Long-term Bank Loans</label>
+            <span class="tooltiptext">Row 119 in Balance Sheet</span>
+            </div>
+          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loan`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-        </div>
+          <${validation.ErrorMessage} errors=${validation.errors} name="long-term-bank-loans2" as=${html`<span className="mf-error-message"></span>`}
+          />
+
+          </div>
 
         </div>
         </div>
@@ -1418,19 +1417,30 @@ h6 {
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
         <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
+          <div className="mf-input-wrapper">
+            <div class="tt1">
+            <label>Provisions</label>
+            <span class="tooltiptext" id="tt9a">Row 136 in Balance Sheet</span>
+            </div>
 
-          <div class="tt1">
-          <label>Long-term Bank Loans</label>
-          <span class="tooltiptext">Row 119 in Balance Sheet</span>
+            <input
+            type="number"
+            className="mf-input "
+            id="mf-input-text-13c1826"
+            name="provisions2"
+            placeholder="${ parent.decodeEntities(`Provisions`) } "
+              onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
+            <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="provisions2"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
           </div>
-        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loan`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
-        />
-
-        <${validation.ErrorMessage} errors=${validation.errors} name="long-term-bank-loans2" as=${html`<span className="mf-error-message"></span>`}
-        />
-
-        </div>
 
         </div>
         </div>
@@ -1438,30 +1448,19 @@ h6 {
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
         <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
+          <div className="mf-input-wrapper">
 
-          <div class="tt1">
-          <label>Added Value</label>
-          <span class="tooltiptext">Row 11 in Income Statement</span>
+            <div class="tt1">
+            <label>Revenue from Sale</label>
+            <span class="tooltiptext" id="tt15">Row 08 in Income Statement</span>
+            </div>
+          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+          />
+
+          <${validation.ErrorMessage} errors=${validation.errors} name="revenue-sale2" as=${html`<span className="mf-error-message"></span>`}
+          />
+
           </div>
-          <input
-          type="number"
-          className="mf-input "
-          id="mf-input-text-13c1826"
-          name="addedvalue2"
-          placeholder="${ parent.decodeEntities(`Added Value`) } "
-            onInput=${parent.handleChange}
-          aria-invalid=${validation.errors['addedvalue2'] ? 'true' : 'false'}
-          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
-          />
-
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="addedvalue2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
-
-        </div>
 
         </div>
         </div>
@@ -1505,7 +1504,7 @@ h6 {
 
           <div class="tt1">
           <label>Revenue (Merchandise)</label>
-          <span class="tooltiptext" id="tt12">Row 01 in Income Statement</span>
+          <span class="tooltiptext" id="tt12">Row 03 in Income Statement</span>
           </div>
 
         <input
@@ -1533,19 +1532,30 @@ h6 {
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
         <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
+          <div className="mf-input-wrapper">
 
-          <div class="tt1">
-          <label>Revenue from Sale</label>
-          <span class="tooltiptext" id="tt15">Row 19 in Income Statement</span>
+            <div class="tt1">
+            <label>Added Value</label>
+            <span class="tooltiptext">Row 11 in Income Statement</span>
+            </div>
+            <input
+            type="number"
+            className="mf-input "
+            id="mf-input-text-13c1826"
+            name="addedvalue2"
+            placeholder="${ parent.decodeEntities(`Added Value`) } "
+              onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['addedvalue2'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
+            <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="addedvalue2"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
           </div>
-        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
-        />
-
-        <${validation.ErrorMessage} errors=${validation.errors} name="revenue-sale2" as=${html`<span className="mf-error-message"></span>`}
-        />
-
-        </div>
 
         </div>
         </div>
@@ -1565,7 +1575,7 @@ h6 {
         <br class="mobile" />
         <div class="tt1">
         <label>Equity</label>
-        <span class="tooltiptext" id="tt6">Row 067 in Balance Sheet</span>
+        <span class="tooltiptext" id="tt6a">Row 080 in Balance Sheet</span>
         </div>
 
         <input
@@ -1702,8 +1712,8 @@ h6 {
 
         <div className="mf-input-wrapper">
           <div class="tt1">
-          <label>Assets (The Year Before)</label>
-          <span class="tooltiptext" id="tt2">Row 030 in Balance Sheet</span>
+          <label>Assets</label>
+          <span class="tooltiptext" id="tt2a">Row 033 in Balance Sheet</span>
           </div>
         <input
         type="number"
@@ -1737,14 +1747,14 @@ h6 {
             <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
         <div className="elementor-widget-container">
 
-        <div className="mf-input-wrapper">
+          <div className="mf-input-wrapper">
 
 
 
         <br class="mobile" />
         <div class="tt1">
-        <label>Liabilities (The Year Before)</label>
-        <span class="tooltiptext" id="tt10">Row 106 in Balance Sheet</span>
+        <label>Liabilities</label>
+        <span class="tooltiptext" id="tt10a">Row 122 in Balance Sheet</span>
         </div>
         <input
         type="number"
@@ -1764,6 +1774,7 @@ h6 {
         />
 
         </div>
+
 
         </div>
         </div>
