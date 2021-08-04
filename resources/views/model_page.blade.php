@@ -105,6 +105,45 @@ h6 {
       document.querySelector('#curyeartext').innerHTML = document.querySelector('#curyear').value;
       document.querySelector('#lastyear').innerHTML = document.querySelector('#curyear').value-1;
       document.querySelector('#yearbefore').innerHTML = document.querySelector('#curyear').value-2;
+
+      if(document.querySelector('#curyear').value >= 2014) {
+          document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
+          document.querySelector('#tt3').innerHTML = "Row 034 in Balance Sheet";
+          document.querySelector('#tt4').innerHTML = "Row 071 in Balance Sheet";
+          document.querySelector('#tt5').innerHTML = "Row 074 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Row 080 in Balance Sheet";
+          document.querySelector('#tt7').innerHTML = "Row 098 in Balance Sheet";
+          document.querySelector('#tt8').innerHTML = "Row 101 in Balance Sheet";
+          document.querySelector('#tt9').innerHTML = "Row 136 in Balance Sheet";
+          document.querySelector('#tt10').innerHTML = "Row 122 in Balance Sheet";
+          document.querySelector('#tt11').innerHTML = "Row 141 in Balance Sheet";
+          document.querySelector('#tt12').innerHTML = "Row 03 in Income Statement";
+          document.querySelector('#tt14').innerHTML = "Row 21 in Income Statement";
+          document.querySelector('#tt15').innerHTML = "Row 08 in Income Statement";
+          document.querySelector('#tt16').innerHTML = "Row 09 in Income Statement";
+          document.querySelector('#tt17').innerHTML = "Row 46 in Income Statement";
+          document.querySelector('#tt18').innerHTML = "Row 49 in Income Statement";
+          document.querySelector('#tt19').innerHTML = "Row 56 in Income Statement";
+        } else {
+          document.querySelector('#tt2').innerHTML = "Row 030 in Balance Sheet";
+          document.querySelector('#tt3').innerHTML = "Row 031 in Balance Sheet";
+          document.querySelector('#tt4').innerHTML = "Row 055 in Balance Sheet";
+          document.querySelector('#tt5').innerHTML = "Row 061 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Row 067 in Balance Sheet";
+          document.querySelector('#tt7').innerHTML = "Row 085 in Balance Sheet";
+          document.querySelector('#tt8').innerHTML = "Row 088 in Balance Sheet";
+          document.querySelector('#tt9').innerHTML = "Row 089 in Balance Sheet";
+          document.querySelector('#tt10').innerHTML = "Row 106 in Balance Sheet";
+          document.querySelector('#tt11').innerHTML = "Row 121 in Balance Sheet";
+          document.querySelector('#tt12').innerHTML = "Row 01 in Income Statement";
+          document.querySelector('#tt14').innerHTML = "Row 18 in Income Statement";
+          document.querySelector('#tt15').innerHTML = "Row 19 in Income Statement";
+          document.querySelector('#tt16').innerHTML = "Row 22 in Income Statement";
+          document.querySelector('#tt17').innerHTML = "Row 28 in Income Statement";
+          document.querySelector('#tt18').innerHTML = "Row 39 in Income Statement";
+          document.querySelector('#tt19').innerHTML = "Row 59 in Income Statement";
+        }
+
     }
 
 
@@ -399,7 +438,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Equity</label>
-    <span class="tooltiptext">Row 067 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt6">Row 067 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -428,7 +467,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Accruals/Deferrals</label>
-    <span class="tooltiptext">Row 121 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt11">Row 121 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -478,7 +517,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Interest Expense</label>
-    <span class="tooltiptext">Row 39 in Income Statement</span>
+    <span class="tooltiptext" id="tt18">Row 39 in Income Statement</span>
     </div>
   <input
     type="number"
@@ -518,7 +557,7 @@ h6 {
 
   <div class="tt1">
   <label>Current Assets</label>
-  <span class="tooltiptext">Row 030 in Balance Sheet</span>
+  <span class="tooltiptext" id="tt2">Row 030 in Balance Sheet</span>
   </div>
         <input
           type="number"
@@ -547,7 +586,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Retained Earnings</label>
-          <span class="tooltiptext">Row 085 in Balance Sheet</span>
+          <span class="tooltiptext" id="tt7">Row 085 in Balance Sheet</span>
           </div>
         <input
           type="number"
@@ -576,7 +615,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Revenue (Merchandise)</label>
-          <span class="tooltiptext">Row 01 in Income Statement</span>
+          <span class="tooltiptext" id="tt12">Row 01 in Income Statement</span>
           </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
@@ -595,7 +634,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Amortization</label>
-          <span class="tooltiptext">Row 18 in Income Statement</span>
+          <span class="tooltiptext" id="tt14">Row 18 in Income Statement</span>
           </div>
           <input
             type="number"
@@ -626,7 +665,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Profit/Loss Before Tax</label>
-          <span class="tooltiptext">Row 59 in Income Statement</span>
+          <span class="tooltiptext" id="tt19">Row 59 in Income Statement</span>
           </div>
           <input
             type="number"
@@ -670,7 +709,7 @@ h6 {
 
 <div class="tt1">
 <label>Inventory</label>
-<span class="tooltiptext">Row 031 in Balance Sheet</span>
+<span class="tooltiptext" id="tt3">Row 031 in Balance Sheet</span>
 </div>
 
     <input
@@ -700,7 +739,7 @@ h6 {
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Liabilities</label>
-      <span class="tooltiptext">Row 088 in Balance Sheet</span>
+      <span class="tooltiptext" id="tt8">Row 088 in Balance Sheet</span>
       </div>
     <input
       type="number"
@@ -761,7 +800,7 @@ h6 {
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Revenue from Sale</label>
-      <span class="tooltiptext">Row 19 in Income Statement</span>
+      <span class="tooltiptext" id="tt15">Row 19 in Income Statement</span>
       </div>
     <input
       type="number"
@@ -831,7 +870,7 @@ h6 {
 
 <div class="tt1">
 <label>Financial Accounts</label>
-<span class="tooltiptext">Row 055 in Balance Sheet</span>
+<span class="tooltiptext" id="tt4">Row 055 in Balance Sheet</span>
 </div>
   <input
     type="number"
@@ -860,7 +899,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Provisions</label>
-    <span class="tooltiptext">Row 089 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt9">Row 089 in Balance Sheet</span>
     </div>
 
     <input
@@ -909,7 +948,7 @@ h6 {
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Other Operating Income</label>
-    <span class="tooltiptext">Row 22 in Income Statement</span>
+    <span class="tooltiptext" id="tt16">Row 22 in Income Statement</span>
     </div>
   <input
     type="number"
@@ -951,7 +990,7 @@ h6 {
 
 <div class="tt1">
 <label>Accruals/Deferrals Total</label>
-<span class="tooltiptext">Row 061 in Balance Sheet</span>
+<span class="tooltiptext" id="tt5">Row 061 in Balance Sheet</span>
 </div>
     <input
       type="number"
@@ -980,7 +1019,7 @@ h6 {
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Current Liabilities</label>
-      <span class="tooltiptext">Row 106 in Balance Sheet</span>
+      <span class="tooltiptext" id="tt10">Row 106 in Balance Sheet</span>
       </div>
     <input
       type="number"
@@ -1028,7 +1067,7 @@ h6 {
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Securities and Shares</label>
-      <span class="tooltiptext">Row 28 in Income Statement</span>
+      <span class="tooltiptext" id="tt17">Row 28 in Income Statement</span>
       </div>
     <input
       type="number"
@@ -1162,7 +1201,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Provisions</label>
-          <span class="tooltiptext">Row 089 in Balance Sheet</span>
+          <span class="tooltiptext" id="tt9">Row 089 in Balance Sheet</span>
           </div>
 
           <input
@@ -1466,7 +1505,7 @@ h6 {
 
           <div class="tt1">
           <label>Revenue (Merchandise)</label>
-          <span class="tooltiptext">Row 01 in Income Statement</span>
+          <span class="tooltiptext" id="tt12">Row 01 in Income Statement</span>
           </div>
 
         <input
@@ -1498,7 +1537,7 @@ h6 {
 
           <div class="tt1">
           <label>Revenue from Sale</label>
-          <span class="tooltiptext">Row 19 in Income Statement</span>
+          <span class="tooltiptext" id="tt15">Row 19 in Income Statement</span>
           </div>
         <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
         />
@@ -1526,7 +1565,7 @@ h6 {
         <br class="mobile" />
         <div class="tt1">
         <label>Equity</label>
-        <span class="tooltiptext">Row 067 in Balance Sheet</span>
+        <span class="tooltiptext" id="tt6">Row 067 in Balance Sheet</span>
         </div>
 
         <input
@@ -1664,7 +1703,7 @@ h6 {
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Assets (The Year Before)</label>
-          <span class="tooltiptext">Row 030 in Balance Sheet</span>
+          <span class="tooltiptext" id="tt2">Row 030 in Balance Sheet</span>
           </div>
         <input
         type="number"
@@ -1705,7 +1744,7 @@ h6 {
         <br class="mobile" />
         <div class="tt1">
         <label>Liabilities (The Year Before)</label>
-        <span class="tooltiptext">Row 106 in Balance Sheet</span>
+        <span class="tooltiptext" id="tt10">Row 106 in Balance Sheet</span>
         </div>
         <input
         type="number"

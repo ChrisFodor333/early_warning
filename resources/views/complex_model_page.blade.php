@@ -109,6 +109,13 @@ display: none;
         document.querySelector('#curyeartext').innerHTML = document.querySelector('#curyear').value;
         document.querySelector('#lastyear').innerHTML = document.querySelector('#curyear').value-1;
         document.querySelector('#yearbefore').innerHTML = document.querySelector('#curyear').value-2;
+        if(document.querySelector('#curyear').value >= 2014) {
+        document.querySelector('#tt1').innerHTML = "Row 033 in Balance Sheet";
+      } else {
+
+      }
+
+
       }
 
     function controls_data (value){
@@ -369,7 +376,7 @@ display: none;
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Equity</label>
-    <span class="tooltiptext">Row 067 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt6">Row 067 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -398,7 +405,7 @@ display: none;
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Accruals/Deferrals</label>
-    <span class="tooltiptext">Row 121 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt11">Row 121 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -448,7 +455,7 @@ display: none;
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Interest Expense</label>
-    <span class="tooltiptext">Row 39 in Income Statement</span>
+    <span class="tooltiptext" id="tt18">Row 39 in Income Statement</span>
     </div>
   <input
     type="number"
@@ -488,7 +495,7 @@ display: none;
 
   <div class="tt1">
   <label>Current Assets</label>
-  <span class="tooltiptext">Row 030 in Balance Sheet</span>
+  <span class="tooltiptext" id="tt2">Row 030 in Balance Sheet</span>
   </div>
         <input
           type="number"
@@ -517,7 +524,7 @@ display: none;
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Retained Earnings</label>
-          <span class="tooltiptext">Row 085 in Balance Sheet</span>
+          <span class="tooltiptext" id="tt7">Row 085 in Balance Sheet</span>
           </div>
         <input
           type="number"
@@ -546,7 +553,7 @@ display: none;
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Revenue (Merchandise)</label>
-          <span class="tooltiptext">Row 01 in Income Statement</span>
+          <span class="tooltiptext" id="tt12">Row 01 in Income Statement</span>
           </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
@@ -565,7 +572,7 @@ display: none;
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Amortization</label>
-          <span class="tooltiptext">Row 18 in Income Statement</span>
+          <span class="tooltiptext" id="tt14">Row 18 in Income Statement</span>
           </div>
           <input
             type="number"
@@ -596,7 +603,7 @@ display: none;
         <div className="mf-input-wrapper">
           <div class="tt1">
           <label>Profit/Loss Before Tax</label>
-          <span class="tooltiptext">Row 59 in Income Statement</span>
+          <span class="tooltiptext" id="tt19">Row 59 in Income Statement</span>
           </div>
           <input
             type="number"
@@ -640,7 +647,7 @@ display: none;
 
 <div class="tt1">
 <label>Inventory</label>
-<span class="tooltiptext">Row 031 in Balance Sheet</span>
+<span class="tooltiptext" id="tt3">Row 031 in Balance Sheet</span>
 </div>
 
     <input
@@ -670,7 +677,7 @@ display: none;
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Liabilities</label>
-      <span class="tooltiptext">Row 088 in Balance Sheet</span>
+      <span class="tooltiptext" id="tt8">Row 088 in Balance Sheet</span>
       </div>
     <input
       type="number"
@@ -731,7 +738,7 @@ display: none;
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Revenue from Sale</label>
-      <span class="tooltiptext">Row 19 in Income Statement</span>
+      <span class="tooltiptext" id="tt15">Row 19 in Income Statement</span>
       </div>
     <input
       type="number"
@@ -801,7 +808,7 @@ display: none;
 
 <div class="tt1">
 <label>Financial Accounts</label>
-<span class="tooltiptext">Row 055 in Balance Sheet</span>
+<span class="tooltiptext" id="tt4">Row 055 in Balance Sheet</span>
 </div>
   <input
     type="number"
@@ -830,7 +837,7 @@ display: none;
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Provisions</label>
-    <span class="tooltiptext">Row 089 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt9">Row 089 in Balance Sheet</span>
     </div>
 
     <input
@@ -879,7 +886,7 @@ display: none;
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Other Operating Income</label>
-    <span class="tooltiptext">Row 22 in Income Statement</span>
+    <span class="tooltiptext" id="tt16">Row 22 in Income Statement</span>
     </div>
   <input
     type="number"
@@ -921,7 +928,7 @@ display: none;
 
 <div class="tt1">
 <label>Accruals/Deferrals Total</label>
-<span class="tooltiptext">Row 061 in Balance Sheet</span>
+<span class="tooltiptext" id="tt5">Row 061 in Balance Sheet</span>
 </div>
     <input
       type="number"
@@ -950,7 +957,7 @@ display: none;
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Current Liabilities</label>
-      <span class="tooltiptext">Row 106 in Balance Sheet</span>
+      <span class="tooltiptext" id="tt10">Row 106 in Balance Sheet</span>
       </div>
     <input
       type="number"
@@ -998,7 +1005,7 @@ display: none;
     <div className="mf-input-wrapper">
       <div class="tt1">
       <label>Securities and Shares</label>
-      <span class="tooltiptext">Row 28 in Income Statement</span>
+      <span class="tooltiptext" id="tt17">Row 28 in Income Statement</span>
       </div>
     <input
       type="number"
@@ -2055,7 +2062,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Equity</label>
-<span class="tooltiptext">Row 067 in Balance Sheet</span>
+<span class="tooltiptext" id="tt6">Row 067 in Balance Sheet</span>
 </div>
 <input
 type="number"
@@ -2084,7 +2091,7 @@ as=${html`<span className="mf-error-message"></span>`}
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Accruals/Deferrals</label>
-<span class="tooltiptext">Row 121 in Balance Sheet</span>
+<span class="tooltiptext" id="tt11">Row 121 in Balance Sheet</span>
 </div>
 <input
 type="number"
@@ -2134,7 +2141,7 @@ as=${html`<span className="mf-error-message"></span>`}
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Interest Expense</label>
-<span class="tooltiptext">Row 39 in Income Statement</span>
+<span class="tooltiptext" id="tt18">Row 39 in Income Statement</span>
 </div>
 <input
 type="number"
@@ -2174,7 +2181,7 @@ as=${html`<span className="mf-error-message"></span>`}
 
 <div class="tt1">
 <label>Current Assets</label>
-<span class="tooltiptext">Row 030 in Balance Sheet</span>
+<span class="tooltiptext" id="tt2">Row 030 in Balance Sheet</span>
 </div>
   <input
     type="number"
@@ -2203,7 +2210,7 @@ as=${html`<span className="mf-error-message"></span>`}
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Retained Earnings</label>
-    <span class="tooltiptext">Row 085 in Balance Sheet</span>
+    <span class="tooltiptext" id="tt7">Row 085 in Balance Sheet</span>
     </div>
   <input
     type="number"
@@ -2232,7 +2239,7 @@ as=${html`<span className="mf-error-message"></span>`}
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Revenue (Merchandise)</label>
-    <span class="tooltiptext">Row 01 in Income Statement</span>
+    <span class="tooltiptext" id="tt12">Row 01 in Income Statement</span>
     </div>
     <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch1" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
       />
@@ -2251,7 +2258,7 @@ as=${html`<span className="mf-error-message"></span>`}
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Amortization</label>
-    <span class="tooltiptext">Row 18 in Income Statement</span>
+    <span class="tooltiptext" id="tt14">Row 18 in Income Statement</span>
     </div>
     <input
       type="number"
@@ -2282,7 +2289,7 @@ as=${html`<span className="mf-error-message"></span>`}
   <div className="mf-input-wrapper">
     <div class="tt1">
     <label>Profit/Loss Before Tax</label>
-    <span class="tooltiptext">Row 59 in Income Statement</span>
+    <span class="tooltiptext" id="tt19">Row 59 in Income Statement</span>
     </div>
     <input
       type="number"
@@ -2326,7 +2333,7 @@ as=${html`<span className="mf-error-message"></span>`}
 
 <div class="tt1">
 <label>Inventory</label>
-<span class="tooltiptext">Row 031 in Balance Sheet</span>
+<span class="tooltiptext" id="tt3">Row 031 in Balance Sheet</span>
 </div>
 
 <input
@@ -2356,7 +2363,7 @@ placeholder="${ parent.decodeEntities(`Inventory`) } "
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Liabilities</label>
-<span class="tooltiptext">Row 088 in Balance Sheet</span>
+<span class="tooltiptext" id="tt8">Row 088 in Balance Sheet</span>
 </div>
 <input
 type="number"
@@ -2417,7 +2424,7 @@ as=${html`<span className="mf-error-message"></span>`}
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Revenue from Sale</label>
-<span class="tooltiptext">Row 19 in Income Statement</span>
+<span class="tooltiptext" id="tt15">Row 19 in Income Statement</span>
 </div>
 <input
 type="number"
@@ -2487,7 +2494,7 @@ placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "
 
 <div class="tt1">
 <label>Financial Accounts</label>
-<span class="tooltiptext">Row 055 in Balance Sheet</span>
+<span class="tooltiptext" id="tt4">Row 055 in Balance Sheet</span>
 </div>
 <input
 type="number"
@@ -2516,7 +2523,7 @@ as=${html`<span className="mf-error-message"></span>`}
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Provisions</label>
-<span class="tooltiptext">Row 089 in Balance Sheet</span>
+<span class="tooltiptext" id="tt9">Row 089 in Balance Sheet</span>
 </div>
 
 <input
@@ -2565,7 +2572,7 @@ as=${html`<span className="mf-error-message"></span>`}
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Other Operating Income</label>
-<span class="tooltiptext">Row 22 in Income Statement</span>
+<span class="tooltiptext" id="tt16">Row 22 in Income Statement</span>
 </div>
 <input
 type="number"
@@ -2607,7 +2614,7 @@ as=${html`<span className="mf-error-message"></span>`}
 
 <div class="tt1">
 <label>Accruals/Deferrals Total</label>
-<span class="tooltiptext">Row 061 in Balance Sheet</span>
+<span class="tooltiptext" id="tt5">Row 061 in Balance Sheet</span>
 </div>
 <input
 type="number"
@@ -2636,7 +2643,7 @@ placeholder="${ parent.decodeEntities(`Accruals/Deferrals`) } "
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Current Liabilities</label>
-<span class="tooltiptext">Row 106 in Balance Sheet</span>
+<span class="tooltiptext" id="tt10">Row 106 in Balance Sheet</span>
 </div>
 <input
 type="number"
@@ -2684,7 +2691,7 @@ placeholder="${ parent.decodeEntities(`Current Liabilities`) } "
 <div className="mf-input-wrapper">
 <div class="tt1">
 <label>Securities and Shares</label>
-<span class="tooltiptext">Row 28 in Income Statement</span>
+<span class="tooltiptext" id="tt17">Row 28 in Income Statement</span>
 </div>
 <input
 type="number"
