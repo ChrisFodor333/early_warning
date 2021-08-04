@@ -238,8 +238,10 @@ class AdminController extends Controller
                  $altmancolor = "orange";
                  $orange++;
                }
-             if($altman == "N/A")
+             if($altman == "N/A") {
                  $altmancolor = "orange";
+                 $nacount++;
+               }
 
              if($in05 < 0.9) {
                      $in05color = "red";
@@ -253,8 +255,10 @@ class AdminController extends Controller
                      $in05color = "orange";
                      $orange++;
                    }
-             if($in05 == "N/A")
+             if($in05 == "N/A") {
                $in05color = "orange";
+               $nacount++;
+             }
 
 
              if($taffler < 0.2) {
@@ -270,8 +274,10 @@ class AdminController extends Controller
                  $orange++;
                }
 
-             if($taffler == "N/A")
+             if($taffler == "N/A") {
                  $tafflercolor = "orange";
+                 $nacount++;
+               }
 
 
              if($quicktest < 9.0) {
@@ -287,8 +293,10 @@ class AdminController extends Controller
                  $orange++;
                }
 
-             if($quicktest == "N/A")
+             if($quicktest == "N/A") {
                  $quicktestcolor = "orange";
+                 $nacount++;
+               }
 
 
              if($bonity < -1.0) {
@@ -304,8 +312,10 @@ class AdminController extends Controller
                  $orange++;
                }
 
-             if($bonity == "N/A")
+             if($bonity == "N/A") {
                $bonitycolor = "orange";
+               $nacount++;
+                  }
 
                if($binkert > 4.35) {
                  $binkertcolor = "#00c373";
@@ -322,8 +332,10 @@ class AdminController extends Controller
                  $orange++;
                }
 
-               if($binkert == "N/A")
+               if($binkert == "N/A") {
                    $binkertcolor = "orange";
+                   $nacount++;
+                 }
 
 
                $data['altmancolor'] = $altmancolor;
@@ -531,8 +543,10 @@ class AdminController extends Controller
                   $altmancolor = "orange";
                   $orange++;
                 }
-              if($altman == "N/A")
+              if($altman == "N/A") {
                   $altmancolor = "orange";
+                  $nacount++;
+                }
 
 
               if($altman2 < 1.2) {
@@ -547,8 +561,10 @@ class AdminController extends Controller
                   $altmancolor2 = "orange";
                   $orange2++;
                 }
-              if($altman2 == "N/A")
+              if($altman2 == "N/A") {
                   $altmancolor2 = "orange";
+                  $nacount2++;
+                }
 
 
               if($altman1 < 1.2) {
@@ -563,8 +579,10 @@ class AdminController extends Controller
                   $altmancolor1 = "orange";
                   $orange1++;
                 }
-              if($altman1 == "N/A")
+              if($altman1 == "N/A") {
                   $altmancolor1 = "orange";
+                  $nacount1++;
+                }
 
 
                   // NOT FINISHED
@@ -580,8 +598,10 @@ class AdminController extends Controller
                           $in05color = "orange";
                           $orange++;
                         }
-                  if($in05 == "N/A")
+                  if($in05 == "N/A") {
                     $in05color = "orange";
+                    $nacount++;
+                  }
 
 
 
@@ -597,8 +617,10 @@ class AdminController extends Controller
                             $in05color2 = "orange";
                             $orange2++;
                           }
-                    if($in052 == "N/A")
+                    if($in052 == "N/A") {
                       $in05color2 = "orange";
+                      $nacount2++;
+                        }
 
 
                       if($in051 < 0.9) {
@@ -613,8 +635,10 @@ class AdminController extends Controller
                               $in05color1 = "orange";
                               $orange1++;
                             }
-                      if($in051 == "N/A")
+                      if($in051 == "N/A") {
                         $in05color1 = "orange";
+                        $nacount1++;
+                      }
 
 
                   if($taffler < 0.2) {
@@ -630,8 +654,10 @@ class AdminController extends Controller
                       $orange++;
                     }
 
-                  if($taffler == "N/A")
+                  if($taffler == "N/A") {
                       $tafflercolor = "orange";
+                      $nacount++;
+                    }
 
 
                       if($taffler2 < 0.2) {
@@ -647,8 +673,10 @@ class AdminController extends Controller
                           $orange2++;
                         }
 
-                      if($taffler2 == "N/A")
+                      if($taffler2 == "N/A") {
                           $tafflercolor2 = "orange";
+                          $nacount2++;
+                        }
 
                           if($taffler1 < 0.2) {
                               $tafflercolor1 = "red";
@@ -662,8 +690,10 @@ class AdminController extends Controller
                               $tafflercolor1 = "orange";
                               $orange1++;
                             }
-                          if($taffler1 == "N/A")
+                          if($taffler1 == "N/A") {
                               $tafflercolor1 = "orange";
+                              $nacount1++;
+                            }
 
 
                   if($quicktest < 9.0) {
@@ -679,8 +709,10 @@ class AdminController extends Controller
                       $orange++;
                     }
 
-                  if($quicktest == "N/A")
+                  if($quicktest == "N/A") {
                       $quicktestcolor = "orange";
+                      $nacount++;
+                    }
 
 
                   if($quicktest2 < 9.0) {
@@ -696,8 +728,10 @@ class AdminController extends Controller
                       $orange2++;
                     }
 
-                  if($quicktest2 == "N/A")
+                  if($quicktest2 == "N/A") {
                       $quicktestcolor2 = "orange";
+                      $nacount2++;
+                    }
 
 
                   if($quicktest1 < 9.0) {
@@ -713,8 +747,10 @@ class AdminController extends Controller
                       $orange1++;
                     }
 
-                  if($quicktest1 == "N/A")
+                  if($quicktest1 == "N/A") {
                       $quicktestcolor1 = "orange";
+                      $nacount1++;
+                    }
 
 
                   if($bonity < -1.0) {
@@ -730,8 +766,10 @@ class AdminController extends Controller
                       $orange++;
                     }
 
-                  if($bonity2 == "N/A")
+                  if($bonity2 == "N/A") {
                     $bonitycolor2 = "orange";
+                    $nacount2++;
+                  }
 
                     if($bonity2 < -1.0) {
                         $bonitycolor2 = "red";
@@ -746,8 +784,10 @@ class AdminController extends Controller
                         $orange2++;
                       }
 
-                    if($bonity2 == "N/A")
+                    if($bonity2 == "N/A") {
                       $bonitycolor2 = "orange";
+                      $nacount2++;
+                    }
 
                       if($bonity1 < -1.0) {
                           $bonitycolor1 = "red";
@@ -762,8 +802,10 @@ class AdminController extends Controller
                           $orange1++;
                         }
 
-                      if($bonity1 == "N/A")
+                      if($bonity1 == "N/A") {
                         $bonitycolor1 = "orange";
+                          $nacount1++;
+                        }
 
 
                     if($binkert > 4.35) {
@@ -781,8 +823,11 @@ class AdminController extends Controller
                       $orange++;
                     }
 
-                    if($binkert == "N/A")
+                    if($binkert == "N/A") {
                         $binkertcolor = "orange";
+                        $nacount++;
+                    }
+
 
                         $greenwarning = "none";
                         $orangewarning = "none";

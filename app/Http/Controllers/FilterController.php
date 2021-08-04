@@ -109,6 +109,195 @@ class FilterController extends Controller
         ->make(true);
   }
 
+  public function filteredchart()
+    {
+      if(session()->has('admin')) {
+
+          $from = request()->get('from');
+          $to = request()->get('to');
+          $date = strtotime($to . ' +1 day');
+          $to =  date('Y-m-d', $date);
+
+          $chart = Lava::DataTable();
+          $basic_nodistress = DB::table('basic')->where('result','LIKE','No %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+          $basic_distress = DB::table('basic')->where('result','LIKE','% Degree %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+
+          $total = DB::table('basic')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+
+          $basic_first_degree= DB::table('basic')->where('result','LIKE','First %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+          $basic_second_degree= DB::table('basic')->where('result','LIKE','Second %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+          $basic_third_degree= DB::table('basic')->where('result','LIKE','Third %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+
+          $chart->addStringColumn('Count')
+                          ->addNumberColumn("No Financial Distress")
+                          ->addNumberColumn("Financial Distress")
+                          ->addRow(["", $basic_nodistress,   $basic_distress]);
+          Lava::ColumnChart('Basic Model Results', $chart, [
+              'title' => 'Basic Model Results',
+              'backgroundColor' => 'white',
+              'color' => 'white',
+              'colors' => ['green', 'red'],
+              'legend' => [
+                  'position' => 'bottom'
+              ],
+          ]);
+
+          $donut = Lava::DataTable();
+          $donut->addStringColumn('Count')
+                          ->addNumberColumn("No Financial Distress")
+                          ->addNumberColumn("Financial Distress")
+                          ->addRow(["No Distress",$basic_nodistress])
+                          ->addRow(["Financial Distress",$basic_distress]);
+
+          Lava::DonutChart('Basic Model Results in %', $donut, [
+              'title' => 'Basic Model Results in %',
+              'backgroundColor' => 'white',
+              'color' => 'white',
+              'colors' => ['green', 'red'],
+              'legend' => [
+                  'position' => 'bottom'
+              ],
+          ]);
+
+
+          $donut2 = Lava::DataTable();
+          $donut2->addStringColumn('Count')
+                          ->addNumberColumn("No Financial Distress")
+                          ->addNumberColumn("First Degree Financial Distress")
+                          ->addNumberColumn("Second Degree Financial Distress")
+                          ->addNumberColumn("Third Degree Financial Distress")
+                          ->addRow(["No Distress",$basic_nodistress])
+                          ->addRow(["First Degree Financial Distress",$basic_first_degree])
+                          ->addRow(["Second Degree Financial Distress",$basic_second_degree])
+                          ->addRow(["Third Degree Financial Distress",$basic_third_degree]);
+
+
+          Lava::DonutChart('Basic Model Results in % (advanced)', $donut2, [
+              'title' => 'Basic Model Results in % (advanced)',
+              'backgroundColor' => 'white',
+              'color' => 'white',
+              'colors' => ['green', 'yellow', 'orange', 'red'],
+              'legend' => [
+                  'position' => 'bottom'
+              ],
+          ]);
+
+
+
+            $chart2 = Lava::DataTable();
+
+            $chart2->addStringColumn('Count')
+                            ->addNumberColumn("No Financial Distress")
+                            ->addNumberColumn("First Degree Financial Distress")
+                            ->addNumberColumn("Second Degree Financial Distress")
+                            ->addNumberColumn("Third Degree Financial Distress")
+                            ->addRow(["", $basic_nodistress, $basic_first_degree, $basic_second_degree, $basic_third_degree]);
+            Lava::ColumnChart('Basic Model Results 2', $chart2, [
+                'title' => 'Basic Model Results (Advanced)',
+                'backgroundColor' => 'white',
+                'color' => 'white',
+                'colors' => ['green', 'yellow', 'orange', 'red'],
+                'legend' => [
+                    'position' => 'bottom'
+                ],
+            ]);
+
+
+
+
+
+
+
+            $chartcomplex = Lava::DataTable();
+            $complex_nodistress = DB::table('complex')->where('result1','LIKE','No %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+            $complex_distress = DB::table('complex')->where('result1','LIKE','% Degree %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+
+
+            $totalcomplex = DB::table('complex')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+
+            $complex_first_degree= DB::table('complex')->where('result1','LIKE','First %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+            $complex_second_degree= DB::table('complex')->where('result1','LIKE','Second %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+            $complex_third_degree= DB::table('complex')->where('result1','LIKE','Third %')->whereRaw("created_at >= ? AND created_at < ?",[$from, $to])->count();
+
+            $chartcomplex->addStringColumn('Count')
+                            ->addNumberColumn("No Financial Distress")
+                            ->addNumberColumn("Financial Distress")
+                            ->addRow(["", $complex_nodistress,   $complex_distress]);
+            Lava::ColumnChart('Complex Model Results', $chartcomplex, [
+                'title' => 'Complex Model Results',
+                'backgroundColor' => 'white',
+                'color' => 'white',
+                'colors' => ['green', 'red'],
+                'legend' => [
+                    'position' => 'bottom'
+                ],
+            ]);
+
+            $donutcomplex = Lava::DataTable();
+            $donutcomplex->addStringColumn('Count')
+                            ->addNumberColumn("No Financial Distress")
+                            ->addNumberColumn("Financial Distress")
+                            ->addRow(["No Distress",$complex_nodistress])
+                            ->addRow(["Financial Distress",$complex_distress]);
+
+            Lava::DonutChart('Complex Model Results in %', $donutcomplex, [
+                'title' => 'Complex Model Results in %',
+                'backgroundColor' => 'white',
+                'color' => 'white',
+                'colors' => ['green', 'red'],
+                'legend' => [
+                    'position' => 'bottom'
+                ],
+            ]);
+
+
+            $donut2complex = Lava::DataTable();
+            $donut2complex->addStringColumn('Count')
+                            ->addNumberColumn("No Financial Distress")
+                            ->addNumberColumn("First Degree Financial Distress")
+                            ->addNumberColumn("Second Degree Financial Distress")
+                            ->addNumberColumn("Third Degree Financial Distress")
+                            ->addRow(["No Distress",$complex_nodistress])
+                            ->addRow(["First Degree Financial Distress",$complex_first_degree])
+                            ->addRow(["Second Degree Financial Distress",$complex_second_degree])
+                            ->addRow(["Third Degree Financial Distress",$complex_third_degree]);
+
+
+            Lava::DonutChart('Complex Model Results in % (advanced)', $donut2complex, [
+                'title' => 'Complex Model Results in % (advanced)',
+                'backgroundColor' => 'white',
+                'color' => 'white',
+                'colors' => ['green', 'yellow', 'orange', 'red'],
+                'legend' => [
+                    'position' => 'bottom'
+                ],
+            ]);
+
+
+
+              $chart2complex = Lava::DataTable();
+
+              $chart2complex->addStringColumn('Count')
+                              ->addNumberColumn("No Financial Distress")
+                              ->addNumberColumn("First Degree Financial Distress")
+                              ->addNumberColumn("Second Degree Financial Distress")
+                              ->addNumberColumn("Third Degree Financial Distress")
+                              ->addRow(["", $complex_nodistress, $complex_first_degree, $complex_second_degree, $complex_third_degree]);
+              Lava::ColumnChart('Complex Model Results 2', $chart2complex, [
+                  'title' => 'Complex Model Results (Advanced)',
+                  'backgroundColor' => 'white',
+                  'color' => 'white',
+                  'colors' => ['green', 'yellow', 'orange', 'red'],
+                  'legend' => [
+                      'position' => 'bottom'
+                  ],
+              ]);
+          return view('admin/charts');
+      } else {
+          return view('admin/login');
+      }
+    }
+
 
 
 }

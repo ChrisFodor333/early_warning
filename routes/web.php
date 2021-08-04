@@ -79,6 +79,8 @@ Route::get('/pro-admin/filteredbasictable/data/', [
     'as' => 'basicajax', 'uses' => 'App\\Http\\Controllers\FilterController@basicajax'
 ]);
 
+Route::post('/pro-admin/filteredcharts', 'App\\Http\\Controllers\FilterController@filteredchart')->name('filteredchart');
+
 Route::post('/pro-admin/filteredcomplextable', 'App\\Http\\Controllers\FilterController@filtercomplex')->name('filtercomplex');
 Route::get('/pro-admin/filteredcomplextable/data/', [
     'as' => 'complexajax', 'uses' => 'App\\Http\\Controllers\FilterController@complexajax'
