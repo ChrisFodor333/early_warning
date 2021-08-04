@@ -183,7 +183,7 @@ class AdminController extends Controller
 
         public function user_index() {
             if(session()->has('admin')) {
-                return view('admiN/Admin_userstable');
+                return view('admin/admin_userstable');
             } else {
                 return view('admin/login');
             }
@@ -1039,14 +1039,14 @@ class AdminController extends Controller
 
 
     if ($validator->fails()) {
-        return Redirect::to('/pro-admiN/Addadmin')
+        return Redirect::to('/pro-admin/Addadmin')
             ->withErrors($validator) // send back all errors to the login form
             ->withInput(Requests::except('password')); // send back the input (not the password) so that we can repopulate the form
     } else {
         $email = Requests::get('email');
 
         if($this->check_email($email)) {
-            return Redirect::to('/pro-admiN/Addadmin')
+            return Redirect::to('/pro-admin/Addadmin')
                 ->withErrors(['email' => 'Email Address Already Exists in the Database'])
                 ->withInput(Requests::except('password')); // send back the input (not the password) so that we can repopulate the form
         }

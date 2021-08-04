@@ -151,6 +151,14 @@ h6 {
           document.querySelector('#tt17').innerHTML = "Row 28 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Row 39 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 59 in Income Statement";
+
+
+          document.querySelector('#tt2a').innerHTML = "Row 030 in Balance Sheet";
+          document.querySelector('#tt6a').innerHTML = "Row 067 in Balance Sheet";
+          document.querySelector('#tt9a').innerHTML = "Row 089 in Balance Sheet";
+          document.querySelector('#tt10a').innerHTML = "Row 106 in Balance Sheet";
+          document.querySelector('#tt12a').innerHTML = "Row 01 in Income Statement";
+          document.querySelector('#tt15a').innerHTML = "Row 19 in Income Statement";
         }
 
     }
