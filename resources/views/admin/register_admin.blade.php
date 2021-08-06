@@ -1,6 +1,8 @@
 @include('admin/header')
 @include('admin/navigation')
 
+
+
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header">
@@ -94,6 +96,12 @@
   </section>
   <!-- /.content -->
 </div>
+
+<script>
+$(document).on("keydown", "form", function(event) {
+alert(event);
+});
+</script>
 <!-- /.content-wrapper -->
 
 <!-- Control Sidebar -->

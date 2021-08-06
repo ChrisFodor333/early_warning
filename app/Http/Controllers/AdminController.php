@@ -1039,14 +1039,14 @@ class AdminController extends Controller
 
 
     if ($validator->fails()) {
-        return Redirect::to('/pro-admin/Addadmin')
+        return Redirect::to('/pro-admin/addadmin')
             ->withErrors($validator) // send back all errors to the login form
             ->withInput(Requests::except('password')); // send back the input (not the password) so that we can repopulate the form
     } else {
         $email = Requests::get('email');
 
         if($this->check_email($email)) {
-            return Redirect::to('/pro-admin/Addadmin')
+            return Redirect::to('/pro-admin/addadmin')
                 ->withErrors(['email' => 'Email Address Already Exists in the Database'])
                 ->withInput(Requests::except('password')); // send back the input (not the password) so that we can repopulate the form
         }

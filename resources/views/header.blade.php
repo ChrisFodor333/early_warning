@@ -209,7 +209,7 @@ body { color:#666!important}
         	<div class="col-md-6">
             <div class="custom-info">
                 <ul >
-                  <a href="<?php echo url('/'); ?>">
+                  <a tabindex="-1"  href="<?php echo url('/'); ?>">
     							<li class="phone mymobile">DanubeChance 2.0 Financial Tool</li>
     						  </a>
 									<!--
@@ -221,7 +221,7 @@ body { color:#666!important}
             <div class="col-md-6 text-right">
             <div class="info-top-right">
             <span class="mymobile"><i class="fa fa-question-circle"></i>Have any questions?</span>
-            <a class="appoinment" href="<?php echo url('/team'); ?>">Contact our Partners</a>
+            <a tabindex="-1"  class="appoinment" href="<?php echo url('/team'); ?>">Contact our Partners</a>
             </div>
 
             </div><!-- /.col-md-6 -->
@@ -236,7 +236,7 @@ body { color:#666!important}
             <div class="col-md-12">
                 <div class="header-wrap clearfix">
                     	<div id="logo" class="logo" style="margin-top: 21px; margin-bottom: 21px;" data-width="263" data-height="75">
-		<a href="http://www.interreg-danube.eu/approved-projects/danubechance2-0" title="Interreg">
+		<a tabindex="-1"  href="http://www.interreg-danube.eu/approved-projects/danubechance2-0" title="Interreg">
 			<img class="site-logo" src="/early_warning/assets/content/themes/finance/images/logo.png" alt="test" width="263" height="75" data-retina="/early_warning/assets/content/uploads/2021/06/logo@2x.png" data-logo_site="/early_warning/assets/content/themes/finance/images/logo.png" data-logo_sticky="/early_warning/assets/content/themes/finance/images/logo.png" data-site_retina_logo_sticky="/early_warning/assets/content/themes/finance/images/logo@2x.png" data-retina_base="/early_warning/assets/content/uploads/2021/06/logo@2x.png" />
 		</a>
 	</div>
@@ -246,26 +246,26 @@ body { color:#666!important}
     </div><!-- //mobile menu button -->
 
 <nav id="mainnav" class="mainnav" role="navigation">
-        <ul id="menu-main" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a href="<?php echo url('/'); ?>">Home</a>
+        <ul id="menu-main" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-17"><a tabindex="-1"  href="<?php echo url('/'); ?>">Home</a>
 </li>
-<li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a href="<?php echo url('/model'); ?>">Basic Model</a>
+<li id="menu-item-1785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1785"><a tabindex="-1"  href="<?php echo url('/model'); ?>">Basic Model</a>
 </li>
-<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29"><a href="<?php echo url('/complexmodel'); ?>">Complex Model</a>
+<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29"><a tabindex="-1"  href="<?php echo url('/complexmodel'); ?>">Complex Model</a>
 	<!--
 <ul class="sub-menu">
-	<li id="menu-item-1707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1707"><a href="<?php echo url('/riskmanagement'); ?>">Risk Management</a></li>
+	<li id="menu-item-1707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1707"><a tabindex="-1"  href="<?php echo url('/riskmanagement'); ?>">Risk Management</a></li>
 </ul>
 -->
 </li>
-<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a href="<?php echo url('/aboutproject'); ?>">About project</a>
+<li id="menu-item-1333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1333"><a tabindex="-1"  href="<?php echo url('/aboutproject'); ?>">About project</a>
 </li>
-<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a href="<?php echo url('/about'); ?>">About</a>
+<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1295"><a tabindex="-1"  href="<?php echo url('/about'); ?>">About</a>
 </li>
-<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a href="<?php echo url('/team'); ?>">Partners</a>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31"><a tabindex="-1"  href="<?php echo url('/team'); ?>">Partners</a>
 </li>
 <!--
-<li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a href="<?php echo url('/team'); ?>">Our Team</a></li>
-<li id="menu-item-1705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1705"><a href="/early_warning/overview/">Overview</a></li>
+<li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a tabindex="-1"  href="<?php echo url('/team'); ?>">Our Team</a></li>
+<li id="menu-item-1705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1705"><a tabindex="-1"  href="/early_warning/overview/">Overview</a></li>
 -->
 </ul>
 </nav><!-- #site-navigation -->

@@ -1,5 +1,19 @@
 @include('header')
 
+<script type="text/javascript">
+
+
+function stopRKey(evt) {
+  var evt = (evt) ? evt : ((event) ? event : null);
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+  if ((evt.keyCode == 13))  {return false;}
+}
+
+document.onkeypress = stopRKey;
+
+
+</script>
+
 <style>
 
  label {
@@ -99,6 +113,7 @@ h6 {
 
 
     <script class="mf-template">
+
 
 
     function myfunction() {
@@ -217,7 +232,9 @@ h6 {
     let page = html`
     <h6 id="infoheading">Hover Over the Input Labels to Get a Hint on Where You Can Find The Required Data (This Only Works for the Residents of <img src="/early_warning/assets/inc/sk2.png"/> )</h6>
 
+
       <form
+        onkeydown="return event.key != 'Enter';"
         className="metform-form-content"
         method="post"
         >
@@ -290,6 +307,7 @@ h6 {
               </div>
             <input
             type="text"
+            tabindex="1"
             className="mf-input "
             id="mf-input-text-13c1826"
             name="companyname"
@@ -344,6 +362,7 @@ h6 {
             min="1900"
             max="2099"
             step="1"
+            tabindex="1"
             id="curyear"
             name="currentyear"
             required
@@ -459,6 +478,7 @@ h6 {
     </div>
     <input
       type="number"
+      tabindex="2"
       className="mf-input "
       id="mf-input-text-13c1826"
       name="total-assets"
@@ -491,6 +511,7 @@ h6 {
     className="mf-input "
     id="mf-input-text-d5f534d"
     name="equity"
+    tabindex="7"
     placeholder="${ parent.decodeEntities(`Equity`) } "
               onInput=${parent.handleChange}
       aria-invalid=${validation.errors['equity'] ? 'true' : 'false'}
@@ -520,6 +541,7 @@ h6 {
     className="mf-input "
     id="mf-input-text-d5f534d"
     name="ad"
+    tabindex="12"
     placeholder="${ parent.decodeEntities(`Accruals/Deferrals`) } "
               onInput=${parent.handleChange}
       aria-invalid=${validation.errors['ad'] ? 'true' : 'false'}
@@ -545,7 +567,7 @@ h6 {
     <label>Own Work Capitalized</label>
     <span class="tooltiptext">Row 07 in Income Statement</span>
     </div>
-  <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-work-cap" placeholder="${ parent.decodeEntities(`Own Work Capitalized`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-work-cap'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+  <input type="number" tabindex="17" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-work-cap" placeholder="${ parent.decodeEntities(`Own Work Capitalized`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-work-cap'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
     />
 
       <${validation.ErrorMessage} errors=${validation.errors} name="own-work-cap" as=${html`<span className="mf-error-message"></span>`}
@@ -570,6 +592,7 @@ h6 {
     className="mf-input "
     id="mf-input-text-d5f534d"
     name="interest-expense"
+    tabindex="22"
     placeholder="${ parent.decodeEntities(`Interest Expense`) } "
               onInput=${parent.handleChange}
       aria-invalid=${validation.errors['interest-expense'] ? 'true' : 'false'}
@@ -608,6 +631,7 @@ h6 {
         <input
           type="number"
           className="mf-input "
+          tabindex="3"
           id="mf-input-text-13c1826"
           name="current-assets"
           placeholder="${ parent.decodeEntities(`Current Assets`) } "
@@ -639,6 +663,7 @@ h6 {
           className="mf-input "
           id="mf-input-text-d5f534d"
           name="retained-earnings"
+          tabindex="8"
           placeholder="${ parent.decodeEntities(`Retained Earnings`) } "
                     onInput=${parent.handleChange}
             aria-invalid=${validation.errors['retained-earnings'] ? 'true' : 'false'}
@@ -663,7 +688,7 @@ h6 {
           <label>Revenue (Merchandise)</label>
           <span class="tooltiptext" id="tt12">Row 03 in Income Statement</span>
           </div>
-          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          <input type="number" tabindex="13"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
               <${validation.ErrorMessage} errors=${validation.errors} name="revenue-merch" as=${html`<span className="mf-error-message"></span>`}
@@ -687,6 +712,7 @@ h6 {
           className="mf-input "
           id="mf-input-text-d5f534d"
           name="revenue-sale"
+          tabindex="18"
           placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "
                     onInput=${parent.handleChange}
             aria-invalid=${validation.errors['revenue-sale'] ? 'true' : 'false'}
@@ -717,6 +743,7 @@ h6 {
             type="number"
             className="mf-input "
             id="mf-input-text-d5f534d"
+            tabindex="23"
             name="profit-loss-before-tax"
             placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "
                       onInput=${parent.handleChange}
@@ -763,6 +790,7 @@ h6 {
       className="mf-input "
       id="mf-input-text-13c1826"
       name="inventory"
+      tabindex="4"
       placeholder="${ parent.decodeEntities(`Inventory`) } "
                 onInput=${parent.handleChange}
         aria-invalid=${validation.errors['inventory'] ? 'true' : 'false'}
@@ -792,6 +820,7 @@ h6 {
       className="mf-input "
       id="mf-input-text-d5f534d"
       name="liabilities"
+      tabindex="9"
       placeholder="${ parent.decodeEntities(`Liabilities`) } "
                 onInput=${parent.handleChange}
         aria-invalid=${validation.errors['liabilities'] ? 'true' : 'false'}
@@ -822,6 +851,7 @@ h6 {
       className="mf-input "
       id="mf-input-text-13c1826"
       name="production"
+      tabindex="14"
       placeholder="${ parent.decodeEntities(`Production`) } "
             onInput=${parent.handleChange}
       aria-invalid=${validation.errors['production'] ? 'true' : 'false'}
@@ -852,6 +882,7 @@ h6 {
           type="number"
           className="mf-input "
           id="mf-input-text-d5f534d"
+          tabindex="19"
           name="operating-income"
           placeholder="${ parent.decodeEntities(`Operating Income`) } "
                     onInput=${parent.handleChange}
@@ -883,6 +914,7 @@ h6 {
       type="number"
       className="mf-input "
       id="mf-input-text-d5f534d"
+      tabindex="24"
       name="profit-loss-after-tax"
       placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "
                 onInput=${parent.handleChange}
@@ -921,6 +953,7 @@ h6 {
   <input
     type="number"
     className="mf-input "
+    tabindex="5"
     id="mf-input-text-13c1826"
     name="financial-accounts"
     placeholder="${ parent.decodeEntities(`Financial Accounts`) } "
@@ -952,6 +985,7 @@ h6 {
         className="mf-input "
         id="mf-input-text-d5f534d"
         name="current-liabilities"
+        tabindex="10"
         placeholder="${ parent.decodeEntities(`Current Liabilities`) } "
                   onInput=${parent.handleChange}
           aria-invalid=${validation.errors['current-liabilities'] ? 'true' : 'false'}
@@ -976,7 +1010,7 @@ h6 {
     <label>Revenue (P and S)</label>
     <span class="tooltiptext">Row 05 in Income Statement</span>
     </div>
-  <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p-s" placeholder="${ parent.decodeEntities(`Revenue (P and S)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+  <input type="number" tabindex="15" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p-s" placeholder="${ parent.decodeEntities(`Revenue (P and S)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
     />
 
       <${validation.ErrorMessage} errors=${validation.errors} name="revenue-p-s" as=${html`<span className="mf-error-message"></span>`}
@@ -999,6 +1033,7 @@ h6 {
                 type="number"
                 className="mf-input "
                 id="mf-input-text-d5f534d"
+                tabindex="20"
                 name="amortization"
                 placeholder="${ parent.decodeEntities(`Amortization`) } "
                           onInput=${parent.handleChange}
@@ -1041,6 +1076,7 @@ h6 {
       type="number"
       className="mf-input "
       id="mf-input-text-13c1826"
+      tabindex="6"
       name="ad-total"
       placeholder="${ parent.decodeEntities(`Accruals/Deferrals`) } "
                 onInput=${parent.handleChange}
@@ -1072,6 +1108,7 @@ h6 {
         className="mf-input "
         id="mf-input-text-13c1826"
         name="provisions"
+        tabindex="11"
         placeholder="${ parent.decodeEntities(`Provisions`) } "
           onInput=${parent.handleChange}
         aria-invalid=${validation.errors['provisions'] ? 'true' : 'false'}
@@ -1097,7 +1134,7 @@ h6 {
       <label>Internal Inventory</label>
       <span class="tooltiptext">Row 06 in Income Statement</span>
       </div>
-    <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="internal-inventory" placeholder="${ parent.decodeEntities(`Internal Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['internal-inventory'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+    <input type="number" tabindex="16"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="internal-inventory" placeholder="${ parent.decodeEntities(`Internal Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['internal-inventory'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
       />
 
         <${validation.ErrorMessage} errors=${validation.errors} name="internal-inventory" as=${html`<span className="mf-error-message"></span>`}
@@ -1120,6 +1157,7 @@ h6 {
       type="number"
       className="mf-input "
       id="mf-input-text-d5f534d"
+      tabindex="21"
       name="securities-shares"
       placeholder="${ parent.decodeEntities(`Securities and Shares`) } "
                 onInput=${parent.handleChange}
@@ -1225,6 +1263,7 @@ h6 {
           type="number"
           className="mf-input "
           id="mf-input-text-13c1826"
+          tabindex="25"
           name="totalassets2"
           placeholder="${ parent.decodeEntities(`Total Assets`) } "
             onInput=${parent.handleChange}
@@ -1255,6 +1294,7 @@ h6 {
             type="number"
             className="mf-input "
             id="mf-input-text-13c1826"
+            tabindex="30"
             name="noncurrentliabilities2"
             placeholder="${ parent.decodeEntities(`Non-current Liabilities`) } "
               onInput=${parent.handleChange}
@@ -1280,6 +1320,7 @@ h6 {
           type="number"
           className="mf-input "
           id="mf-input-text-13c1826"
+          tabindex="35"
           name="internalinventory2"
           placeholder="${ parent.decodeEntities(`Internal Inventory`) } "
             onInput=${parent.handleChange}
@@ -1312,6 +1353,7 @@ h6 {
           className="mf-input "
           id="mf-input-text-13c1826"
           name="profit-loss-after-tax2"
+          tabindex="40"
           placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "
             onInput=${parent.handleChange}
           aria-invalid=${validation.errors['profit-loss-after-tax2'] ? 'true' : 'false'}
@@ -1351,6 +1393,7 @@ h6 {
 
         <input
         type="number"
+        tabindex="26"
         className="mf-input "
         id="mf-input-text-13c1826"
         name="noncurrentassets2"
@@ -1379,7 +1422,7 @@ h6 {
             <label>Long-term Bank Loans</label>
             <span class="tooltiptext">Row 119 in Balance Sheet</span>
             </div>
-          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loan`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+          <input type="number" tabindex="31" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loan`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
           <${validation.ErrorMessage} errors=${validation.errors} name="long-term-bank-loans2" as=${html`<span className="mf-error-message"></span>`}
@@ -1403,6 +1446,7 @@ h6 {
           className="mf-input "
           id="mf-input-text-13c1826"
           name="ownwork2"
+          tabindex="36"
           placeholder="${ parent.decodeEntities(`Own Work Capitalized`) } "
           onInput=${parent.handleChange}
           aria-invalid=${validation.errors['ownwork2'] ? 'true' : 'false'}
@@ -1440,7 +1484,7 @@ h6 {
         <label>Property, Plant, Equipment</label>
         <span class="tooltiptext">Row 011 in Balance Sheet</span>
         </div>
-      <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ppe2" placeholder="${ parent.decodeEntities(`Property, Plant ...`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ppe2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+      <input type="number" tabindex="27" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ppe2" placeholder="${ parent.decodeEntities(`Property, Plant ...`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ppe2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
       />
 
       <${validation.ErrorMessage} errors=${validation.errors} name="ppe2" as=${html`<span className="mf-error-message"></span>`}
@@ -1465,6 +1509,7 @@ h6 {
             className="mf-input "
             id="mf-input-text-13c1826"
             name="provisions2"
+            tabindex="32"
             placeholder="${ parent.decodeEntities(`Provisions`) } "
               onInput=${parent.handleChange}
             aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false'}
@@ -1491,7 +1536,7 @@ h6 {
             <label>Revenue from Sale</label>
             <span class="tooltiptext" id="tt15a2">Row 08 in Income Statement</span>
             </div>
-          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+          <input type="number" tabindex="37" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
           <${validation.ErrorMessage} errors=${validation.errors} name="revenue-sale2" as=${html`<span className="mf-error-message"></span>`}
@@ -1523,7 +1568,7 @@ h6 {
         <label>Non-current Assets</label>
         <span class="tooltiptext">Row 021 in Balance Sheet</span>
         </div>
-      <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-assets2" placeholder="${ parent.decodeEntities(`Non-current Assets`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-assets2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+      <input type="number" tabindex="28" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-assets2" placeholder="${ parent.decodeEntities(`Non-current Assets`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-assets2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
       />
 
       <${validation.ErrorMessage} errors=${validation.errors} name="non-current-assets2" as=${html`<span className="mf-error-message"></span>`}
@@ -1549,6 +1594,7 @@ h6 {
         className="mf-input "
         id="mf-input-text-13c1826"
         name="revenue-merch2"
+        tabindex="33"
         placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "
           onInput=${parent.handleChange}
         aria-invalid=${validation.errors['revenue-merch2'] ? 'true' : 'false'}
@@ -1580,6 +1626,7 @@ h6 {
             className="mf-input "
             id="mf-input-text-13c1826"
             name="addedvalue2"
+            tabindex="38"
             placeholder="${ parent.decodeEntities(`Added Value`) } "
               onInput=${parent.handleChange}
             aria-invalid=${validation.errors['addedvalue2'] ? 'true' : 'false'}
@@ -1620,6 +1667,8 @@ h6 {
         className="mf-input "
         id="mf-input-text-13c1826"
         name="equity2"
+
+        tabindex="29"
         placeholder="${ parent.decodeEntities(`Equity`) } "
           onInput=${parent.handleChange}
         aria-invalid=${validation.errors['equity2'] ? 'true' : 'false'}
@@ -1651,6 +1700,7 @@ h6 {
           className="mf-input "
           id="mf-input-text-13c1826"
           name="production2"
+          tabindex="34"
           placeholder="${ parent.decodeEntities(`Production`) } "
                 onInput=${parent.handleChange}
           aria-invalid=${validation.errors['production2'] ? 'true' : 'false'}
@@ -1676,7 +1726,7 @@ h6 {
           <label>Securities and Shares</label>
           <span class="tooltiptext">Row 27 in Income Statement</span>
           </div>
-        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="securities-shares2" placeholder="${ parent.decodeEntities(`Securities and Shares`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['securities-shares2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+        <input type="number" tabindex="39" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="securities-shares2" placeholder="${ parent.decodeEntities(`Securities and Shares`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['securities-shares2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
         />
 
         <${validation.ErrorMessage} errors=${validation.errors} name="securities-shares2" as=${html`<span className="mf-error-message"></span>`}
@@ -1749,7 +1799,7 @@ h6 {
 
         <div className="mf-input-wrapper">
           <div class="tt1">
-          <label>Assets</label>
+          <label>Current Assets</label>
           <span class="tooltiptext" id="tt2a1">Row 033 in Balance Sheet</span>
           </div>
         <input
@@ -1757,7 +1807,8 @@ h6 {
         className="mf-input "
         id="mf-input-text-13c1826"
         name="assets1"
-        placeholder="${ parent.decodeEntities(`Assets`) } "
+        tabindex="41"
+        placeholder="${ parent.decodeEntities(`Current Assets`) } "
           onInput=${parent.handleChange}
         aria-invalid=${validation.errors['assets1'] ? 'true' : 'false'}
         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1790,7 +1841,7 @@ h6 {
 
         <br class="mobile" />
         <div class="tt1">
-        <label>Liabilities</label>
+        <label>Current Liabilities</label>
         <span class="tooltiptext" id="tt10a1">Row 122 in Balance Sheet</span>
         </div>
         <input
@@ -1798,7 +1849,8 @@ h6 {
         className="mf-input "
         id="mf-input-text-13c1826"
         name="liabilities1"
-        placeholder="${ parent.decodeEntities(`Liabilities`) } "
+        tabindex="42"
+        placeholder="${ parent.decodeEntities(`Current Liabilities`) } "
               onInput=${parent.handleChange}
         aria-invalid=${validation.errors['liabilities1'] ? 'true' : 'false'}
         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1864,6 +1916,17 @@ h6 {
       `
 
       return page;
+  </script>
+
+  <script>
+  $(document).ready(function() {
+    $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
   </script>
 
 
