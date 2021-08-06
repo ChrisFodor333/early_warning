@@ -126,6 +126,12 @@
     }
 }
 
+@media not print {
+    #curyear{
+       margin-left:120px;
+    }
+}
+
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -270,7 +276,7 @@ input[type=image] {
                     </div><!-- /.page-title-captions -->
 
 
-		
+
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
@@ -285,7 +291,7 @@ input[type=image] {
 
 
 	<div id="content" >
-
+    <h2 id="curyear" style="text-align:center; margin-top: 5px;">The Results of the Model for the year <?php echo $currentyear; ?></h2> 
 		<div class="container" >
 			<div class="row row-wrapper">
 		<div data-elementor-type="wp-page" data-elementor-id="1163" class="elementor elementor-1163" data-elementor-settings="[]">

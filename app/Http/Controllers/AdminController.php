@@ -205,6 +205,9 @@ class AdminController extends Controller
              $binkert = $basic->binkert;
              $result = $basic->result;
 
+             $year = $basic->current_year;
+             $data['currentyear'] = $year;
+
 
              $nacount = 0;
 

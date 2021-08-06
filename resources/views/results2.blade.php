@@ -32,9 +32,11 @@
           display: none;
         }
 
+
         .container {
           display: none;
         }
+
 
 
 
@@ -52,6 +54,13 @@
         display: block;
     }
 }
+
+@media not print {
+    #curyear{
+       margin-left:120px;
+    }
+}
+
 
 .styled-table {
     border-collapse: collapse;
@@ -214,8 +223,8 @@ onclick="window.print();">
 
 
 
-	<div id="content" >
 
+	<h2 id="curyear" style="text-align:center; margin-top: 5px;">The Results of the Model for the year <?php echo $currentyear; ?></h2>
 		<div class="container" >
 			<div class="row row-wrapper">
 		<div data-elementor-type="wp-page" data-elementor-id="1163" class="elementor elementor-1163" data-elementor-settings="[]">
@@ -230,7 +239,7 @@ onclick="window.print();">
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-56c7fb24 elementor-widget elementor-widget-heading" data-id="56c7fb24" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">The Results of the Model</h2>		</div>
+
 				</div>
 				<div class="elementor-element elementor-element-78a60114 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="78a60114" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
