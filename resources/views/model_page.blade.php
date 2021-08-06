@@ -127,25 +127,28 @@ h6 {
           document.querySelector('#tt18').innerHTML = "Row 49 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 56 in Income Statement";
 
-          if(document.querySelector('#curyear').value-1 >= 2014) {
-            document.querySelector('#tt6a2').innerHTML = "Row 080 in Balance Sheet";
-            document.querySelector('#tt9a2').innerHTML = "Row 136 in Balance Sheet";
-            document.querySelector('#tt12a2').innerHTML = "Row 03 in Income Statement";
-            document.querySelector('#tt15a2').innerHTML = "Row 08 in Income Statement";
-          } else {
-            document.querySelector('#tt6a2').innerHTML = "Row 067 in Balance Sheet";
-            document.querySelector('#tt9a2').innerHTML = "Row 089 in Balance Sheet";
-            document.querySelector('#tt12a2').innerHTML = "Row 01 in Income Statement";
-            document.querySelector('#tt15a2').innerHTML = "Row 19 in Income Statement";
-          }
-
           if(document.querySelector('#curyear').value-2 >= 2014) {
-            document.querySelector('#tt2a1').innerHTML = "Row 033 in Balance Sheet";
-            document.querySelector('#tt10a1').innerHTML = "Row 122 in Balance Sheet";
-          } else {
+          document.querySelector('#tt2a1').innerHTML = "Row 033 in Balance Sheet";
+          document.querySelector('#tt10a1').innerHTML = "Row 122 in Balance Sheet";
+        } else {
            document.querySelector('#tt2a1').innerHTML = "Row 030 in Balance Sheet";
            document.querySelector('#tt10a1').innerHTML = "Row 106 in Balance Sheet";
+      }
+
+      if(document.querySelector('#curyear').value-1 >= 2014) {
+          document.querySelector('#tt6a2').innerHTML = "Row 080 in Balance Sheet";
+          document.querySelector('#tt9a2').innerHTML = "Row 136 in Balance Sheet";
+          document.querySelector('#tt12a2').innerHTML = "Row 03 in Income Statement";
+          document.querySelector('#tt15a2').innerHTML = "Row 08 in Income Statement";
+        } else {
+          document.querySelector('#tt6a2').innerHTML = "Row 067 in Balance Sheet";
+          document.querySelector('#tt9a2').innerHTML = "Row 089 in Balance Sheet";
+          document.querySelector('#tt12a2').innerHTML = "Row 01 in Income Statement";
+          document.querySelector('#tt15a2').innerHTML = "Row 19 in Income Statement";
           }
+
+
+        //IF VALUE <2014
         } else {
           document.querySelector('#tt2').innerHTML = "Row 030 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 031 in Balance Sheet";
@@ -165,7 +168,15 @@ h6 {
           document.querySelector('#tt18').innerHTML = "Row 39 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 59 in Income Statement";
 
-          if(document.querySelector('#curyear').value-1 >= 2014) {
+          if(document.querySelector('#curyear').value-2 >= 2014) {
+           document.querySelector('#tt2a1').innerHTML = "Row 033 in Balance Sheet";
+           document.querySelector('#tt10a1').innerHTML = "Row 122 in Balance Sheet";
+         } else {
+          document.querySelector('#tt2a1').innerHTML = "Row 030 in Balance Sheet";
+          document.querySelector('#tt10a1').innerHTML = "Row 106 in Balance Sheet";
+         }
+
+         if(document.querySelector('#curyear').value-1 >= 2014) {
             document.querySelector('#tt6a2').innerHTML = "Row 080 in Balance Sheet";
             document.querySelector('#tt9a2').innerHTML = "Row 136 in Balance Sheet";
             document.querySelector('#tt12a2').innerHTML = "Row 03 in Income Statement";
@@ -177,13 +188,6 @@ h6 {
             document.querySelector('#tt15a2').innerHTML = "Row 19 in Income Statement";
           }
 
-          if(document.querySelector('#curyear').value-2 >= 2014) {
-            document.querySelector('#tt2a1').innerHTML = "Row 033 in Balance Sheet";
-            document.querySelector('#tt10a1').innerHTML = "Row 122 in Balance Sheet";
-          } else {
-           document.querySelector('#tt2a1').innerHTML = "Row 030 in Balance Sheet";
-           document.querySelector('#tt10a1').innerHTML = "Row 106 in Balance Sheet";
-          }
 
         }
     }
