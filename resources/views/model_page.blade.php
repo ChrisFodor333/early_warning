@@ -430,7 +430,7 @@ h6 {
               <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-              <h2 id="curyeartext"><?php echo date("Y"); ?></h2>
+              <h2 class="elementor-heading-title elementor-size-default" id="curyeartext"><?php echo date("Y"); ?></h2>
             </div>
 
                 </div>
