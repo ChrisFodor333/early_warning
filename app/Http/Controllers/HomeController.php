@@ -9,11 +9,15 @@ class HomeController extends Controller
 {
 
       public function model_page() {
-          return view('model_page');
+          $years = range(strftime("%Y", time()),1900);
+          $data['years'] = $years;
+          return view('model_page',$data);
       }
 
       public function complex_model_page() {
-          return view('complex_model_page');
+          $years = range(strftime("%Y", time()),1900);
+          $data['years'] = $years;
+          return view('complex_model_page',$data);
       }
 
 

@@ -356,19 +356,21 @@ h6 {
             <label>Current Year</label>
             <span class="tooltiptext">Enter the Year You Want to Use as the Current Year</span>
             </div>
-            <input
-            type="number"
-            className="mf-input "
-            min="1900"
-            max="2099"
-            step="1"
+
+            <select
+            className="mf-input"
             tabindex="1"
             id="curyear"
             name="currentyear"
             required
-            placeholder="${ parent.decodeEntities(`Current Year`) } "
             onInput=${myfunction}
-                />
+            >
+            <?php foreach($years as $year) : ?>
+              <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+            <?php endforeach; ?>
+          </select>
+
+
 
             </div>
 
@@ -428,7 +430,7 @@ h6 {
               <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-              <h2 id="curyeartext">Current Year</h2>
+              <h2 id="curyeartext"><?php echo date("Y"); ?></h2>
             </div>
 
                 </div>
@@ -1210,7 +1212,7 @@ h6 {
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default" id="lastyear">Last Year</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default" id="lastyear"><?php echo date('Y', strtotime(' -1 years')); ?></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
@@ -1756,7 +1758,7 @@ h6 {
       			<div class="elementor-widget-wrap elementor-element-populated">
       								<div class="elementor-element elementor-element-4fe67cb0 elementor-widget elementor-widget-heading" data-id="4fe67cb0" data-element_type="widget" data-widget_type="heading.default">
       				<div class="elementor-widget-container">
-      			<h2 class="elementor-heading-title elementor-size-default" id="yearbefore">The Year Before</h2>		</div>
+      			<h2 class="elementor-heading-title elementor-size-default" id="yearbefore"><?php echo date('Y', strtotime(' -2 years')); ?></h2>		</div>
       				</div>
       				<div class="elementor-element elementor-element-5adf2f76 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5adf2f76" data-element_type="widget" data-widget_type="divider.default">
       				<div class="elementor-widget-container">
@@ -1918,16 +1920,7 @@ h6 {
       return page;
   </script>
 
-  <script>
-  $(document).ready(function() {
-    $(window).keydown(function(event){
-      if(event.keyCode == 13) {
-        event.preventDefault();
-        return false;
-      }
-    });
-  });
-  </script>
+
 
 
 
