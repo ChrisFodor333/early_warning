@@ -470,7 +470,7 @@ h6 {
 
       <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
 
@@ -498,10 +498,10 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
       <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-      <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
     <div class="tt1">
@@ -528,10 +528,10 @@ h6 {
 
         </div>
 
-  </div>
+
       </div>
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
     <div class="tt1">
@@ -558,11 +558,11 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
 
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
     <div class="tt1">
@@ -577,12 +577,12 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
 
 
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
     <div class="tt1">
@@ -609,7 +609,7 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
 
         </div>
@@ -619,7 +619,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
           <!-- IMPORTANT -->
                   <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-          <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -650,10 +650,10 @@ h6 {
 
             </div>
 
-          </div>
+
           </div>
           <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-          <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -680,10 +680,10 @@ h6 {
 
             </div>
 
-        </div>
+
           </div>
           <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-          <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -698,11 +698,11 @@ h6 {
 
             </div>
 
-          </div>
+
           </div>
 
           <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-          <div className="elementor-widget-container">
+
 
             <div className="mf-input-wrapper">
           <div class="tt1">
@@ -729,12 +729,12 @@ h6 {
 
             </div>
 
-          </div>
+
           </div>
 
 
           <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-          <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -761,7 +761,7 @@ h6 {
 
             </div>
 
-          </div>
+
           </div>
 
 
@@ -773,7 +773,7 @@ h6 {
     <div className="elementor-widget-wrap elementor-element-populated">
       <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
 
@@ -807,10 +807,10 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
       <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
       <div class="tt1">
@@ -837,10 +837,10 @@ h6 {
 
         </div>
 
-    </div>
+
       </div>
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
       <div class="tt1">
@@ -868,12 +868,12 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
 
 
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -900,12 +900,12 @@ h6 {
 
             </div>
 
-      </div>
+
       </div>
 
 
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
       <div class="tt1">
@@ -931,7 +931,7 @@ h6 {
         />
         </div>
 
-      </div>
+
       </div>
 
         </div>
@@ -941,7 +941,7 @@ h6 {
   <div className="elementor-widget-wrap elementor-element-populated">
     <!-- IMPORTANT -->
             <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-    <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
 
@@ -972,10 +972,10 @@ h6 {
 
       </div>
 
-    </div>
+
     </div>
     <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-    <div className="elementor-widget-container">
+
 
       <div className="mf-input-wrapper">
         <div class="tt1">
@@ -1002,10 +1002,10 @@ h6 {
 
           </div>
 
-  </div>
+
     </div>
     <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-    <div className="elementor-widget-container">
+
 
   <div className="mf-input-wrapper">
     <div class="tt1">
@@ -1020,11 +1020,11 @@ h6 {
 
       </div>
 
-    </div>
+
     </div>
 
     <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-    <div className="elementor-widget-container">
+
 
       <div className="mf-input-wrapper">
               <div class="tt1">
@@ -1051,7 +1051,7 @@ h6 {
 
                 </div>
 
-    </div>
+
     </div>
 
       </div>
@@ -1061,7 +1061,7 @@ h6 {
     <div className="elementor-widget-wrap elementor-element-populated">
       <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
 
@@ -1094,10 +1094,10 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
       <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-      <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
         <div class="tt1">
@@ -1126,10 +1126,10 @@ h6 {
           </div>
 
 
-    </div>
+
       </div>
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
       <div class="tt1">
@@ -1144,11 +1144,11 @@ h6 {
 
         </div>
 
-      </div>
+
       </div>
 
       <div className="elementor-element elementor-element-d5f534d elementor-widget elementor-widget-mf-text" data-id="d5f534d" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-      <div className="elementor-widget-container">
+
 
     <div className="mf-input-wrapper">
       <div class="tt1">
@@ -1176,24 +1176,13 @@ h6 {
         </div>
 
       </div>
-      </div>
 
         </div>
 
 </div>
 
             </div>
-            <!--
-            <div className="elementor-element elementor-element-71aab40 btn-metform-h50 mf-btn--center elementor-widget elementor-widget-mf-button" data-id="71aab40" data-element_type="widget" data-widget_type="mf-button.default">
-            <div className="">
-              <div className="mf-btn-wraper " data-mf-form-conditional-logic-requirement="">
-                  <button type="submit" className="metform-btn metform-submit-btn " id="">
-              <span>${ parent.decodeEntities(`Calculate`) } </span>
-            </button>
-                  </div>
-                </div>
-            </div>
--->
+
   </section>
 
 
@@ -1251,7 +1240,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1281,10 +1270,10 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-        <div className="elementor-widget-container">
+
 
           <div className="mf-input-wrapper">
             <div class="tt1">
@@ -1306,11 +1295,11 @@ h6 {
 
           </div>
 
-        </div>
+
         </div>
 
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -1338,11 +1327,11 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
 
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -1369,11 +1358,7 @@ h6 {
           />
 
         </div>
-
         </div>
-        </div>
-
-
         </div>
         </div>
 
@@ -1381,7 +1366,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
             <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1413,10 +1398,10 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-        <div className="elementor-widget-container">
+
 
           <div className="mf-input-wrapper">
 
@@ -1432,11 +1417,11 @@ h6 {
 
           </div>
 
-        </div>
+
         </div>
 
         <div className="elementor-element elementor-element-094f2a0 elementor-widget elementor-widget-mf-email" data-id="094f2a0" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}" data-widget_type="mf-email.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -1463,11 +1448,8 @@ h6 {
 
         </div>
 
+
         </div>
-        </div>
-
-
-
 
         </div>
         </div>
@@ -1476,7 +1458,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1495,10 +1477,9 @@ h6 {
         </div>
 
         </div>
-        </div>
 
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
           <div className="mf-input-wrapper">
             <div class="tt1">
@@ -1526,11 +1507,11 @@ h6 {
 
           </div>
 
-        </div>
+
         </div>
 
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
           <div className="mf-input-wrapper">
 
@@ -1546,7 +1527,7 @@ h6 {
 
           </div>
 
-        </div>
+
         </div>
 
 
@@ -1559,7 +1540,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1578,11 +1559,11 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
 
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1611,11 +1592,11 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
 
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
           <div className="mf-input-wrapper">
 
@@ -1643,7 +1624,7 @@ h6 {
 
           </div>
 
-        </div>
+
         </div>
         </div>
         </div>
@@ -1652,7 +1633,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1685,10 +1666,10 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1717,10 +1698,10 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
 
@@ -1736,7 +1717,7 @@ h6 {
 
         </div>
 
-        </div>
+
         </div>
         </div>
         </div>
@@ -1797,7 +1778,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
+
 
         <div className="mf-input-wrapper">
           <div class="tt1">
@@ -1825,7 +1806,6 @@ h6 {
         </div>
 
         </div>
-        </div>
 
 
         </div>
@@ -1835,8 +1815,6 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
             <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-        <div className="elementor-widget-container">
-
           <div className="mf-input-wrapper">
 
 
@@ -1866,8 +1844,6 @@ h6 {
 
         </div>
 
-
-        </div>
         </div>
         </div>
         </div>
