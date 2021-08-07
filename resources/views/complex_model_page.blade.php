@@ -21,13 +21,13 @@
       text-align: center;
       }
 
-      #yearlabel {
+      .yearlabel {
         display: none;
       }
-      #yearlabel1 {
+      .yearlabel1 {
         display: none;
       }
-      #yearlabel2 {
+      .yearlabel2 {
         display: none;
       }
 
@@ -42,13 +42,13 @@
       margin-left: 12px;
       width: 100%;
     }
-    #yearlabel {
+    .yearlabel {
       display: block;
     }
-    #yearlabel1 {
+    .yearlabel1 {
         display: block;
     }
-    #yearlabel2 {
+    .yearlabel2 {
       display: block;
     }
 
@@ -69,13 +69,13 @@
     text-align: center;
     }
 
-    #yearlabel {
+    .yearlabel {
       display: none;
     }
-    #yearlabel1 {
+    .yearlabel1 {
       display: none;
     }
-    #yearlabel2 {
+    .yearlabel2 {
       display: none;
     }
 
@@ -137,13 +137,13 @@ display: none;
 .mobile {
   display: block;
 }
-#yearlabel {
+.yearlabel {
   display: block;
 }
-#yearlabel1 {
+.yearlabel1 {
     display: block;
 }
-#yearlabel2 {
+.yearlabel2 {
   display: block;
 }
 
@@ -219,7 +219,18 @@ display: none;
         document.querySelector('#yearbefore').innerHTML = document.querySelector('#curyear').value-2;
         document.querySelector('#extra').innerHTML = "Additional Information for the Year of " + Number(document.querySelector('#curyear').value-1);
 
+        document.querySelectorAll('.yearlabel').forEach(function(field) {
+            field.innerHTML = "(" + Number(document.querySelector('#curyear').value) + ")";
+        });
 
+        document.querySelectorAll('.yearlabel2').forEach(function(field) {
+            field.innerHTML = "(" + Number(document.querySelector('#curyear').value-1) + ")";
+        });
+
+
+        document.querySelectorAll('.yearlabel1').forEach(function(field) {
+            field.innerHTML = "(" + Number(document.querySelector('#curyear').value-2) + ")";
+        });
 
         if(document.querySelector('#curyear').value >= 2014) {
             document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
@@ -669,7 +680,7 @@ display: none;
   <div className="tablet mf-input-wrapper">
 
     <br class="mobile" />   <div class="tt1">
-    <label>Total Assets</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+    <label>Total Assets</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
     <span class="tooltiptext">Row 001 in Balance Sheet</span>
     </div>
     <input
@@ -708,7 +719,7 @@ display: none;
 
 
     <br class="mobile" />  <div class="tt1">
-  <label>Total Assets</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+  <label>Total Assets</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
   <span class="tooltiptext">Row 001 in Balance Sheet</span>
   </div>
 
@@ -746,7 +757,7 @@ as=${html`<span className="mf-error-message"></span>`}
 <br class="mobile" />
 
 <div class="tt1">
-<label>Total Assets</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+<label>Total Assets</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
 <span class="tooltiptext">Row 001 in Balance Sheet</span>
 </div>
 <input
@@ -783,7 +794,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
     <div className="tablet mf-input-wrapper">
 
       <br class="mobile" />   <div class="tt1">
-      <label>Current Assets</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+      <label>Current Assets</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
       <span class="tooltiptext" id="tt2">Row 033 in Balance Sheet</span>
       </div>
             <input
@@ -822,7 +833,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
     <br class="mobile" />   <div class="tt1">
-    <label>Current Assets</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+    <label>Current Assets</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
     <span class="tooltiptext" id="tt2a">Row 033 in Balance Sheet</span>
     </div>
     <input
@@ -859,7 +870,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
   <br class="mobile" />   <div class="tt1">
-  <label>Current Assets</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+  <label>Current Assets</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
   <span class="tooltiptext" id="tt2b">Row 033 in Balance Sheet</span>
   </div>
     <input
@@ -897,7 +908,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
       <div className="tablet mf-input-wrapper">
 
         <br class="mobile" />   <div class="tt1">
-        <label>Inventory</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+        <label>Inventory</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
         <span class="tooltiptext" id="tt3">Row 034 in Balance Sheet</span>
         </div>
 
@@ -937,7 +948,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
       <br class="mobile" />   <div class="tt1">
-      <label>Inventory</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+      <label>Inventory</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
       <span class="tooltiptext" id="tt3a">Row 034 in Balance Sheet</span>
       </div>
     <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="inventory2" placeholder="${ parent.decodeEntities(`Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['inventory2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -963,7 +974,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
     <br class="mobile" />   <div class="tt1">
-    <label>Inventory</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+    <label>Inventory</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
     <span class="tooltiptext" id="tt3b">Row 034 in Balance Sheet</span>
     </div>
 
@@ -1001,7 +1012,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
         <div className="tablet mf-input-wrapper">
 
           <br class="mobile" />   <div class="tt1">
-          <label>Financial Accounts</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+          <label>Financial Accounts</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
           <span class="tooltiptext" id="tt4">Row 071 in Balance Sheet</span>
           </div>
             <input
@@ -1040,7 +1051,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
         <br class="mobile" />   <div class="tt1">
-        <label>Financial Accounts</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+        <label>Financial Accounts</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
         <span class="tooltiptext" id="tt4a">Row 071 in Balance Sheet</span>
         </div>
       <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="financial-accounts2" placeholder="${ parent.decodeEntities(`Financial Accounts`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['financial-accounts2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1066,7 +1077,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
       <br class="mobile" />   <div class="tt1">
-      <label>Financial Accounts</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+      <label>Financial Accounts</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
       <span class="tooltiptext" id="tt4b">Row 071 in Balance Sheet</span>
       </div>
       <input
@@ -1104,7 +1115,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
-            <label>Accruals/Deferrals Total</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+            <label>Accruals/Deferrals Total</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
             <span class="tooltiptext" id="tt5">Row 074 in Balance Sheet</span>
             </div>
                 <input
@@ -1143,7 +1154,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Accruals/Deferrals Total</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Accruals/Deferrals Total</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext" id="tt5a">Row 063 in Balance Sheet</span>
           </div>
 
@@ -1181,7 +1192,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
         <br class="mobile" />   <div class="tt1">
-        <label>Accruals/Deferrals Total</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+        <label>Accruals/Deferrals Total</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
         <span class="tooltiptext" id="tt5b">Row 074 in Balance Sheet</span>
         </div>
         <input
@@ -1219,7 +1230,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <div className="tablet mf-input-wrapper">
 
               <br class="mobile" />   <div class="tt1">
-              <label>Equity</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+              <label>Equity</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
               <span class="tooltiptext" id="tt6">Row 080 in Balance Sheet</span>
               </div>
             <input
@@ -1258,7 +1269,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Equity</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Equity</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext" id="tt6a">Row 080 in Balance Sheet</span>
             </div>
 
@@ -1296,7 +1307,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Equity</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+          <label>Equity</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
           <span class="tooltiptext" id="tt6b">Row 080 in Balance Sheet</span>
           </div>
           <input
@@ -1334,7 +1345,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="tablet mf-input-wrapper">
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Retained Earnings</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                <label>Retained Earnings</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                 <span class="tooltiptext" id="tt7">Row 098 in Balance Sheet</span>
                 </div>
               <input
@@ -1373,7 +1384,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Retained Earnings</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+              <label>Retained Earnings</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext" id="tt7a">Row 098 in Balance Sheet</span>
               </div>
 
@@ -1411,7 +1422,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Retained Earnings</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+            <label>Retained Earnings</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
             <span class="tooltiptext" id="tt7b">Row 098 in Balance Sheet</span>
             </div>
           <input
@@ -1449,7 +1460,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Liabilities</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <label>Liabilities</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                   <span class="tooltiptext" id="tt8">Row 101 in Balance Sheet</span>
                   </div>
                 <input
@@ -1488,7 +1499,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Liabilities</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <label>Liabilities</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                 <span class="tooltiptext" id="tt8a">Row 101 in Balance Sheet</span>
                 </div>
 
@@ -1526,7 +1537,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Liabilities</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+              <label>Liabilities</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
               <span class="tooltiptext" id="tt8b">Row 101 in Balance Sheet</span>
               </div>
               <input
@@ -1564,7 +1575,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <div className="tablet mf-input-wrapper">
 
               <br class="mobile" />   <div class="tt1">
-              <label>Current Liabilities</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+              <label>Current Liabilities</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
               <span class="tooltiptext" id="tt10">Row 122 in Balance Sheet</span>
               </div>
             <input
@@ -1603,7 +1614,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Current Liabilities</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Current Liabilities</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext" id="tt10a">Row 122 in Balance Sheet</span>
             </div>
 
@@ -1641,7 +1652,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Current Liabilities</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+            <label>Current Liabilities</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
             <span class="tooltiptext" id="tt10b">Row 122 in Balance Sheet</span>
             </div>
             <input
@@ -1678,7 +1689,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="tablet mf-input-wrapper">
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Provisions</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                <label>Provisions</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                 <span class="tooltiptext" id="tt9">Row 136 in Balance Sheet</span>
                 </div>
 
@@ -1718,7 +1729,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Provisions</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+              <label>Provisions</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext" id="tt9a">Row 136 in Balance Sheet</span>
               </div>
             <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="provisions2" placeholder="${ parent.decodeEntities(`Provisions`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1744,7 +1755,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Provisions</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+              <label>Provisions</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
               <span class="tooltiptext" id="tt9b">Row 136 in Balance Sheet</span>
               </div>
 
@@ -1783,7 +1794,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
-            <label>Accruals/Deferrals</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+            <label>Accruals/Deferrals</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
             <span class="tooltiptext" id="tt11">Row 141 in Balance Sheet</span>
             </div>
           <input
@@ -1822,7 +1833,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Accruals/Deferrals</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Accruals/Deferrals</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext" id="tt11a">Row 141 in Balance Sheet</span>
           </div>
 
@@ -1860,7 +1871,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Accruals/Deferrals</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+          <label>Accruals/Deferrals</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
           <span class="tooltiptext" id="tt11b">Row 141 in Balance Sheet</span>
           </div>
           <input
@@ -1897,7 +1908,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <div className="tablet mf-input-wrapper">
 
               <br class="mobile" />   <div class="tt1">
-              <label>Revenue (Merchandise)</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+              <label>Revenue (Merchandise)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
               <span class="tooltiptext" id="tt12">Row 03 in Income Statement</span>
               </div>
               <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -1925,7 +1936,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Revenue (Merchandise)</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Revenue (Merchandise)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext" id="tt12a">Row 03 in Income Statement</span>
             </div>
 
@@ -1963,7 +1974,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Revenue (Merchandise)</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+            <label>Revenue (Merchandise)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
             <span class="tooltiptext" id="tt12b">Row 03 in Income Statement</span>
             </div>
             <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch1" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -1990,7 +2001,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="tablet mf-input-wrapper">
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Production</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                <label>Production</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                 <span class="tooltiptext">Row 04 in Income Statement</span>
                 </div>
 
@@ -2030,7 +2041,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Production</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+              <label>Production</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext">Row 04 in Income Statement</span>
               </div>
 
@@ -2068,7 +2079,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Production</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+              <label>Production</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
               <span class="tooltiptext">Row 04 in Income Statement</span>
               </div>
 
@@ -2109,7 +2120,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
-            <label>Revenue (P and S)</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+            <label>Revenue (P and S)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
             <span class="tooltiptext">Row 05 in Income Statement</span>
             </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p-s" placeholder="${ parent.decodeEntities(`Revenue (P and S)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -2137,7 +2148,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Revenue (P and S)</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Revenue (P and S)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext">Row 05 in Income Statement</span>
           </div>
         <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p-s2" placeholder="${ parent.decodeEntities(`Revenue (P and S)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p-s2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -2163,7 +2174,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Revenue (P and S)</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+          <label>Revenue (P and S)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
           <span class="tooltiptext">Row 05 in Income Statement</span>
           </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p-s1" placeholder="${ parent.decodeEntities(`Revenue (P and S)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p-s1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -2189,7 +2200,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <div className="tablet mf-input-wrapper">
 
               <br class="mobile" />   <div class="tt1">
-              <label>Internal Inventory</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+              <label>Internal Inventory</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
               <span class="tooltiptext">Row 06 in Income Statement</span>
               </div>
             <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="internal-inventory" placeholder="${ parent.decodeEntities(`Internal Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['internal-inventory'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -2217,7 +2228,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Internal Inventory</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Internal Inventory</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext">Row 06 in Income Statement</span>
             </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="internal-inventory2" placeholder="${ parent.decodeEntities(`Internal Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['internal-inventory2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -2243,7 +2254,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Internal Inventory</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+            <label>Internal Inventory</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
             <span class="tooltiptext">Row 06 in Income Statement</span>
             </div>
             <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="internal-inventory1" placeholder="${ parent.decodeEntities(`Internal Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['internal-inventory1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -2269,7 +2280,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="tablet mf-input-wrapper">
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Own Work Capitalized</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                <label>Own Work Capitalized</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                 <span class="tooltiptext">Row 07 in Income Statement</span>
                 </div>
               <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-work-cap" placeholder="${ parent.decodeEntities(`Own Work Capitalized`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-work-cap'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -2297,7 +2308,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Own Work Capitalized</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+              <label>Own Work Capitalized</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext">Row 07 in Income Statement</span>
               </div>
 
@@ -2335,7 +2346,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Own Work Capitalized</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+              <label>Own Work Capitalized</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
               <span class="tooltiptext">Row 07 in Income Statement</span>
               </div>
               <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-work-cap1" placeholder="${ parent.decodeEntities(`Own Work Capitalized`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-work-cap1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -2362,7 +2373,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Revenue from Sale</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <label>Revenue from Sale</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                   <span class="tooltiptext" id="tt15">Row 08 in Income Statement</span>
                   </div>
                 <input
@@ -2401,7 +2412,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Revenue from Sale</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <label>Revenue from Sale</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                 <span class="tooltiptext" id="tt15a">Row 08 in Income Statement</span>
                 </div>
               <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -2427,7 +2438,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Revenue from Sale</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                <label>Revenue from Sale</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                 <span class="tooltiptext" id="tt15b">Row 08 in Income Statement</span>
                 </div>
                 <input
@@ -2465,7 +2476,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <div className="tablet mf-input-wrapper">
 
                     <br class="mobile" />   <div class="tt1">
-                    <label>Other Operating Income</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                    <label>Other Operating Income</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                     <span class="tooltiptext" id="tt16">Row 09 in Income Statement</span>
                     </div>
                   <input
@@ -2504,7 +2515,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Other Operating Income</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                  <label>Other Operating Income</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                   <span class="tooltiptext" id="tt16a">Row 09 in Income Statement</span>
                   </div>
                 <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="operating-income2" placeholder="${ parent.decodeEntities(`Other Operating Income`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['operating-income2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -2530,7 +2541,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Other Operating Income</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                  <label>Other Operating Income</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                   <span class="tooltiptext" id="tt16b">Row 09 in Income Statement</span>
                   </div>
                   <input
@@ -2568,7 +2579,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="tablet mf-input-wrapper">
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Amortization</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                <label>Amortization</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                 <span class="tooltiptext" id="tt14">Row 21 in Income Statement</span>
                 </div>
                 <input
@@ -2607,7 +2618,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Amortization</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+              <label>Amortization</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext" id="tt14a">Row 21 in Income Statement</span>
               </div>
 
@@ -2645,7 +2656,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Amortization</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+              <label>Amortization</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
               <span class="tooltiptext" id="tt14b">Row 21 in Income Statement</span>
               </div>
               <input
@@ -2682,7 +2693,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Securities and Shares</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <label>Securities and Shares</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                   <span class="tooltiptext" id="tt17">Row 46 in Income Statement</span>
                   </div>
                 <input
@@ -2721,7 +2732,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Securities and Shares</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <label>Securities and Shares</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                 <span class="tooltiptext" id="tt17a">Row 46 in Income Statement</span>
                 </div>
 
@@ -2759,7 +2770,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Securities and Shares</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                <label>Securities and Shares</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                 <span class="tooltiptext" id="tt17b">Row 46 in Income Statement</span>
                 </div>
                 <input
@@ -2797,7 +2808,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <div className="tablet mf-input-wrapper">
 
                     <br class="mobile" />   <div class="tt1">
-                    <label>Interest Expense</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                    <label>Interest Expense</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                     <span class="tooltiptext" id="tt18">Row 49 in Income Statement</span>
                     </div>
                   <input
@@ -2836,7 +2847,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Interest Expense</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                  <label>Interest Expense</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                   <span class="tooltiptext" id="tt18a">Row 49 in Income Statement</span>
                   </div>
 
@@ -2874,7 +2885,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Interest Expense</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                  <label>Interest Expense</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                   <span class="tooltiptext" id="tt18b">Row 49 in Income Statement</span>
                   </div>
                   <input
@@ -2911,7 +2922,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     <div className="tablet mf-input-wrapper">
 
                       <br class="mobile" />   <div class="tt1">
-                      <label>Profit/Loss Before Tax</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                      <label>Profit/Loss Before Tax</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                       <span class="tooltiptext" id="tt19">Row 56 in Income Statement</span>
                       </div>
                       <input
@@ -2950,7 +2961,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                     <br class="mobile" />   <div class="tt1">
-                    <label>Profit/Loss Before Tax</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                    <label>Profit/Loss Before Tax</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                     <span class="tooltiptext" id="tt19a">Row 56 in Income Statement</span>
                     </div>
                   <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="profit-loss-before-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-before-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -2976,7 +2987,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                     <br class="mobile" />   <div class="tt1">
-                    <label>Profit/Loss Before Tax</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                    <label>Profit/Loss Before Tax</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                     <span class="tooltiptext" id="tt19b">Row 56 in Income Statement</span>
                     </div>
                     <input
@@ -3013,7 +3024,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                       <div className="tablet mf-input-wrapper">
 
                         <br class="mobile" />   <div class="tt1">
-                        <label>Profit/Loss After Tax</label> <label id="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                        <label>Profit/Loss After Tax</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                         <span class="tooltiptext">Row 61 in Income Statement</span>
                         </div>
                       <input
@@ -3052,7 +3063,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                       <br class="mobile" />   <div class="tt1">
-                      <label>Profit/Loss After Tax</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                      <label>Profit/Loss After Tax</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                       <span class="tooltiptext">Row 61 in Income Statement</span>
                       </div>
                     <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="profit-loss-after-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-after-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -3078,7 +3089,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                       <br class="mobile" />   <div class="tt1">
-                      <label>Profit/Loss After Tax</label> <label id="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                      <label>Profit/Loss After Tax</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                       <span class="tooltiptext">Row 61 in Income Statement</span>
                       </div>
                       <input
@@ -3169,7 +3180,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
             <br class="mobile" />
             <div class="tt1">
-            <label>Intangible Assets</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Intangible Assets</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext">Row 003 in Balance Sheet</span>
             </div>
 
@@ -3208,7 +3219,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Property, Plant, Equipment </label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Property, Plant, Equipment </label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext">Row 011 in Balance Sheet</span>
           </div>
 
@@ -3249,7 +3260,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
           <br class="mobile" />
           <div class="tt1">
-          <label>Financial Assets</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Financial Assets</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext">Row 021 in Balance Sheet</span>
           </div>
           <input
@@ -3296,7 +3307,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
             <br class="mobile" />
             <div class="tt1">
-            <label>Non-current Liabilities</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Non-current Liabilities</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext">Row 094 in Balance Sheet</span>
             </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-liabilities-2" placeholder="${ parent.decodeEntities(`Non-current Liabilities`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-liabilities-2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -3323,7 +3334,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Long-term Bank Loans</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Long-term Bank Loans</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext">Row 119 in Balance Sheet</span>
           </div>
 
@@ -3364,7 +3375,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
           <br class="mobile" />
           <div class="tt1">
-          <label>Added Value</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label>Added Value</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext">Row 11 in Income Statement</span>
           </div>
 
@@ -3411,7 +3422,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
             <br class="mobile" />
             <div class="tt1">
-            <label>Revenue from Shares</label> <label id="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label>Revenue from Shares</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext">Row 27 in Income Statement</span>
             </div>
 
@@ -3457,6 +3468,15 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
 
+          </div>
+          <div className="elementor-element elementor-element-71aab40 btn-metform-h50 mf-btn--center elementor-widget elementor-widget-mf-button" data-id="71aab40" data-element_type="widget" data-widget_type="mf-button.default">
+          <div className="">
+            <div className="mf-btn-wraper " data-mf-form-conditional-logic-requirement="">
+                <button type="submit" className="metform-btn metform-submit-btn " id="">
+            <span>${ parent.decodeEntities(`Calculate`) } </span>
+          </button>
+                </div>
+              </div>
           </div>
           </section>
           </div>
