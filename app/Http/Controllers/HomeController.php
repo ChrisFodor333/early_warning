@@ -11,8 +11,8 @@ class HomeController extends Controller
       public function model_page() {
           $years = range(strftime("%Y", time()),1900);
           $data['years'] = $years;
-          //return view('copies/modelhelper',$data);
-          return view('model_page',$data);
+          return view('copies/model_page',$data);
+          //return view('model_page',$data);
       }
 
       public function complex_model_page() {

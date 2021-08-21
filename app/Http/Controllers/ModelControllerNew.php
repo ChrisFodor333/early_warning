@@ -93,11 +93,16 @@ class ModelControllerNew extends Controller
     $nacount++;
   } else {
 
+  // X1 = 3774785 + 26152 - 3885356 - 726782 / 43183601  = -811,201  => -0.0187849318077944
+  // X2 = 323728 / 43183601 = 0.0074965494424608
   $x1 = ($aad33 + $aad64 - $laed44 - $laed59) / $totalassets;
   $x2 = $laed23 / $totalassets;
   $x3 = ($isd62 + $isd42) / $totalassets;
   $x4 = $laed5 / $totalliabilities;
   $x5 = ($isd4 + $isd8) / $totalassets;
+
+
+
 
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
   $altman = number_format($altman,2);

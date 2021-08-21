@@ -189,6 +189,18 @@ body { color:#666!important}
 				}
 			//});
 		  };</script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHW89Q3JF9"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JHW89Q3JF9');
+      </script>
+
+
 </head>
 
 <body class="home page-template page-template-tpl page-template-elementor-front-page page-template-tplelementor-front-page-php page page-id-1141 has-topbar header_sticky wide sidebar-right elementor-default elementor-kit-24 elementor-page elementor-page-1141">
