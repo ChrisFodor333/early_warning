@@ -17,7 +17,8 @@
 <link rel="pingback" href="/early_warning/xmlrpc.php">
 
 <title>Danube Chance Financial Tool</title>
-<meta name='robots' content='noindex, nofollow' />
+<meta name="robots" content="index,follow"><!-- All Search Engines -->
+<meta name="googlebot" content="index,follow"><!-- Google Specific -->
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="test &raquo; Feed" href="/early_warning/feed/" />
