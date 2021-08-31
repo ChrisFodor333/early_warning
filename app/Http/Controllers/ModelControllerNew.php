@@ -57,9 +57,12 @@ class ModelControllerNew extends Controller
   $b13 = request()->get('liabilities');
 
   // LAST YEAR
+  $c4= request()->get('ppe2');
   $c22= request()->get('revenue-merch2');
   $c18= request()->get('long-term-bank-loans2');
   $c23_1= request()->get('revenue-p2');
+  $c23_2= request()->get('revenue-s2');
+  $c26= request()->get('ncia2');
 
   $c27 = request()->get('securities-shares2');
   $c5 = request()->get('non-current-assets2');
@@ -364,7 +367,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
 
 
 
-  if($d16 == 0 || ($c3 + $aae14 + $c5) == 0 || ($c22 + ($c23_1 - $ise9 - $ise10 - $ise22)) == 0 ||
+  if($d16 == 0 || ($c3 + $c4 + $c5) == 0 || ($c22 + ($c23_1  + $c23_2 - $c26)) == 0 ||
      $c24== 0 || $c2 == 0 || $c11 == 0 ||
      ($c2 - $c11) == 0 || ($c11 + $c14 + $c15 + $c18) == 0) {
 
