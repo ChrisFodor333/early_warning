@@ -90,11 +90,11 @@ class ModelControllerNew extends Controller
 
   // X1 = 3774785 + 26152 - 3885356 - 726782 / 43183601  = -811,201  => -0.0187849318077944
   // X2 = 323728 / 43183601 = 0.0074965494424608
-  $x1 = ($b6 + $b10 - $b16 - $b20) / $totalassets;
+  $x1 = ($b7 + $b8 + $b9 + $b10 - $b16 - $b17 - $b19 - $b20) / $b2;
   $x2 = $b12 / $totalassets;
   $x3 = ($b29 + $b28) / $totalassets;
-  $x4 = $b11 / $totalliabilities;
-  $x5 = ($b22 + $b23_2) / $totalassets;
+  $x4 = $b11 / ($b13 - $b14);
+  $x5 = ($b22 + $b23_1 + $b23_2 + $b26 + $b27) / $totalassets;
 
 
 
@@ -129,15 +129,15 @@ class ModelControllerNew extends Controller
     $nacount++;
   }
   else {
-  $y1 = $totalassets / $totalliabilities;
+  $y1 = $totalassets / ($b13 + $b20);
   if($b28 == 0) {
     $y2 = 0;
   } else {
       $y2 = ($b29 + $b28) / $b28;
   }
   $y3 = ($b29 + $b28) / $totalassets;
-  $y4 = ($b22 + $b23_2 - $isd9 - $isd10 + $isd22 + $isd25 - $isd22) / $totalassets;
-  $y5 = $b6 / $b16;
+  $y4 = ($b22 + $b23_1 + $b23_2 - $b27 + $b26) / $totalassets;
+  $y5 = $b6 / ($b16 + $b19);
 
   $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
   $in05 = number_format($in05,2);
@@ -179,7 +179,7 @@ class ModelControllerNew extends Controller
 
   $t2 = $b6 / $b13;
   $t3 = $b16 / $totalassets;
-  $t4 = ($b22 + $b23_2) / $totalassets;
+  $t4 = ($b22 + + $b23_1 + $b23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
   $taffler = number_format($taffler,2);
@@ -204,12 +204,11 @@ class ModelControllerNew extends Controller
   $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
   $quicktestcolor = "";
 
-  $totalassetsQT1 = $b2;
   $cashflow = ($b30 + $b25);
-  $sales = ($b22 + $b23_2);
+  $sales = ($b22 + $b23_1 + $b23_2);
 
 
-  if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
+  if($b2 == 0 || $cashflow == 0 || $sales == 0) {
       $quicktest = "N/A";
       $quicktestcolor = "orange";
       $nacount++;
@@ -324,7 +323,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
 
   $totalliabilities = ($b2 - $b11);
   $totalassets = $b2;
-  $sales = ($b22 + ($b23_1 - $isd9 - $isd10) + $isd22 + $b27);
+  $sales = ($b22 + $b23_2 + $b23_1 + $b26 + $b27);
 
   if($totalliabilities == 0 || $totalassets == 0 || $sales == 0) {
     $bonity = "N/A";
@@ -336,7 +335,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $l3 = $b29 / $totalassets;
   $l4 = $b29 / $sales;
   $l5 = $b7 / $sales;
-  $l6 = ($b22 + ($b23_1 - $isd9 - $isd10) +$isd22 + $b27) / $totalassets;
+  $l6 = ($b22 + $b23_1 + $b23_2 + $b26 + $b27) / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
   $bonity = number_format($bonity,2);
@@ -375,9 +374,9 @@ $data['quicktestcolor'] =  $quicktestcolor;
 
   } else {
   $u1 = $d6 / $d16;
-  $u2 = $c11 / ($c3 + $aae14 + $c5);
-  $u3 = $c30 / ($c22 + ($c23_1 - $ise9 - $ise10 - $ise22));
-  $u4 = ($c22 + ($c23_1 - $ise9 - $ise10) + $ise22 + $c27) / $c24;
+  $u2 = $c11 / ($c3 + $c4 + $c5);
+  $u3 = $c30 / ($c22 + ($c23_1 + $c23_2 - $c26));
+  $u4 = ($c22 + $c23_1 + $c23_2 + $c26 + $c27) / $c24;
   $u5 = $b2 / $c2 - 1;
   $u6 = $b11 / $c11 - 1;
 
