@@ -1329,7 +1329,7 @@ h6 {
                     <!-- IMPORTANT -->
                         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
 
-                          
+
 
                     </div>
 
@@ -1563,7 +1563,7 @@ h6 {
               <br class="mobile" />
             <div class="tt1">
             <label>Non-current Liabilities</label>
-            <span class="tooltiptext">Row 094 in Balance Sheet</span>
+            <span class="tooltiptext">Row 102 in Balance Sheet</span>
             </div>
 
             <input

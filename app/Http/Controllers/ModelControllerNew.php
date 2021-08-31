@@ -204,22 +204,23 @@ class ModelControllerNew extends Controller
   $data['tafflercolor'] =  $tafflercolor;
 
   // QUICK TEST
-  $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
+  $bq1 = 0; $bq2 = 0; $bq3 = 0; $bq4 = 0; $quicktest = 0;
   $quicktestcolor = "";
 
   $cashflow = ($b30 + $b25);
-  $sales = ($b22 + $b23_1 + $b23_2);
+  $sales = $b22 + $b23_1 + $b23_2;
 
 
-  if($b2 == 0 || $cashflow == 0 || $sales == 0) {
+  if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
       $quicktest = "N/A";
       $quicktestcolor = "orange";
       $nacount++;
-  } else {
-  $b1 = ($b11 / $totalassets)*100;
-  $b2 = ($b13 - $b9) / $cashflow;
-  $b3 = ($cashflow / $sales)*100;
-  $b4 = (($b29 + $b28) / $totalassets)*100;
+  }
+   else {
+  $bq1 = ($b11 / $totalassets)*100;
+  $bq2 = ($b13 - $b9) / $cashflow;
+  $bq3 = ($cashflow / $sales)*100;
+  $bq4 = (($b29 + $b28) / $totalassets)*100;
 
 
   $b1score = 0;
@@ -227,73 +228,73 @@ class ModelControllerNew extends Controller
   $b3score = 0;
   $b4score = 0;
 
-  if($b1 < 0) {
+  if($bq1 < 0) {
     $b1score = 5;
   }
-  if($b1 >= 0 && $b1 < 10) {
+  if($bq1 >= 0 && $bq1 < 10) {
     $b1score = 4;
   }
-  if($b1 >= 10 && $b1 < 20) {
+  if($bq1 >= 10 && $bq1 < 20) {
     $b1score = 3;
   }
-  if($b1 >= 20 && $b1 < 30) {
+  if($bq1 >= 20 && $bq1 < 30) {
     $b1score = 2;
   }
-  if($b1 >= 30) {
+  if($bq1 >= 30) {
     $b1score = 1;
   }
 
-  if($b2 < 3) {
+  if($bq2 < 3) {
     $b2score = 1;
   }
-  if($b2 >= 3 && $b2 < 5) {
+  if($bq2 >= 3 && $bq2 < 5) {
     $b2score = 2;
   }
-  if($b2 >= 5 && $b2 < 12) {
+  if($bq2 >= 5 && $bq2 < 12) {
     $b2score = 3;
   }
-  if($b2 >= 12 && $b2 < 30) {
+  if($bq2 >= 12 && $bq2 < 30) {
     $b2score = 4;
   }
-  if($b2 >= 30) {
+  if($bq2 >= 30) {
     $b2score = 5;
   }
 
 
-  if($b3 < 0) {
+  if($bq3 < 0) {
     $b3score = 5;
   }
-  if($b3 >= 0 && $b3 < 5) {
+  if($bq3 >= 0 && $bq3 < 5) {
     $b3score = 4;
   }
-  if($b3 >= 5 && $b3 < 8) {
-    $b3score = 3;
+  if($bq3 >= 5 && $bq3 < 8) {
+    $bq3score = 3;
   }
-  if($b3 >= 8 && $b3 < 10) {
+  if($bq3 >= 8 && $bq3 < 10) {
     $b3score = 2;
   }
-  if($b3 >= 10) {
+  if($bq3 >= 10) {
     $b3score = 1;
   }
 
-  if($b4 < 0) {
+  if($bq4 < 0) {
     $b4score = 5;
   }
-  if($b4 >= 0 && $b4 < 8) {
+  if($bq4 >= 0 && $bq4 < 8) {
     $b4score = 4;
   }
-  if($b4 >= 8 && $b4 < 12) {
+  if($bq4 >= 8 && $bq4 < 12) {
     $b4score = 3;
   }
-  if($b4 >= 12 && $b4 < 15) {
-    $b4score = 2;
+  if($bq4 >= 12 && $bq4 < 15) {
+    $bq4score = 2;
   }
-  if($b4 >= 15) {
+  if($bq4 >= 15) {
     $b4score = 1;
   }
-  $data['b2'] =  $b2;
-  $data['b3'] =  $b3;
-  $data['b4'] =  $b4;
+  $data['b2'] =  $bq2;
+  $data['b3'] =  $bq3;
+  $data['b4'] =  $bq4;
   $data['b2score'] =  $b2score;
   $data['b3score'] =  $b3score;
   $data['b4score'] =  $b4score;
