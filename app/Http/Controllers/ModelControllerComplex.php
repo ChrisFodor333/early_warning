@@ -44,99 +44,103 @@ class ModelControllerComplex extends Controller
 
 
   // DATA FROM THE FORM - CURRENT YEAR
-  $aad4 = request()->get('total-assets');
-  $isd4 = request()->get('revenue-merch');
-  $isd21 = request()->get('amortization');
-  $isd62 = request()->get('profit-loss-before-tax');
-  $laed27 = request()->get('provisions');
+  $bs2 = request()->get('total-assets');
+  $bs22 = request()->get('revenue-merch');
+  $bs25 = request()->get('amortization');
+  $bs29 = request()->get('profit-loss-before-tax');
+  $bs14 = request()->get('provisions');
 
-  $aad33 = request()->get('current-assets');
-  $isd7 = request()->get('production');
-  $isd22 = request()->get('revenue-sale');
-  $isd64 = request()->get('profit-loss-after-tax');
-  $laed44 = request()->get('current-liabilities');
+  $bs6 = request()->get('current-assets');
+  $bs26 = request()->get('revenue-sale');
+  $bs30 = request()->get('profit-loss-after-tax');
+  $bs16 = request()->get('current-liabilities');
 
-  $aad34 = request()->get('inventory');
-  $isd8 = request()->get('revenue-p-s');
-  $isd25 = request()->get('operating-income');
-  $laed5 = request()->get('equity');
-  $laed59 = request()->get('ad');
+  $bs7= request()->get('inventory');
+  $bs23_1 = request()->get('revenue-p');
+  $bs23_2 = request()->get('revenue-s');
+  $bs11 = request()->get('equity');
+  $bs20 = request()->get('ad');
 
-  $aad58 = request()->get('financial-accounts');
-  $isd9 = request()->get('internal-inventory');
-  $isd31 = request()->get('securities-shares');
-  $laed23 = request()->get('retained-earnings');
+  $bs9 = request()->get('financial-accounts');
+  $bs27 = request()->get('securities-shares');
 
-  $aad64 = request()->get('ad-total');
-  $isd10 = request()->get('own-work-cap');
-  $isd42 = request()->get('interest-expense');
-  $laed26 = request()->get('liabilities');
+  $bs10 = request()->get('ad-total');
+  $bs28 = request()->get('interest-expense');
+  $bs13 = request()->get('liabilities');
+
+  $bs12 = request()->get('net-profit-loss');
+  $bs8 = request()->get('current-receivables');
+  $bs17 = request()->get('financial-assistance');
+  $bs19 = request()->get('current-bank-loans');
+  $bs26 = request()->get('ncia');
 
   // LAST YEAR
-  $aae4 = request()->get('total-assets2');
-  $aae34 = request()->get('inventory2');
-  $ise8 = request()->get('revenue-p-s2');
-  $ise22 = request()->get('revenue-sale2');
-  $ise62 = request()->get('profit-loss-before-tax2');
-  $laee27 = request()->get('provisions2');
+  $cs2 = request()->get('total-assets2');
+  $cs7= request()->get('inventory2');
+  $cs23_1 = request()->get('revenue-p2');
+  $cs23_2 = request()->get('revenue-s2');
+  $cs26 = request()->get('revenue-sale2');
+  $cs29 = request()->get('profit-loss-before-tax2');
+  $cs14 = request()->get('provisions2');
 
-  $aae6 = request()->get('intangible-assets2');
-  $aae58 = request()->get('financial-accounts2');
-  $ise9 = request()->get('internal-inventory2');
-  $ise25 = request()->get('operating-income2');
-  $ise64 = request()->get('profit-loss-after-tax2');
-  $laee32 = request()->get('non-current-liabilities-2');
+  $cs3 = request()->get('intangible-assets2');
+  $cs9 = request()->get('financial-accounts2');
+  $cs30 = request()->get('profit-loss-after-tax2');
+  $cs15 = request()->get('non-current-liabilities-2');
 
-  $aae14 = request()->get('ppe2');
-  $aae64 = request()->get('ad-total2');
-  $ise10 = request()->get('own-work2');
-  $ise30 = request()->get('revenue-shares2');
-  $laee5 = request()->get('equity2');
-  $laee44 = request()->get('current-liabilities2');
+  $cs4 = request()->get('ppe2');
+  $cs10 = request()->get('ad-total2');
+  $cs11 = request()->get('equity2');
+  $cs16 = request()->get('current-liabilities2');
 
-  $aae24 = request()->get('financial-assets2');
-  $ise4 = request()->get('revenue-merch2');
-  $ise14 = request()->get('added-value2');
-  $ise31 = request()->get('securities-shares2');
-  $laee23 = request()->get('retained-earnings2');
-  $laee57 = request()->get('bank-loans2');
+  $cs5 = request()->get('financial-assets2');
+  $cs22 = request()->get('revenue-merch2');
+  $cs24 = request()->get('added-value2');
+  $cs27 = request()->get('securities-shares2');
+  $cs18 = request()->get('bank-loans2');
 
-  $aae33 = request()->get('current-assets2');
-  $ise7 = request()->get('production2');
-  $ise21 = request()->get('amortization2');
-  $ise42 = request()->get('interest-expense2');
-  $laee26 = request()->get('liabilities2');
-  $laee59 = request()->get('ad2');
+  $cs6 = request()->get('current-assets2');
+  $cs25 = request()->get('amortization2');
+  $cs28 = request()->get('interest-expense2');
+  $cs13 = request()->get('liabilities2');
+  $cs20 = request()->get('ad2');
+
+  $cs12 = request()->get('net-profit-loss2');
+  $cs8 = request()->get('current-receivables2');
+  $cs17 = request()->get('financial-assistance2');
+  $cs19 = request()->get('current-bank-loans2');
 
   // THE YEAR BEFORE
 
-  $aaf4 = request()->get('total-assets1');
-  $isf4 = request()->get('revenue-merch1');
-  $isf21 = request()->get('amortization1');
-  $isf62 = request()->get('profit-loss-before-tax1');
-  $laef27 = request()->get('provisions1');
+  $ds2 = request()->get('total-assets1');
+  $ds22 = request()->get('revenue-merch1');
+  $ds25 = request()->get('amortization1');
+  $ds29 = request()->get('profit-loss-before-tax1');
+  $ds14 = request()->get('provisions1');
 
-  $aaf33 = request()->get('current-assets1');
-  $isf7 = request()->get('production1');
-  $isf22 = request()->get('revenue-sale1');
-  $isf64 = request()->get('profit-loss-after-tax1');
-  $laef44 = request()->get('current-liabilities1');
+  $ds6 = request()->get('current-assets1');
+  $ds26 = request()->get('revenue-sale1');
+  $ds30 = request()->get('profit-loss-after-tax1');
+  $ds16 = request()->get('current-liabilities1');
 
-  $aaf34 = request()->get('inventory1');
-  $isf8 = request()->get('revenue-p-s1');
-  $isf25 = request()->get('operating-income1');
-  $laef5 = request()->get('equity1');
-  $laef59 = request()->get('ad1');
+  $ds7= request()->get('inventory1');
+  $ds23_1 = request()->get('revenue-p1');
+  $ds23_2 = request()->get('revenue-s1');
+  $ds11 = request()->get('equity1');
+  $ds20 = request()->get('ad1');
 
-  $aaf58 = request()->get('financial-accounts1');
+  $ds9 = request()->get('financial-accounts1');
   $isf9 = request()->get('internal-inventory1');
-  $isf31 = request()->get('securities-shares1');
-  $laef23 = request()->get('retained-earnings1');
+  $ds27 = request()->get('securities-shares1');
 
-  $aaf64 = request()->get('ad-total1');
-  $isf10 = request()->get('own-work-cap1');
-  $isf42 = request()->get('interest-expense1');
-  $laef26 = request()->get('liabilities1');
+  $ds10 = request()->get('ad-total1');
+  $ds28 = request()->get('interest-expense1');
+  $ds13 = request()->get('liabilities1');
+
+  $ds12 = request()->get('net-profit-loss1');
+  $ds8 = request()->get('current-receivables1');
+  $ds17 = request()->get('financial-assistance1');
+  $ds19 = request()->get('current-bank-loans1');
 
 
 
@@ -146,19 +150,19 @@ class ModelControllerComplex extends Controller
   $altmancolor = "";
 
 
-  $totalassets = $aad4;
-  $totalliabilities = $laed26 - $laed27;
+  $totalassets = $bs2;
+  $totalliabilities = $bs13 - $bs14;
   if($totalassets == 0 || $totalliabilities == 0) {
     $altman = "N/A";
     $altmancolor = "orange";
     $nacount++;
   } else {
 
-  $x1 = ($aad33 + $aad64 - $laed44 - $laed59) / $totalassets;
-  $x2 = $laed23 / $totalassets;
-  $x3 = ($isd62 + $isd42) / $totalassets;
-  $x4 = $laed5 / $totalliabilities;
-  $x5 = ($isd4 + $isd8) / $totalassets;
+  $x1 = ($bs7 + $bs8 + $bs9 + $bs10 - $bs16 - $bs17 - $bs19 - $bs20) / $totalassets;
+  $x2 = $bs12 / $totalassets;
+  $x3 = ($bs29 + $bs28) / $totalassets;
+  $x4 = $bs11 / $totalliabilities;
+  $x5 = ($bs22 + $bs23_1 + $bs23_2 + $bs26 + $bs27) / $totalassets;
 
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
   $altman = number_format($altman,2);
@@ -188,19 +192,19 @@ $x1 = 0; $x2 = 0; $x3 = 0; $x4 = 0; $x5 = 0; $altman = 0;
 $altmancolor = "";
 
 
-$totalassets = $aae4;
-$totalliabilities = $laee26 - $laee27;
+$totalassets = $cs2;
+$totalliabilities = $cs13 - $cs14;
 if($totalassets == 0 || $totalliabilities == 0) {
   $altman = "N/A";
   $altmancolor = "orange";
   $nacount2++;
 } else {
 
-$x1 = ($aae33 + $aae64 - $laee44 - $laee59) / $totalassets;
-$x2 = $laee23 / $totalassets;
-$x3 = ($ise62 + $ise42) / $totalassets;
-$x4 = $laee5 / $totalliabilities;
-$x5 = ($ise4 + $ise8) / $totalassets;
+$x1 = ($cs7 + $cs8 + $cs9 + $cs10 - $cs16 - $cs17 - $cs19 - $cs20) / $totalassets;
+$x2 = $cs12 / $totalassets;
+$x3 = ($cs29 + $cs28) / $totalassets;
+$x4 = $cs11 / $totalliabilities;
+$x5 = ($cs22 + $cs23_1 + $cs23_2 + $cs26 + $cs27) / $totalassets;
 
 $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
 $altman = number_format($altman,2);
@@ -229,19 +233,19 @@ $x1 = 0; $x2 = 0; $x3 = 0; $x4 = 0; $x5 = 0; $altman = 0;
 $altmancolor = "";
 
 
-$totalassets = $aaf4;
-$totalliabilities = $laef26 - $laef27;
+$totalassets = $ds2;
+$totalliabilities = $ds13 - $ds14;
 if($totalassets == 0 || $totalliabilities == 0) {
   $altman = "N/A";
   $altmancolor = "orange";
   $nacount1++;
 } else {
 
-$x1 = ($aaf33 + $aaf64 - $laef44 - $laef59) / $totalassets;
-$x2 = $laef23 / $totalassets;
-$x3 = ($isf62 + $isf42) / $totalassets;
-$x4 = $laef5 / $totalliabilities;
-$x5 = ($isf4 + $isf8) / $totalassets;
+$x1 = ($ds7 + $ds8 + $ds9 + $ds10 - $ds16 - $ds17 - $ds19 - $ds20) / $totalassets;
+$x2 = $ds12 / $totalassets;
+$x3 = ($ds29 + $ds28) / $totalassets;
+$x4 = $ds11 / $totalliabilities;
+$x5 = ($ds22 + $ds23_1 + $ds23_2 + $ds26 + $ds27) / $totalassets;
 
 $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
 $altman = number_format($altman,2);
@@ -268,24 +272,24 @@ $complex->altman3= $altman;
   // IN05
   $y1 = 0; $y2 = 0; $y3 = 0; $y4 = 0; $y5 = 0; $in05 = 0;
   $in05color = "";
-  $totalassets = $aad4;
-  $totalliabilities = $laed26 + $laed59;
+  $totalassets = $bs2;
+  $totalliabilities = $bs13 + $bs20;
 
-  if($totalassets == 0 || $totalliabilities == 0  || $laed44== 0) {
+  if($totalassets == 0 || $totalliabilities == 0  || $bs16== 0) {
     $in05color = "orange";
     $in05 = "N/A";
     $nacount++;
   }
   else {
   $y1 = $totalassets / $totalliabilities;
-  if($isd42 == 0) {
+  if($bs28 == 0) {
     $y2 = 0;
   } else {
-      $y2 = ($isd62 + $isd42) / $isd42;
+      $y2 = ($bs29 + $bs28) / $bs28;
   }
-  $y3 = ($isd62 + $isd42) / $totalassets;
-  $y4 = ($isd4 + $isd8 - $isd9 - $isd10 + $isd22 + $isd25 - $isd22) / $totalassets;
-  $y5 = $aad33 / $laed44;
+  $y3 = ($bs29 + $bs28) / $totalassets;
+  $y4 = ($bs22 + $bs23_1 + $bs23_2 + $bs27 + $bs26) / $totalassets;
+  $y5 = $bs6 / ($bs16 + $bs19);
 
   $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
   $in05 = number_format($in05,2);
@@ -312,24 +316,24 @@ $complex->altman3= $altman;
  // IN05
  $y1 = 0; $y2 = 0; $y3 = 0; $y4 = 0; $y5 = 0; $in05 = 0;
  $in05color = "";
- $totalassets = $aae4;
- $totalliabilities = $laee26 + $laee59;
+ $totalassets = $cs2;
+ $totalliabilities = $cs13 + $cs20;
 
- if($totalassets == 0 || $totalliabilities == 0  || $laee44== 0) {
+ if($totalassets == 0 || $totalliabilities == 0  || $cs16== 0) {
    $in05color = "orange";
    $in05 = "N/A";
    $nacount2++;
  }
  else {
  $y1 = $totalassets / $totalliabilities;
- if($ise42 == 0) {
+ if($cs28 == 0) {
    $y2 = 0;
  } else {
-     $y2 = ($ise62 + $ise42) / $ise42;
+     $y2 = ($cs29 + $cs28) / $cs28;
  }
- $y3 = ($ise62 + $ise42) / $totalassets;
- $y4 = ($ise4 + $ise8 - $ise9 - $ise10 + $ise22 + $ise25 - $ise22) / $totalassets;
- $y5 = $aae33 / $laee44;
+ $y3 = ($cs29 + $cs28) / $totalassets;
+ $y4 = ($cs22 + $cs23_1 + $cs23_2 + $cs27 +$cs26) / $totalassets;
+ $y5 = $cs6 / ($cs16 + $cs19);
 
  $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
  $in05 = number_format($in05,2);
@@ -357,24 +361,24 @@ $complex->altman3= $altman;
 // IN05
 $y1 = 0; $y2 = 0; $y3 = 0; $y4 = 0; $y5 = 0; $in05 = 0;
 $in05color = "";
-$totalassets = $aaf4;
-$totalliabilities = $laef26 + $laef59;
+$totalassets = $ds2;
+$totalliabilities = $ds13 + $ds20;
 
-if($totalassets == 0 || $totalliabilities == 0  || $laef44== 0) {
+if($totalassets == 0 || $totalliabilities == 0  || $ds16== 0) {
   $in05color = "orange";
   $in05 = "N/A";
   $nacount1++;
 }
 else {
 $y1 = $totalassets / $totalliabilities;
-if($isf42 == 0) {
+if($ds28 == 0) {
   $y2 = 0;
 } else {
-    $y2 = ($isf62 + $isf42) / $isf42;
+    $y2 = ($ds29 + $ds28) / $ds28;
 }
-$y3 = ($isf62 + $isf42) / $totalassets;
-$y4 = ($isf4 + $isf8 - $isf9 - $isf10 + $isf22 + $isf25 - $isf22) / $totalassets;
-$y5 = $aaf33 / $laef44;
+$y3 = ($ds29 + $ds28) / $totalassets;
+$y4 = ($ds22 + $ds23_1 + $ds23_2 + $ds27 + $ds26) / $totalassets;
+$y5 = $ds6 / ($ds16 + $ds19);
 
 $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
 $in05 = number_format($in05,2);
@@ -402,23 +406,23 @@ $complex->in053 = $in05;
   $t1 = 0; $t2 = 0; $t3 = 0; $t4 = 0; $taffler = 0;
   $tafflercolor = "";
 
-  $totalassets = $aad4;
-  $totalliabilities = $laed26;
+  $totalassets = $bs2;
+  $totalliabilities = $bs13;
 
   if($totalassets == 0 || $totalliabilities == 0) {
     $taffler = "N/A";
     $tafflercolor = "orange";
     $nacount++;
   } else {
-  if($laed44 == 0) {
+  if($bs16 == 0) {
     $t1 = 0;
   }  else {
-      $t1 = $isd62 / $laed44;
+      $t1 = $bs29 / $bs16;
   }
 
-  $t2 = $aad33 / $laed26;
-  $t3 = $laed44 / $totalassets;
-  $t4 = ($isd4 + $isd8) / $totalassets;
+  $t2 = $bs6 / $bs13;
+  $t3 = $bs16 / $totalassets;
+  $t4 = ($bs22 + $bs23_1 + $bs23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
   $taffler = number_format($taffler,2);
@@ -446,23 +450,23 @@ $complex->in053 = $in05;
   $t1 = 0; $t2 = 0; $t3 = 0; $t4 = 0; $taffler = 0;
   $tafflercolor = "";
 
-  $totalassets = $aae4;
-  $totalliabilities = $laee26;
+  $totalassets = $cs2;
+  $totalliabilities = $cs13;
 
   if($totalassets == 0 || $totalliabilities == 0) {
     $taffler = "N/A";
     $tafflercolor = "orange";
     $nacount2++;
   } else {
-  if($laee44 == 0) {
+  if($cs16 == 0) {
     $t1 = 0;
   }  else {
-      $t1 = $ise62 / $laee44;
+      $t1 = $cs29 / $cs16;
   }
 
-  $t2 = $aae33 / $laee26;
-  $t3 = $laee44 / $totalassets;
-  $t4 = ($ise4 + $ise8) / $totalassets;
+  $t2 = $cs6 / $cs13;
+  $t3 = $cs16 / $totalassets;
+  $t4 = ($cs22 + $cs23_1 + $cs23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
   $taffler = number_format($taffler,2);
@@ -491,23 +495,23 @@ $complex->in053 = $in05;
   $t1 = 0; $t2 = 0; $t3 = 0; $t4 = 0; $taffler = 0;
   $tafflercolor = "";
 
-  $totalassets = $aaf4;
-  $totalliabilities = $laef26;
+  $totalassets = $ds2;
+  $totalliabilities = $ds13;
 
   if($totalassets == 0 || $totalliabilities == 0) {
     $taffler = "N/A";
     $tafflercolor = "orange";
     $nacount1++;
   } else {
-  if($laef44 == 0) {
+  if($ds16 == 0) {
     $t1 = 0;
   }  else {
-      $t1 = $isf62 / $laef44;
+      $t1 = $ds29 / $ds16;
   }
 
-  $t2 = $aaf33 / $laef26;
-  $t3 = $laef44 / $totalassets;
-  $t4 = ($isf4 + $isf8) / $totalassets;
+  $t2 = $ds6 / $ds13;
+  $t3 = $ds16 / $totalassets;
+  $t4 = ($ds22 + $ds23_1 + $ds23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
   $taffler = number_format($taffler,2);
@@ -537,9 +541,9 @@ $complex->in053 = $in05;
   $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
   $quicktestcolor = "";
 
-  $totalassets = $aad4;
-  $cashflow = ($isd64 + $isd21);
-  $sales = ($isd4 + $isd8);
+  $totalassets = $bs2;
+  $cashflow = ($bs30 + $bs25);
+  $sales = ($bs22 + $bs23_1 + $bs23_2);
 
 
   if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
@@ -547,10 +551,10 @@ $complex->in053 = $in05;
       $quicktestcolor = "orange";
       $nacount++;
   } else {
-  $b1 = ($laed5 / $totalassets)*100;
-  $b2 = ($laed26 - $aad58) / $cashflow;
+  $b1 = ($bs11 / $totalassets)*100;
+  $b2 = ($bs13 - $bs9) / $cashflow;
   $b3 = ($cashflow / $sales)*100;
-  $b4 = (($isd62 + $isd42) / $totalassets)*100;
+  $b4 = (($bs29 + $bs28) / $totalassets)*100;
 
 
   $b1score = 0;
@@ -658,9 +662,9 @@ $complex->quicktest1 = $quicktest;
 $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
 $quicktestcolor = "";
 
-$totalassets = $aae4;
-$cashflow = ($ise64 + $ise21);
-$sales = ($ise4 + $ise8);
+$totalassets = $cs2;
+$cashflow = ($cs30 + $cs25);
+$sales = ($cs22 + $cs23_1 + $cs23_2);
 
 
 if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
@@ -668,10 +672,10 @@ if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
     $quicktestcolor = "orange";
     $nacount2++;
 } else {
-$b1 = ($laee5 / $totalassets)*100;
-$b2 = ($laee26 - $aae58) / $cashflow;
+$b1 = ($cs11 / $totalassets)*100;
+$b2 = ($cs13 - $cs9) / $cashflow;
 $b3 = ($cashflow / $sales)*100;
-$b4 = (($ise62 + $ise42) / $totalassets)*100;
+$b4 = (($cs29 + $cs28) / $totalassets)*100;
 
 
 $b1score = 0;
@@ -778,9 +782,9 @@ $complex->quicktest2 = $quicktest;
 $b1 = 0; $b2 = 0; $b3 = 0; $b4 = 0; $quicktest = 0;
 $quicktestcolor = "";
 
-$totalassets = $aaf4;
-$cashflow = ($isf64 + $isf21);
-$sales = ($isf4 + $isf8);
+$totalassets = $ds2;
+$cashflow = ($ds30 + $ds25);
+$sales = ($ds22 + $ds23_1 + $ds23_2);
 
 
 if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
@@ -788,10 +792,10 @@ if($totalassets == 0 || $cashflow == 0 || $sales == 0) {
     $quicktestcolor = "orange";
     $nacount1++;
 } else {
-$b1 = ($laef5 / $totalassets)*100;
-$b2 = ($laef26 - $aaf58) / $cashflow;
+$b1 = ($ds11 / $totalassets)*100;
+$b2 = ($ds13 - $ds9) / $cashflow;
 $b3 = ($cashflow / $sales)*100;
-$b4 = (($isf62 + $isf42) / $totalassets)*100;
+$b4 = (($ds29 + $ds28) / $totalassets)*100;
 
 
 $b1score = 0;
@@ -898,21 +902,21 @@ $complex->quicktest3 = $quicktest;
   $l1 = 0; $l2 = 0; $l3 = 0; $l4 = 0; $l5 = 0; $l6 = 0; $bonity = 0;
   $bonitycolor = "";
 
-  $totalliabilities = ($aad4 - $laed5);
-  $totalassets = $aad4;
-  $sales = ($isd4 + ($isd7 - $isd9 - $isd10) + $isd22 + $isd31);
+  $totalliabilities = ($bs2 - $bs11);
+  $totalassets = $bs2;
+  $sales = ($bs22 + $bs23_1 + $bs23_2 + $bs26 + $bs27);
 
   if($totalliabilities == 0 || $totalassets == 0 || $sales == 0) {
     $bonity = "N/A";
     $bonitycolor = "orange";
     $nacount++;
   } else {
-  $l1 = ($isd64 + $isd21) / $totalliabilities;
+  $l1 = ($bs30 + $bs25) / $totalliabilities;
   $l2 = $totalassets / $totalliabilities;
-  $l3 = $isd62 / $totalassets;
-  $l4 = $isd62 / $sales;
-  $l5 = $aad34 / $sales;
-  $l6 = ($isd4 + ($isd7 - $isd9 - $isd10) +$isd22 + $isd31) / $totalassets;
+  $l3 = $bs29 / $totalassets;
+  $l4 = $bs29 / $sales;
+  $l5 = $bs7 / $sales;
+  $l6 = $sales / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
   $bonity = number_format($bonity,2);
@@ -940,21 +944,21 @@ $complex->quicktest3 = $quicktest;
   $l1 = 0; $l2 = 0; $l3 = 0; $l4 = 0; $l5 = 0; $l6 = 0; $bonity = 0;
   $bonitycolor = "";
 
-  $totalliabilities = ($aae4 - $laee5);
-  $totalassets = $aae4;
-  $sales = ($ise4 + ($ise7 - $ise9 - $ise10) + $ise22 + $ise31);
+  $totalliabilities = ($cs2 - $cs11);
+  $totalassets = $cs2;
+  $sales = ($cs22 + $cs23_1 + $cs23_2 + $cs26 + $cs27);
 
   if($totalliabilities == 0 || $totalassets == 0 || $sales == 0) {
     $bonity = "N/A";
     $bonitycolor = "orange";
     $nacount2++;
   } else {
-  $l1 = ($ise64 + $ise21) / $totalliabilities;
+  $l1 = ($cs30 + $cs25) / $totalliabilities;
   $l2 = $totalassets / $totalliabilities;
-  $l3 = $ise62 / $totalassets;
-  $l4 = $ise62 / $sales;
-  $l5 = $aae34 / $sales;
-  $l6 = ($ise4 + ($ise7 - $ise9 - $ise10) +$ise22 + $ise31) / $totalassets;
+  $l3 = $cs29 / $totalassets;
+  $l4 = $cs29 / $sales;
+  $l5 = $cs7/ $sales;
+  $l6 = $sales / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
   $bonity = number_format($bonity,2);
@@ -983,21 +987,21 @@ $complex->quicktest3 = $quicktest;
   $l1 = 0; $l2 = 0; $l3 = 0; $l4 = 0; $l5 = 0; $l6 = 0; $bonity = 0;
   $bonitycolor = "";
 
-  $totalliabilities = ($aaf4 - $laef5);
-  $totalassets = $aaf4;
-  $sales = ($isf4 + ($isf7 - $isf9 - $isf10) + $isf22 + $isf31);
+  $totalliabilities = ($ds2 - $ds11);
+  $totalassets = $ds2;
+  $sales = ($ds22 + $ds23_1 + $ds23_2 + $ds26 + $ds27);
 
   if($totalliabilities == 0 || $totalassets == 0 || $sales == 0) {
     $bonity = "N/A";
     $bonitycolor = "orange";
     $nacount1++;
   } else {
-  $l1 = ($isf64 + $isf21) / $totalliabilities;
+  $l1 = ($ds30 + $ds25) / $totalliabilities;
   $l2 = $totalassets / $totalliabilities;
-  $l3 = $isf62 / $totalassets;
-  $l4 = $isf62 / $sales;
-  $l5 = $aaf34 / $sales;
-  $l6 = ($isf4 + ($isf7 - $isf9 - $isf10) +$isf22 + $isf31) / $totalassets;
+  $l3 = $ds29 / $totalassets;
+  $l4 = $ds29 / $sales;
+  $l5 = $ds7/ $sales;
+  $l6 = $sales / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
   $bonity = number_format($bonity,2);
@@ -1026,24 +1030,24 @@ $complex->quicktest3 = $quicktest;
   $binkertcolor = "";
   $u1 = 0; $u2 = 0; $u3 = 0; $u4 = 0; $u5 = 0; $u6 = 0; $u7= 0; $u8 = 0;
 
-  if($laef44 == 0 || ($aae6 + $aae14 + $aae24) == 0 || ($ise4 + ($ise7 - $ise9 - $ise10 - $ise22)) == 0 ||
-     $ise14== 0 || $aae4 == 0 || $laee5 == 0 ||
-     ($aae4 - $laee5) == 0 || ($laee5 + $laee27 + $laee32 + $laee57) == 0) {
+  if($ds16 == 0 || ($cs3 + $cs4 + $cs5) == 0 || $cs22 + $cs23 - $cs26) == 0 ||
+     $cs24== 0 || $cs2 == 0 || $cs11 == 0 ||
+     ($cs2 - $cs11) == 0 || ($cs11 + $cs14 + $cs15 + $cs18) == 0) {
 
      $binkert = "N/A";
      $binkertcolor = "orange";
      $nacount++;
 
   } else {
-  $u1 = $aaf33 / $laef44;
-  $u2 = $laee5 / ($aae6 + $aae14 + $aae24);
-  $u3 = $ise64 / ($ise4 + ($ise7 - $ise9 - $ise10 - $ise22));
-  $u4 = ($ise4 + ($ise7 - $ise9 - $ise10) + $ise22 + $ise30) / $ise14;
-  $u5 = $aad4 / $aae4 - 1;
-  $u6 = $laed5 / $laee5 - 1;
+  $u1 = $ds6 / $ds16;
+  $u2 = $cs11 / ($cs3 + $cs4 + $cs5);
+  $u3 = $cs30 / ($cs22 + $cs23_1 + $cs23_2 - $cs26)
+  $u4 = ($cs22 + $cs23_1 + $cs23_2 + $cs26 + $cs27) / $cs24;
+  $u5 = $bs2 / $cs2 - 1;
+  $u6 = $bs11 / $cs11 - 1;
 
-  $u7 = (($aad4 - $laed5) / ($aae4 - $laee5))-1;
-  $u8 = $ise64 / ($laee5 + $laee27 + $laee32 + $laee57);
+  $u7 = (($bs2 - $bs11) / ($cs2 - $cs11))-1;
+  $u8 = $cs30 / ($cs11 + $cs14 + $cs15 + $cs18);
 
   $binkert = (0.18 * $u1) + (0.147 * $u2) + (0.237 * $u3) + (0.377 * $u4) + (0.514 * $u5) + (0.505 * $u6) + (0.271 * $u7) + (0.207 * $u8);
   $binkert = number_format($binkert,2);
