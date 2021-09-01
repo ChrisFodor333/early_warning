@@ -1030,7 +1030,7 @@ $complex->quicktest3 = $quicktest;
   $binkertcolor = "";
   $u1 = 0; $u2 = 0; $u3 = 0; $u4 = 0; $u5 = 0; $u6 = 0; $u7= 0; $u8 = 0;
 
-  if($ds16 == 0 || ($cs3 + $cs4 + $cs5) == 0 || $cs22 + $cs23 - $cs26) == 0 ||
+  if($ds16 == 0 || ($cs3 + $cs4 + $cs5) == 0 || ($cs22 + $cs23 - $cs26) == 0 ||
      $cs24== 0 || $cs2 == 0 || $cs11 == 0 ||
      ($cs2 - $cs11) == 0 || ($cs11 + $cs14 + $cs15 + $cs18) == 0) {
 
@@ -1041,7 +1041,7 @@ $complex->quicktest3 = $quicktest;
   } else {
   $u1 = $ds6 / $ds16;
   $u2 = $cs11 / ($cs3 + $cs4 + $cs5);
-  $u3 = $cs30 / ($cs22 + $cs23_1 + $cs23_2 - $cs26)
+  $u3 = $cs30 / ($cs22 + $cs23_1 + $cs23_2 - $cs26);
   $u4 = ($cs22 + $cs23_1 + $cs23_2 + $cs26 + $cs27) / $cs24;
   $u5 = $bs2 / $cs2 - 1;
   $u6 = $bs11 / $cs11 - 1;
