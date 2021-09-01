@@ -72,7 +72,6 @@ class ModelControllerComplex extends Controller
   $bs8 = request()->get('current-receivables');
   $bs17 = request()->get('financial-assistance');
   $bs19 = request()->get('current-bank-loans');
-  $bs26 = request()->get('ncia');
 
   // LAST YEAR
   $cs2 = request()->get('total-assets2');
@@ -158,11 +157,12 @@ class ModelControllerComplex extends Controller
     $nacount++;
   } else {
 
-  $x1 = ($bs7 + $bs8 + $bs9 + $bs10 - $bs16 - $bs17 - $bs19 - $bs20) / $totalassets;
-  $x2 = $bs12 / $totalassets;
-  $x3 = ($bs29 + $bs28) / $totalassets;
-  $x4 = $bs11 / $totalliabilities;
-  $x5 = ($bs22 + $bs23_1 + $bs23_2 + $bs26 + $bs27) / $totalassets;
+    $x1 = ($bs7 + $bs8 + $bs9 + $bs10 - $bs16 - $bs17 - $bs19 - $bs20) / $totalassets;
+    $x2 = $bs12 / $totalassets;
+    $x3 = ($bs29 + $bs28) / $totalassets;
+    $x4 = $bs11 / $totalliabilities;
+    $x5 = ($bs22 + $bs23_1 + $bs23_2 + $bs26 + $bs27) / $totalassets;
+
 
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
   $altman = number_format($altman,2);
@@ -179,6 +179,7 @@ class ModelControllerComplex extends Controller
       $orange++;
     }
  }
+
   $data['altman'] =  $altman;
   $data['altmancolor'] =  $altmancolor;
   $complex->altman1= $altman;
@@ -205,6 +206,7 @@ $x2 = $cs12 / $totalassets;
 $x3 = ($cs29 + $cs28) / $totalassets;
 $x4 = $cs11 / $totalliabilities;
 $x5 = ($cs22 + $cs23_1 + $cs23_2 + $cs26 + $cs27) / $totalassets;
+
 
 $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
 $altman = number_format($altman,2);
@@ -1030,7 +1032,7 @@ $complex->quicktest3 = $quicktest;
   $binkertcolor = "";
   $u1 = 0; $u2 = 0; $u3 = 0; $u4 = 0; $u5 = 0; $u6 = 0; $u7= 0; $u8 = 0;
 
-  if($ds16 == 0 || ($cs3 + $cs4 + $cs5) == 0 || ($cs22 + $cs23 - $cs26) == 0 ||
+  if($ds16 == 0 || ($cs3 + $cs4 + $cs5) == 0 || ($cs22 + $cs23_1 + $cs23_2 - $cs26) == 0 ||
      $cs24== 0 || $cs2 == 0 || $cs11 == 0 ||
      ($cs2 - $cs11) == 0 || ($cs11 + $cs14 + $cs15 + $cs18) == 0) {
 
