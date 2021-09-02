@@ -141,6 +141,27 @@ h6 {
 
 
       if(document.querySelector('#curyear').value >= 2014) {
+        document.querySelector('#merge').innerHTML = "Revenue - Services";
+        document.querySelector('#mergehide').style.display = "block";
+        document.querySelector('.mergeinput').placeholder = "Revenue - Services";
+      } else {
+        document.querySelector('#merge').innerHTML = "Revenue (P and S)";
+        document.querySelector('#mergehide').style.display = "none";
+        document.querySelector('.mergeinput').placeholder = "Revenue (P and S)";
+      }
+
+      if(document.querySelector('#curyear').value-1 >= 2014) {
+        document.querySelector('#merge2').innerHTML = "Revenue - Services";
+        document.querySelector('#mergehide2').style.display = "block";
+        document.querySelector('.mergeinput2').placeholder = "Revenue - Services";
+      } else {
+        document.querySelector('#merge2').innerHTML = "Revenue (P and S)";
+        document.querySelector('#mergehide2').style.display = "none";
+        document.querySelector('.mergeinput2').placeholder = "Revenue (P and S)";
+      }
+
+
+      if(document.querySelector('#curyear').value >= 2014) {
           document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 034 in Balance Sheet";
           document.querySelector('#tt4').innerHTML = "Row 071 in Balance Sheet";
@@ -1047,11 +1068,11 @@ h6 {
               </div>
                 </div>
                 <div className="elementor-container elementor-column-gap-default">
-                <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                <div id="mergehide" className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
                 <div className="elementor-widget-wrap elementor-element-populated">
 
                 <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-                  <div className="tablet mf-input-wrapper">
+                  <div  className="tablet mf-input-wrapper">
                   <br class="mobile" />
 
                   <div class="tt1">
@@ -1095,10 +1116,10 @@ h6 {
                           <br class="mobile" />
 
                           <div class="tt1">
-                          <label>Revenue from Services</label>
+                          <label id="merge">Revenue from Services</label>
                           <span class="tooltiptext">Row 05 in Income Statement</span>
                           </div>
-                        <input type="number" tabindex="18" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="${ parent.decodeEntities(`Revenue - Services`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                        <input type="number" tabindex="18" className="mergeinput mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="Revenue - Services"  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
                             <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s" as=${html`<span className="mf-error-message"></span>`}
@@ -1699,7 +1720,7 @@ h6 {
         </div>
         </div>
 
-        <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div id="mergehide2" className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -1743,13 +1764,13 @@ h6 {
           <div className="tablet mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Revenue from Services</label>
+          <label id="merge2">Revenue from Services</label>
           <span class="tooltiptext">Row 05 in Income Statement</span>
           </div>
 
           <input
           type="number"
-          className="mf-input "
+          className="mergeinput2 mf-input "
           id="mf-input-text-13c1826"
           name="revenue-s2"
           tabindex="35"
