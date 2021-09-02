@@ -33,6 +33,7 @@ class ModelControllerNew extends Controller
   $b14 = request()->get('provisions');
 
   $b6 = request()->get('current-assets');
+  // IF CURRENT YEAR < 2014 THEN 0
   $b23_1 = request()->get('revenue-p');
   $b30 = request()->get('profit-loss-after-tax');
   $b16 = request()->get('current-liabilities');
