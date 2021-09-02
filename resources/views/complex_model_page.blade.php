@@ -219,6 +219,39 @@ display: none;
         document.querySelector('#yearbefore').innerHTML = document.querySelector('#curyear').value-2;
         document.querySelector('#extra').innerHTML = "Additional Information for the Year of " + Number(document.querySelector('#curyear').value-1);
 
+        if(document.querySelector('#curyear').value >= 2014) {
+          document.querySelector('.merge').innerHTML = "Revenue (Services)";
+          document.querySelector('#mergehide').style.display = "block";
+          document.querySelector('.mergeinput').placeholder = "Revenue (Services)";
+        } else {
+          document.querySelector('.merge').innerHTML = "Revenue (P and S)";
+          document.querySelector('#mergehide').style.display = "none";
+          document.querySelector('.mergeinput').placeholder = "Revenue (P and S)";
+        }
+
+
+        if(document.querySelector('#curyear').value-1 >= 2014) {
+          document.querySelector('.merge2').innerHTML = "Revenue (Services)";
+          document.querySelector('#mergehide2').style.display = "block";
+          document.querySelector('.mergeinput2').placeholder = "Revenue (Services)";
+        } else {
+          document.querySelector('.merge2').innerHTML = "Revenue (P and S)";
+          document.querySelector('#mergehide2').style.display = "none";
+          document.querySelector('.mergeinput2').placeholder = "Revenue (P and S)";
+        }
+
+
+        if(document.querySelector('#curyear').value-2 >= 2014) {
+          document.querySelector('.merge3').innerHTML = "Revenue (Services)";
+          document.querySelector('#mergehide3').style.display = "block";
+          document.querySelector('.mergeinput3').placeholder = "Revenue (Services)";
+        } else {
+          document.querySelector('.merge3').innerHTML = "Revenue (P and S)";
+          document.querySelector('#mergehide3').style.display = "none";
+          document.querySelector('.mergeinput3').placeholder = "Revenue (P and S)";
+        }
+
+
         document.querySelectorAll('.yearlabel').forEach(function(field) {
             field.innerHTML = "(" + Number(document.querySelector('#curyear').value) + ")";
         });
@@ -2390,12 +2423,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <div className="elementor-container elementor-column-gap-default">
-          <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+          <div  className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
           <div className="elementor-widget-wrap elementor-element-populated">
           <!-- IMPORTANT -->
-              <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div  className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
           <div className="elementor-widget-container">
-          <div className="tablet mf-input-wrapper">
+          <div id="mergehide" className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
             <label>Revenue (Products)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
@@ -2420,7 +2453,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
           <div className="elementor-widget-container">
 
-          <div className="mf-input-wrapper">
+          <div id="mergehide2" className="mf-input-wrapper">
 
 
 
@@ -2448,7 +2481,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
           <div className="elementor-widget-container">
 
-          <div className="mf-input-wrapper">
+          <div id="mergehide3" className="mf-input-wrapper">
 
 
           <br class="mobile" />   <div class="tt1">
@@ -2481,10 +2514,10 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <div className="tablet mf-input-wrapper">
 
               <br class="mobile" />   <div class="tt1">
-              <label>Revenue (Services)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+              <label class="merge">Revenue (Services)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
               <span class="tooltiptext">Row 05 in Income Statement</span>
               </div>
-            <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            <input type="number"  defaultValue="" className="mergeinput mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
                 <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s" as=${html`<span className="mf-error-message"></span>`}
@@ -2509,10 +2542,10 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Revenue (Services)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+            <label class="merge2">Revenue (Services)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
             <span class="tooltiptext">Row 05 in Income Statement</span>
             </div>
-            <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-s2" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            <input type="number"  defaultValue="" className="mergeinput2 mf-input " id="mf-input-email-094f2a0" name="revenue-s2" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
             <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s2" as=${html`<span className="mf-error-message"></span>`}
@@ -2535,10 +2568,10 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Revenue (Services)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+            <label class="merge3">Revenue (Services)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
             <span class="tooltiptext">Row 05 in Income Statement</span>
             </div>
-            <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-s1" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            <input type="number"  defaultValue="" className="mergeinput3 mf-input " id="mf-input-email-094f2a0" name="revenue-s1" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
             <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s1" as=${html`<span className="mf-error-message"></span>`}
