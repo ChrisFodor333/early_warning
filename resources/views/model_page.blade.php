@@ -141,9 +141,9 @@ h6 {
 
 
       if(document.querySelector('#curyear').value >= 2014) {
-        document.querySelector('#merge').innerHTML = "Revenue - Services";
+        document.querySelector('#merge').innerHTML = "Revenue (Services)";
         document.querySelector('#mergehide').style.display = "block";
-        document.querySelector('.mergeinput').placeholder = "Revenue - Services";
+        document.querySelector('.mergeinput').placeholder = "Revenue (Services)";
       } else {
         document.querySelector('#merge').innerHTML = "Revenue (P and S)";
         document.querySelector('#mergehide').style.display = "none";
@@ -151,9 +151,9 @@ h6 {
       }
 
       if(document.querySelector('#curyear').value-1 >= 2014) {
-        document.querySelector('#merge2').innerHTML = "Revenue - Services";
+        document.querySelector('#merge2').innerHTML = "Revenue (Services)";
         document.querySelector('#mergehide2').style.display = "block";
-        document.querySelector('.mergeinput2').placeholder = "Revenue - Services";
+        document.querySelector('.mergeinput2').placeholder = "Revenue (Services)";
       } else {
         document.querySelector('#merge2').innerHTML = "Revenue (P and S)";
         document.querySelector('#mergehide2').style.display = "none";
@@ -1086,7 +1086,7 @@ h6 {
                   id="mf-input-text-13c1826"
                   name="revenue-p"
                   tabindex="17"
-                  placeholder="${ parent.decodeEntities(`Revenue - Products`) } "
+                  placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "
                         onInput=${parent.handleChange}
                   aria-invalid=${validation.errors['revenue-p'] ? 'true' : 'false'}
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1119,7 +1119,7 @@ h6 {
                           <label id="merge">Revenue from Services</label>
                           <span class="tooltiptext">Row 05 in Income Statement</span>
                           </div>
-                        <input type="number" tabindex="18" className="mergeinput mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="Revenue - Services"  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                        <input type="number" tabindex="18" className="mergeinput mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="Revenue (Services)"  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
                             <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s" as=${html`<span className="mf-error-message"></span>`}
@@ -1737,7 +1737,7 @@ h6 {
           id="mf-input-text-13c1826"
           name="revenue-p2"
           tabindex="34"
-          placeholder="${ parent.decodeEntities(`Revenue - Products`) } "
+          placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "
                 onInput=${parent.handleChange}
           aria-invalid=${validation.errors['revenue-p2'] ? 'true' : 'false'}
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1774,7 +1774,7 @@ h6 {
           id="mf-input-text-13c1826"
           name="revenue-s2"
           tabindex="35"
-          placeholder="${ parent.decodeEntities(`Revenue - Services`) } "
+          placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "
                 onInput=${parent.handleChange}
           aria-invalid=${validation.errors['revenue-s2'] ? 'true' : 'false'}
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
