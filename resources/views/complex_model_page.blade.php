@@ -528,11 +528,7 @@ display: none;
             value="{{ csrf_token() }}"
             />
 
-            <${validation.ErrorMessage}
-            errors=${validation.errors}
-            name="companyname"
-            as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
             </div>
 
@@ -760,11 +756,7 @@ display: none;
         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
-            <${validation.ErrorMessage}
-        errors=${validation.errors}
-        name="total-assets"
-        as=${html`<span className="mf-error-message"></span>`}
-        />
+
 
         </div>
 
@@ -837,11 +829,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
         />
 
-      <${validation.ErrorMessage}
-  errors=${validation.errors}
-  name="total-assets1"
-  as=${html`<span className="mf-error-message"></span>`}
-  />
+
 
         </div>
 
@@ -874,11 +862,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="current-assets"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
           </div>
 
@@ -913,11 +897,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
     />
 
-    <${validation.ErrorMessage}
-    errors=${validation.errors}
-    name="current-assets2"
-    as=${html`<span className="mf-error-message"></span>`}
-    />
+
 
               </div>
 
@@ -950,11 +930,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
-            <${validation.ErrorMessage}
-        errors=${validation.errors}
-        name="current-assets1"
-        as=${html`<span className="mf-error-message"></span>`}
-        />
+
 
           </div>
 
@@ -989,11 +965,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="inventory"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
             </div>
 
@@ -1020,8 +992,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
     <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="inventory2" placeholder="${ parent.decodeEntities(`Inventory`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['inventory2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
     />
 
-    <${validation.ErrorMessage} errors=${validation.errors} name="inventory2" as=${html`<span className="mf-error-message"></span>`}
-    />
+
 
                 </div>
 
@@ -1055,11 +1026,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
       ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
-          <${validation.ErrorMessage}
-      errors=${validation.errors}
-      name="inventory1"
-      as=${html`<span className="mf-error-message"></span>`}
-      />
+
 
             </div>
 
@@ -1099,11 +1066,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="current-receivables"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                 </div>
 
@@ -1130,8 +1093,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="current-receivables2" placeholder="${ parent.decodeEntities(`Current Receivables`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['current-receivables2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                 />
 
-                <${validation.ErrorMessage} errors=${validation.errors} name="current-receivables2" as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                   </div>
 
@@ -1165,11 +1127,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                 />
 
-                <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="current-receivables1"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                 </div>
 
@@ -1212,11 +1170,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="financial-accounts"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
               </div>
 
@@ -1243,8 +1197,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
       <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="financial-accounts2" placeholder="${ parent.decodeEntities(`Financial Accounts`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['financial-accounts2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
       />
 
-      <${validation.ErrorMessage} errors=${validation.errors} name="financial-accounts2" as=${html`<span className="mf-error-message"></span>`}
-      />
+
 
                   </div>
 
@@ -1277,11 +1230,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
       ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
-          <${validation.ErrorMessage}
-      errors=${validation.errors}
-      name="financial-accounts1"
-      as=${html`<span className="mf-error-message"></span>`}
-      />
+
 
               </div>
 
@@ -1315,11 +1264,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
-                        <${validation.ErrorMessage}
-                    errors=${validation.errors}
-                    name="ad-total"
-                    as=${html`<span className="mf-error-message"></span>`}
-                    />
+
 
                 </div>
 
@@ -1355,11 +1300,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="ad-total2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
                     </div>
 
@@ -1392,11 +1333,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                 />
 
-              <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="ad-total1"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
                 </div>
 
@@ -1430,11 +1367,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="equity"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                   </div>
 
@@ -1470,11 +1403,6 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
-            <${validation.ErrorMessage}
-            errors=${validation.errors}
-            name="equity2"
-            as=${html`<span className="mf-error-message"></span>`}
-            />
 
                       </div>
 
@@ -1507,11 +1435,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                 />
 
-              <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="equity1"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
                   </div>
 
@@ -1545,11 +1469,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="net-profit-loss"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                     </div>
 
@@ -1585,11 +1505,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
               />
 
-              <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="net-profit-loss2"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
                         </div>
 
@@ -1622,11 +1538,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
-                  <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="net-profit-loss1"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
                     </div>
 
@@ -1660,11 +1572,6 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
-                        <${validation.ErrorMessage}
-                    errors=${validation.errors}
-                    name="liabilities"
-                    as=${html`<span className="mf-error-message"></span>`}
-                    />
 
                       </div>
 
@@ -1700,11 +1607,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                 />
 
-                <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="liabilities2"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                           </div>
 
@@ -1737,11 +1640,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="liabilities1"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                       </div>
 
@@ -1775,11 +1674,6 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="current-liabilities"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
 
             </div>
 
@@ -1815,11 +1709,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
-            <${validation.ErrorMessage}
-            errors=${validation.errors}
-            name="current-liabilities2"
-            as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
               </div>
 
@@ -1852,11 +1742,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
-                  <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="current-liabilities1"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
             </div>
 
@@ -1890,11 +1776,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                 />
 
-                <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="provisions"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
               </div>
 
@@ -1921,8 +1803,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="provisions2" placeholder="${ parent.decodeEntities(`Provisions`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
-            <${validation.ErrorMessage} errors=${validation.errors} name="provisions2" as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
                 </div>
 
@@ -1956,11 +1837,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
               />
 
-              <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="provisions1"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
               </div>
 
@@ -1995,11 +1872,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
-                        <${validation.ErrorMessage}
-                    errors=${validation.errors}
-                    name="current-bank-loans"
-                    as=${html`<span className="mf-error-message"></span>`}
-                    />
+
 
                 </div>
 
@@ -2035,11 +1908,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                 />
 
-                <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="current-bank-loans2"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                   </div>
 
@@ -2072,11 +1941,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
-                    <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="current-bank-loans1"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                 </div>
 
@@ -2114,11 +1979,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                       ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                             />
 
-                          <${validation.ErrorMessage}
-                      errors=${validation.errors}
-                      name="financial-assistance"
-                      as=${html`<span className="mf-error-message"></span>`}
-                      />
+
 
                   </div>
 
@@ -2154,11 +2015,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                   />
 
-                  <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="financial-assistance2"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                     </div>
 
@@ -2191,11 +2048,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="financial-assistance1"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                   </div>
 
@@ -2235,11 +2088,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
-                  <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="ad"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
           </div>
 
@@ -2275,11 +2124,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="ad2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
             </div>
 
@@ -2312,11 +2157,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                 />
 
-              <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="ad1"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
           </div>
 
@@ -2341,8 +2182,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                 />
 
-                  <${validation.ErrorMessage} errors=${validation.errors} name="revenue-merch" as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
             </div>
 
@@ -2378,11 +2218,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
-            <${validation.ErrorMessage}
-            errors=${validation.errors}
-            name="revenue-merch2"
-            as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
               </div>
 
@@ -2407,8 +2243,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch1" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
-                <${validation.ErrorMessage} errors=${validation.errors} name="revenue-merch1" as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
             </div>
 
@@ -2437,8 +2272,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
-              <${validation.ErrorMessage} errors=${validation.errors} name="revenue-p" as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
           </div>
 
@@ -2465,8 +2299,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
         <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p2" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
         />
 
-        <${validation.ErrorMessage} errors=${validation.errors} name="revenue-p2" as=${html`<span className="mf-error-message"></span>`}
-        />
+
 
             </div>
 
@@ -2491,8 +2324,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p1" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage} errors=${validation.errors} name="revenue-p1" as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
           </div>
 
@@ -2520,8 +2352,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <input type="number"  defaultValue="" className="mergeinput mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
               />
 
-                <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s" as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
             </div>
 
@@ -2548,8 +2379,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <input type="number"  defaultValue="" className="mergeinput2 mf-input " id="mf-input-email-094f2a0" name="revenue-s2" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
-            <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s2" as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
               </div>
 
@@ -2574,8 +2404,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <input type="number"  defaultValue="" className="mergeinput3 mf-input " id="mf-input-email-094f2a0" name="revenue-s1" placeholder="${ parent.decodeEntities(`Revenue (Services)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
-            <${validation.ErrorMessage} errors=${validation.errors} name="revenue-s1" as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
             </div>
 
@@ -2616,11 +2445,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
-                        <${validation.ErrorMessage}
-                    errors=${validation.errors}
-                    name="revenue-sale"
-                    as=${html`<span className="mf-error-message"></span>`}
-                    />
+
 
                 </div>
 
@@ -2647,8 +2472,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-sale2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-sale2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
               />
 
-              <${validation.ErrorMessage} errors=${validation.errors} name="revenue-sale2" as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
                   </div>
 
@@ -2681,11 +2505,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="revenue-sale1"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                 </div>
 
@@ -2718,11 +2538,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
-                        <${validation.ErrorMessage}
-                    errors=${validation.errors}
-                    name="amortization"
-                    as=${html`<span className="mf-error-message"></span>`}
-                    />
+
 
               </div>
 
@@ -2758,11 +2574,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
               />
 
-              <${validation.ErrorMessage}
-              errors=${validation.errors}
-              name="amortization2"
-              as=${html`<span className="mf-error-message"></span>`}
-              />
+
 
                 </div>
 
@@ -2795,11 +2607,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="amortization1"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
               </div>
 
@@ -2832,11 +2640,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
 
-                        <${validation.ErrorMessage}
-                    errors=${validation.errors}
-                    name="securities-shares"
-                    as=${html`<span className="mf-error-message"></span>`}
-                    />
+
 
                 </div>
 
@@ -2872,11 +2676,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                 />
 
-                <${validation.ErrorMessage}
-                errors=${validation.errors}
-                name="securities-shares2"
-                as=${html`<span className="mf-error-message"></span>`}
-                />
+
 
                   </div>
 
@@ -2909,11 +2709,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="securities-shares1"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                 </div>
 
@@ -2947,11 +2743,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                       ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                             />
 
-                          <${validation.ErrorMessage}
-                      errors=${validation.errors}
-                      name="interest-expense"
-                      as=${html`<span className="mf-error-message"></span>`}
-                      />
+
 
                   </div>
 
@@ -2987,11 +2779,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                   />
 
-                  <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="interest-expense2"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                     </div>
 
@@ -3024,11 +2812,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                         />
 
-                      <${validation.ErrorMessage}
-                  errors=${validation.errors}
-                  name="interest-expense1"
-                  as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                   </div>
 
@@ -3061,11 +2845,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                                 />
 
-                              <${validation.ErrorMessage}
-                          errors=${validation.errors}
-                          name="profit-loss-before-tax"
-                          as=${html`<span className="mf-error-message"></span>`}
-                          />
+
 
                     </div>
 
@@ -3092,8 +2872,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="profit-loss-before-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-before-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                   />
 
-                  <${validation.ErrorMessage} errors=${validation.errors} name="profit-loss-before-tax2" as=${html`<span className="mf-error-message"></span>`}
-                  />
+
 
                       </div>
 
@@ -3126,11 +2905,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                               />
 
-                            <${validation.ErrorMessage}
-                        errors=${validation.errors}
-                        name="profit-loss-before-tax1"
-                        as=${html`<span className="mf-error-message"></span>`}
-                        />
+
 
                     </div>
 
@@ -3163,11 +2938,6 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                                 />
 
-                              <${validation.ErrorMessage}
-                          errors=${validation.errors}
-                          name="profit-loss-after-tax"
-                          as=${html`<span className="mf-error-message"></span>`}
-                          />
 
                       </div>
 
@@ -3194,8 +2964,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="profit-loss-after-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-after-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                     />
 
-                    <${validation.ErrorMessage} errors=${validation.errors} name="profit-loss-after-tax2" as=${html`<span className="mf-error-message"></span>`}
-                    />
+
 
                         </div>
 
@@ -3228,11 +2997,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                               />
 
-                            <${validation.ErrorMessage}
-                        errors=${validation.errors}
-                        name="profit-loss-after-tax1"
-                        as=${html`<span className="mf-error-message"></span>`}
-                        />
+
 
                       </div>
 
@@ -3320,11 +3085,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                 />
 
-              <${validation.ErrorMessage}
-            errors=${validation.errors}
-            name="intangible-assets2"
-            as=${html`<span className="mf-error-message"></span>`}
-            />
+
 
           </div>
 
@@ -3359,11 +3120,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="ppe2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
           </div>
 
@@ -3399,11 +3156,6 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="financial-assets2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
 
           </div>
 
@@ -3438,8 +3190,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-liabilities-2" placeholder="${ parent.decodeEntities(`Non-current Liabilities`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-liabilities-2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage} errors=${validation.errors} name="non-current-liabilities-2" as=${html`<span className="mf-error-message"></span>`}
-          />
+        
 
           </div>
 
@@ -3474,11 +3225,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="bank-loans2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
           </div>
 
@@ -3515,11 +3262,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
-          <${validation.ErrorMessage}
-          errors=${validation.errors}
-          name="added-value2"
-          as=${html`<span className="mf-error-message"></span>`}
-          />
+
 
           </div>
 
