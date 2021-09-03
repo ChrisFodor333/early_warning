@@ -3433,7 +3433,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <br class="mobile" />
             <div class="tt1">
             <label>Non-current Liabilities</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
-            <span class="tooltiptext" id="tt23a">Row 094 in Balance Sheet</span>
+            <span class="tooltiptext" id="tt23a">Row 102 in Balance Sheet</span>
             </div>
           <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-liabilities-2" placeholder="${ parent.decodeEntities(`Non-current Liabilities`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-liabilities-2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
@@ -3460,7 +3460,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <br class="mobile" />
           <div class="tt1">
           <label>Long-term Bank Loans</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
-          <span class="tooltiptext" id="tt24a">Row 119 in Balance Sheet</span>
+          <span class="tooltiptext" id="tt24a">Row 121 in Balance Sheet</span>
           </div>
 
           <input
@@ -3501,7 +3501,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <br class="mobile" />
           <div class="tt1">
           <label>Added Value</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
-          <span class="tooltiptext" id="tt25a">Row 11 in Income Statement</span>
+          <span class="tooltiptext" id="tt25a">Row 28 in Income Statement</span>
           </div>
 
           <input
