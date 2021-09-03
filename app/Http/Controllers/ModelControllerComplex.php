@@ -165,7 +165,7 @@ class ModelControllerComplex extends Controller
 
 
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
-  $altman = number_format($altman,2);
+  $altman = number_format($altman,2, '.', '');
   if($altman < 1.2) {
       $altmancolor = "red";
       $red++;
@@ -209,7 +209,7 @@ $x5 = ($cs22 + $cs23_1 + $cs23_2 + $cs26 + $cs27) / $totalassets;
 
 
 $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
-$altman = number_format($altman,2);
+$altman = number_format($altman,2, '.', '');
 if($altman < 1.2) {
     $altmancolor = "red";
     $red2++;
@@ -250,7 +250,7 @@ $x4 = $ds11 / $totalliabilities;
 $x5 = ($ds22 + $ds23_1 + $ds23_2 + $ds26 + $ds27) / $totalassets;
 
 $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
-$altman = number_format($altman,2);
+$altman = number_format($altman,2, '.', '');
 if($altman < 1.2) {
     $altmancolor = "red";
     $red1++;
@@ -294,7 +294,7 @@ $complex->altman3= $altman;
   $y5 = $bs6 / ($bs16 + $bs19);
 
   $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
-  $in05 = number_format($in05,2);
+  $in05 = number_format($in05,2, '.', '');
 
 
   if($in05 < 0.9) {
@@ -338,7 +338,7 @@ $complex->altman3= $altman;
  $y5 = $cs6 / ($cs16 + $cs19);
 
  $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
- $in05 = number_format($in05,2);
+ $in05 = number_format($in05,2, '.', '');
 
 
  if($in05 < 0.9) {
@@ -383,7 +383,7 @@ $y4 = ($ds22 + $ds23_1 + $ds23_2 + $ds27 + $ds26) / $totalassets;
 $y5 = $ds6 / ($ds16 + $ds19);
 
 $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
-$in05 = number_format($in05,2);
+$in05 = number_format($in05,2, '.', '');
 
 
 if($in05 < 0.9) {
@@ -427,7 +427,7 @@ $complex->in053 = $in05;
   $t4 = ($bs22 + $bs23_1 + $bs23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
-  $taffler = number_format($taffler,2);
+  $taffler = number_format($taffler,2, '.', '');
 
   if($taffler < 0.2) {
       $tafflercolor = "red";
@@ -471,7 +471,7 @@ $complex->in053 = $in05;
   $t4 = ($cs22 + $cs23_1 + $cs23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
-  $taffler = number_format($taffler,2);
+  $taffler = number_format($taffler,2, '.', '');
 
   if($taffler < 0.2) {
       $tafflercolor = "red";
@@ -516,7 +516,7 @@ $complex->in053 = $in05;
   $t4 = ($ds22 + $ds23_1 + $ds23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
-  $taffler = number_format($taffler,2);
+  $taffler = number_format($taffler,2, '.', '');
 
   if($taffler < 0.2) {
       $tafflercolor = "red";
@@ -636,7 +636,7 @@ $complex->in053 = $in05;
   $data['b4score'] =  $b4score;
 
   $quicktest = $b1score + $b2score + $b3score + $b4score;
-  $quicktest = number_format($quicktest,2);
+  $quicktest = number_format($quicktest,2, '.', '');
 
 
   if($quicktest < 9.0) {
@@ -757,7 +757,7 @@ $data['b3score'] =  $b3score;
 $data['b4score'] =  $b4score;
 
 $quicktest = $b1score + $b2score + $b3score + $b4score;
-$quicktest = number_format($quicktest,2);
+$quicktest = number_format($quicktest,2, '.', '');
 
 
 if($quicktest < 9.0) {
@@ -877,7 +877,7 @@ $data['b3score'] =  $b3score;
 $data['b4score'] =  $b4score;
 
 $quicktest = $b1score + $b2score + $b3score + $b4score;
-$quicktest = number_format($quicktest,2);
+$quicktest = number_format($quicktest,2, '.', '');
 
 
 if($quicktest < 9.0) {
@@ -921,7 +921,7 @@ $complex->quicktest3 = $quicktest;
   $l6 = $sales / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
-  $bonity = number_format($bonity,2);
+  $bonity = number_format($bonity,2, '.', '');
 
   if($bonity < -1.0) {
       $bonitycolor = "red";
@@ -963,7 +963,7 @@ $complex->quicktest3 = $quicktest;
   $l6 = $sales / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
-  $bonity = number_format($bonity,2);
+  $bonity = number_format($bonity,2, '.', '');
 
   if($bonity < -1.0) {
       $bonitycolor = "red";
@@ -1006,7 +1006,7 @@ $complex->quicktest3 = $quicktest;
   $l6 = $sales / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
-  $bonity = number_format($bonity,2);
+  $bonity = number_format($bonity,2, '.', '');
 
   if($bonity < -1.0) {
       $bonitycolor = "red";
@@ -1052,7 +1052,7 @@ $complex->quicktest3 = $quicktest;
   $u8 = $cs30 / ($cs11 + $cs14 + $cs15 + $cs18);
 
   $binkert = (0.18 * $u1) + (0.147 * $u2) + (0.237 * $u3) + (0.377 * $u4) + (0.514 * $u5) + (0.505 * $u6) + (0.271 * $u7) + (0.207 * $u8);
-  $binkert = number_format($binkert,2);
+  $binkert = number_format($binkert,2, '.', '');
 
 
 

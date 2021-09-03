@@ -104,7 +104,7 @@ class ModelControllerNew extends Controller
 
 
   $altman = (0.717 * $x1) + (0.847 * $x2) + (3.107 * $x3) + (0.42 * $x4) + (0.998 * $x5);
-  $altman = number_format($altman,2);
+  $altman = number_format($altman,2, '.', '');
   if($altman < 1.2) {
       $altmancolor = "red";
       $red++;
@@ -144,7 +144,7 @@ class ModelControllerNew extends Controller
   $y5 = $b6 / ($b16 + $b19);
 
   $in05 = (0.13 *  $y1) + (0.04 * $y2) + (3.97 * $y3) + (0.21 * $y4) + (0.09 * $y5);
-  $in05 = number_format($in05,2);
+  $in05 = number_format($in05,2, '.', '');
 
 
   if($in05 < 0.9) {
@@ -186,7 +186,7 @@ class ModelControllerNew extends Controller
   $t4 = ($b22 + + $b23_1 + $b23_2) / $totalassets;
 
   $taffler = (0.53 * $t1) + (0.13 * $t2) + (0.18 * $t3) + (0.16 * $t4);
-  $taffler = number_format($taffler,2);
+  $taffler = number_format($taffler,2, '.', '');
 
   if($taffler < 0.2) {
       $tafflercolor = "red";
@@ -301,7 +301,7 @@ class ModelControllerNew extends Controller
   $data['b4score'] =  $b4score;
 
   $quicktest = $b1score + $b2score + $b3score + $b4score;
-  $quicktest = number_format($quicktest,2);
+  $quicktest = number_format($quicktest,2, '.', '');
 
 
 
@@ -343,7 +343,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $l6 = ($b22 + $b23_1 + $b23_2 + $b26 + $b27) / $totalassets;
 
   $bonity = (1.5 * $l1) + (0.08 * $l2) + (10 * $l3) + (5 * $l4) + (0.3 * $l5) + (0.1 * $l6);
-  $bonity = number_format($bonity,2);
+  $bonity = number_format($bonity,2, '.', '');
 
   if($bonity < -1.0) {
       $bonitycolor = "red";
@@ -389,7 +389,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $u8 = $c30 / ($c11 + $c14 + $c15 + $c18);
 
   $binkert = (0.18 * $u1) + (0.147 * $u2) + (0.237 * $u3) + (0.377 * $u4) + (0.514 * $u5) + (0.505 * $u6) + (0.271 * $u7) + (0.207 * $u8);
-  $binkert = number_format($binkert,2);
+  $binkert = number_format($binkert,2, '.', '');
 
 
 
