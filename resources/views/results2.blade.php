@@ -36,14 +36,17 @@
         .container {
           display: none;
         }
-
-
-
-
     </style>
 
 
 <style>
+
+@media (max-width: 1024px) {
+  .tablet {
+    margin-left: 80px;
+    width: 100%;
+  }
+}
 
 #printOnly {
     display: none;
@@ -276,7 +279,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title  elementor-size-default">Scoring Parameter 1</h2>		</div>
+			<h2 class="tablet elementor-heading-title  elementor-size-default">Scoring Parameter 1</h2>		</div>
 				</div>
       </div>
 
@@ -296,7 +299,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-9019ec0 elementor-widget elementor-widget-heading" data-id="9019ec0" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
         <div class="modelname">
-			<h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 2</h2>		</div>
+			<h2 class="tablet elementor-heading-title elementor-size-default">Scoring Parameter 2</h2>		</div>
       </div>
 				</div>
 					</div>
@@ -315,7 +318,7 @@ onclick="window.print();">
 				<div class="elementor-element elementor-element-6f21d3b1 elementor-widget elementor-widget-heading" data-id="6f21d3b1" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
               <div class="modelname">
-			<h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 3</h2>		</div>
+			<h2 class="tablet elementor-heading-title elementor-size-default">Scoring Parameter 3</h2>		</div>
     </div>
 				</div>
 
@@ -340,7 +343,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-7854ae06 elementor-widget elementor-widget-heading" data-id="7854ae06" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
     <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 4</h2>		</div>
+  <h2 class="tablet elementor-heading-title elementor-size-default">Scoring Parameter 4</h2>		</div>
     </div>
   </div>
 
@@ -360,7 +363,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-9019ec0 elementor-widget elementor-widget-heading" data-id="9019ec0" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
     <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 5</h2>		</div>
+  <h2 class="tablet elementor-heading-title elementor-size-default">Scoring Parameter 5</h2>		</div>
   </div>
     </div>
       </div>
@@ -379,7 +382,7 @@ onclick="window.print();">
     <div class="elementor-element elementor-element-6f21d3b1 elementor-widget elementor-widget-heading" data-id="6f21d3b1" data-element_type="widget" data-widget_type="heading.default">
     <div class="elementor-widget-container">
           <div class="modelname">
-  <h2 class="elementor-heading-title elementor-size-default">Scoring Parameter 6</h2>		</div>
+  <h2 class="tablet elementor-heading-title elementor-size-default">Scoring Parameter 6</h2>		</div>
 </div>
     </div>
 
@@ -390,23 +393,29 @@ onclick="window.print();">
 
 </section>
 <div class="success-msg" style="display: <?php echo $greenwarning;?>;">
-  <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected.
+  <p><i class="fa fa-check"></i>
+  According to the information provided, your company is <b>out of danger.</b> <br />
+  Using the methodology of selected prediction models and company’s financial statements, none of the six prediction models detected the risk of bankruptcy or financial distress. -> <b> The company is facing no bankruptcy nor risk of financial distress.</b>
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
-  <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress.
+  <p><i class="fa fa-warning"></i>
+  According to the information provided, your company is in <b> the financial distress of the I. degree.</b> <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+  </p>
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning;?>;">
-  <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress; ?> degree financial distress.
+  <p><i class="fa fa-times-circle"></i>
+  According to the information provided, your company is in the <b><?php echo $dist; ?>.</b> <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model.
+  Not all information has been filled in when sending the data or an index cannot be calculated, which can result in lower accuracy of the model.
 </div>
 
 

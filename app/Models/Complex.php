@@ -15,6 +15,7 @@ class Complex extends Model
 
     protected $fillable = [
         'company_name',
+        'country',
         'current_year',
         'altman1',
         'altman2',

@@ -60,6 +60,11 @@
     </style>
 
 <style>
+p {
+  font-weight: normal;
+   text-align: justify;
+}
+
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -268,23 +273,29 @@ input[type=image] {
 
 
 <div class="success-msg" style="display: <?php echo $greenwarning;?>;">
-  <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo $currentyear; ?>
+  <p><i class="fa fa-check"></i>
+  According to the information provided, your company is <b>out of danger<b/> in the year of <?php echo $currentyear; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, none of the six prediction models detected the risk of bankruptcy or financial distress. -> <b> The company is facing no bankruptcy nor risk of financial distress.</b>
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
-  <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress in the year of <?php echo $currentyear; ?>.
+  <p><i class="fa fa-warning"></i>
+  According to the information provided, your company is in <b> the financial distress of the I. degree</b> in the year of <?php echo $currentyear; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+  </p>
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning;?>;">
-  <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress; ?> degree financial distress in the year of <?php echo $currentyear; ?>.
+  <p><i class="fa fa-times-circle"></i>
+  According to the information provided, your company is in the <b><?php echo $dist; ?></b> in the year of <?php echo $currentyear; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>;
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo $currentyear; ?>.
+  Not all information has been filled in when sending the data or an index cannot be calculated, which can result in lower accuracy of the model.
 </div>
 
 
@@ -292,23 +303,29 @@ input[type=image] {
 
 
 <div class="success-msg" style="display: <?php echo $greenwarning2;?>;">
-  <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo $currentyear-1; ?>.
+  <p><i class="fa fa-check"></i>
+  According to the information provided, your company is <b>out of danger<b/> in the year of <?php echo $currentyear-1; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, none of the six prediction models detected the risk of bankruptcy or financial distress. -> <b> The company is facing no bankruptcy nor risk of financial distress.</b>
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning2;?>;">
-  <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress in the year of <?php echo $currentyear-1; ?>.
+  <p><i class="fa fa-warning"></i>
+  According to the information provided, your company is in <b> the financial distress of the I. degree</b> in the year of <?php echo $currentyear-1; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+  </p>
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning2;?>;">
-  <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress2; ?> degree financial distress in the year of <?php echo $currentyear-1; ?>.
+  <p><i class="fa fa-times-circle"></i>
+  According to the information provided, your company is in the <b><?php echo $dist2; ?></b> in the year of <?php echo $currentyear-1; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress2; ?></b> <?php echo $distress2_2; ?>
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay2;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo $currentyear-1; ?>.
+  Not all information has been filled in when sending the data or an index cannot be calculated, which can result in lower accuracy of the model.
 </div>
 
 
@@ -318,24 +335,33 @@ input[type=image] {
 
 
 <div class="success-msg" style="display: <?php echo $greenwarning1;?>;">
-  <i class="fa fa-check"></i>
-  According to the information provided your company is out of danger. No financial distress has been detected in the year of <?php echo $currentyear-2; ?>.
+  <p><i class="fa fa-check"></i>
+  According to the information provided, your company is <b>out of danger<b/> in the year of <?php echo $currentyear-2; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, none of the six prediction models detected the risk of bankruptcy or financial distress. -> <b> The company is facing no bankruptcy nor risk of financial distress.</b>
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $orangewarning1;?>;">
-  <i class="fa fa-warning"></i>
-  According to the information provided your company is in first degree financial distress in the year of <?php echo $currentyear-2; ?>.
+  <p><i class="fa fa-warning"></i>
+  According to the information provided, your company is in <b> the financial distress of the I. degree</b> in the year of <?php echo $currentyear-2; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+  </p>
 </div>
 
 <div class="error-msg" style="display: <?php echo $redwarning1;?>;">
-  <i class="fa fa-times-circle"></i>
-  According to the information provided your company is in <?php echo $distress1; ?> degree financial distress in the year of <?php echo $currentyear-2; ?>.
+  <p><i class="fa fa-times-circle"></i>
+  According to the information provided, your company is in the <b><?php echo $dist1; ?></b> in the year of <?php echo $currentyear-2; ?>. <br />
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress1; ?></b> <?php echo $distress1_2; ?>;
+</p>
 </div>
 
 <div class="warning-msg" style="display: <?php echo $nadisplay1;?>;">
   <i class="fa fa-warning"></i>
-  Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model in the year of <?php echo $currentyear-2; ?>.
+  Not all information has been filled in when sending the data or an index cannot be calculated, which can result in lower accuracy of the model.
 </div>
+
+<br /> <br /> <br /> <br />
+
 </div>
 </body>
 

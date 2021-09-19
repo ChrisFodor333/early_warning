@@ -19,7 +19,8 @@ class ModelControllerNew extends Controller
   $nacount = 0;
 
   //COMPANY DETAILS
-  $company = request()->get('companyname');
+  //$company = request()->get('companyname');
+  $country = request()->get('country');
   $currentyear = request()->get('currentyear');
   $data['currentyear'] =  $currentyear;
 
@@ -419,7 +420,9 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $greenwarning = "none";
   $orangewarning = "none";
   $redwarning = "none";
+  $dist = "";
   $distress = "";
+  $distress2 = "";
 
   $result = "";
 
@@ -429,13 +432,17 @@ $data['quicktestcolor'] =  $quicktestcolor;
       $result = "First Degree Financial Distress";
     }
     if($red > 2 && $red <= 4) {
-      $distress = "second";
+      $dist = "the financial distress of the II. degree";
+      $distress = "the financial distress of the second degree – medium risk of bankruptcy";
+      $distress2 = " (maximum 4 of the six prediction models detected risk of bankruptcy or financial distress).";
       $redwarning = "block";
       $orangewarning = "none";
       $result = "Second Degree Financial Distress";
     }
     if($red > 4) {
-      $distress = "third";
+      $dist = "the financial distress of the III. degree";
+      $distress = "the financial distress of the third degree – high risk of bankruptcy";
+      $distress2 = " (at least 5 of the six prediction models detected risk of bankruptcy or financial distress).";
       $redwarning = "block";
       $orangewarning = "none";
       $result = "Third Degree Financial Distress";
@@ -509,12 +516,15 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $data['orangewarning'] = $orangewarning;
   $data['redwarning'] = $redwarning;
   $data['distress'] = $distress;
+  $data['distress2'] = $distress2;
+  $data['dist'] = $dist;
   $data['nadisplay'] = $nadisplay;
 
   // ADD TO DATABASE
   $basic =  new Basic;
 
-  $basic->company_name = $company;
+  //$basic->company_name = $company;
+  $basic->country = $country;
   $basic->current_year = $currentyear;
   $basic->altman= $altman;
   $basic->in05 = $in05;

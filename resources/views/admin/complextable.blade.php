@@ -74,6 +74,7 @@
                                             <tr style="cursor: pointer;">
                                                <th>DateTime</th>
                                                <th>Company Name</th>
+                                               <th>Country</th>
                                                <th>Current Year</th>
                                                <th>Altman (Year 1)</th>
                                                <th>Index 05 (Year 1)</th>
@@ -118,7 +119,7 @@
             buttons: [
                 { extend: 'excel', text: 'Export to Excel',
                     exportOptions: {
-                        columns: [0,1,2,3,4,5,6,7,8,9]
+                        columns: [0,1,2,3,4,5,6,7,8,9,10]
                     }
                 }
 
@@ -137,6 +138,7 @@
             columns: [
                 { data: 'date', name: 'date' },
                 { data: 'company_name', name: 'company_name' },
+                { data: 'country', name: 'country' },
                 { data: 'current_year', name: '	current_year' },
                 { data: 'altman1', name: 'altman1' },
                 { data: 'in051', name: 'in051' },

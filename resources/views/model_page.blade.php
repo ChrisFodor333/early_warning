@@ -16,9 +16,19 @@ document.onkeypress = stopRKey;
 
 <style>
 
-  #curyear {
-    height: 53px;
+  #siz1 {
+    font-size: 13px;
   }
+
+  #siz2 {
+    font-size: 12px;
+  }
+
+  #siz3 {
+    font-size: 12px;
+  }
+
+
 
  label {
    cursor: help;
@@ -166,7 +176,7 @@ h6 {
           document.querySelector('#tt3').innerHTML = "Row 034 in Balance Sheet";
           document.querySelector('#tt4').innerHTML = "Row 071 in Balance Sheet";
           document.querySelector('#tt4X').innerHTML = "Row 053 in Balance Sheet";
-          document.querySelector('#tt5').innerHTML = "Row 074 in Balance Sheet";
+          document.querySelector('#tt5').innerHTML = "Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet";
           document.querySelector('#tt6').innerHTML = "Row 080 in Balance Sheet";
           document.querySelector('#tt7').innerHTML = "Row 097 in Balance Sheet";
           document.querySelector('#tt8').innerHTML = "Row 101 in Balance Sheet";
@@ -175,14 +185,14 @@ h6 {
           document.querySelector('#tt9').innerHTML = "Row 136 in Balance Sheet";
           document.querySelector('#tt21').innerHTML = "Row 139 in Balance Sheet";
           document.querySelector('#tt22').innerHTML = "Row 140 in Balance Sheet";
-          document.querySelector('#tt11').innerHTML = "Row 141 in Balance Sheet";
-          document.querySelector('#tt12').innerHTML = "Row 03 in Income Statement";
-          document.querySelector('#tt23').innerHTML = "Row 08 in Income Statement";
+          document.querySelector('#tt11').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+          document.querySelector('#tt12').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
+          document.querySelector('#tt23').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
           document.querySelector('#tt14').innerHTML = "Row 21 in Income Statement";
           document.querySelector('#tt24').innerHTML = "Row 28 in Income Statement";
           document.querySelector('#tt17').innerHTML = "Row 46 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Row 49 in Income Statement";
-          document.querySelector('#tt19').innerHTML = "Row 56 in Income Statement";
+          document.querySelector('#tt19').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
 
 
 
@@ -199,9 +209,9 @@ h6 {
       if(document.querySelector('#curyear').value-1 >= 2014) {
           document.querySelector('#tt6a2').innerHTML = "Row 080 in Balance Sheet";
           document.querySelector('#tt9a2').innerHTML = "Row 136 in Balance Sheet";
-          document.querySelector('#tt12a2').innerHTML = "Row 03 in Income Statement";
+          document.querySelector('#tt12a2').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
           document.querySelector('#tt17a').innerHTML = "Row 46 in Income Statement";
-          document.querySelector('#tt23a').innerHTML = "Row 08 in Income Statement";
+          document.querySelector('#tt23a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
           document.querySelector('#ttb2').innerHTML = "Row 121 in Balance Sheet";
         } else {
           document.querySelector('#tt6a2').innerHTML = "Row 067 in Balance Sheet";
@@ -252,8 +262,8 @@ h6 {
          if(document.querySelector('#curyear').value-1 >= 2014) {
             document.querySelector('#tt6a2').innerHTML = "Row 080 in Balance Sheet";
             document.querySelector('#tt9a2').innerHTML = "Row 136 in Balance Sheet";
-            document.querySelector('#tt12a2').innerHTML = "Row 03 in Income Statement";
-            document.querySelector('#tt23a').innerHTML = "Row 08 in Income Statement";
+            document.querySelector('#tt12a2').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
+            document.querySelector('#tt23a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
             document.querySelector('#ttb2').innerHTML = "Row 121 in Balance Sheet";
             document.querySelector('#tt17a').innerHTML = "Row 46 in Income Statement";
           } else {
@@ -364,21 +374,18 @@ h6 {
 
             <div className="tablet mf-input-wrapper">
               <div class="tt1">
-              <label>Company Name</label>
-              <span class="tooltiptext">Enter the Name of Your Company</span>
+              <label>Country</label>
+              <span class="tooltiptext">Enter the country where the company is based</span>
               </div>
-            <input
-            type="text"
-            tabindex="1"
-            className="mf-input "
-            id="mf-input-text-13c1826"
-            name="companyname"
-            required
-            placeholder="${ parent.decodeEntities(`Company Name`) } "
-              onInput=${parent.handleChange}
-            aria-invalid=${validation.errors['companyname'] ? 'true' : 'false'}
-            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
-            />
+              <select
+              className="mf-input"
+              name="country"
+              required
+              >
+              <?php foreach($countries as $country) : ?>
+                <option value="<?php echo $country; ?>"><?php echo $country; ?></option>
+              <?php endforeach; ?>
+            </select>
 
             <input
             type="hidden"
@@ -390,7 +397,7 @@ h6 {
 
             <${validation.ErrorMessage}
             errors=${validation.errors}
-            name="companyname"
+            name="country"
             as=${html`<span className="mf-error-message"></span>`}
             />
 
@@ -705,8 +712,8 @@ h6 {
                   <br class="mobile" />
 
                   <div class="tt1">
-                  <label>Accruals/Deferrals Total</label>
-                  <span class="tooltiptext" id="tt5">Row 074 in Balance Sheet</span>
+                  <label>Accruals/Deferrals (A)</label>
+                  <span class="tooltiptext" id="tt5">Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet</span>
                   </div>
                   <input
                     type="number"
@@ -714,7 +721,7 @@ h6 {
                     id="mf-input-text-13c1826"
                     tabindex="7"
                     name="ad-total"
-                    placeholder="${ parent.decodeEntities(`Accruals/Deferrals`) } "
+                    placeholder="${ parent.decodeEntities(`Accruals/Deferrals (A)`) } "
                               onInput=${parent.handleChange}
                       aria-invalid=${validation.errors['ad-total'] ? 'true' : 'false'}
                       ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -780,7 +787,7 @@ h6 {
             <br class="mobile" />
 
             <div class="tt1">
-            <label>Net Profit/Loss</label>
+            <label id="siz2">Net Profit/Loss of Previous Years </label>
             <span class="tooltiptext" id="tt7">Row 097 in Balance Sheet</span>
             </div>
             <input
@@ -900,7 +907,7 @@ h6 {
                     <br class="mobile" />
 
                     <div class="tt1">
-                    <label>Provisions</label>
+                    <label>Short-term Provisions</label>
                     <span class="tooltiptext" id="tt9">Row 136 in Balance Sheet</span>
                     </div>
 
@@ -972,7 +979,7 @@ h6 {
                 <div className="mf-input-wrapper">
                       <br class="mobile" />
                   <div class="tt1">
-                  <label>Financial Assistance</label>
+                  <label id="siz3">Short-term Financial Assistance</label>
                   <span class="tooltiptext" id="tt22">Row 140 in Balance Sheet</span>
                   </div>
                 <input
@@ -1011,8 +1018,8 @@ h6 {
                   <div className="mf-input-wrapper">
                       <br class="mobile" />
                     <div class="tt1">
-                    <label>Accruals/Deferrals</label>
-                    <span class="tooltiptext" id="tt11">Row 141 in Balance Sheet</span>
+                    <label>Accruals/Deferrals (L & E)</label>
+                    <span class="tooltiptext" id="tt11">Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet</span>
                     </div>
                   <input
                     type="number"
@@ -1052,7 +1059,7 @@ h6 {
 
                     <div class="tt1">
                     <label>Revenue (Merchandise)</label>
-                    <span class="tooltiptext" id="tt12">Row 03 in Income Statement</span>
+                    <span class="tooltiptext" id="tt12">Revenue from the sale of merchandise => Row 03 in Income Statement</span>
                     </div>
                     <input type="number" tabindex="16"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
@@ -1076,8 +1083,8 @@ h6 {
                   <br class="mobile" />
 
                   <div class="tt1">
-                  <label>Revenue from Products</label>
-                  <span class="tooltiptext">Row 04 in Income Statement</span>
+                  <label>Revenue (Products)</label>
+                  <span class="tooltiptext">Revenue from the sale of own products => Row 04 in Income Statement</span>
                   </div>
 
                   <input
@@ -1116,8 +1123,8 @@ h6 {
                           <br class="mobile" />
 
                           <div class="tt1">
-                          <label id="merge">Revenue from Services</label>
-                          <span class="tooltiptext">Row 05 in Income Statement</span>
+                          <label id="merge">Revenue (Services)</label>
+                          <span class="tooltiptext">Revenue from the sale of own services => Row 05 in Income Statement</span>
                           </div>
                         <input type="number" tabindex="18" className="mergeinput mf-input " id="mf-input-email-094f2a0" name="revenue-s" placeholder="Revenue (Services)"  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-s'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                           />
@@ -1144,10 +1151,10 @@ h6 {
                     <br class="mobile" />
 
                     <div class="tt1">
-                    <label>Revenue from Sale</label>
-                    <span class="tooltiptext" id="tt23">Row 08 in Income Statement</span>
+                    <label>Revenue (Other Sale)</label>
+                    <span class="tooltiptext" id="tt23">Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement</span>
                     </div>
-                    <input type="number" tabindex="19" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ncia" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                    <input type="number" tabindex="19" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ncia" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
                       <${validation.ErrorMessage} errors=${validation.errors} name="ncia" as=${html`<span className="mf-error-message"></span>`}
@@ -1171,7 +1178,7 @@ h6 {
                     <br class="mobile" />
 
                     <div class="tt1">
-                    <label>Amortization</label>
+                    <label>Amortization/Depreciation</label>
                     <span class="tooltiptext" id="tt14">Row 21 in Income Statement</span>
                     </div>
                     <input
@@ -1180,7 +1187,7 @@ h6 {
                       id="mf-input-text-d5f534d"
                       tabindex="20"
                       name="amortization"
-                      placeholder="${ parent.decodeEntities(`Amortization`) } "
+                      placeholder="${ parent.decodeEntities(`Amortization/Depre ...`) } "
                                 onInput=${parent.handleChange}
                         aria-invalid=${validation.errors['amortization'] ? 'true' : 'false'}
                         ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -1209,7 +1216,7 @@ h6 {
                       <br class="mobile" />
 
                       <div class="tt1">
-                      <label>Securities and Shares</label>
+                      <label>Securities and Shares Sold</label>
                       <span class="tooltiptext" id="tt17">Row 46 in Income Statement</span>
                       </div>
                     <input
@@ -1288,7 +1295,7 @@ h6 {
 
                             <div class="tt1">
                             <label>Profit/Loss Before Tax</label>
-                            <span class="tooltiptext" id="tt19">Row 56 in Income Statement</span>
+                            <span class="tooltiptext" id="tt19">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
                             </div>
                             <input
                               type="number"
@@ -1327,7 +1334,7 @@ h6 {
 
                   <div class="tt1">
                   <label>Profit/Loss After Tax</label>
-                  <span class="tooltiptext">Row 61 in Income Statement</span>
+                  <span class="tooltiptext">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
                   </div>
                   <input
                   type="number"
@@ -1482,7 +1489,7 @@ h6 {
         <div className="mf-input-wrapper">
         <br class="mobile" />
         <div class="tt1">
-        <label>Intangible Assets</label>
+        <label id="siz1">Long-term Intangible Assets</label>
         <span class="tooltiptext">Row 003 in Balance Sheet</span>
         </div>
         <input
@@ -1521,7 +1528,7 @@ h6 {
 
           <div class="tt1">
           <label>Property, Plant, Equipment</label>
-          <span class="tooltiptext">Row 011 in Balance Sheet</span>
+          <span class="tooltiptext">Property, Plant and Equipment (total) => Row 011 in Balance Sheet</span>
           </div>
           <input type="number" tabindex="27" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ppe2" placeholder="${ parent.decodeEntities(`Property, Plant ... `) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ppe2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
@@ -1548,10 +1555,11 @@ h6 {
           <br class="mobile" />
 
           <div class="tt1">
-          <label>Non-current Assets</label>
+          <label>Long-term Financial Assets</label>
           <span class="tooltiptext">Row 021 in Balance Sheet</span>
           </div>
-          <input type="number" tabindex="28" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-assets2" placeholder="${ parent.decodeEntities(`Non-current Assets`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-assets2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+          <input type="number" tabindex="28" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="non-current-assets2"
+          placeholder="${ parent.decodeEntities(`Financial Assets`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['non-current-assets2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
           <${validation.ErrorMessage} errors=${validation.errors} name="non-current-assets2" as=${html`<span className="mf-error-message"></span>`}
@@ -1656,7 +1664,7 @@ h6 {
           <div className="mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Provisions</label>
+          <label>Short-term Provisions</label>
           <span class="tooltiptext" id="tt9a2">Row 136 in Balance Sheet</span>
           </div>
 
@@ -1693,7 +1701,7 @@ h6 {
 
           <div class="tt1">
           <label>Revenue (Merchandise)</label>
-          <span class="tooltiptext" id="tt12a2">Row 03 in Income Statement</span>
+          <span class="tooltiptext" id="tt12a2">Revenue from the sale of merchandise => Row 03 in Income Statement</span>
           </div>
 
           <input
@@ -1727,8 +1735,8 @@ h6 {
           <div className="mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Revenue from Products</label>
-          <span class="tooltiptext">Row 04 in Income Statement</span>
+          <label>Revenue (Products)</label>
+          <span class="tooltiptext">Revenue from the sale of own products => Row 04 in Income Statement</span>
           </div>
 
           <input
@@ -1764,8 +1772,8 @@ h6 {
           <div className="tablet mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label id="merge2">Revenue from Services</label>
-          <span class="tooltiptext">Row 05 in Income Statement</span>
+          <label id="merge2">Revenue (Services)</label>
+          <span class="tooltiptext">Revenue from the sale of own services => Row 05 in Income Statement</span>
           </div>
 
           <input
@@ -1802,10 +1810,10 @@ h6 {
           <br class="mobile" />
 
           <div class="tt1">
-          <label>Revenue from Sale</label>
-          <span class="tooltiptext" id="tt23a">Row 08 in Income Statement</span>
+          <label>Revenue (Other Sale)</label>
+          <span class="tooltiptext" id="tt23a">Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement</span>
           </div>
-          <input type="number" tabindex="36" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ncia2" placeholder="${ parent.decodeEntities(`Revenue from Sale`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          <input type="number" tabindex="36" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ncia2" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
           />
 
             <${validation.ErrorMessage} errors=${validation.errors} name="ncia2" as=${html`<span className="mf-error-message"></span>`}
@@ -1862,7 +1870,7 @@ h6 {
           <div className="mf-input-wrapper">
             <br class="mobile" />
             <div class="tt1">
-            <label>Securities and Shares</label>
+            <label>Securities and Shares Sold</label>
             <span class="tooltiptext" id="tt17a">Row 46 in Income Statement</span>
             </div>
             <input type="number" tabindex="38" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="securities-shares2" placeholder="${ parent.decodeEntities(`Securities and Shares`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['securities-shares2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -1887,7 +1895,7 @@ h6 {
             <br class="mobile" />
             <div class="tt1">
             <label>Profit/Loss After Tax</label>
-            <span class="tooltiptext">Row 61 in Income Statement</span>
+            <span class="tooltiptext">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
             </div>
 
             <input

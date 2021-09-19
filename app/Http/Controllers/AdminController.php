@@ -352,7 +352,9 @@ class AdminController extends Controller
                $greenwarning = "none";
                $orangewarning = "none";
                $redwarning = "none";
+               $dist = "";
                $distress = "";
+               $distress2 = "";
 
                $result = "";
 
@@ -362,13 +364,17 @@ class AdminController extends Controller
                    $result = "First Degree Financial Distress";
                  }
                  if($red > 2 && $red <= 4) {
-                   $distress = "second";
+                   $dist = "the financial distress of the II. degree";
+                   $distress = "the financial distress of the second degree – medium risk of bankruptcy";
+                   $distress2 = " (maximum 4 of the six prediction models detected risk of bankruptcy or financial distress).";
                    $redwarning = "block";
                    $orangewarning = "none";
                    $result = "Second Degree Financial Distress";
                  }
                  if($red > 4) {
-                   $distress = "third";
+                   $dist = "the financial distress of the III. degree";
+                   $distress = "the financial distress of the third degree – high risk of bankruptcy";
+                   $distress2 = " (at least 5 of the six prediction models detected risk of bankruptcy or financial distress).";
                    $redwarning = "block";
                    $orangewarning = "none";
                    $result = "Third Degree Financial Distress";
@@ -442,6 +448,8 @@ class AdminController extends Controller
                $data['orangewarning'] = $orangewarning;
                $data['redwarning'] = $redwarning;
                $data['distress'] = $distress;
+               $data['distress2'] = $distress2;
+               $data['dist'] = $dist;
                $data['nadisplay'] = $nadisplay;
 
 
@@ -800,7 +808,7 @@ class AdminController extends Controller
                           $bonitycolor1 = "#00c373";
                           $green1++;
                         }
-                      if($bonity1 >= -1.0 && $bonity <= 1.0) {
+                      if($bonity1 >= -1.0 && $bonity1 <= 1.0) {
                           $bonitycolor1 = "orange";
                           $orange1++;
                         }
@@ -836,16 +844,22 @@ class AdminController extends Controller
                         $orangewarning = "none";
                         $redwarning = "none";
                         $distress = "";
+                        $distress_2 = "";
+                        $dist = "";
 
                         $greenwarning2 = "none";
                         $orangewarning2 = "none";
                         $redwarning2 = "none";
                         $distress2 = "";
+                        $distress2_2 = "";
+                        $dist2 = "";
 
                         $greenwarning1 = "none";
                         $orangewarning1 = "none";
                         $redwarning1 = "none";
                         $distress1 = "";
+                        $distress1_2 = "";
+                        $dist1 = "";
 
                         $result1 = "";
                         $result2 = "";
@@ -857,13 +871,17 @@ class AdminController extends Controller
                             $result1 = "First Degree Financial Distress";
                           }
                           if($red > 2 && $red <= 4) {
-                            $distress = "second";
+                            $dist = "the financial distress of the II. degree";
+                            $distress = "the financial distress of the second degree – medium risk of bankruptcy";
+                            $distress_2 = " (maximum 4 of the six prediction models detected risk of bankruptcy or financial distress).";
                             $redwarning = "block";
                             $orangewarning = "none";
                             $result1 = "Second Degree Financial Distress";
                           }
                           if($red > 4) {
-                            $distress = "third";
+                            $dist = "the financial distress of the III. degree";
+                            $distress = "the financial distress of the third degree – high risk of bankruptcy";
+                            $distress_2 = " (at least 5 of the six prediction models detected risk of bankruptcy or financial distress).";
                             $redwarning = "block";
                             $orangewarning = "none";
                             $result1 = "Third Degree Financial Distress";
@@ -899,13 +917,17 @@ class AdminController extends Controller
                           $result2 = "First Degree Financial Distress";
                         }
                         if($red2 > 2 && $red2 <= 4) {
-                          $distress2 = "second";
+                          $dist2 = "the financial distress of the II. degree";
+                          $distress2 = "the financial distress of the second degree – medium risk of bankruptcy";
+                          $distress2_2 = " (maximum 4 of the six prediction models detected risk of bankruptcy or financial distress).";
                           $redwarning2 = "block";
                           $orangewarning2 = "none";
                           $result2 = "Second Degree Financial Distress";
                         }
                         if($red2 > 4) {
-                          $distress2 = "third";
+                          $dist2 = "the financial distress of the III. degree";
+                          $distress2 = "the financial distress of the third degree – high risk of bankruptcy";
+                          $distress2_2 = " (at least 5 of the six prediction models detected risk of bankruptcy or financial distress).";
                           $redwarning2 = "block";
                           $orangewarning2 = "none";
                           $result2 = "Third Degree Financial Distress";
@@ -941,13 +963,17 @@ class AdminController extends Controller
                         $result3 = "First Degree Financial Distress";
                       }
                       if($red1 > 2 && $red1 <= 4) {
-                        $distress1 = "second";
+                        $dist1 = "the financial distress of the II. degree";
+                        $distress1 = "the financial distress of the second degree – medium risk of bankruptcy";
+                        $distress1_2 = " (maximum 4 of the six prediction models detected risk of bankruptcy or financial distress).";
                         $redwarning1 = "block";
                         $orangewarning1 = "none";
                         $result3 = "Second Degree Financial Distress";
                       }
                       if($red1 > 4) {
-                        $distress1 = "third";
+                        $dist1 = "the financial distress of the III. degree";
+                        $distress1 = "the financial distress of the third degree – high risk of bankruptcy";
+                        $distress1_2 = " (at least 5 of the six prediction models detected risk of bankruptcy or financial distress).";
                         $redwarning1 = "block";
                         $result3 = "Third Degree Financial Distress";
                       }
@@ -979,6 +1005,8 @@ class AdminController extends Controller
                       $data['orangewarning'] = $orangewarning;
                       $data['redwarning'] = $redwarning;
                       $data['distress'] = $distress;
+                      $data['distress_2'] = $distress_2;
+                      $data['dist'] = $dist;
                       $data['nadisplay'] = $nadisplay;
 
 
@@ -986,6 +1014,8 @@ class AdminController extends Controller
                       $data['orangewarning2'] = $orangewarning2;
                       $data['redwarning2'] = $redwarning2;
                       $data['distress2'] = $distress2;
+                      $data['distress2_2'] = $distress2_2;
+                      $data['dist2'] = $dist2;
                       $data['nadisplay2'] = $nadisplay2;
 
 
@@ -993,6 +1023,8 @@ class AdminController extends Controller
                       $data['orangewarning1'] = $orangewarning1;
                       $data['redwarning1'] = $redwarning1;
                       $data['distress1'] = $distress1;
+                      $data['distress1_2'] = $distress1_2;
+                      $data['dist1'] = $dist1;
                       $data['nadisplay1'] = $nadisplay1;
 
 
