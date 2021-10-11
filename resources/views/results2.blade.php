@@ -254,7 +254,10 @@ onclick="window.print();">
 				</div>
 				<div class="elementor-element elementor-element-7b14ce94 elementor-widget elementor-widget-heading" data-id="7b14ce94" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Here you can find the results of the model based on the values from the input form.</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Here you can find the results of the model based on the values from the input form.</h2>
+
+    	</div>
+        <h3>Your company is more successful than <?php echo $percentage; ?>% of the tested companies</h3>
 				</div>
 
 					</div>

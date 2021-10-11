@@ -292,6 +292,7 @@ input[type=image] {
 
 	<div id="content" >
     <h2 id="curyear" style="text-align:center; margin-top: 5px;">The Results of the Model for the year <?php echo $currentyear; ?></h2>
+    <h3 style="text-align:center; margin-top: 5px;">The company was more successful than <?php echo $percentage; ?>% of the tested companies</h3>
 		<div class="container" >
 			<div class="row row-wrapper">
 		<div data-elementor-type="wp-page" data-elementor-id="1163" class="elementor elementor-1163" data-elementor-settings="[]">
@@ -553,5 +554,6 @@ input[type=image] {
       Not all information has been filled when sending the data or an index cannot be calculated, which can result in the lower accuracy of the model.
     </div>
     </div>
+    <br> <br> <br> <br>
 
  @include('admin/footer')

@@ -46,6 +46,14 @@ Route::get('/pro-admin/deletebasic/{id}', [
     'as' => 'deletebasic', 'uses' => 'App\\Http\\Controllers\AdminController@deletebasic'
 ]);
 
+Route::get('/pro-admin/deletehistorical/{id}', [
+    'as' => 'deletehistorical', 'uses' => 'App\\Http\\Controllers\HistoryController@deletehistorical'
+]);
+
+Route::get('/pro-admin/deletehistoricalcomplex/{id}', [
+    'as' => 'deletehistoricalcomplex', 'uses' => 'App\\Http\\Controllers\HistoryController@deletehistoricalcomplex'
+]);
+
 Route::get('/pro-admin/deletecomplex/{id}', [
     'as' => 'deletecomplex', 'uses' => 'App\\Http\\Controllers\AdminController@deletecomplex'
 ]);
@@ -58,6 +66,14 @@ Route::get('/pro-admin/overviewbasic/{id}', [
     'as' => 'overviewbasic', 'uses' => 'App\\Http\\Controllers\AdminController@overviewbasic'
 ]);
 
+Route::get('/pro-admin/overviewhistorical/{id}', [
+    'as' => 'overviewhistorical', 'uses' => 'App\\Http\\Controllers\HistoryController@overviewhistorical'
+]);
+
+Route::get('/pro-admin/overviewhistoricalcomplex/{id}', [
+    'as' => 'overviewhistoricalcomplex', 'uses' => 'App\\Http\\Controllers\HistoryController@overviewhistoricalcomplex'
+]);
+
 
 
 Route::get('/pro-admin/edit/{id}','App\\Http\\Controllers\AdminController@edit');
@@ -67,6 +83,12 @@ Route::post('/pro-admin/edited/',[  'as' => 'updates',
 
 Route::get('/pro-admin/basictable', 'App\\Http\\Controllers\AdminController@basic_index');
 Route::get('/pro-admin/basictable/data', 'App\\Http\\Controllers\AdminController@basictable');
+
+Route::get('/pro-admin/historicaltable', 'App\\Http\\Controllers\AdminController@historical_index');
+Route::get('/pro-admin/historicaltable/data', 'App\\Http\\Controllers\AdminController@historicaltable');
+
+Route::get('/pro-admin/historicaltablecomplex', 'App\\Http\\Controllers\AdminController@historicalcomplex_index');
+Route::get('/pro-admin/historicaltablecomplex/data', 'App\\Http\\Controllers\AdminController@historicalcomplextable');
 
 Route::get('/pro-admin/complextable', 'App\\Http\\Controllers\AdminController@complex_index');
 Route::get('/pro-admin/complextable/data', 'App\\Http\\Controllers\AdminController@complextable');

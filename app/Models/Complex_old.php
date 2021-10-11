@@ -4,12 +4,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Complex extends Model
+class Complex_old extends Model
 {
 
 
 
-    protected $table = 'complex';
+    protected $table = 'complex_old';
     protected $primaryKey = 'id_complex';
 
 
@@ -33,9 +33,7 @@ class Complex extends Model
         'taffler2',
         'taffler3',
         'binkert',
-        'result',
-        'ratio',
-        'percentage'
+        'result'
     ];
 
 

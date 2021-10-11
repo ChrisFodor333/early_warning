@@ -86,9 +86,21 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="<?php echo url('/pro-admin/historicaltable'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Basic Historical Data</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="<?php echo url('/pro-admin/complextable'); ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Complex Model</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo url('/pro-admin/historicaltablecomplex'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Complex Historical Data</p>
               </a>
             </li>
 

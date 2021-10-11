@@ -6,7 +6,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Basic;
+use App\Models\Basic_old;
 use App\Models\Complex;
+use App\Models\Complex_old;
 use Requests;
 use Redirect;
 use DataTables;
@@ -101,6 +103,9 @@ class AdminController extends Controller
         }
     }
 
+
+
+
     public function deletecomplex($id) {
 
         if(session()->has('admin')) {
@@ -163,6 +168,42 @@ class AdminController extends Controller
               ->make(true);
           }
 
+
+          public function historicaltable()
+            {
+                $basic = Basic_old::select('*');
+                return Datatables::of($basic)
+                ->addColumn('date', function ($row) {
+                    return substr($row->created_at->format('d/m/Y'),0,10);
+                })
+                ->addColumn('overview', function($row) {
+                    return '<a  href="'. url('/pro-admin/'). '/overviewhistorical/'. $row->id_basic .'" class="mybutton">Overview</a>';
+                })
+                ->addColumn('delete', function ($row) {
+                    return '<a href="'. url('/pro-admin/'). '/deletehistorical/'. $row->id_basic .'" class="mybutton">Delete</a>';
+                })
+                ->rawColumns(['delete' => 'delete','overview' => 'overview'])
+                ->make(true);
+            }
+
+
+            public function historicalcomplextable()
+              {
+                  $complex = Complex_old::select('*');
+                  return Datatables::of($complex)
+                  ->addColumn('date', function ($row) {
+                        return substr($row->created_at->format('d/m/Y'),0,10);
+                  })
+                  ->addColumn('overview', function($row) {
+                      return '<a  href="'. url('/pro-admin/'). '/overviewhistoricalcomplex/'. $row->id_complex .'" class="mybutton">Overview</a>';
+                  })
+                  ->addColumn('delete', function ($row) {
+                      return '<a href="'. url('/pro-admin/'). '/deletehistoricalcomplex/'. $row->id_complex .'" class="mybutton">Delete</a>';
+                  })
+                  ->rawColumns(['delete' => 'delete','overview' => 'overview'])
+                  ->make(true);
+              }
+
           public function complextable()
             {
                 $complex = Complex::select('*');
@@ -190,6 +231,10 @@ class AdminController extends Controller
         }
 
 
+
+
+
+
         public function overviewbasic($id) {
           if(session()->has('admin')) {
               if ($id == null) {
@@ -204,6 +249,8 @@ class AdminController extends Controller
              $taffler = $basic->taffler;
              $binkert = $basic->binkert;
              $result = $basic->result;
+             $percentage = $basic->percentage;
+             $data['percentage'] = $percentage;
 
              $year = $basic->current_year;
              $data['currentyear'] = $year;
@@ -1212,6 +1259,22 @@ class AdminController extends Controller
       public function basic_index() {
           if(session()->has('admin')) {
               return view('admin/basictable');
+          } else {
+              return view('admin/login');
+          }
+      }
+
+      public function historical_index() {
+          if(session()->has('admin')) {
+              return view('admin/historicaltable');
+          } else {
+              return view('admin/login');
+          }
+      }
+
+      public function historicalcomplex_index() {
+          if(session()->has('admin')) {
+              return view('admin/historicalcomplextable');
           } else {
               return view('admin/login');
           }
