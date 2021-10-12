@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Requests;
 use App\Models\Complex;
+use DB;
 
 class ModelControllerComplex extends Controller
 {
@@ -185,6 +186,7 @@ class ModelControllerComplex extends Controller
   $data['altman'] =  $altman;
   $data['altmancolor'] =  $altmancolor;
   $complex->altman1= $altman;
+  $alt1 = $altman;
 
 
 // END OF ALTMAN
@@ -228,6 +230,7 @@ if($altman >= 1.2 && $altman <= 2.9) {
 $data['altman2'] =  $altman;
 $data['altmancolor2'] =  $altmancolor;
 $complex->altman2= $altman;
+$alt2 = $altman;
 
 // END OF ALTMAN
 
@@ -269,6 +272,7 @@ if($altman >= 1.2 && $altman <= 2.9) {
 $data['altman1'] =  $altman;
 $data['altmancolor1'] =  $altmancolor;
 $complex->altman3= $altman;
+$alt3 = $altman;
 
 // END OF ALTMAN
 
@@ -315,6 +319,7 @@ $complex->altman3= $altman;
   $data['in05'] =  $in05;
   $data['in05color'] =  $in05color;
   $complex->in051 = $in05;
+  $ind1 = $in05;
  // END OF IN05
 
  // IN05
@@ -359,6 +364,7 @@ $complex->altman3= $altman;
  $data['in052'] =  $in05;
  $data['in05color2'] =  $in05color;
  $complex->in052 = $in05;
+ $ind2 = $in05;
 // END OF IN05
 
 
@@ -404,6 +410,7 @@ if($in05 >= 0.9 && $in05 <= 1.6) {
 $data['in051'] =  $in05;
 $data['in05color1'] =  $in05color;
 $complex->in053 = $in05;
+$ind3 = $in05;
 // END OF IN05
 
   // TAFFLER
@@ -447,6 +454,7 @@ $complex->in053 = $in05;
   $data['taffler'] =  $taffler;
   $data['tafflercolor'] =  $tafflercolor;
   $complex->taffler1 = $taffler;
+  $taff1 = $taffler;
 
   //END OF TAFFLER
 
@@ -491,6 +499,7 @@ $complex->in053 = $in05;
   $data['taffler2'] =  $taffler;
   $data['tafflercolor2'] =  $tafflercolor;
   $complex->taffler2 = $taffler;
+  $taff2 = $taffler;
 
   //END OF TAFFLER
 
@@ -536,6 +545,7 @@ $complex->in053 = $in05;
   $data['taffler1'] =  $taffler;
   $data['tafflercolor1'] =  $tafflercolor;
   $complex->taffler3 = $taffler;
+  $taff3 = $taffler;
 
   //END OF TAFFLER
 
@@ -658,6 +668,7 @@ $complex->in053 = $in05;
 $data['quicktest'] =  $quicktest;
 $data['quicktestcolor'] =  $quicktestcolor;
 $complex->quicktest1 = $quicktest;
+$quickt1 = $quicktest;
 
 //END OF QUICK TEST
 
@@ -779,6 +790,7 @@ if($quicktest >= 9.0 && $quicktest <= 15.0) {
 $data['quicktest2'] =  $quicktest;
 $data['quicktestcolor2'] =  $quicktestcolor;
 $complex->quicktest2 = $quicktest;
+$quickt2 = $quicktest;
 //END OF QUICK TEST
 
 
@@ -899,6 +911,7 @@ if($quicktest >= 9.0 && $quicktest <= 15.0) {
 $data['quicktest1'] =  $quicktest;
 $data['quicktestcolor1'] =  $quicktestcolor;
 $complex->quicktest3 = $quicktest;
+$quickt3 = $quicktest;
 
 //END OF QUICK TEST
 
@@ -941,6 +954,7 @@ $complex->quicktest3 = $quicktest;
   $data['bonity'] =  $bonity;
   $data['bonitycolor'] =  $bonitycolor;
   $complex->bonity1 = $bonity;
+  $bon1 = $bonity;
 
   // END OF BONITY
 
@@ -983,6 +997,7 @@ $complex->quicktest3 = $quicktest;
   $data['bonity2'] =  $bonity;
   $data['bonitycolor2'] =  $bonitycolor;
   $complex->bonity2 = $bonity;
+  $bon2 = $bonity;
 
   // END OF BONITY
 
@@ -1026,7 +1041,7 @@ $complex->quicktest3 = $quicktest;
   $data['bonity1'] =  $bonity;
   $data['bonitycolor1'] =  $bonitycolor;
   $complex->bonity3 = $bonity;
-
+  $bon3 = $bonity;
   // END OF BONITY
 
   //BINKERTS Model
@@ -1316,8 +1331,35 @@ $nadisplay1 = "none";
   $complex->result2 = $result2;
   $complex->result3 = $result3;
 
+  $ratio1 = (floatval($alt1) + floatval($ind1) + floatval((1/$quickt1)) + floatval($bon1) + floatval($complex->taff1));
+  $ratio2 = (floatval($alt2) + floatval($ind2) + floatval((1/$quickt2)) + floatval($bon2) + floatval($complex->taff2));
+  $ratio3 = (floatval($alt3) + floatval($ind3) + floatval((1/$quickt3)) + floatval($bon3) + floatval($complex->taff3));
+
+  $ratio = $ratio1 + $ratio2 + $ratio3 + floatval($binkert) / 16;
+  $complex->ratio = $ratio;
 
   $complex->save();
+
+  // LAST ID
+  $my_id = $complex->id_complex;
+  // NUMBER OF ROWS
+  $number_of_rows = $complex->distinct('ratio')->count('ratio');
+
+  $position = DB::table('complex')
+                   ->select('id_complex',
+                    DB::raw('ratio AS rt'),
+                    DB::raw('(SELECT COUNT(DISTINCT(ratio))+1 FROM complex WHERE ratio < rt) AS position_firma'))
+                   ->where('id_complex', $my_id)->first();
+
+  $percentage = number_format(floatval(($position->position_firma / $number_of_rows) * 100),2);
+
+
+  $affected = DB::table('complex')
+              ->where('id_complex', $my_id)
+              ->update(['percentage' => $percentage]);
+  $data['percentage'] = $percentage;
+
+
   // RETURN VIEW
   //return view('results',$data);
   // ALTERNATIVE

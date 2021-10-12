@@ -1,4 +1,12 @@
 <!-- Main Footer -->
+
+<style type="text/css" media="print">
+
+    footer {
+      display: none;
+    }
+</style>
+
 <footer class="main-footer" style="position: fixed;
     bottom: 0;
     width: 100%;">
@@ -20,6 +28,8 @@
 <script src="/early_warning/assets/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/early_warning/assets/admin/dist/js/adminlte.js"></script>
+
+
 
 
 

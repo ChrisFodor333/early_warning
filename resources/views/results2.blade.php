@@ -435,7 +435,7 @@ onclick="window.print();">
     </div><!-- #content -->
 
     <div id="printOnly">
-
+        <h3 style="text-align: center;">Your company is more successful than <?php echo $percentage; ?>% of the tested companies</h3>
     <table class="styled-table">
         <thead>
             <tr>

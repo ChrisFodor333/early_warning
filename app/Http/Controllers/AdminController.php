@@ -250,6 +250,7 @@ class AdminController extends Controller
              $binkert = $basic->binkert;
              $result = $basic->result;
              $percentage = $basic->percentage;
+             $percentage = "The company was more successful than " . $percentage . "% of the tested companies";
              $data['percentage'] = $percentage;
 
              $year = $basic->current_year;
@@ -541,6 +542,10 @@ class AdminController extends Controller
               $taffler1 = $complex->taffler3;
               $result1 = $complex->result3;
 
+              $percentage = $complex->percentage;
+              $percentage = "The company was more successful than " . $percentage . "% of the tested companies";
+              $data['percentage'] = $percentage;
+
               $data['altman'] = $altman;
               $data['in05'] = $in05;
               $data['quicktest'] = $quicktest;
@@ -643,7 +648,7 @@ class AdminController extends Controller
                 }
 
 
-                  // NOT FINISHED
+
                   if($in05 < 0.9) {
                           $in05color = "red";
                           $red++;
@@ -661,7 +666,7 @@ class AdminController extends Controller
                     $nacount++;
                   }
 
-
+                    $in05color2 = "cyan";
 
                     if($in052 < 0.9) {
                             $in05color2 = "red";

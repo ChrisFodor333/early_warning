@@ -35,6 +35,8 @@ class HistoryController extends Controller
             return abort(404);
         }
         $complex = Complex_old::find($id);
+        $percentage = "";
+        $data['percentage'] = $percentage;
 
         $altman = $complex->altman1;
         $in05 =   $complex->in051;
@@ -669,6 +671,8 @@ public function overviewhistorical($id) {
      $taffler = $basic->taffler;
      $binkert = $basic->binkert;
      $result = $basic->result;
+     $percentage = "";
+     $data['percentage'] = $percentage;
 
      $year = $basic->current_year;
      $data['currentyear'] = $year;

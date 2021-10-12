@@ -30,34 +30,7 @@
 <link rel="https://api.w.org/" href="/early_warning/wp-json/" /><link rel="alternate" type="application/json" href="/early_warning/wp-json/wp/v2/pages/1141" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/early_warning/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/early_warning/assets/inc/wlwmanifest.xml" />
 
-<style type="text/css" media="print">
-        header
-        {
-            display: none;
-        }
-        footer {
-           display: none;
-        }
 
-        input {
-          display: none;
-        }
-        head {
-          display:none;
-        }
-        .bottom {
-          display: none;
-        }
-        .container {
-          display: none;
-        }
-
-        .mycontent {
-
-        }
-
-
-    </style>
 
 <style>
 p {
@@ -159,6 +132,80 @@ input[type=image] {
 
 </style>
 
+
+<style type="text/css" media="print">
+
+
+.styled-table thead tr {
+    background-color: #164289;
+    color: #fff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    padding -8px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #000;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #fff;
+    color: #000;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+    color: #000;
+}
+
+        #success {
+          color: black;
+        }
+        header
+        {
+            display: none;
+        }
+        footer {
+           display: none;
+        }
+
+        input {
+          display: none;
+        }
+        head {
+          display:none;
+        }
+        .bottom {
+          display: none;
+        }
+        .container {
+          display: none;
+        }
+
+        .mycontent {
+                background-color: white;
+        }
+        table {
+            background-color: white;
+        }
+
+        #content {
+          background-color: white;
+
+        }
+        body {
+          background-color: white;
+        }
+        html {
+          background-color: white;
+        }
+
+    </style>
+
 <div class="page-title pagetitle_style_2">
     <div class="overlay"></div>
     <div class="container">
@@ -222,6 +269,7 @@ input[type=image] {
 
 <body>
 <div class="mycontent">
+  <h3 id="success" style="text-align:center; margin-top: 5px;"><?php echo $percentage; ?></h3>
 <table class="styled-table" id="results">
     <thead>
         <tr>
