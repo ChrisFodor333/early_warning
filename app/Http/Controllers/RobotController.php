@@ -111,6 +111,8 @@ class RobotController extends Controller
                         $crawler = $client->click($link);
                         $my_href = $crawler->filter('a[class="p-3 p-lg-0 my-lg-1 row align-items-center"]')->first()->link();
                         $crawler = $client->click($my_href);
+
+                        // TO USE THE OTHER 2
                         $aktiva = $crawler->selectLink('Strana aktív')->link();
                         $crawler = $client->click($aktiva);
                         // tvalue_item text-right
@@ -120,14 +122,12 @@ class RobotController extends Controller
                           if($node->text() == "") {
 
                             array_push($aktiva_array, "0");
-
                           }
                           else {
                               array_push($aktiva_array, $node->text());
-                              //print $node->text() . "\n";
                           }
-
                           });
+
                           $sorted_aktiva = array();
                           $i = 0;
                           foreach ($aktiva_array as $aktiva) {
@@ -136,8 +136,64 @@ class RobotController extends Controller
                             }
                             $i++;
                           }
-                            print $sorted_aktiva['20']; 
-                        //return Redirect::to('/pro-admin/robot')->with('status', $result);
+                          //print $sorted_aktiva['20'];
+
+                          $pasiva = $crawler->selectLink('Strana pasív')->link();
+                          $crawler = $client->click($pasiva);
+                          // tvalue_item text-right
+                          $pasiva_array = array();
+                          $i = 0;
+                          $crawler->filter('td[class="tvalue_item text-right"]')->each(function ($node) use (&$pasiva_array) {
+                            if($node->text() == "") {
+                              array_push($pasiva_array, "0");
+                            }
+                            else {
+                                array_push($pasiva_array, $node->text());
+                            }
+                            });
+                            $sorted_pasiva = array();
+                            $i = 0;
+                            foreach ($pasiva_array as $pasiva) {
+                              if($i % 2 == 0) {
+                              array_push($sorted_pasiva,$pasiva);
+                              }
+                              $i++;
+                            }
+
+                            print_r($sorted_pasiva);
+
+                            $income_statement = $crawler->selectLink('Výkaz ziskov a strát')->link();
+                            $crawler = $client->click($income_statement);
+                            // tvalue_item text-right
+                            $income_statement_array = array();
+                            $i = 0;
+                            $crawler->filter('td[class="tvalue_item text-right"]')->each(function ($node) use (&$income_statement_array) {
+                              if($node->text() == "") {
+                                array_push($income_statement_array, "0");
+                              }
+                              else {
+                                  array_push($income_statement_array, $node->text());
+                              }
+                              });
+                              $sorted_income_statement = array();
+                              $i = 0;
+                              foreach ($income_statement_array as $income_statement) {
+                                if($i % 2 == 0) {
+                                array_push($sorted_income_statement,$income_statement);
+                                }
+                                $i++;
+                              }
+                              //print_r($sorted_income_statement);
+                              /*
+                              $sorted_income_statement [0] = 1
+                              $sorted_aktiva  [0] = 1
+                              $sorted_pasiva [0] = 24
+                              */
+
+                              // ARRAY INDEXES TO INPUTS
+
+
+                        //return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
 
 
                  } else {
