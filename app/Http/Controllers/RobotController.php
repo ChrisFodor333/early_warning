@@ -111,12 +111,32 @@ class RobotController extends Controller
                         $crawler = $client->click($link);
                         $my_href = $crawler->filter('a[class="p-3 p-lg-0 my-lg-1 row align-items-center"]')->first()->link();
                         $crawler = $client->click($my_href);
-                        //$my_href2 = $crawler->filter('a[class="p-lg-0"]')->link();
-                        //$crawler = $client->click($my_href2);
-                        $crawler->each(function ($node) {
-                         print $node->text() . "\n";
-                          });
+                        $aktiva = $crawler->selectLink('Strana aktív')->link();
+                        $crawler = $client->click($aktiva);
+                        // tvalue_item text-right
+                        $aktiva_array = array();
+                        $i = 0;
+                        $crawler->filter('td[class="tvalue_item text-right"]')->each(function ($node) use (&$aktiva_array) {
+                          if($node->text() == "") {
 
+                            array_push($aktiva_array, "0");
+
+                          }
+                          else {
+                              array_push($aktiva_array, $node->text());
+                              //print $node->text() . "\n";
+                          }
+
+                          });
+                          $sorted_aktiva = array();
+                          $i = 0;
+                          foreach ($aktiva_array as $aktiva) {
+                            if($i % 2 == 0) {
+                            array_push($sorted_aktiva,$aktiva);
+                            }
+                            $i++;
+                          }
+                            print $sorted_aktiva['20']; 
                         //return Redirect::to('/pro-admin/robot')->with('status', $result);
 
 
