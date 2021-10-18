@@ -27,8 +27,12 @@ Route::get('/pro-admin/', array('uses' => 'App\\Http\\Controllers\AdminControlle
 Route::get('/pro-admin/logout', array('uses' => 'App\\Http\\Controllers\AdminController@logout'));
 
 Route::get('/pro-admin/profile', array('uses' => 'App\\Http\\Controllers\AdminController@showprofile'));
+Route::get('/pro-admin/robot', array('uses' => 'App\\Http\\Controllers\AdminController@showrobot'));
 Route::post('/pro-admin/profile/edit/',[  'as' => 'updates',
     'uses' =>'App\\Http\\Controllers\AdminController@changepass']);
+
+Route::post('/pro-admin/robot/send/',[  'as' => 'sends',
+        'uses' =>'App\\Http\\Controllers\RobotController@sendrobot']);
 
 Route::get('/pro-admin/addadmin/','App\\Http\\Controllers\AdminController@showaddAdmin');
 Route::post('/pro-admin/addadmin/',[  'as' => 'updates',

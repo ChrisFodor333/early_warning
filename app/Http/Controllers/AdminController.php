@@ -1216,6 +1216,14 @@ class AdminController extends Controller
             } else {   return view('admin/login'); }
           }
 
+          public function showrobot() {
+              if(session()->has('admin')) {
+              $user = User::where("id_user","=",session()->get('userID'))->first();
+              $data['users'] = $user;
+              return view('admin/robot',$data);
+            } else {   return view('admin/login'); }
+          }
+
       public function dologin() {
 
         $rules = array(

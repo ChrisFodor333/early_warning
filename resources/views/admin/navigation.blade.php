@@ -105,6 +105,14 @@
             </li>
 
           </ul>
+          <li class="nav-item">
+            <a href="<?php echo url('/pro-admin/robot'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-robot"></i>
+              <p>
+                Automatic Robot
+              </p>
+            </a>
+          </li>
         </li>
         <li class="nav-header">USER ACTIONS</li>
         <li class="nav-item">
