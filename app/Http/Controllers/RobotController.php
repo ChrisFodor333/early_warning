@@ -91,6 +91,7 @@ class RobotController extends Controller
                         fclose($file); //Close after reading
                         $j = 0;
                         $ico_array = array();
+
                         $ico = "";
 
                         foreach ($importData_arr as $importData) {
@@ -99,6 +100,7 @@ class RobotController extends Controller
                         $j++;
                         }
                         // CALL CRAWLER HERE FOR THE ICO_ARRAY
+                        // TUTO BUDE FOR EACH
                         $client = new Client();
                         $result = "";
                         $crawler = $client->request('GET', 'https://www.registeruz.sk/cruz-public/domain/accountingentity/simplesearch');
@@ -106,10 +108,16 @@ class RobotController extends Controller
                         $goutteClient = new Client(HttpClient::create(['timeout' => 60]));
 
                         $form = $crawler->filter('.mx-auto > form')->form();
-                        $crawler = $client->submit($form, ['accountingEntityName' => $ico]);
+                        // current stage of for each
+
+                        $crawler = $client->submit($form, ['accountingEntityName' => '45597103']);
                         $link = $crawler->selectLink('Detail')->link();
                         $crawler = $client->click($link);
-                        $my_href = $crawler->filter('a[class="p-3 p-lg-0 my-lg-1 row align-items-center"]')->first()->link();
+
+
+                        //$my_href = $crawler->filter('a[class="p-3 p-lg-0 my-lg-1 row align-items-center"]')->first()->link();
+                        if ($crawler->selectLink('Úč POD:')->count() > 0 ) {
+                        $my_href = $crawler->selectLink('Úč POD:')->link();
                         $crawler = $client->click($my_href);
 
                         // TO USE THE OTHER 2
@@ -183,7 +191,7 @@ class RobotController extends Controller
                                 }
                                 $i++;
                               }
-                              //print_r($sorted_income_statement);
+                              print_r($sorted_income_statement);
                               /*
                               $sorted_income_statement [0] = 1
                               $sorted_aktiva  [0] = 1
@@ -192,8 +200,10 @@ class RobotController extends Controller
 
                               // ARRAY INDEXES TO INPUTS
 
-
-                        return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
+                            } else {
+                              print "Mothafucka";
+                            }
+                        //return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
 
 
                  } else {
