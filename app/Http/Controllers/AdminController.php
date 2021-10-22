@@ -250,7 +250,8 @@ class AdminController extends Controller
              $binkert = $basic->binkert;
              $result = $basic->result;
              $percentage = $basic->percentage;
-             $percentage = "The company was more successful than " . $percentage . "% of the tested companies";
+             $country = $basic->country;
+             $percentage = "The company was more successful than " . $percentage . "% of the tested companies in ". $country;
              $data['percentage'] = $percentage;
 
              $year = $basic->current_year;
@@ -543,7 +544,8 @@ class AdminController extends Controller
               $result1 = $complex->result3;
 
               $percentage = $complex->percentage;
-              $percentage = "The company was more successful than " . $percentage . "% of the tested companies";
+              $country = $complex->country;
+              $percentage = "The company was more successful than " . $percentage . "% of the tested companies in ". $country;
               $data['percentage'] = $percentage;
 
               $data['altman'] = $altman;
