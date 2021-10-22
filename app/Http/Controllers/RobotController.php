@@ -160,7 +160,7 @@ class RobotController extends Controller
                               $i++;
                             }
 
-                            print_r($sorted_pasiva);
+                            //print_r($sorted_pasiva);
 
                             $income_statement = $crawler->selectLink('Výkaz ziskov a strát')->link();
                             $crawler = $client->click($income_statement);
@@ -193,7 +193,7 @@ class RobotController extends Controller
                               // ARRAY INDEXES TO INPUTS
 
 
-                        //return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
+                        return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
 
 
                  } else {

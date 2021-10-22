@@ -180,7 +180,7 @@ onclick="window.print();">
       </div>
 
         </div><!-- /.row -->
-  <h3 style="text-align: center;">Your company is more successful than <?php echo $percentage; ?>% of the tested companies</h3>
+  <h3 style="text-align: center;">Your company is more successful than <?php echo $percentage; ?>% of the tested companies in <?php echo $country; ?></h3>
 <body>
 
 <table class="styled-table" id="results">

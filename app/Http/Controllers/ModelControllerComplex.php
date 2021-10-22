@@ -37,6 +37,7 @@ class ModelControllerComplex extends Controller
   //COMPANY DETAILS
   //$company = request()->get('companyname');
   $country = request()->get('country');
+  $data['country'] =  $country;
   $currentyear = request()->get('currentyear');
   $data['currentyear'] =  $currentyear;
 
@@ -1335,7 +1336,7 @@ $nadisplay1 = "none";
   $ratio2 = (floatval($alt2) + floatval($ind2) + floatval((1/$quickt2)) + floatval($bon2) + floatval($complex->taff2));
   $ratio3 = (floatval($alt3) + floatval($ind3) + floatval((1/$quickt3)) + floatval($bon3) + floatval($complex->taff3));
 
-  $ratio = $ratio1 + $ratio2 + $ratio3 + floatval($binkert) / 16;
+  $ratio = $ratio1 + $ratio2 + $ratio3  / 15;
   $complex->ratio = $ratio;
 
   $complex->save();
@@ -1343,12 +1344,12 @@ $nadisplay1 = "none";
   // LAST ID
   $my_id = $complex->id_complex;
   // NUMBER OF ROWS
-  $number_of_rows = $complex->distinct('ratio')->count('ratio');
+  $number_of_rows = $complex->where('country',$country)->distinct('ratio')->count('ratio');
 
   $position = DB::table('complex')
                    ->select('id_complex',
                     DB::raw('ratio AS rt'),
-                    DB::raw('(SELECT COUNT(DISTINCT(ratio))+1 FROM complex WHERE ratio < rt) AS position_firma'))
+                    DB::raw('(SELECT COUNT(DISTINCT(ratio))+1 FROM complex WHERE ratio < rt AND country = "'.$country.'") AS position_firma'))
                    ->where('id_complex', $my_id)->first();
 
   $percentage = number_format(floatval(($position->position_firma / $number_of_rows) * 100),2);

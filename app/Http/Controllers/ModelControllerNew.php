@@ -22,6 +22,7 @@ class ModelControllerNew extends Controller
   //COMPANY DETAILS
   //$company = request()->get('companyname');
   $country = request()->get('country');
+  $data['country'] =  $country;
   $currentyear = request()->get('currentyear');
   $data['currentyear'] =  $currentyear;
 
@@ -535,7 +536,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $basic->binkert = $binkert;
   $basic->result = $result;
 
-  $ratio = (floatval($altman) + floatval($in05) + floatval((1/$quicktest)) + floatval($bonity) + floatval($taffler) + floatval($binkert)) / 6;
+  $ratio = (floatval($altman) + floatval($in05) + floatval((1/$quicktest)) + floatval($bonity) + floatval($taffler)) / 5;
   $basic->ratio = $ratio;
   $basic->save();
 
@@ -543,7 +544,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $my_id = $basic->id_basic;
   // NUMBER OF ROWS
   //$number_of_rows = $basic->count();
-  $number_of_rows = $basic->distinct('ratio')->count('ratio');
+  $number_of_rows = $basic->where('country',$country)->distinct('ratio')->count('ratio');
   /*
   SELECT id_basic, percentage as pe,
          (SELECT COUNT(*)+1
@@ -554,7 +555,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $position = DB::table('basic')
                    ->select('id_basic',
                     DB::raw('ratio AS rt'),
-                    DB::raw('(SELECT COUNT(DISTINCT(ratio))+1 FROM basic WHERE ratio < rt) AS position_firma'))
+                    DB::raw('(SELECT COUNT(DISTINCT(ratio))+1 FROM basic WHERE ratio < rt AND country = "'.$country.'") AS position_firma'))
                    ->where('id_basic', $my_id)->first();
 
   $percentage = number_format(floatval(($position->position_firma / $number_of_rows) * 100),2);
