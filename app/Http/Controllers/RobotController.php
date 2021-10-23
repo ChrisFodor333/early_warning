@@ -139,6 +139,7 @@ class RobotController extends Controller
                           //print $currentyear;
                         });
                         // TO USE THE OTHER 2
+                        if ($crawler->selectLink('Strana aktív')->count() > 0 ) {
                         $aktiva = $crawler->selectLink('Strana aktív')->link();
                         $crawler = $client->click($aktiva);
                         // tvalue_item text-right
@@ -442,6 +443,9 @@ class RobotController extends Controller
                                       $d6 = intval($sorted_aktiva_2[32]);
                                       $d16 = intval($sorted_pasiva_2[43]);
 
+                                      } else {
+                                        continue;
+                                      }
                                       //print $sorted_aktiva_2[32] . $sorted_pasiva_2[43];
 
 
