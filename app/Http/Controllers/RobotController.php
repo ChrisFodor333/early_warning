@@ -436,7 +436,9 @@ class RobotController extends Controller
                                       }
 
                                       $d6 = intval($sorted_aktiva_2[32]);
-                                      $d16 = intval($sorted_aktiva_2[43]);
+                                      $d16 = intval($sorted_pasiva_2[43]);
+
+                                      //print $sorted_aktiva_2[32] . $sorted_pasiva_2[43];
 
 
       /* THE MODEL */
@@ -805,7 +807,7 @@ class RobotController extends Controller
                   ->update(['percentage' => $percentage]);
 
 
-                  return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
+                 return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
                   } else {
                         // continue;
                         //print "Mothafucka";
