@@ -113,8 +113,12 @@ class RobotController extends Controller
                         // current stage of for each
 
                         $crawler = $client->submit($form, ['accountingEntityName' => $ico]);
+                        if ($crawler->selectLink('Detail')->count() > 0) {
                         $link = $crawler->selectLink('Detail')->link();
                         $crawler = $client->click($link);
+                      } else {
+                        continue;
+                      }
 
 
                         //$my_href = $crawler->filter('a[class="p-3 p-lg-0 my-lg-1 row align-items-center"]')->first()->link();
