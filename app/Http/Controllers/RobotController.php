@@ -123,7 +123,7 @@ class RobotController extends Controller
                         $current_year = "";
                         $crawler->filter('div[class="col-12 d-none d-lg-block col-lg-3 col-xl-4 text-gray fs-16 font-weight-medium"]')->each(function ($node) use (&$current_year) {
                           $current_year = substr($node->text(),-4);
-                          print $current_year;
+                          //print $current_year;
                         });
                         // TO USE THE OTHER 2
                         $aktiva = $crawler->selectLink('Strana aktív')->link();
@@ -144,12 +144,12 @@ class RobotController extends Controller
                           $sorted_aktiva = array();
                           $i = 0;
                           foreach ($aktiva_array as $aktiva) {
-                            if($i % 2 == 0) {
+                            if($i % 4 == 0) {
                             array_push($sorted_aktiva,$aktiva);
                             }
                             $i++;
                           }
-                          //print $sorted_aktiva['20'];
+                          //print_r($sorted_aktiva);
 
                           $pasiva = $crawler->selectLink('Strana pasív')->link();
                           $crawler = $client->click($pasiva);
@@ -200,13 +200,71 @@ class RobotController extends Controller
                               /*
                               $sorted_income_statement [0] = 1
                               $sorted_aktiva  [0] = 1
-                              $sorted_pasiva [0] = 24
+                              $sorted_pasiva [0] = 79
                               */
 
                               // ARRAY INDEXES TO INPUTS
+                              $country = "Slovakia";
+
+                              // DATA FROM THE FORM - CURRENT YEAR
+                              $b2 = $sorted_aktiva[0];
+                              $b6 = $sorted_aktiva[32];
+                              $b7 = $sorted_aktiva[33];
+                              $b8 = $sorted_aktiva[52];
+                              $b9 = $sorted_aktiva[70];
+
+                              $b10 = $sorted_aktiva[73];
+                              $b11 = $sorted_pasiva[1]; // 80
+                              $b12 = $sorted_pasiva[18];
+                              $b13 = $sorted_pasiva[22];
+                              $b16 = $sorted_pasiva[43];
+
+                              $b14 = $sorted_pasiva[57];
+                              $b19 = $sorted_pasiva[60];
+                              $b17 = $sorted_pasiva[61];
+                              $b20 = $sorted_pasiva[62];
+
+                              $b22 = $sorted_income_statement[2];
+
+                              $b23_1 = $sorted_income_statement[3];
+                              $b23_2 = $sorted_income_statement[4];
+                              $b26 = $sorted_income_statement[7];
+                              $b25 = $sorted_income_statement[20];
+                              $b27 = $sorted_income_statement[45];
+
+                              $b28 = $sorted_income_statement[48];
+                              $b29 = $sorted_income_statement[55];
+                              $b30 = $sorted_income_statement[60];
+
+                              //print $b2;
+
+                              // LAST YEAR
+                              /*
+                              $c4= request()->get('ppe2');
+                              $c22= request()->get('revenue-merch2');
+                              $c18= request()->get('long-term-bank-loans2');
+                              $c23_1= request()->get('revenue-p2');
+                              $c23_2= request()->get('revenue-s2');
+                              $c26= request()->get('ncia2');
+
+                              $c27 = request()->get('securities-shares2');
+                              $c5 = request()->get('non-current-assets2');
+                              $c30 = request()->get('profit-loss-after-tax2');
+                              $c11 = request()->get('equity2');
+                              $c2 = request()->get('totalassets2');
+                              $c14 = request()->get('provisions2');
+                              $c24 = request()->get('addedvalue2');
+                              $c3 = request()->get('noncurrentassets2');
+                              $c15 = request()->get('noncurrentliabilities2');
+
+                              // THE YEAR BEFORE
+                              $d6 = request()->get('assets1');
+                              $d16 = request()->get('liabilities1');
+                              */
 
                             } else {
-                              print "Mothafucka";
+                              // continue;
+                              //print "Mothafucka";
                             }
                         //return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
 
