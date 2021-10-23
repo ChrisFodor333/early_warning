@@ -119,7 +119,12 @@ class RobotController extends Controller
                         if ($crawler->selectLink('Úč POD:')->count() > 0 ) {
                         $my_href = $crawler->selectLink('Úč POD:')->link();
                         $crawler = $client->click($my_href);
-
+                        // GET CURRENT YEAR - col-12 d-none d-lg-block col-lg-3 col-xl-4 text-gray fs-16 font-weight-medium
+                        $current_year = "";
+                        $crawler->filter('div[class="col-12 d-none d-lg-block col-lg-3 col-xl-4 text-gray fs-16 font-weight-medium"]')->each(function ($node) use (&$current_year) {
+                          $current_year = substr($node->text(),-4);
+                          print $current_year;
+                        });
                         // TO USE THE OTHER 2
                         $aktiva = $crawler->selectLink('Strana aktív')->link();
                         $crawler = $client->click($aktiva);
@@ -191,7 +196,7 @@ class RobotController extends Controller
                                 }
                                 $i++;
                               }
-                              print_r($sorted_income_statement);
+                              //print_r($sorted_income_statement);
                               /*
                               $sorted_income_statement [0] = 1
                               $sorted_aktiva  [0] = 1
