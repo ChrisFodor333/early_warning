@@ -101,10 +101,10 @@ class RobotController extends Controller
                         }
                         // CALL CRAWLER HERE FOR THE ICO_ARRAY
                         // TUTO BUDE FOR EACH
-                        $client = new Client();
+
                         $result = "";
-
-
+                        foreach ($ico_array as $ico) {
+                        $client = new Client();
                         $goutteClient = new Client(HttpClient::create(['timeout' => 60]));
 
                         $crawler = $client->request('GET', 'https://www.registeruz.sk/cruz-public/domain/accountingentity/simplesearch');
@@ -112,7 +112,7 @@ class RobotController extends Controller
                         $form = $crawler->filter('.mx-auto > form')->form();
                         // current stage of for each
 
-                        $crawler = $client->submit($form, ['accountingEntityName' => '45597103']);
+                        $crawler = $client->submit($form, ['accountingEntityName' => $ico]);
                         $link = $crawler->selectLink('Detail')->link();
                         $crawler = $client->click($link);
 
@@ -252,7 +252,7 @@ class RobotController extends Controller
                               $form = $crawler->filter('.mx-auto > form')->form();
                               // current stage of for each
 
-                              $crawler = $client->submit($form, ['accountingEntityName' => '45597103']);
+                              $crawler = $client->submit($form, ['accountingEntityName' => $ico]);
                               $link = $crawler->selectLink('Detail')->link();
                               $crawler = $client->click($link);
 
@@ -358,7 +358,7 @@ class RobotController extends Controller
                               $form = $crawler->filter('.mx-auto > form')->form();
                               // current stage of for each
 
-                              $crawler = $client->submit($form, ['accountingEntityName' => '45597103']);
+                              $crawler = $client->submit($form, ['accountingEntityName' => $ico]);
                               $link = $crawler->selectLink('Detail')->link();
                               $crawler = $client->click($link);
 
@@ -785,6 +785,7 @@ class RobotController extends Controller
       $basic->binkert = $binkert;
       $basic->result = $result;
 
+      if($quicktest != "N/A") {
       $ratio = (floatval($altman) + floatval($in05) + floatval((1/$quicktest)) + floatval($bonity) + floatval($taffler)) / 5;
       $basic->ratio = $ratio;
       $basic->save();
@@ -805,15 +806,14 @@ class RobotController extends Controller
       $affected = DB::table('basic')
                   ->where('id_basic', $my_id)
                   ->update(['percentage' => $percentage]);
+                }
 
-
-                 return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
                   } else {
-                        // continue;
+                        continue;
                         //print "Mothafucka";
                         }
-
-
+                      }
+                      return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
 
                  } else {
                    return Redirect::to('/pro-admin/robot')
