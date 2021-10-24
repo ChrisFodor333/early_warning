@@ -81,7 +81,7 @@ class RobotController extends Controller
                         // Skip first row (Remove below comment if you want to skip the first row)
                         if ($i == 0) {
                         $i++;
-                        // continue;
+                        continue;
                         }
                         for ($c = 0; $c < $num; $c++) {
                         $importData_arr[$i][] = $filedata[$c];
@@ -120,7 +120,7 @@ class RobotController extends Controller
                         $link = $crawler->selectLink('Detail')->link();
                         $crawler = $client->click($link);
                       } else {
-                        // continue;
+                        continue;
                       }
 
 
@@ -450,7 +450,7 @@ class RobotController extends Controller
                                       $d16 = intval(str_replace(' ', '', $sorted_pasiva_3[43]));
 
                                       } else {
-                                        // continue;
+                                        continue;
                                       }
                                       //print $sorted_aktiva_2[32] . $sorted_pasiva_2[43];
 
@@ -787,6 +787,7 @@ class RobotController extends Controller
 
 
       // ADD TO DATABASE
+      if(strlen($currentyear > 1)) {
       $basic =  new Basic;
 
       $basic->country = $country;
@@ -821,9 +822,9 @@ class RobotController extends Controller
                   ->where('id_basic', $my_id)
                   ->update(['percentage' => $percentage]);
                 }
-
+              }
                   } else {
-                        // continue;
+                        continue;
                         //print "Mothafucka";
                         }
 
@@ -836,6 +837,7 @@ class RobotController extends Controller
                  }
 
                }
+
 
             } // IF SUBMITTED
           } // SEND ROBOT FUNCTION
