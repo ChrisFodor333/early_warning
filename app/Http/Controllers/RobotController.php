@@ -81,7 +81,7 @@ class RobotController extends Controller
                         // Skip first row (Remove below comment if you want to skip the first row)
                         if ($i == 0) {
                         $i++;
-                        continue;
+                        // continue;
                         }
                         for ($c = 0; $c < $num; $c++) {
                         $importData_arr[$i][] = $filedata[$c];
@@ -103,7 +103,10 @@ class RobotController extends Controller
                         // TUTO BUDE FOR EACH
 
                         $result = "";
+
                         foreach ($ico_array as $ico) {
+
+
                         $client = new Client();
                         $goutteClient = new Client(HttpClient::create(['timeout' => 60]));
 
@@ -117,7 +120,7 @@ class RobotController extends Controller
                         $link = $crawler->selectLink('Detail')->link();
                         $crawler = $client->click($link);
                       } else {
-                        continue;
+                        // continue;
                       }
 
 
@@ -129,7 +132,7 @@ class RobotController extends Controller
                         $red = 0;
                         $nacount = 0;
 
-
+                        //31426085
                         $my_href = $crawler->selectLink('Úč POD:')->link();
                         $crawler = $client->click($my_href);
                         // GET CURRENT YEAR - col-12 d-none d-lg-block col-lg-3 col-xl-4 text-gray fs-16 font-weight-medium
@@ -156,7 +159,7 @@ class RobotController extends Controller
                           });
 
                           $sorted_aktiva = array();
-                          $i = 0;
+                          $i = -2;
                           foreach ($aktiva_array as $aktiva) {
                             if($i % 4 == 0) {
                             array_push($sorted_aktiva,$aktiva);
@@ -221,34 +224,37 @@ class RobotController extends Controller
                               $country = "Slovakia";
 
                               // DATA FROM THE FORM - CURRENT YEAR
-                              $b2 = intval($sorted_aktiva[0]);
-                              $b6 = intval($sorted_aktiva[32]);
-                              $b7 = intval($sorted_aktiva[33]);
-                              $b8 = intval($sorted_aktiva[52]);
-                              $b9 = intval($sorted_aktiva[70]);
+                              /*
+                              str_replace(' ', '', $sorted_aktiva[0])
+                              */
+                              $b2 = intval(str_replace(' ', '', $sorted_aktiva[0]));
+                              $b6 = intval(str_replace(' ', '', $sorted_aktiva[32]));
+                              $b7 = intval(str_replace(' ', '', $sorted_aktiva[33]));
+                              $b8 = intval(str_replace(' ', '', $sorted_aktiva[52]));
+                              $b9 = intval(str_replace(' ', '', $sorted_aktiva[70]));
 
-                              $b10 = intval($sorted_aktiva[73]);
-                              $b11 = intval($sorted_pasiva[1]); // 80
-                              $b12 = intval($sorted_pasiva[18]);
-                              $b13 = intval($sorted_pasiva[22]);
-                              $b16 = intval($sorted_pasiva[43]);
+                              $b10 = intval(str_replace(' ', '', $sorted_aktiva[73]));
+                              $b11 = intval(str_replace(' ', '', $sorted_pasiva[1])); // 80
+                              $b12 = intval(str_replace(' ', '', $sorted_pasiva[18]));
+                              $b13 = intval(str_replace(' ', '', $sorted_pasiva[22]));
+                              $b16 = intval(str_replace(' ', '', $sorted_pasiva[43]));
 
-                              $b14 = intval($sorted_pasiva[57]);
-                              $b19 = intval($sorted_pasiva[60]);
-                              $b17 = intval($sorted_pasiva[61]);
-                              $b20 = intval($sorted_pasiva[62]);
+                              $b14 = intval(str_replace(' ', '', $sorted_pasiva[57]));
+                              $b19 = intval(str_replace(' ', '', $sorted_pasiva[60]));
+                              $b17 = intval(str_replace(' ', '', $sorted_pasiva[61]));
+                              $b20 = intval(str_replace(' ', '', $sorted_pasiva[62]));
 
-                              $b22 = intval($sorted_income_statement[2]);
+                              $b22 = intval(str_replace(' ', '', $sorted_income_statement[2]));
 
-                              $b23_1 = intval($sorted_income_statement[3]);
-                              $b23_2 = intval($sorted_income_statement[4]);
-                              $b26 = intval($sorted_income_statement[7]);
-                              $b25 = intval($sorted_income_statement[20]);
-                              $b27 = intval($sorted_income_statement[45]);
+                              $b23_1 = intval(str_replace(' ', '', $sorted_income_statement[3]));
+                              $b23_2 = intval(str_replace(' ', '', $sorted_income_statement[4]));
+                              $b26 = intval(str_replace(' ', '', $sorted_income_statement[7]));
+                              $b25 = intval(str_replace(' ', '', $sorted_income_statement[20]));
+                              $b27 = intval(str_replace(' ', '', $sorted_income_statement[45]));
 
-                              $b28 = intval($sorted_income_statement[48]);
-                              $b29 = intval($sorted_income_statement[55]);
-                              $b30 = intval($sorted_income_statement[60]);
+                              $b28 = intval(str_replace(' ', '', $sorted_income_statement[48]));
+                              $b29 = intval(str_replace(' ', '', $sorted_income_statement[55]));
+                              $b30 = intval(str_replace(' ', '', $sorted_income_statement[60]));
 
 
                               // LAST YEAR
@@ -284,7 +290,7 @@ class RobotController extends Controller
                                   });
 
                                   $sorted_aktiva_2 = array();
-                                  $i = 0;
+                                  $i = -2;
                                   foreach ($aktiva_array_2 as $aktiva) {
                                     if($i % 4 == 0) {
                                     array_push($sorted_aktiva_2,$aktiva);
@@ -338,24 +344,24 @@ class RobotController extends Controller
                                         $i++;
                                       }
 
-                                      $c2 = intval($sorted_aktiva_2[0]);
-                                      $c3 = intval($sorted_aktiva_2[2]);
-                                      $c4= intval($sorted_aktiva_2[10]);
-                                      $c5 = intval($sorted_aktiva_2[20]);
-                                      $c11 = intval($sorted_pasiva_2[1]);
+                                      $c2 = intval(str_replace(' ', '', $sorted_aktiva_2[0]));
+                                      $c3 = intval(str_replace(' ', '', $sorted_aktiva_2[2]));
+                                      $c4= intval(str_replace(' ', '', $sorted_aktiva_2[10]));
+                                      $c5 = intval(str_replace(' ', '', $sorted_aktiva_2[20]));
+                                      $c11 = intval(str_replace(' ', '', $sorted_pasiva_2[1]));
 
-                                      $c15 = intval($sorted_pasiva_2[23]);
-                                      $c18 = intval($sorted_pasiva_2[42]);
-                                      $c14 = intval($sorted_pasiva_2[57]);
-                                      $c22 = intval($sorted_income_statement_2[2]);
-                                      $c23_1 = intval($sorted_income_statement_2[3]);
+                                      $c15 = intval(str_replace(' ', '', $sorted_pasiva_2[23]));
+                                      $c18 = intval(str_replace(' ', '', $sorted_pasiva_2[42]));
+                                      $c14 = intval(str_replace(' ', '', $sorted_pasiva_2[57]));
+                                      $c22 = intval(str_replace(' ', '', $sorted_income_statement_2[2]));
+                                      $c23_1 = intval(str_replace(' ', '', $sorted_income_statement_2[3]));
 
 
-                                      $c23_2= intval($sorted_income_statement_2[4]);
-                                      $c26 = intval($sorted_income_statement_2[7]);
-                                      $c24 = intval($sorted_income_statement_2[27]);
-                                      $c27 = intval($sorted_income_statement_2[45]);
-                                      $c30 = intval($sorted_income_statement_2[60]);
+                                      $c23_2= intval(str_replace(' ', '', $sorted_income_statement_2[4]));
+                                      $c26 = intval(str_replace(' ', '', $sorted_income_statement_2[7]));
+                                      $c24 = intval(str_replace(' ', '', $sorted_income_statement_2[27]));
+                                      $c27 = intval(str_replace(' ', '', $sorted_income_statement_2[45]));
+                                      $c30 = intval(str_replace(' ', '', $sorted_income_statement_2[60]));
 
                               // YEAR BEFORE
                               $crawler = $client->request('GET', 'https://www.registeruz.sk/cruz-public/domain/accountingentity/simplesearch');
@@ -386,7 +392,7 @@ class RobotController extends Controller
                                   });
 
                                   $sorted_aktiva_3 = array();
-                                  $i = 0;
+                                  $i = -2;
                                   foreach ($aktiva_array_3 as $aktiva) {
                                     if($i % 4 == 0) {
                                     array_push($sorted_aktiva_3,$aktiva);
@@ -418,7 +424,7 @@ class RobotController extends Controller
 
                                     //print_r($sorted_pasiva);
 
-                                    $income_statement = $crawler->selectLink('Výkaz ziskov a strát')->link();
+                                    /*$income_statement = $crawler->selectLink('Výkaz ziskov a strát')->link();
                                     $crawler = $client->click($income_statement);
                                     // tvalue_item text-right
                                     $income_statement_array_3 = array();
@@ -438,13 +444,13 @@ class RobotController extends Controller
                                         array_push($sorted_income_statement_3,$income_statement);
                                         }
                                         $i++;
-                                      }
+                                      } */
 
-                                      $d6 = intval($sorted_aktiva_2[32]);
-                                      $d16 = intval($sorted_pasiva_2[43]);
+                                      $d6 = intval(str_replace(' ', '', $sorted_aktiva_3[32]));
+                                      $d16 = intval(str_replace(' ', '', $sorted_pasiva_3[43]));
 
                                       } else {
-                                        continue;
+                                        // continue;
                                       }
                                       //print $sorted_aktiva_2[32] . $sorted_pasiva_2[43];
 
@@ -817,11 +823,12 @@ class RobotController extends Controller
                 }
 
                   } else {
-                        continue;
+                        // continue;
                         //print "Mothafucka";
                         }
-                      }
-                      return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
+
+                     } // FOR EACH
+                     return Redirect::to('/pro-admin/robot')->with('status', "The robot completed it's process");
 
                  } else {
                    return Redirect::to('/pro-admin/robot')
