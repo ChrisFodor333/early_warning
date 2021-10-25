@@ -251,10 +251,95 @@ class AdminController extends Controller
              $result = $basic->result;
              $percentage = $basic->percentage;
              $country = $basic->country;
+
+             $help = "";
+             $help2 = "";
+
+             switch ($country) {
+               case 'Slovakia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://uksk.sk/";
+                 break;
+
+               case 'Hungary':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://ifka.hu/ or https://www.pbn.hu/";
+                 break;
+
+               case 'Germany':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.steinbeis-europa.de/";
+                 break;
+
+               case 'Romania':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.utcluj.ro/";
+                 break;
+
+
+               case 'Austria':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.zsi.at/";
+                 break;
+
+
+               case 'Croatia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "http://www.czposijek.hr/";
+                 break;
+
+
+               case 'Slovenia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.p-tech.si/";
+                 break;
+
+               case 'Bosnia and Herzegovina':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.rars-msp.org/";
+                 break;
+
+
+               case 'Serbia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://pks.rs/";
+                 break;
+
+
+               case 'Moldova':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.odimm.md/";
+                 break;
+
+
+               case 'Ukraine':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "http://www.impeer.od.ua/";
+                 break;
+
+
+               default:
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://uksk.sk/";
+                 break;
+             }
+
+
+             $data['help'] =  $help;
+             $data['help2'] =  $help2;
+
+
+
+
+
              $percentage = "The company was more successful than " . $percentage . "% of the tested companies in ". $country;
              $data['percentage'] = $percentage;
 
              $year = $basic->current_year;
+
+
+
+
              $data['currentyear'] = $year;
 
 
@@ -545,6 +630,86 @@ class AdminController extends Controller
 
               $percentage = $complex->percentage;
               $country = $complex->country;
+
+
+              $help = "";
+              $help2 = "";
+
+              switch ($country) {
+                case 'Slovakia':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://uksk.sk/";
+                  break;
+
+                case 'Hungary':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://ifka.hu/ or https://www.pbn.hu/";
+                  break;
+
+                case 'Germany':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://www.steinbeis-europa.de/";
+                  break;
+
+                case 'Romania':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://www.utcluj.ro/";
+                  break;
+
+
+                case 'Austria':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://www.zsi.at/";
+                  break;
+
+
+                case 'Croatia':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "http://www.czposijek.hr/";
+                  break;
+
+
+                case 'Slovenia':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://www.p-tech.si/";
+                  break;
+
+                case 'Bosnia and Herzegovina':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://www.rars-msp.org/";
+                  break;
+
+
+                case 'Serbia':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://pks.rs/";
+                  break;
+
+
+                case 'Moldova':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://www.odimm.md/";
+                  break;
+
+
+                case 'Ukraine':
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "http://www.impeer.od.ua/";
+                  break;
+
+
+                default:
+                  $help = "For financial support in ".$country. " contact our partners at ";
+                  $help2 = "https://uksk.sk/";
+                  break;
+              }
+
+
+              $data['help'] =  $help;
+              $data['help2'] =  $help2;
+
+
+
               $percentage = "The company was more successful than " . $percentage . "% of the tested companies in ". $country;
               $data['percentage'] = $percentage;
 

@@ -42,6 +42,83 @@ class ModelControllerComplex extends Controller
   $data['currentyear'] =  $currentyear;
 
 
+  $help = "";
+  $help2 = "";
+
+  switch ($country) {
+    case 'Slovakia':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://uksk.sk/";
+      break;
+
+    case 'Hungary':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://ifka.hu/ or https://www.pbn.hu/";
+      break;
+
+    case 'Germany':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://www.steinbeis-europa.de/";
+      break;
+
+    case 'Romania':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://www.utcluj.ro/";
+      break;
+
+
+    case 'Austria':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://www.zsi.at/";
+      break;
+
+
+    case 'Croatia':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "http://www.czposijek.hr/";
+      break;
+
+
+    case 'Slovenia':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://www.p-tech.si/";
+      break;
+
+    case 'Bosnia and Herzegovina':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://www.rars-msp.org/";
+      break;
+
+
+    case 'Serbia':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://pks.rs/";
+      break;
+
+
+    case 'Moldova':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://www.odimm.md/";
+      break;
+
+
+    case 'Ukraine':
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "http://www.impeer.od.ua/";
+      break;
+
+
+    default:
+      $help = "For financial support in ".$country. " contact our partners at ";
+      $help2 = "https://uksk.sk/";
+      break;
+  }
+
+
+  $data['help'] =  $help;
+  $data['help2'] =  $help2;
+
+
     //$complex->company_name = $company;
     $complex->country = $country;
     $complex->current_year = $currentyear;

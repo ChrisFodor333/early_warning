@@ -406,6 +406,7 @@ onclick="window.print();">
   <p><i class="fa fa-warning"></i>
   According to the information provided, your company is in <b> the financial distress of the I. degree.</b> <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
   </p>
 </div>
 
@@ -413,6 +414,7 @@ onclick="window.print();">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist; ?>.</b> <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>
+  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </p>
 </div>
 
@@ -474,17 +476,22 @@ onclick="window.print();">
 
     <div class="success-msg" style="display: <?php echo $greenwarning;?>;">
       <i class="fa fa-check"></i>
-      According to the information provided your company is out of danger. No financial distress has been detected.
+      According to the information provided, your company is <b>out of danger.</b> <br />
+      Using the methodology of selected prediction models and company’s financial statements, none of the six prediction models detected the risk of bankruptcy or financial distress. -> <b> The company is facing no bankruptcy nor risk of financial distress.</b>
     </div>
 
     <div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
       <i class="fa fa-warning"></i>
-      According to the information provided your company is in first degree financial distress.
+      According to the information provided, your company is in <b> the financial distress of the I. degree.</b> <br />
+      Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+      <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
     </div>
 
     <div class="error-msg" style="display: <?php echo $redwarning;?>;">
       <i class="fa fa-times-circle"></i>
-      According to the information provided your company is in <?php echo $distress; ?> degree financial distress.
+      According to the information provided, your company is in the <b><?php echo $dist; ?>.</b> <br />
+      Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>
+      <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
     </div>
 
     <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">

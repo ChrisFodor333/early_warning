@@ -476,6 +476,7 @@ input[type=image] {
   <p><i class="fa fa-warning"></i>
   According to the information provided, your company is in <b> the financial distress of the I. degree.</b> <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
   </p>
 </div>
 
@@ -483,6 +484,7 @@ input[type=image] {
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist; ?>.</b> <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>
+  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </p>
 </div>
 
@@ -548,12 +550,16 @@ input[type=image] {
 
     <div class="warning-msg" style="display: <?php echo $orangewarning;?>;">
       <i class="fa fa-warning"></i>
-      According to the information provided your company is in first degree financial distress.
+      According to the information provided, your company is in <b> the financial distress of the I. degree.</b> <br />
+      Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
+      <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
     </div>
 
     <div class="error-msg" style="display: <?php echo $redwarning;?>;">
       <i class="fa fa-times-circle"></i>
-      According to the information provided your company is in <?php echo $distress; ?> degree financial distress.
+      According to the information provided, your company is in the <b><?php echo $dist; ?>.</b> <br />
+      Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>
+      <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
     </div>
 
     <div class="warning-msg" style="display: <?php echo $nadisplay;?>;">
