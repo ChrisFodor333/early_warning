@@ -613,9 +613,14 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $basic->binkert = $binkert;
   $basic->result = $result;
 
+
+  $ratio = 0;
+  if($quicktest != "N/A" && $altman != "N/A" && $in05 != "N/A" && $bonity != "N/A" && $taffler != "N/A") {
   $ratio = (floatval($altman) + floatval($in05) + floatval((1/$quicktest)) + floatval($bonity) + floatval($taffler)) / 5;
+  }
   $basic->ratio = $ratio;
   $basic->save();
+
 
   // LAST ID
   $my_id = $basic->id_basic;

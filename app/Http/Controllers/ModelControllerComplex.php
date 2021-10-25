@@ -1409,9 +1409,17 @@ $nadisplay1 = "none";
   $complex->result2 = $result2;
   $complex->result3 = $result3;
 
+  $ratio1 = 0; $ratio2 = 0; $ratio3 = 0;
+
+  if($quickt1 != "N/A" && $alt1 != "N/A" && $ind1 != "N/A" && $bon1 != "N/A" && $taff1 != "N/A") {
   $ratio1 = (floatval($alt1) + floatval($ind1) + floatval((1/$quickt1)) + floatval($bon1) + floatval($complex->taff1));
+  }
+  if($quickt2 != "N/A" && $alt2 != "N/A" && $ind2 != "N/A" && $bon2 != "N/A" && $taff2 != "N/A") {
   $ratio2 = (floatval($alt2) + floatval($ind2) + floatval((1/$quickt2)) + floatval($bon2) + floatval($complex->taff2));
+  }
+  if($quickt3 != "N/A" && $alt3 != "N/A" && $ind3 != "N/A" && $bon3 != "N/A" && $taff3 != "N/A") {
   $ratio3 = (floatval($alt3) + floatval($ind3) + floatval((1/$quickt3)) + floatval($bon3) + floatval($complex->taff3));
+  }
 
   $ratio = $ratio1 + $ratio2 + $ratio3  / 15;
   $complex->ratio = $ratio;
