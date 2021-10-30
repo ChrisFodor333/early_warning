@@ -222,6 +222,8 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Romania") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/rom.png";
+          document.querySelector('#provis').innerHTML = "Provisions";
+          document.querySelector('#provis2').innerHTML = "Provisions";
 
           //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 009 in Balance Sheet";
@@ -266,6 +268,9 @@ h6 {
 
           document.querySelector('#tt2b').innerHTML = "Row 009 in Balance Sheet";
           document.querySelector('#tt10b').innerHTML = "Row 013 in Balance Sheet";
+        } else {
+          document.querySelector('#provis').innerHTML = "Short-term Provisions";
+          document.querySelector('#provis2').innerHTML = "Short-term Provisions";
         }
 
       if(document.querySelector('#countryselect').value == "Hungary") {
@@ -1144,11 +1149,11 @@ h6 {
               <!-- IMPORTANT -->
                   <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
 
-                    <div className="tablet mf-input-wrapper">
+                    <div className="tablet mf-input-wrapper ">
                     <br class="mobile" />
 
                     <div class="tt1">
-                    <label>Short-term Provisions</label>
+                    <label id="provis">Short-term Provisions</label>
                     <span class="tooltiptext" id="tt11">Row 136 in Balance Sheet</span>
                     </div>
 
@@ -1905,7 +1910,7 @@ h6 {
           <div className="mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Short-term Provisions</label>
+          <label id="provis2">Short-term Provisions</label>
           <span class="tooltiptext" id="tt11a">Row 136 in Balance Sheet</span>
           </div>
 
