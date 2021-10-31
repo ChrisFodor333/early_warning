@@ -236,7 +236,227 @@ display: none;
       <script class="mf-template">
 
       function countryChange() {
+        if(document.querySelector('#countryselect').value == "Slovakia") {
+            document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
 
+            document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+            document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
+            document.querySelector('#tt3').innerHTML = "Row 034 in Balance Sheet";
+            document.querySelector('#tt4').innerHTML = "Row 053 in Balance Sheet";
+            document.querySelector('#tt5').innerHTML = "Row 071 in Balance Sheet";
+            document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet";
+            document.querySelector('#tt7').innerHTML = "Row 080 in Balance Sheet";
+            document.querySelector('#tt8').innerHTML = "Row 097 in Balance Sheet";
+            document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+            document.querySelector('#tt10').innerHTML = "Row 122 in Balance Sheet";
+            document.querySelector('#tt11').innerHTML = "Row 136 in Balance Sheet";
+            document.querySelector('#tt12').innerHTML = "Row 139 in Balance Sheet";
+            document.querySelector('#tt13').innerHTML = "Row 140 in Balance Sheet";
+            document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+            document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
+            document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
+            document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
+            document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
+            document.querySelector('#tt19').innerHTML = "Row 21 in Income Statement";
+            document.querySelector('#tt20').innerHTML = "Row 46 in Income Statement";
+            document.querySelector('#tt21').innerHTML = "Row 49 in Income Statement";
+            document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
+            document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
+
+            document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
+            document.querySelector('#tt2a').innerHTML = "Row 033 in Balance Sheet";
+            document.querySelector('#tt3a').innerHTML = "Row 034 in Balance Sheet";
+            document.querySelector('#tt4a').innerHTML = "Row 053 in Balance Sheet";
+            document.querySelector('#tt5a').innerHTML = "Row 071 in Balance Sheet";
+            document.querySelector('#tt6a').innerHTML = "Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet";
+            document.querySelector('#tt7a').innerHTML = "Row 080 in Balance Sheet";
+            document.querySelector('#tt8a').innerHTML = "Row 097 in Balance Sheet";
+            document.querySelector('#tt9a').innerHTML = "Row 101 in Balance Sheet";
+            document.querySelector('#tt10a').innerHTML = "Row 122 in Balance Sheet";
+            document.querySelector('#tt11a').innerHTML = "Row 136 in Balance Sheet";
+            document.querySelector('#tt12a').innerHTML = "Row 139 in Balance Sheet";
+            document.querySelector('#tt13a').innerHTML = "Row 140 in Balance Sheet";
+            document.querySelector('#tt14a').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+            document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
+            document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
+            document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
+            document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
+            document.querySelector('#tt19a').innerHTML = "Row 21 in Income Statement";
+            document.querySelector('#tt20a').innerHTML = "Row 46 in Income Statement";
+            document.querySelector('#tt21a').innerHTML = "Row 49 in Income Statement";
+            document.querySelector('#tt22a').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
+            document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
+
+            document.querySelector('#tt1b').innerHTML = "Row 001 in Balance Sheet";
+            document.querySelector('#tt2b').innerHTML = "Row 033 in Balance Sheet";
+            document.querySelector('#tt3b').innerHTML = "Row 034 in Balance Sheet";
+            document.querySelector('#tt4b').innerHTML = "Row 053 in Balance Sheet";
+            document.querySelector('#tt5b').innerHTML = "Row 071 in Balance Sheet";
+            document.querySelector('#tt6b').innerHTML = "Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet";
+            document.querySelector('#tt7b').innerHTML = "Row 080 in Balance Sheet";
+            document.querySelector('#tt8b').innerHTML = "Row 097 in Balance Sheet";
+            document.querySelector('#tt9b').innerHTML = "Row 101 in Balance Sheet";
+            document.querySelector('#tt10b').innerHTML = "Row 122 in Balance Sheet";
+            document.querySelector('#tt11b').innerHTML = "Row 136 in Balance Sheet";
+            document.querySelector('#tt12b').innerHTML = "Row 139 in Balance Sheet";
+            document.querySelector('#tt13b').innerHTML = "Row 140 in Balance Sheet";
+            document.querySelector('#tt14b').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+            document.querySelector('#tt15b').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
+            document.querySelector('#tt16b').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
+            document.querySelector('#tt17b').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
+            document.querySelector('#tt18b').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
+            document.querySelector('#tt19b').innerHTML = "Row 21 in Income Statement";
+            document.querySelector('#tt20b').innerHTML = "Row 46 in Income Statement";
+            document.querySelector('#tt21b').innerHTML = "Row 49 in Income Statement";
+            document.querySelector('#tt22b').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
+            document.querySelector('#tt23b').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
+
+            document.querySelector('#tt24').innerHTML = "Row 003 in Balance Sheet";
+            document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 011 in Balance Sheet";
+            document.querySelector('#tt26').innerHTML = "Row 021 in Balance Sheet";
+            document.querySelector('#tt27').innerHTML = "Row 102 in Balance Sheet";
+            document.querySelector('#tt28').innerHTML = "Row 121 in Balance Sheet";
+            document.querySelector('#tt29').innerHTML = "Row 28 in Income Statement";
+
+
+
+          }
+
+        if(document.querySelector('#countryselect').value == "Slovenia") {
+            document.querySelector('#countryimage').src = "/early_warning/assets/inc/slove.png";
+          }
+
+          if(document.querySelector('#countryselect').value == "Austria") {
+              document.querySelector('#countryimage').src = "/early_warning/assets/inc/aus.png";
+            }
+
+            if(document.querySelector('#countryselect').value == "Germany") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/ger.png";
+
+                document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2').innerHTML = "Row 020 in Balance Sheet";
+                document.querySelector('#tt3').innerHTML = "Row 021 in Balance Sheet";
+                document.querySelector('#tt4').innerHTML = "Row 026 in Balance Sheet";
+                document.querySelector('#tt5').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 035 in Balance Sheet";
+                document.querySelector('#tt7').innerHTML = "Row 039 in Balance Sheet";
+                document.querySelector('#tt8').innerHTML = "Row 048 in Balance Sheet";
+                document.querySelector('#tt9').innerHTML = "Row 053 in Balance Sheet";
+                document.querySelector('#tt10').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt11').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt12').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt13').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 062 in Balance Sheet";
+                document.querySelector('#tt15').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt16').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt17').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt18').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt19').innerHTML = "Row 11 in Income Statement";
+                document.querySelector('#tt20').innerHTML = "Row 16 in Income Statement";
+                document.querySelector('#tt21').innerHTML = "Row 19 in Income Statement";
+                document.querySelector('#tt22').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt23').innerHTML = "No Tooltip Available";
+
+                document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2a').innerHTML = "Row 020 in Balance Sheet";
+                document.querySelector('#tt3a').innerHTML = "Row 021 in Balance Sheet";
+                document.querySelector('#tt4a').innerHTML = "Row 026 in Balance Sheet";
+                document.querySelector('#tt5a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt6a').innerHTML = "Accruals/Deferrals (within Assets section) => Row 035 in Balance Sheet";
+                document.querySelector('#tt7a').innerHTML = "Row 039 in Balance Sheet";
+                document.querySelector('#tt8a').innerHTML = "Row 048 in Balance Sheet";
+                document.querySelector('#tt9a').innerHTML = "Row 053 in Balance Sheet";
+                document.querySelector('#tt10a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt11a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt12a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt13a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt14a').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 062 in Balance Sheet";
+                document.querySelector('#tt15a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt16a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt17a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt18a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt19a').innerHTML = "Row 11 in Income Statement";
+                document.querySelector('#tt20a').innerHTML = "Row 16 in Income Statement";
+                document.querySelector('#tt21a').innerHTML = "Row 19 in Income Statement";
+                document.querySelector('#tt22a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt23a').innerHTML = "No Tooltip Available";
+
+                document.querySelector('#tt1b').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2b').innerHTML = "Row 020 in Balance Sheet";
+                document.querySelector('#tt3b').innerHTML = "Row 021 in Balance Sheet";
+                document.querySelector('#tt4b').innerHTML = "Row 026 in Balance Sheet";
+                document.querySelector('#tt5b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt6b').innerHTML = "Accruals/Deferrals (within Assets section) => Row 035 in Balance Sheet";
+                document.querySelector('#tt7b').innerHTML = "Row 039 in Balance Sheet";
+                document.querySelector('#tt8b').innerHTML = "Row 048 in Balance Sheet";
+                document.querySelector('#tt9b').innerHTML = "Row 053 in Balance Sheet";
+                document.querySelector('#tt10b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt11b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt12b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt13b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt14b').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 062 in Balance Sheet";
+                document.querySelector('#tt15b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt16b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt17b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt18b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt19b').innerHTML = "Row 11 in Income Statement";
+                document.querySelector('#tt20b').innerHTML = "Row 16 in Income Statement";
+                document.querySelector('#tt21b').innerHTML = "Row 19 in Income Statement";
+                document.querySelector('#tt22b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt23b').innerHTML = "No Tooltip Available";
+
+
+                document.querySelector('#tt24').innerHTML = "Row 003 in Balance Sheet";
+                document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 008 in Balance Sheet";
+                document.querySelector('#tt26').innerHTML = "Row 013 in Balance Sheet";
+                document.querySelector('#tt27').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt28').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt29').innerHTML = "No Tooltip Available";
+
+              }
+
+            if(document.querySelector('#countryselect').value == "Moldova") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/mold.png";
+              }
+
+            if(document.querySelector('#countryselect').value == "Serbia") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/serb.png";
+              }
+
+            if(document.querySelector('#countryselect').value == "Ukraine") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/ukr.png";
+              }
+
+              // DISPLAY NONE
+
+              if(document.querySelector('#countryselect').value == "Ukraine" ||
+                 document.querySelector('#countryselect').value == "Austria" ||
+                 document.querySelector('#countryselect').value == "Slovenia" ||
+                 document.querySelector('#countryselect').value == "Serbia" ||
+                 document.querySelector('#countryselect').value == "Moldova") {
+                  const tooltips = document.querySelectorAll('.tooltiptext');
+                  const labels = document.querySelectorAll('label');
+
+                  tooltips.forEach(function(tooltip) {
+                     tooltip.style.display = "none";
+                  });
+
+                  labels.forEach(function(label) {
+                     label.style.cursor = "default";
+                  });
+
+                } else {
+                  const tooltips = document.querySelectorAll('.tooltiptext');
+                  const labels = document.querySelectorAll('label');
+
+                  tooltips.forEach(function(tooltip) {
+                     tooltip.style.display = "block";
+                  });
+
+                  labels.forEach(function(label) {
+                     label.style.cursor = "help";
+                  });
+                }
       }
 
       function myfunction() {
