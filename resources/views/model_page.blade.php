@@ -185,6 +185,15 @@ h6 {
          ph.placeholder = "Revenue (Merch)";
       });
 
+      document.querySelector('#revenueproducts').innerHTML = "Revenue (Products)";
+      document.querySelector('#revenueproducts2').innerHTML = "Revenue (Products)";
+      const placeholders2 = document.querySelectorAll('.phrevenuep');
+
+
+      placeholders2.forEach(function(ph) {
+         ph.placeholder = "Revenue (Products)";
+      });
+
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
 
@@ -243,6 +252,22 @@ h6 {
           document.querySelector('#provis').innerHTML = "Provisions";
           document.querySelector('#provis2').innerHTML = "Provisions";
 
+          document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
+          document.querySelector('#revenueproducts2').innerHTML = "Revenue (P & S)";
+          const placeholders = document.querySelectorAll('.phrevenuep');
+          const services = document.querySelectorAll('.mergehide2');
+
+
+          services.forEach(function(service) {
+             service.style.display = "none";
+          });
+
+          placeholders.forEach(function(ph) {
+             ph.placeholder = "Revenue (P & S)";
+          });
+
+
+
           //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 009 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 005 in Balance Sheet";
@@ -258,8 +283,8 @@ h6 {
           document.querySelector('#tt13').innerHTML = "Row 96 in Form 30";
           //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
           document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
-          document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 02 in Form 20";
-          document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
+          document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
+          //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
           document.querySelector('#tt19').innerHTML = "Row 25 in Form 20";
           document.querySelector('#tt20').innerHTML = "Row 45 in Form 20";
@@ -278,8 +303,8 @@ h6 {
           document.querySelector('#tt7a').innerHTML = "Row 080 in Balance Sheet";
           document.querySelector('#tt11a').innerHTML = "Row 046 in Balance Sheet";
           document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
-          document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 02 in Form 20";
-          document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
+          document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
+          //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
           document.querySelector('#tt20a').innerHTML = "Row 45 in Form 20";
           //document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
@@ -365,6 +390,20 @@ h6 {
       if(document.querySelector('#countryselect').value == "Bosnia and Herzegovina") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
 
+          document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
+          document.querySelector('#revenueproducts2').innerHTML = "Revenue (P & S)";
+          const placeholders = document.querySelectorAll('.phrevenuep');
+          const services = document.querySelectorAll('.mergehide2');
+
+
+          services.forEach(function(service) {
+             service.style.display = "none";
+          });
+
+          placeholders.forEach(function(ph) {
+             ph.placeholder = "Revenue (P & S)";
+          });
+
           document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 031 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 032 in Balance Sheet";
@@ -380,8 +419,8 @@ h6 {
           document.querySelector('#tt13').innerHTML = "Row 047 in Balance Sheet";
           //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 240 in Income Statement";
           document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
-          document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 206 in Income Statement";
-          document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
+          document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
+          //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 223 in Income Statement";
           document.querySelector('#tt20').innerHTML = "Row 303 in Income Statement";
@@ -400,7 +439,7 @@ h6 {
           document.querySelector('#tt7a').innerHTML = "Row 101 in Balance Sheet";
           document.querySelector('#tt11a').innerHTML = "Row 144 in Balance Sheet";
           document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
-          //document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
+          document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
           //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 002 in Balance Sheet";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
           document.querySelector('#tt20a').innerHTML = "Row 303 in Income Statement";
@@ -1382,13 +1421,13 @@ h6 {
                   <br class="mobile" />
 
                   <div class="tt1">
-                  <label>Revenue (Products)</label>
+                  <label id="revenueproducts">Revenue (Products)</label>
                   <span class="tooltiptext" id="tt16">Revenue from the sale of own products => Row 04 in Income Statement</span>
                   </div>
 
                   <input
                   type="number"
-                  className="mf-input "
+                  className="mf-input phrevenuep"
                   id="mf-input-text-13c1826"
                   name="revenue-p"
                   tabindex="17"
@@ -2034,13 +2073,13 @@ h6 {
           <div className="mf-input-wrapper">
           <br class="mobile" />
           <div class="tt1">
-          <label>Revenue (Products)</label>
+          <label id="revenueproducts2">Revenue (Products)</label>
           <span class="tooltiptext" id="tt16a">Revenue from the sale of own products => Row 04 in Income Statement</span>
           </div>
 
           <input
           type="number"
-          className="mf-input "
+          className="mf-input phrevenuep"
           id="mf-input-text-13c1826"
           name="revenue-p2"
           tabindex="34"
