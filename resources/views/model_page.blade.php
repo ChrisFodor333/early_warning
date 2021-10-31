@@ -91,6 +91,12 @@ transition: opacity 1s;
 display: none;
 }
 
+.adlhide {
+display: none;
+}
+
+
+
 @media (max-width: 1024px) {
   .tablet {
     margin-left: 12px;
@@ -194,6 +200,20 @@ h6 {
          ph.placeholder = "Revenue (Products)";
       });
 
+
+      document.querySelector('#adl').innerHTML = "Accruals/Deferrals (A)";
+      const phadl = document.querySelectorAll('.phadl');
+
+
+      phadl.forEach(function(ph) {
+         ph.placeholder = "Accruals/Deferrals (A)";
+      });
+
+      const show_deferrals = document.querySelectorAll('.adlhide');
+      show_deferrals.forEach(function(deferral) {
+         deferral.style.display = "none";
+      });
+
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
 
@@ -252,6 +272,21 @@ h6 {
           document.querySelector('#provis').innerHTML = "Provisions";
           document.querySelector('#provis2').innerHTML = "Provisions";
 
+          document.querySelector('#adl').innerHTML = "Accruals (A)";
+          const phadl = document.querySelectorAll('.phadl');
+
+
+          phadl.forEach(function(ph) {
+             ph.placeholder = "Accruals (A)";
+          });
+
+          const show_deferrals = document.querySelectorAll('.adlhide');
+          show_deferrals.forEach(function(deferral) {
+             deferral.style.display = "block";
+          });
+
+
+
           document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
           document.querySelector('#revenueproducts2').innerHTML = "Revenue (P & S)";
           const placeholders = document.querySelectorAll('.phrevenuep');
@@ -273,7 +308,7 @@ h6 {
           document.querySelector('#tt3').innerHTML = "Row 005 in Balance Sheet";
           document.querySelector('#tt4').innerHTML = "Row 006 in Balance Sheet";
           document.querySelector('#tt5').innerHTML = "Row 008 in Balance Sheet";
-          //document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 010 in Balance Sheet";
           document.querySelector('#tt7').innerHTML = "Row 046 in Balance Sheet";
           //document.querySelector('#tt8').innerHTML = "Row 097 in Balance Sheet";
           //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
@@ -1050,12 +1085,12 @@ h6 {
                   <br class="mobile" />
 
                   <div class="tt1">
-                  <label>Accruals/Deferrals (A)</label>
+                  <label id="adl">Accruals/Deferrals (A)</label>
                   <span class="tooltiptext" id="tt6">Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet</span>
                   </div>
                   <input
                     type="number"
-                    className="mf-input "
+                    className="mf-input phadl"
                     id="mf-input-text-13c1826"
                     tabindex="7"
                     name="ad-total"
@@ -1068,6 +1103,45 @@ h6 {
                           <${validation.ErrorMessage}
                       errors=${validation.errors}
                       name="ad-total"
+                      as=${html`<span className="mf-error-message"></span>`}
+                      />
+
+                      </div>
+
+          </div>
+          </div>
+          </div>
+
+          <div className="adlhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+          <div className="elementor-widget-wrap elementor-element-populated">
+
+
+
+          <!-- IMPORTANT -->
+                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+
+                  <div className="tablet mf-input-wrapper">
+                  <br class="mobile" />
+
+                  <div class="tt1">
+                  <label id="adl2">Deferrals (A)</label>
+                  <span class="tooltiptext" id="tt6">Accruals/Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                  </div>
+                  <input
+                    type="number"
+                    className="mf-input"
+                    id="mf-input-text-13c1826"
+                    tabindex="7"
+                    name="ad-totalR"
+                    placeholder="${ parent.decodeEntities(`Deferrals (A)`) } "
+                              onInput=${parent.handleChange}
+                      aria-invalid=${validation.errors['ad-totalR'] ? 'true' : 'false'}
+                      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                            />
+
+                          <${validation.ErrorMessage}
+                      errors=${validation.errors}
+                      name="ad-totalR"
                       as=${html`<span className="mf-error-message"></span>`}
                       />
 

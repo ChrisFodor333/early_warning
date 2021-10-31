@@ -133,7 +133,7 @@ class ModelControllerNew extends Controller
   $b26 = request()->get('ncia');
 
 
-  $b10 = request()->get('ad-total');
+  $b10 = request()->get('ad-total') + request()->get('ad-totalR');
   $b28 = request()->get('interest-expense');
   $b13 = request()->get('liabilities');
 
