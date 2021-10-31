@@ -93,7 +93,7 @@ transition: opacity 1s;
 display: none;
 }
 
-.adlhide, .hidle, .profitlosshide {
+.adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide {
 display: none;
 }
 
@@ -220,7 +220,7 @@ h6 {
       const phadle2 = document.querySelectorAll('.phadle');
 
       phadle2.forEach(function(ph) {
-         ph.placeholder = "Accruals/Deferrals (L & E)";
+         ph.placeholder = "Accruals/Deferrals";
       });
 
       const show_deferrals2 = document.querySelectorAll('.hidle');
@@ -244,11 +244,57 @@ h6 {
          profitloss.style.display = "none";
       });
 
-      document.querySelector('#revchange').style.fontSize = "12px";
+      document.querySelector('#revchange').style.fontSize = "14px";
       document.querySelector('#siz3').style.fontSize = "12px";
+
+      //Profit/Loss Before Tax
+      document.querySelector('#beforetaxlab').innerHTML = "Profit/Loss Before Tax";
+      const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+      phbeforetax.forEach(function(ph) {
+         ph.placeholder = "Profit/Loss Before Tax";
+      });
+
+      const show_beforetax = document.querySelectorAll('.beforetaxhide');
+      show_beforetax.forEach(function(field) {
+         field.style.display = "none";
+      });
+
+      //Profit/Loss After Tax
+      document.querySelector('#aftertaxlab').innerHTML = "Profit/Loss After Tax";
+      document.querySelector('#aftertaxlab2').innerHTML = "Profit/Loss After Tax";
+      const phaftertax = document.querySelectorAll('.phaftertax');
+
+      phaftertax.forEach(function(ph) {
+         ph.placeholder = "Profit/Loss After Tax";
+      });
+
+      const show_aftertax = document.querySelectorAll('.aftertaxhide');
+      show_aftertax.forEach(function(field) {
+         field.style.display = "none";
+      });
+
+      const amordep = document.querySelectorAll('.amordep');
+      amordep.forEach(function(ph) {
+         ph.placeholder = "Amortization/Depre...";
+      });
+
 
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
+
+          const mywraps = document.querySelectorAll('.mywrap');
+
+          mywraps.forEach(function(mywrap) {
+             mywrap.style.paddingLeft = "0px";
+             mywrap.style.marginRight = "0px";
+          });
+
+          const mywraps2 = document.querySelectorAll('.mywrap2');
+
+          mywraps2.forEach(function(mywrap) {
+             mywrap.style.width = "200px";
+          });
 
           document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
@@ -334,6 +380,34 @@ h6 {
              profitloss.style.display = "block";
           });
 
+          //Profit/Loss Before Tax
+          document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
+          const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+          phbeforetax.forEach(function(ph) {
+             ph.placeholder = "Profit Before Tax";
+          });
+
+          const show_beforetax = document.querySelectorAll('.beforetaxhide');
+          show_beforetax.forEach(function(field) {
+             field.style.display = "block";
+          });
+
+          //Profit/Loss After Tax
+          document.querySelector('#aftertaxlab').innerHTML = "Profit After Tax";
+          document.querySelector('#aftertaxlab2').innerHTML = "Profit After Tax";
+          const phaftertax = document.querySelectorAll('.phaftertax');
+
+          phaftertax.forEach(function(ph) {
+             ph.placeholder = "Profit After Tax";
+          });
+
+          const show_aftertax = document.querySelectorAll('.aftertaxhide');
+          show_aftertax.forEach(function(field) {
+             field.style.display = "block";
+          });
+
+
 
 
           document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
@@ -374,8 +448,10 @@ h6 {
           document.querySelector('#tt19').innerHTML = "Row 25 in Form 20";
           document.querySelector('#tt20').innerHTML = "Row 45 in Form 20";
           document.querySelector('#tt21').innerHTML = "Row 56 in Form 20";
-          //document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Form 20";
-          //document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Form 20";
+          document.querySelector('#tt22').innerHTML = "Profit for the accounting period before tax => Row 64 in Form 20";
+          document.querySelector('#tt22RB').innerHTML = "Loss for the accounting period before tax => Row 65 in Form 20";
+          document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
+          document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
 
           document.querySelector('#tt24').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 002 in Balance Sheet";
@@ -392,7 +468,8 @@ h6 {
           //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
           document.querySelector('#tt20a').innerHTML = "Row 45 in Form 20";
-          //document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
+          document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
+          document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
 
           document.querySelector('#tt2b').innerHTML = "Row 009 in Balance Sheet";
           document.querySelector('#tt10b').innerHTML = "Row 013 in Balance Sheet";
@@ -403,9 +480,26 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Hungary") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/hu.png";
+
           document.querySelector('#revchange').innerHTML = "Income from Sales";
           document.querySelector('#revchange2').innerHTML = "Income from Sales";
           const placeholders = document.querySelectorAll('.tt15input');
+
+          const mywraps = document.querySelectorAll('.mywrap');
+
+          mywraps.forEach(function(mywrap) {
+             mywrap.style.paddingLeft = "8px";
+             mywrap.style.marginRight = "-8px";
+          });
+
+          const mywraps2 = document.querySelectorAll('.mywrap2');
+
+          mywraps2.forEach(function(mywrap) {
+             mywrap.style.width = "355px";
+          });
+
+
+
           const products = document.querySelectorAll('.mergehide');
           const services = document.querySelectorAll('.mergehide2');
 
@@ -420,6 +514,11 @@ h6 {
 
           placeholders.forEach(function(ph) {
              ph.placeholder = "Income from Sales";
+          });
+
+          const amordep = document.querySelectorAll('.amordep');
+          amordep.forEach(function(ph) {
+             ph.placeholder = "Amortization/Depreciation";
           });
 
           document.querySelector('#tt1').innerHTML = "Row 052 in Balance Sheet";
@@ -474,6 +573,33 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Bosnia and Herzegovina") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
+
+          //Profit/Loss Before Tax
+          document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
+          const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+          phbeforetax.forEach(function(ph) {
+             ph.placeholder = "Profit Before Tax";
+          });
+
+          const show_beforetax = document.querySelectorAll('.beforetaxhide');
+          show_beforetax.forEach(function(field) {
+             field.style.display = "block";
+          });
+
+          //Profit/Loss After Tax
+          document.querySelector('#aftertaxlab').innerHTML = "Profit After Tax";
+          document.querySelector('#aftertaxlab2').innerHTML = "Profit After Tax";
+          const phaftertax = document.querySelectorAll('.phaftertax');
+
+          phaftertax.forEach(function(ph) {
+             ph.placeholder = "Profit After Tax";
+          });
+
+          const show_aftertax = document.querySelectorAll('.aftertaxhide');
+          show_aftertax.forEach(function(field) {
+             field.style.display = "block";
+          });
 
           // Net Profit/Loss of Previous Year
           document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
@@ -544,8 +670,10 @@ h6 {
           document.querySelector('#tt19').innerHTML = "Row 223 in Income Statement";
           document.querySelector('#tt20').innerHTML = "Row 303 in Income Statement";
           document.querySelector('#tt21').innerHTML = "Row 240 in Income Statement";
-          //document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 59 in Balance Sheet";
-          //document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 32 in Balance Sheet";
+          document.querySelector('#tt22').innerHTML = "Profit for the accounting period before tax => Row 294 in Income Statement";
+          document.querySelector('#tt22RB').innerHTML = "Loss for the accounting period before tax => Row 295 in Income Statement";
+          document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 299 in Income Statement";
+          document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 300 in Income Statement";
 
           document.querySelector('#tt24').innerHTML = "Row 002 in Balance Sheet";
           document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 008 in Balance Sheet";
@@ -562,7 +690,8 @@ h6 {
           //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 002 in Balance Sheet";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
           document.querySelector('#tt20a').innerHTML = "Row 303 in Income Statement";
-          //document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 032 in Balance Sheet";
+          document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 299 in Income Statement";
+          document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 300 in Income Statement";
 
           document.querySelector('#tt2b').innerHTML = "Row 031 in Balance Sheet";
           document.querySelector('#tt10b').innerHTML = "Row 145 in Balance Sheet";
@@ -575,6 +704,19 @@ h6 {
           const placeholders = document.querySelectorAll('.tt15input');
           const products = document.querySelectorAll('.mergehide');
           const services = document.querySelectorAll('.mergehide2');
+
+          const mywraps = document.querySelectorAll('.mywrap');
+
+          mywraps.forEach(function(mywrap) {
+             mywrap.style.paddingLeft = "8px";
+             mywrap.style.marginRight = "-8px";
+          });
+
+          const mywraps2 = document.querySelectorAll('.mywrap2');
+
+          mywraps2.forEach(function(mywrap) {
+             mywrap.style.width = "355px";
+          });
 
           products.forEach(function(product) {
              product.style.display = "none";
@@ -1333,13 +1475,13 @@ h6 {
             tabindex="9"
             placeholder="${ parent.decodeEntities(`Net Loss`) } "
                       onInput=${parent.handleChange}
-              aria-invalid=${validation.errors['net-profit-loss'] ? 'true' : 'false'}
+              aria-invalid=${validation.errors['net-profit-lossRB'] ? 'true' : 'false'}
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
                   <${validation.ErrorMessage}
               errors=${validation.errors}
-              name="net-profit-loss"
+              name="net-profit-lossRB"
               as=${html`<span className="mf-error-message"></span>`}
               />
 
@@ -1704,7 +1846,7 @@ h6 {
                   </div>
                 </div>
 
-                <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                <div className="mywrap elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                 <div className="elementor-widget-wrap elementor-element-populated">
                 <!-- IMPORTANT -->
                 <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -1719,7 +1861,7 @@ h6 {
                     <label>Revenue (Other Sale)</label>
                     <span class="tooltiptext" id="tt18">Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement</span>
                     </div>
-                    <input type="number" tabindex="19" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ncia" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                    <input type="number" tabindex="19" defaultValue="" className="mf-input mywrap2" id="mf-input-email-094f2a0" name="ncia" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
                       <${validation.ErrorMessage} errors=${validation.errors} name="ncia" as=${html`<span className="mf-error-message"></span>`}
@@ -1748,7 +1890,7 @@ h6 {
                     </div>
                     <input
                       type="number"
-                      className="mf-input "
+                      className="mf-input amordep"
                       id="mf-input-text-d5f534d"
                       tabindex="20"
                       name="amortization"
@@ -1859,12 +2001,12 @@ h6 {
                             <br class="mobile" />
 
                             <div class="tt1">
-                            <label>Profit/Loss Before Tax</label>
+                            <label id="beforetaxlab">Profit/Loss Before Tax</label>
                             <span class="tooltiptext" id="tt22">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
                             </div>
                             <input
                               type="number"
-                              className="mf-input "
+                              className="mf-input phbeforetax"
                               id="mf-input-text-d5f534d"
                               tabindex="23"
                               name="profit-loss-before-tax"
@@ -1887,6 +2029,47 @@ h6 {
                       </div>
                     </div>
 
+
+                    <div className="beforetaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                    <div className="elementor-widget-wrap elementor-element-populated">
+                    <!-- IMPORTANT -->
+                            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+
+
+                              <div className="mf-input-wrapper">
+
+
+                            <br class="mobile" />
+
+                            <div class="tt1">
+                            <label>Loss Before Tax</label>
+                            <span class="tooltiptext" id="tt22RB">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
+                            </div>
+                            <input
+                              type="number"
+                              className="mf-input "
+                              id="mf-input-text-d5f534d"
+                              tabindex="23"
+                              name="profit-loss-before-taxRB"
+                              placeholder="${ parent.decodeEntities(`Loss Before Tax`) } "
+                                        onInput=${parent.handleChange}
+                                aria-invalid=${validation.errors['profit-loss-before-taxRB'] ? 'true' : 'false'}
+                                ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                      />
+
+                                    <${validation.ErrorMessage}
+                                errors=${validation.errors}
+                                name="profit-loss-before-taxRB"
+                                as=${html`<span className="mf-error-message"></span>`}
+                                />
+
+                              </div>
+
+
+                    </div>
+                      </div>
+                    </div>
+
                     <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                     <div className="elementor-widget-wrap elementor-element-populated">
                     <!-- IMPORTANT -->
@@ -1894,11 +2077,11 @@ h6 {
 
 
 
-                      <div className="mf-input-wrapper">
+                  <div className="mf-input-wrapper">
                   <br class="mobile" />
 
                   <div class="tt1">
-                  <label>Profit/Loss After Tax</label>
+                  <label id="aftertaxlab">Profit/Loss After Tax</label>
                   <span class="tooltiptext" id="tt23">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
                   </div>
                   <input
@@ -1928,9 +2111,51 @@ h6 {
                     </div>
                     </div>
 
-                    <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+
+                    <div className="aftertaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                     <div className="elementor-widget-wrap elementor-element-populated">
                     <!-- IMPORTANT -->
+                    <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+
+
+
+                  <div className="mf-input-wrapper">
+                  <br class="mobile" />
+
+                  <div class="tt1">
+                  <label>Loss After Tax</label>
+                  <span class="tooltiptext" id="tt23RB">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
+                  </div>
+                  <input
+                  type="number"
+                  className="mf-input "
+                  id="mf-input-text-d5f534d"
+                  tabindex="24"
+                  name="profit-loss-after-taxRB"
+                  placeholder="${ parent.decodeEntities(`Loss After Tax`) } "
+                            onInput=${parent.handleChange}
+                    aria-invalid=${validation.errors['profit-loss-after-taxRB'] ? 'true' : 'false'}
+                    ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                          />
+
+                        <${validation.ErrorMessage}
+                    errors=${validation.errors}
+                    name="profit-loss-after-taxRB"
+                    as=${html`<span className="mf-error-message"></span>`}
+                    />
+
+                  </div>
+
+
+
+
+                    </div>
+                    </div>
+                    </div>
+
+                    <!--
+                    <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                    <div className="elementor-widget-wrap elementor-element-populated">
                       <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
 
 
@@ -1943,7 +2168,7 @@ h6 {
 
                     <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                     <div className="elementor-widget-wrap elementor-element-populated">
-                    <!-- IMPORTANT -->
+
                         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
 
 
@@ -1952,6 +2177,8 @@ h6 {
 
                     </div>
                     </div>
+                    -->
+
                       </div>
 
 
@@ -2370,7 +2597,7 @@ h6 {
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
-          <div className="mf-input-wrapper">
+          <div className="mf-input-wrapper ">
 
           <br class="mobile" />
 
@@ -2459,7 +2686,7 @@ h6 {
           <div className="mf-input-wrapper">
             <br class="mobile" />
             <div class="tt1">
-            <label>Profit/Loss After Tax</label>
+            <label id="aftertaxlab2">Profit/Loss After Tax</label>
             <span class="tooltiptext" id="tt23a">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
             </div>
 
@@ -2478,6 +2705,40 @@ h6 {
             <${validation.ErrorMessage}
             errors=${validation.errors}
             name="profit-loss-after-tax2"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div className="aftertaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="elementor-widget-wrap elementor-element-populated">
+        <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div className="mf-input-wrapper">
+            <br class="mobile" />
+            <div class="tt1">
+            <label>Loss After Tax</label>
+            <span class="tooltiptext" id="tt23aRB">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
+            </div>
+
+            <input
+            type="number"
+            className="mf-input "
+            id="mf-input-text-13c1826"
+            name="profit-loss-after-tax2RB"
+            tabindex="39"
+            placeholder="${ parent.decodeEntities(`Loss After Tax`) } "
+              onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['profit-loss-after-tax2RB'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
+            <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="profit-loss-after-tax2RB"
             as=${html`<span className="mf-error-message"></span>`}
             />
 

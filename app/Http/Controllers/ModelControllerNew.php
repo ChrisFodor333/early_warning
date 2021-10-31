@@ -110,12 +110,18 @@ class ModelControllerNew extends Controller
   $b22 = request()->get('revenue-merch');
   $b25 = request()->get('amortization');
   $b29 = request()->get('profit-loss-before-tax');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $b29 = request()->get('profit-loss-before-tax') + request()->get('profit-loss-before-taxRB');
+  }
   $b14 = request()->get('provisions');
 
   $b6 = request()->get('current-assets');
   // IF CURRENT YEAR < 2014 THEN 0
   $b23_1 = request()->get('revenue-p');
   $b30 = request()->get('profit-loss-after-tax');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $b30 = request()->get('profit-loss-after-tax') + request()->get('profit-loss-after-taxRB');
+  }
   $b16 = request()->get('current-liabilities');
 
   $b7 = request()->get('inventory');
@@ -156,6 +162,9 @@ class ModelControllerNew extends Controller
   $c27 = request()->get('securities-shares2');
   $c5 = request()->get('non-current-assets2');
   $c30 = request()->get('profit-loss-after-tax2');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $c30 = request()->get('profit-loss-after-tax2') + request()->get('profit-loss-after-tax2RB');
+  }
   $c11 = request()->get('equity2');
   $c2 = request()->get('totalassets2');
   $c14 = request()->get('provisions2');
