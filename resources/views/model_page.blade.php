@@ -279,22 +279,22 @@ h6 {
          ph.placeholder = "Amortization/Depre...";
       });
 
+      const mywraps = document.querySelectorAll('.mywrap');
+
+      mywraps.forEach(function(mywrap) {
+         mywrap.style.paddingLeft = "0px";
+         mywrap.style.marginRight = "0px";
+      });
+
+      const mywraps2 = document.querySelectorAll('.mywrap2');
+
+      mywraps2.forEach(function(mywrap) {
+         mywrap.style.width = "200px";
+      });
+
 
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
-
-          const mywraps = document.querySelectorAll('.mywrap');
-
-          mywraps.forEach(function(mywrap) {
-             mywrap.style.paddingLeft = "0px";
-             mywrap.style.marginRight = "0px";
-          });
-
-          const mywraps2 = document.querySelectorAll('.mywrap2');
-
-          mywraps2.forEach(function(mywrap) {
-             mywrap.style.width = "200px";
-          });
 
           document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
