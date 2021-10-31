@@ -167,6 +167,24 @@ h6 {
 
     function countryChange() {
 
+      document.querySelector('#revchange').innerHTML = "Revenue (Merchandise)";
+      document.querySelector('#revchange2').innerHTML = "Revenue (Merchandise)";
+      const placeholders = document.querySelectorAll('.tt15input');
+      const products = document.querySelectorAll('.mergehide');
+      const services = document.querySelectorAll('.mergehide2');
+
+      products.forEach(function(product) {
+         product.style.display = "block";
+      });
+
+      services.forEach(function(service) {
+         service.style.display = "block";
+      });
+
+      placeholders.forEach(function(ph) {
+         ph.placeholder = "Revenue (Merch)";
+      });
+
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
 
@@ -275,6 +293,24 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Hungary") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/hu.png";
+          document.querySelector('#revchange').innerHTML = "Income from Sales";
+          document.querySelector('#revchange2').innerHTML = "Income from Sales";
+          const placeholders = document.querySelectorAll('.tt15input');
+          const products = document.querySelectorAll('.mergehide');
+          const services = document.querySelectorAll('.mergehide2');
+
+          products.forEach(function(product) {
+             product.style.display = "none";
+          });
+
+          services.forEach(function(service) {
+             service.style.display = "none";
+          });
+
+
+          placeholders.forEach(function(ph) {
+             ph.placeholder = "Income from Sales";
+          });
 
           document.querySelector('#tt1').innerHTML = "Row 052 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 026 in Balance Sheet";
@@ -290,7 +326,7 @@ h6 {
           document.querySelector('#tt12').innerHTML = "Row 083 in Balance Sheet";
           document.querySelector('#tt13').innerHTML = "Row 081 in Balance Sheet";
           document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 090 in Balance Sheet";
-          document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row I. in Income Statement";
+          document.querySelector('#tt15').innerHTML = "Row I. in Income Statement";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row I. in Income Statement";
           document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row I. in Income Statement";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row III. in Income Statement";
@@ -330,52 +366,69 @@ h6 {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
 
           document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
-          document.querySelector('#tt2').innerHTML = "Row 145 in Balance Sheet";
-          document.querySelector('#tt3').innerHTML = "Row 144 in Balance Sheet";
-          document.querySelector('#tt4').innerHTML = "Row 150 in Balance Sheet";
-          document.querySelector('#tt5').innerHTML = "Row 047 in Balance Sheet";
-          //document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet";
-          document.querySelector('#tt7').innerHTML = "Row 202 in Income Statement";
-          document.querySelector('#tt8').innerHTML = "Row 206 in Income Statement";
-          document.querySelector('#tt9').innerHTML = "Row 206 in Income Statement";
-          document.querySelector('#tt10').innerHTML = "Row 246 in Income Statement";
-          document.querySelector('#tt11').innerHTML = "Row 223 in Income Statement";
-          document.querySelector('#tt12').innerHTML = "Row 031 in Balance Sheet";
-          document.querySelector('#tt13').innerHTML = "Row 303 in Income Statement";
-          document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 240 in Income Statement";
-          //document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
-          //document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
-          document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 002 in Balance Sheet";
-          document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Balance Sheet";
-          document.querySelector('#tt19').innerHTML = "Row 21 in Balance Sheet";
-          document.querySelector('#tt20').innerHTML = "Row 136 in Balance Sheet";
-          document.querySelector('#tt21').innerHTML = "Row 140 in Balance Sheet";
-          document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 59 in Balance Sheet";
-          document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 32 in Balance Sheet";
+          document.querySelector('#tt2').innerHTML = "Row 031 in Balance Sheet";
+          document.querySelector('#tt3').innerHTML = "Row 032 in Balance Sheet";
+          document.querySelector('#tt4').innerHTML = "Row 039 in Balance Sheet";
+          document.querySelector('#tt5').innerHTML = "Row 056 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 061 in Balance Sheet";
+          document.querySelector('#tt7').innerHTML = "Row 101 in Balance Sheet";
+          //document.querySelector('#tt8').innerHTML = "Row 206 in Balance Sheet";
+          document.querySelector('#tt9').innerHTML = "Row 135 in Balance Sheet";
+          document.querySelector('#tt10').innerHTML = "Row 145 in Balance Sheet";
+          document.querySelector('#tt11').innerHTML = "Row 144 in Balance Sheet";
+          document.querySelector('#tt12').innerHTML = "Row 150 in Balance Sheet";
+          document.querySelector('#tt13').innerHTML = "Row 047 in Balance Sheet";
+          //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 240 in Income Statement";
+          document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
+          document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 206 in Income Statement";
+          document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
+          document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
+          document.querySelector('#tt19').innerHTML = "Row 223 in Income Statement";
+          document.querySelector('#tt20').innerHTML = "Row 303 in Income Statement";
+          document.querySelector('#tt21').innerHTML = "Row 240 in Income Statement";
+          //document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 59 in Balance Sheet";
+          //document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 32 in Balance Sheet";
 
-          document.querySelector('#tt24').innerHTML = "Row 039 in Balance Sheet";
-          document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 056 in Balance Sheet";
-          document.querySelector('#tt26').innerHTML = "Row 061 in Balance Sheet";
-          document.querySelector('#tt27').innerHTML = "Row 101 in Balance Sheet";
-          //document.querySelector('#tt28').innerHTML = "Row 121 in Balance Sheet";
-          document.querySelector('#tt29').innerHTML = "Row 135 in Income Statement";
+          document.querySelector('#tt24').innerHTML = "Row 002 in Balance Sheet";
+          document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 008 in Balance Sheet";
+          document.querySelector('#tt26').innerHTML = "Row 021 in Balance Sheet";
+          document.querySelector('#tt27').innerHTML = "Row 136 in Balance Sheet";
+          document.querySelector('#tt28').innerHTML = "Row 140 in Balance Sheet";
+          document.querySelector('#tt29').innerHTML = "Row 059 in Balance Sheet";
 
           document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
-          document.querySelector('#tt7a').innerHTML = "Row 202 in Income Statement";
-          document.querySelector('#tt11a').innerHTML = "Row 223 in Income Statement";
-          //document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 03 in Income Statement";
+          document.querySelector('#tt7a').innerHTML = "Row 101 in Balance Sheet";
+          document.querySelector('#tt11a').innerHTML = "Row 144 in Balance Sheet";
+          document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
           //document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
-          document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 002 in Balance Sheet";
-          document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 008 in Balance Sheet";
-          document.querySelector('#tt20a').innerHTML = "Row 136 in Balance Sheet";
-          document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 032 in Balance Sheet";
+          //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 002 in Balance Sheet";
+          document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
+          document.querySelector('#tt20a').innerHTML = "Row 303 in Income Statement";
+          //document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 032 in Balance Sheet";
 
-          document.querySelector('#tt2b').innerHTML = "Row 145 in Balance Sheet";
-          document.querySelector('#tt10b').innerHTML = "Row 246 in Income Statement";
+          document.querySelector('#tt2b').innerHTML = "Row 031 in Balance Sheet";
+          document.querySelector('#tt10b').innerHTML = "Row 145 in Balance Sheet";
         }
 
       if(document.querySelector('#countryselect').value == "Croatia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/cro.png";
+          document.querySelector('#revchange').innerHTML = "Income from Sales";
+          document.querySelector('#revchange2').innerHTML = "Income from Sales";
+          const placeholders = document.querySelectorAll('.tt15input');
+          const products = document.querySelectorAll('.mergehide');
+          const services = document.querySelectorAll('.mergehide2');
+
+          products.forEach(function(product) {
+             product.style.display = "none";
+          });
+
+          services.forEach(function(service) {
+             service.style.display = "none";
+          });
+
+          placeholders.forEach(function(ph) {
+             ph.placeholder = "Income from Sales";
+          });
 
           document.querySelector('#tt1').innerHTML = "Row 065 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 037 in Balance Sheet";
@@ -1304,10 +1357,10 @@ h6 {
                     <br class="mobile" />
 
                     <div class="tt1">
-                    <label>Revenue (Merchandise)</label>
+                    <label id="revchange">Revenue (Merchandise)</label>
                     <span class="tooltiptext" id="tt15">Revenue from the sale of merchandise => Row 03 in Income Statement</span>
                     </div>
-                    <input type="number" tabindex="16"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                    <input type="number" tabindex="16"  defaultValue="" className="mf-input tt15input" name="revenue-merch" placeholder="${ parent.decodeEntities(`Revenue (Merch)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-merch'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                       />
 
                         <${validation.ErrorMessage} errors=${validation.errors} name="revenue-merch" as=${html`<span className="mf-error-message"></span>`}
@@ -1321,7 +1374,7 @@ h6 {
               </div>
                 </div>
                 <div className="elementor-container elementor-column-gap-default">
-                <div id="mergehide" className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                <div className="mergehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
                 <div className="elementor-widget-wrap elementor-element-populated">
 
                 <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -1358,7 +1411,7 @@ h6 {
                 </div>
                 </div>
 
-                <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                <div className="mergehide2 elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                 <div className="elementor-widget-wrap elementor-element-populated">
                 <!-- IMPORTANT -->
                         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -1946,13 +1999,13 @@ h6 {
           <br class="mobile" />
 
           <div class="tt1">
-          <label>Revenue (Merchandise)</label>
+          <label id="revchange2">Revenue (Merchandise)</label>
           <span class="tooltiptext" id="tt15a">Revenue from the sale of merchandise => Row 03 in Income Statement</span>
           </div>
 
           <input
           type="number"
-          className="mf-input "
+          className="mf-input tt15input"
           id="mf-input-text-13c1826"
           name="revenue-merch2"
           tabindex="33"
@@ -1974,7 +2027,7 @@ h6 {
         </div>
         </div>
 
-        <div id="mergehide2" className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="mergehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -2010,7 +2063,7 @@ h6 {
         </div>
         </div>
         <div className="elementor-container elementor-column-gap-default">
-        <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+        <div className="mergehide2 elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
