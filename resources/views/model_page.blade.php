@@ -20,9 +20,11 @@ document.onkeypress = stopRKey;
     font-size: 13px;
   }
 
-  #siz2 {
+  #profitlosslab {
     font-size: 12px;
   }
+
+
 
   #siz3 {
     font-size: 12px;
@@ -91,7 +93,7 @@ transition: opacity 1s;
 display: none;
 }
 
-.adlhide {
+.adlhide, .hidle, .profitlosshide {
 display: none;
 }
 
@@ -214,6 +216,37 @@ h6 {
          deferral.style.display = "none";
       });
 
+      document.querySelector('#adlel').innerHTML = "Accruals/Deferrals (L & E)";
+      const phadle2 = document.querySelectorAll('.phadle');
+
+      phadle2.forEach(function(ph) {
+         ph.placeholder = "Accruals/Deferrals (L & E)";
+      });
+
+      const show_deferrals2 = document.querySelectorAll('.hidle');
+      show_deferrals2.forEach(function(deferral) {
+         deferral.style.display = "none";
+      });
+
+      // Net Profit/Loss of Previous Year
+      document.querySelector('#profitlosslab').innerHTML = "Net Profit/Loss of Previous Year";
+
+      document.querySelector('#profitlosslab').style.fontSize = "12px";
+
+      const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+      phprofitloss.forEach(function(ph) {
+         ph.placeholder = "Net Profit/Loss";
+      });
+
+      const show_profitloss = document.querySelectorAll('.profitlosshide');
+      show_profitloss.forEach(function(profitloss) {
+         profitloss.style.display = "none";
+      });
+
+      document.querySelector('#revchange').style.fontSize = "12px";
+      document.querySelector('#siz3').style.fontSize = "12px";
+
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
 
@@ -275,7 +308,6 @@ h6 {
           document.querySelector('#adl').innerHTML = "Accruals (A)";
           const phadl = document.querySelectorAll('.phadl');
 
-
           phadl.forEach(function(ph) {
              ph.placeholder = "Accruals (A)";
           });
@@ -283,6 +315,23 @@ h6 {
           const show_deferrals = document.querySelectorAll('.adlhide');
           show_deferrals.forEach(function(deferral) {
              deferral.style.display = "block";
+          });
+
+          // Net Profit/Loss of Previous Year
+          document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
+
+          document.querySelector('#profitlosslab').style.fontSize = "10px";
+          document.querySelector('#profitlosslab2').style.fontSize = "10px";
+
+          const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+          phprofitloss.forEach(function(ph) {
+             ph.placeholder = "Net Profit";
+          });
+
+          const show_profitloss = document.querySelectorAll('.profitlosshide');
+          show_profitloss.forEach(function(profitloss) {
+             profitloss.style.display = "block";
           });
 
 
@@ -308,9 +357,10 @@ h6 {
           document.querySelector('#tt3').innerHTML = "Row 005 in Balance Sheet";
           document.querySelector('#tt4').innerHTML = "Row 006 in Balance Sheet";
           document.querySelector('#tt5').innerHTML = "Row 008 in Balance Sheet";
-          document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 010 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Accruals (within Assets section) => Row 010 in Balance Sheet";
           document.querySelector('#tt7').innerHTML = "Row 046 in Balance Sheet";
-          //document.querySelector('#tt8').innerHTML = "Row 097 in Balance Sheet";
+          document.querySelector('#tt8').innerHTML = "Row 041 in Balance Sheet";
+          document.querySelector('#tt8RB').innerHTML = "Row 042 in Balance Sheet";
           //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
           document.querySelector('#tt10').innerHTML = "Row 013 in Balance Sheet";
           document.querySelector('#tt11').innerHTML = "Row 017 in Balance Sheet";
@@ -425,10 +475,43 @@ h6 {
       if(document.querySelector('#countryselect').value == "Bosnia and Herzegovina") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
 
+          // Net Profit/Loss of Previous Year
+          document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
+
+
+          document.querySelector('#revchange').style.fontSize = "12px";
+          document.querySelector('#siz3').style.fontSize = "9px";
+
+          document.querySelector('#profitlosslab').style.fontSize = "10px";
+          document.querySelector('#profitlosslab2').style.fontSize = "10px";
+
+          const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+          phprofitloss.forEach(function(ph) {
+             ph.placeholder = "Net Profit";
+          });
+
+          const show_profitloss = document.querySelectorAll('.profitlosshide');
+          show_profitloss.forEach(function(profitloss) {
+             profitloss.style.display = "block";
+          });
+
           document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
           document.querySelector('#revenueproducts2').innerHTML = "Revenue (P & S)";
           const placeholders = document.querySelectorAll('.phrevenuep');
           const services = document.querySelectorAll('.mergehide2');
+
+          document.querySelector('#adlel').innerHTML = "Accruals (L & E)";
+          const phadle = document.querySelectorAll('.phadle');
+
+          phadle.forEach(function(ph) {
+             ph.placeholder = "Accruals (L & E)";
+          });
+
+          const show_deferrals = document.querySelectorAll('.hidle');
+          show_deferrals.forEach(function(deferral) {
+             deferral.style.display = "block";
+          });
 
 
           services.forEach(function(service) {
@@ -446,13 +529,14 @@ h6 {
           document.querySelector('#tt5').innerHTML = "Row 056 in Balance Sheet";
           document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 061 in Balance Sheet";
           document.querySelector('#tt7').innerHTML = "Row 101 in Balance Sheet";
-          //document.querySelector('#tt8').innerHTML = "Row 206 in Balance Sheet";
+          document.querySelector('#tt8').innerHTML = "Row 120 in Balance Sheet";
+          document.querySelector('#tt8RB').innerHTML = "Row 124 in Balance Sheet";
           document.querySelector('#tt9').innerHTML = "Row 135 in Balance Sheet";
           document.querySelector('#tt10').innerHTML = "Row 145 in Balance Sheet";
           document.querySelector('#tt11').innerHTML = "Row 144 in Balance Sheet";
           document.querySelector('#tt12').innerHTML = "Row 150 in Balance Sheet";
           document.querySelector('#tt13').innerHTML = "Row 047 in Balance Sheet";
-          //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 240 in Income Statement";
+          document.querySelector('#tt14').innerHTML = "Accruals (within Liabilities and Equity section) => Row 162 in Income Statement";
           document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
           //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
@@ -1125,7 +1209,7 @@ h6 {
 
                   <div class="tt1">
                   <label id="adl2">Deferrals (A)</label>
-                  <span class="tooltiptext" id="tt6">Accruals/Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                  <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
                   </div>
                   <input
                     type="number"
@@ -1199,16 +1283,55 @@ h6 {
             <br class="mobile" />
 
             <div class="tt1">
-            <label id="siz2">Net Profit/Loss of Previous Years </label>
+            <label id="profitlosslab">Net Profit/Loss of Previous Years</label>
             <span class="tooltiptext" id="tt8">Row 097 in Balance Sheet</span>
+            </div>
+            <input
+            type="number"
+            className="mf-input phprofitloss"
+            id="mf-input-text-d5f534d"
+            name="net-profit-loss"
+            tabindex="9"
+            placeholder="${ parent.decodeEntities(`Net Profit/Loss`) } "
+                      onInput=${parent.handleChange}
+              aria-invalid=${validation.errors['net-profit-loss'] ? 'true' : 'false'}
+              ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                    />
+
+                  <${validation.ErrorMessage}
+              errors=${validation.errors}
+              name="net-profit-loss"
+              as=${html`<span className="mf-error-message"></span>`}
+              />
+
+                </div>
+
+
+          </div>
+          </div>
+          </div>
+
+          <div className="profitlosshide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+          <div className="elementor-widget-wrap elementor-element-populated">
+          <!-- IMPORTANT -->
+          <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+
+            <div className="mf-input-wrapper">
+
+
+            <br class="mobile" />
+
+            <div class="tt1">
+            <label id="profitlosslab2">Net Loss of Previous Years</label>
+            <span class="tooltiptext" id="tt8RB">Row 097 in Balance Sheet</span>
             </div>
             <input
             type="number"
             className="mf-input "
             id="mf-input-text-d5f534d"
-            name="net-profit-loss"
+            name="net-profit-lossRB"
             tabindex="9"
-            placeholder="${ parent.decodeEntities(`Net Profit/Loss`) } "
+            placeholder="${ parent.decodeEntities(`Net Loss`) } "
                       onInput=${parent.handleChange}
               aria-invalid=${validation.errors['net-profit-loss'] ? 'true' : 'false'}
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -1430,12 +1553,12 @@ h6 {
                   <div className="mf-input-wrapper">
                       <br class="mobile" />
                     <div class="tt1">
-                    <label>Accruals/Deferrals (L & E)</label>
+                    <label id="adlel">Accruals/Deferrals (L & E)</label>
                     <span class="tooltiptext" id="tt14">Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet</span>
                     </div>
                   <input
                     type="number"
-                    className="mf-input "
+                    className="mf-input phadle"
                     id="mf-input-text-d5f534d"
                     name="ad"
                     tabindex="15"
@@ -1452,12 +1575,42 @@ h6 {
                       />
 
                   </div>
-
-
-
-
+              </div>
+              </div>
               </div>
 
+
+              <div className="hidle elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+              <div className="elementor-widget-wrap elementor-element-populated">
+              <!-- IMPORTANT -->
+                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+
+                  <div className="mf-input-wrapper">
+                      <br class="mobile" />
+                    <div class="tt1">
+                    <label>Deferrals (L & E)</label>
+                    <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                    </div>
+                  <input
+                    type="number"
+                    className="mf-input "
+                    id="mf-input-text-d5f534d"
+                    name="adB"
+                    tabindex="15"
+                    placeholder="${ parent.decodeEntities(`Deferrals (L & E)`) } "
+                              onInput=${parent.handleChange}
+                      aria-invalid=${validation.errors['adB'] ? 'true' : 'false'}
+                      ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                            />
+
+                          <${validation.ErrorMessage}
+                      errors=${validation.errors}
+                      name="adB"
+                      as=${html`<span className="mf-error-message"></span>`}
+                      />
+
+                  </div>
+              </div>
               </div>
               </div>
 

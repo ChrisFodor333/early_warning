@@ -122,18 +122,26 @@ class ModelControllerNew extends Controller
   $b23_2 = request()->get('revenue-s');
   $b11 = request()->get('equity');
   $b20 = request()->get('ad');
+  if($country == "Bosnia and Herzegovina") {
+  $b20 = request()->get('ad') + request()->get('adB');
+  }
 
   $b9 = request()->get('financial-accounts');
   $b27 = request()->get('securities-shares');
   $b12 = request()->get('net-profit-loss');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $b12 = request()->get('net-profit-loss') + request()->get('net-profit-lossRB');
+  }
 
   $b8 = request()->get('current-receivables');
   $b17 = request()->get('financial-assistance');
   $b19 = request()->get('current-bank-loans');
   $b26 = request()->get('ncia');
-
-
   $b10 = request()->get('ad-total') + request()->get('ad-totalR');
+  if($country == "Romania") {
+    $b10 = request()->get('ad-total');
+  }
+
   $b28 = request()->get('interest-expense');
   $b13 = request()->get('liabilities');
 
