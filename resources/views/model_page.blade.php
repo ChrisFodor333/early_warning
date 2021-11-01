@@ -2036,14 +2036,11 @@ h6 {
                             <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
 
 
-                              <div className="mf-input-wrapper">
-
-
+                            <div className="mf-input-wrapper">
                             <br class="mobile" />
-
                             <div class="tt1">
                             <label>Loss Before Tax</label>
-                            <span class="tooltiptext" id="tt22RB">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
+                            <span class="tooltiptext" id="tt22RB">Loss for the accounting period before tax => Row 56 in Income Statement</span>
                             </div>
                             <input
                               type="number"
@@ -2052,17 +2049,15 @@ h6 {
                               tabindex="23"
                               name="profit-loss-before-taxRB"
                               placeholder="${ parent.decodeEntities(`Loss Before Tax`) } "
-                                        onInput=${parent.handleChange}
-                                aria-invalid=${validation.errors['profit-loss-before-taxRB'] ? 'true' : 'false'}
-                                ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
-                                      />
-
-                                    <${validation.ErrorMessage}
-                                errors=${validation.errors}
-                                name="profit-loss-before-taxRB"
-                                as=${html`<span className="mf-error-message"></span>`}
-                                />
-
+                              onInput=${parent.handleChange}
+                              aria-invalid=${validation.errors['profit-loss-before-taxRB'] ? 'true' : 'false'}
+                              ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                    />
+                                  <${validation.ErrorMessage}
+                              errors=${validation.errors}
+                              name="profit-loss-before-taxRB"
+                              as=${html`<span className="mf-error-message"></span>`}
+                              />
                               </div>
 
 
@@ -2124,7 +2119,7 @@ h6 {
 
                   <div class="tt1">
                   <label>Loss After Tax</label>
-                  <span class="tooltiptext" id="tt23RB">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
+                  <span class="tooltiptext" id="tt23RB">Loss for the accounting period after tax => Row 61 in Income Statement</span>
                   </div>
                   <input
                   type="number"

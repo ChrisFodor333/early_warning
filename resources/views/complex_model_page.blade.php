@@ -97,7 +97,9 @@
    cursor: help;
  }
 
-
+ .adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide {
+ display: none;
+ }
 
   .tt1 {
     position: relative;
@@ -236,6 +238,121 @@ display: none;
       <script class="mf-template">
 
       function countryChange() {
+
+        document.querySelector('#revchange').innerHTML = "Revenue (Merchandise)";
+        document.querySelector('#revchange2').innerHTML = "Revenue (Merchandise)";
+        document.querySelector('#revchange3').innerHTML = "Revenue (Merchandise)";
+
+        const placeholders = document.querySelectorAll('.tt15input');
+        const products = document.querySelectorAll('.mergehide');
+        const services = document.querySelectorAll('.mergehide2');
+
+        products.forEach(function(product) {
+           product.style.display = "block";
+        });
+
+        services.forEach(function(service) {
+           service.style.display = "block";
+        });
+
+        placeholders.forEach(function(ph) {
+           ph.placeholder = "Revenue (Merch)";
+        });
+
+        document.querySelector('#revenueproducts').innerHTML = "Revenue (Products)";
+        document.querySelector('#revenueproducts2').innerHTML = "Revenue (Products)";
+        document.querySelector('#revenueproducts3').innerHTML = "Revenue (Products)";
+        const placeholders2 = document.querySelectorAll('.phrevenuep');
+
+
+        placeholders2.forEach(function(ph) {
+           ph.placeholder = "Revenue (Products)";
+        });
+
+
+        document.querySelector('#adl').innerHTML = "Accruals/Deferrals (A)";
+        document.querySelector('#adl2').innerHTML = "Accruals/Deferrals (A)";
+        document.querySelector('#adl3').innerHTML = "Accruals/Deferrals (A)";
+
+        const phadl = document.querySelectorAll('.phadl');
+
+
+        phadl.forEach(function(ph) {
+           ph.placeholder = "Accruals/Deferrals (A)";
+        });
+
+        const show_deferrals = document.querySelectorAll('.adlhide');
+        show_deferrals.forEach(function(deferral) {
+           deferral.style.display = "none";
+        });
+
+        document.querySelector('#adlel').innerHTML = "Accruals/Deferrals (L & E)";
+        document.querySelector('#adlel2').innerHTML = "Accruals/Deferrals (L & E)";
+        document.querySelector('#adlel3').innerHTML = "Accruals/Deferrals (L & E)";
+
+
+        const phadle2 = document.querySelectorAll('.phadle');
+
+        phadle2.forEach(function(ph) {
+           ph.placeholder = "Accruals/Deferrals";
+        });
+
+        const show_deferrals2 = document.querySelectorAll('.hidle');
+        show_deferrals2.forEach(function(deferral) {
+           deferral.style.display = "none";
+        });
+
+        // Net Profit/Loss of Previous Year
+        document.querySelector('#profitlosslab').innerHTML = "Net Profit/Loss of Previous Year";
+        document.querySelector('#profitlosslab2').innerHTML = "Net Profit/Loss of Previous Year";
+        document.querySelector('#profitlosslab3').innerHTML = "Net Profit/Loss of Previous Year";
+
+
+        const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+        phprofitloss.forEach(function(ph) {
+           ph.placeholder = "Net Profit/Loss";
+        });
+
+        const show_profitloss = document.querySelectorAll('.profitlosshide');
+        show_profitloss.forEach(function(profitloss) {
+           profitloss.style.display = "none";
+        });
+
+
+        //Profit/Loss Before Tax
+        document.querySelector('#beforetaxlab').innerHTML = "Profit/Loss Before Tax";
+        document.querySelector('#beforetaxlab2').innerHTML = "Profit/Loss Before Tax";
+        document.querySelector('#beforetaxlab3').innerHTML = "Profit/Loss Before Tax";
+
+        const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+        phbeforetax.forEach(function(ph) {
+           ph.placeholder = "Profit/Loss Before Tax";
+        });
+
+        const show_beforetax = document.querySelectorAll('.beforetaxhide');
+        show_beforetax.forEach(function(field) {
+           field.style.display = "none";
+        });
+
+        //Profit/Loss After Tax
+        document.querySelector('#aftertaxlab').innerHTML = "Profit/Loss After Tax";
+        document.querySelector('#aftertaxlab2').innerHTML = "Profit/Loss After Tax";
+        document.querySelector('#aftertaxlab3').innerHTML = "Profit/Loss After Tax";
+
+        const phaftertax = document.querySelectorAll('.phaftertax');
+
+        phaftertax.forEach(function(ph) {
+           ph.placeholder = "Profit/Loss After Tax";
+        });
+
+        const show_aftertax = document.querySelectorAll('.aftertaxhide');
+        show_aftertax.forEach(function(field) {
+           field.style.display = "none";
+        });
+
+
         if(document.querySelector('#countryselect').value == "Slovakia") {
             document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
 
@@ -449,43 +566,13 @@ display: none;
               document.querySelector('#countryimage').src = "/early_warning/assets/inc/aus.png";
             }
 
-            if(document.querySelector('#countryselect').value == "Romania") {
-                document.querySelector('#countryimage').src = "/early_warning/assets/inc/rom.png";
-                document.querySelector('#provis').innerHTML = "Provisions";
-                document.querySelector('#provis2').innerHTML = "Provisions";
-                document.querySelector('#provis3').innerHTML = "Provisions";
-
-                document.querySelector('#adl').innerHTML = "Accruals (A)";
-                const phadl = document.querySelectorAll('.phadl');
-
-                phadl.forEach(function(ph) {
-                   ph.placeholder = "Accruals (A)";
-                });
-
-                const show_deferrals = document.querySelectorAll('.adlhide');
-                show_deferrals.forEach(function(deferral) {
-                   deferral.style.display = "block";
-                });
-
-                // Net Profit/Loss of Previous Year
-                document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
-
-                document.querySelector('#profitlosslab').style.fontSize = "10px";
-                document.querySelector('#profitlosslab2').style.fontSize = "10px";
-
-                const phprofitloss = document.querySelectorAll('.phprofitloss');
-
-                phprofitloss.forEach(function(ph) {
-                   ph.placeholder = "Net Profit";
-                });
-
-                const show_profitloss = document.querySelectorAll('.profitlosshide');
-                show_profitloss.forEach(function(profitloss) {
-                   profitloss.style.display = "block";
-                });
+            if(document.querySelector('#countryselect').value == "Bosnia and Herzegovina") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
 
                 //Profit/Loss Before Tax
                 document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
+                document.querySelector('#beforetaxlab2').innerHTML = "Profit Before Tax";
+                document.querySelector('#beforetaxlab3').innerHTML = "Profit Before Tax";
                 const phbeforetax = document.querySelectorAll('.phbeforetax');
 
                 phbeforetax.forEach(function(ph) {
@@ -500,6 +587,218 @@ display: none;
                 //Profit/Loss After Tax
                 document.querySelector('#aftertaxlab').innerHTML = "Profit After Tax";
                 document.querySelector('#aftertaxlab2').innerHTML = "Profit After Tax";
+                document.querySelector('#aftertaxlab3').innerHTML = "Profit After Tax";
+                const phaftertax = document.querySelectorAll('.phaftertax');
+
+                phaftertax.forEach(function(ph) {
+                   ph.placeholder = "Profit After Tax";
+                });
+
+                const show_aftertax = document.querySelectorAll('.aftertaxhide');
+                show_aftertax.forEach(function(field) {
+                   field.style.display = "block";
+                });
+
+                // Net Profit/Loss of Previous Year
+                document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
+                document.querySelector('#profitlosslab2').innerHTML = "Net Profit of Previous Year";
+                document.querySelector('#profitlosslab3').innerHTML = "Net Profit of Previous Year";
+
+
+
+                const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+                phprofitloss.forEach(function(ph) {
+                   ph.placeholder = "Net Profit";
+                });
+
+                const show_profitloss = document.querySelectorAll('.profitlosshide');
+                show_profitloss.forEach(function(profitloss) {
+                   profitloss.style.display = "block";
+                });
+
+                document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
+                document.querySelector('#revenueproducts2').innerHTML = "Revenue (P & S)";
+                document.querySelector('#revenueproducts3').innerHTML = "Revenue (P & S)";
+
+                const placeholders = document.querySelectorAll('.phrevenuep');
+                const services = document.querySelectorAll('.mergehide2');
+
+                document.querySelector('#adlel').innerHTML = "Accruals (L & E)";
+                document.querySelector('#adlel2').innerHTML = "Accruals (L & E)";
+                document.querySelector('#adlel3').innerHTML = "Accruals (L & E)";
+
+                const phadle = document.querySelectorAll('.phadle');
+
+                phadle.forEach(function(ph) {
+                   ph.placeholder = "Accruals (L & E)";
+                });
+
+                const show_deferrals = document.querySelectorAll('.hidle');
+                show_deferrals.forEach(function(deferral) {
+                   deferral.style.display = "block";
+                });
+
+
+                services.forEach(function(service) {
+                   service.style.display = "none";
+                });
+
+                placeholders.forEach(function(ph) {
+                   ph.placeholder = "Revenue (P & S)";
+                });
+
+                document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2').innerHTML = "Row 031 in Balance Sheet";
+                document.querySelector('#tt3').innerHTML = "Row 032 in Balance Sheet";
+                document.querySelector('#tt4').innerHTML = "Row 039 in Balance Sheet";
+                document.querySelector('#tt5').innerHTML = "Row 056 in Balance Sheet";
+                document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 061 in Balance Sheet";
+                document.querySelector('#tt7').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt8').innerHTML = "Row 120 in Balance Sheet";
+                document.querySelector('#tt8RB').innerHTML = "Row 124 in Balance Sheet";
+                document.querySelector('#tt9').innerHTML = "Row 135 in Balance Sheet";
+                document.querySelector('#tt10').innerHTML = "Row 145 in Balance Sheet";
+                document.querySelector('#tt11').innerHTML = "Row 144 in Balance Sheet";
+                document.querySelector('#tt12').innerHTML = "Row 150 in Balance Sheet";
+                document.querySelector('#tt13').innerHTML = "Row 047 in Balance Sheet";
+                document.querySelector('#tt14').innerHTML = "Accruals (within Liabilities and Equity section) => Row 162 in Income Statement";
+                document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
+                document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
+                //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
+                document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
+                document.querySelector('#tt19').innerHTML = "Row 223 in Income Statement";
+                document.querySelector('#tt20').innerHTML = "Row 303 in Income Statement";
+                document.querySelector('#tt21').innerHTML = "Row 240 in Income Statement";
+                document.querySelector('#tt22').innerHTML = "Profit for the accounting period before tax => Row 294 in Income Statement";
+                document.querySelector('#tt22RB').innerHTML = "Loss for the accounting period before tax => Row 295 in Income Statement";
+                document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 299 in Income Statement";
+                document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 300 in Income Statement";
+
+                document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2a').innerHTML = "Row 031 in Balance Sheet";
+                document.querySelector('#tt3a').innerHTML = "Row 032 in Balance Sheet";
+                document.querySelector('#tt4a').innerHTML = "Row 039 in Balance Sheet";
+                document.querySelector('#tt5a').innerHTML = "Row 056 in Balance Sheet";
+                document.querySelector('#tt6a').innerHTML = "Accruals/Deferrals (within Assets section) => Row 061 in Balance Sheet";
+                document.querySelector('#tt7a').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt8a').innerHTML = "Row 120 in Balance Sheet";
+                document.querySelector('#tt8aRB').innerHTML = "Row 124 in Balance Sheet";
+                document.querySelector('#tt9a').innerHTML = "Row 135 in Balance Sheet";
+                document.querySelector('#tt10a').innerHTML = "Row 145 in Balance Sheet";
+                document.querySelector('#tt11a').innerHTML = "Row 144 in Balance Sheet";
+                document.querySelector('#tt12a').innerHTML = "Row 150 in Balance Sheet";
+                document.querySelector('#tt13a').innerHTML = "Row 047 in Balance Sheet";
+                document.querySelector('#tt14a').innerHTML = "Accruals (within Liabilities and Equity section) => Row 162 in Income Statement";
+                document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
+                document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
+                //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
+                document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
+                document.querySelector('#tt19a').innerHTML = "Row 223 in Income Statement";
+                document.querySelector('#tt20a').innerHTML = "Row 303 in Income Statement";
+                document.querySelector('#tt21a').innerHTML = "Row 240 in Income Statement";
+                document.querySelector('#tt22a').innerHTML = "Profit for the accounting period before tax => Row 294 in Income Statement";
+                document.querySelector('#tt22aRB').innerHTML = "Loss for the accounting period before tax => Row 295 in Income Statement";
+                document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 299 in Income Statement";
+                document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 300 in Income Statement";
+
+
+                document.querySelector('#tt1b').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2b').innerHTML = "Row 031 in Balance Sheet";
+                document.querySelector('#tt3b').innerHTML = "Row 032 in Balance Sheet";
+                document.querySelector('#tt4b').innerHTML = "Row 039 in Balance Sheet";
+                document.querySelector('#tt5b').innerHTML = "Row 056 in Balance Sheet";
+                document.querySelector('#tt6b').innerHTML = "Accruals/Deferrals (within Assets section) => Row 061 in Balance Sheet";
+                document.querySelector('#tt7b').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt8b').innerHTML = "Row 120 in Balance Sheet";
+                document.querySelector('#tt8bRB').innerHTML = "Row 124 in Balance Sheet";
+                document.querySelector('#tt9b').innerHTML = "Row 135 in Balance Sheet";
+                document.querySelector('#tt10b').innerHTML = "Row 145 in Balance Sheet";
+                document.querySelector('#tt11b').innerHTML = "Row 144 in Balance Sheet";
+                document.querySelector('#tt12b').innerHTML = "Row 150 in Balance Sheet";
+                document.querySelector('#tt13b').innerHTML = "Row 047 in Balance Sheet";
+                document.querySelector('#tt14b').innerHTML = "Accruals (within Liabilities and Equity section) => Row 162 in Income Statement";
+                document.querySelector('#tt15b').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
+                document.querySelector('#tt16b').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
+                //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
+                document.querySelector('#tt18b').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
+                document.querySelector('#tt19b').innerHTML = "Row 223 in Income Statement";
+                document.querySelector('#tt20b').innerHTML = "Row 303 in Income Statement";
+                document.querySelector('#tt21b').innerHTML = "Row 240 in Income Statement";
+                document.querySelector('#tt22b').innerHTML = "Profit for the accounting period before tax => Row 294 in Income Statement";
+                document.querySelector('#tt22bRB').innerHTML = "Loss for the accounting period before tax => Row 295 in Income Statement";
+                document.querySelector('#tt23b').innerHTML = "Profit for the accounting period after tax => Row 299 in Income Statement";
+                document.querySelector('#tt23bRB').innerHTML = "Loss for the accounting period after tax => Row 300 in Income Statement";
+
+                document.querySelector('#tt24').innerHTML = "Row 002 in Balance Sheet";
+                document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 008 in Balance Sheet";
+                document.querySelector('#tt26').innerHTML = "Row 021 in Balance Sheet";
+                document.querySelector('#tt27').innerHTML = "Row 136 in Balance Sheet";
+                document.querySelector('#tt28').innerHTML = "Row 140 in Balance Sheet";
+                document.querySelector('#tt29').innerHTML = "Row 059 in Balance Sheet";
+
+
+              }
+
+
+            if(document.querySelector('#countryselect').value == "Romania") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/rom.png";
+                document.querySelector('#provis').innerHTML = "Provisions";
+                document.querySelector('#provis2').innerHTML = "Provisions";
+                document.querySelector('#provis3').innerHTML = "Provisions";
+
+                document.querySelector('#adl').innerHTML = "Accruals (A)";
+                document.querySelector('#adl2').innerHTML = "Accruals (A)";
+                document.querySelector('#adl3').innerHTML = "Accruals (A)";
+
+                const phadl = document.querySelectorAll('.phadl');
+
+                phadl.forEach(function(ph) {
+                   ph.placeholder = "Accruals (A)";
+                });
+
+                const show_deferrals = document.querySelectorAll('.adlhide');
+                show_deferrals.forEach(function(deferral) {
+                   deferral.style.display = "block";
+                });
+
+                // Net Profit/Loss of Previous Year
+                document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
+                document.querySelector('#profitlosslab2').innerHTML = "Net Profit of Previous Year";
+                document.querySelector('#profitlosslab3').innerHTML = "Net Profit of Previous Year";
+
+
+                const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+                phprofitloss.forEach(function(ph) {
+                   ph.placeholder = "Net Profit";
+                });
+
+                const show_profitloss = document.querySelectorAll('.profitlosshide');
+                show_profitloss.forEach(function(profitloss) {
+                   profitloss.style.display = "block";
+                });
+
+                //Profit/Loss Before Tax
+                document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
+                document.querySelector('#beforetaxlab2').innerHTML = "Profit Before Tax";
+                document.querySelector('#beforetaxlab3').innerHTML = "Profit Before Tax";
+
+                const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+                phbeforetax.forEach(function(ph) {
+                   ph.placeholder = "Profit Before Tax";
+                });
+
+                const show_beforetax = document.querySelectorAll('.beforetaxhide');
+                show_beforetax.forEach(function(field) {
+                   field.style.display = "block";
+                });
+
+                //Profit/Loss After Tax
+                document.querySelector('#aftertaxlab').innerHTML = "Profit After Tax";
+                document.querySelector('#aftertaxlab2').innerHTML = "Profit After Tax";
+                document.querySelector('#aftertaxlab3').innerHTML = "Profit After Tax";
                 const phaftertax = document.querySelectorAll('.phaftertax');
 
                 phaftertax.forEach(function(ph) {
@@ -516,6 +815,7 @@ display: none;
 
                 document.querySelector('#revenueproducts').innerHTML = "Revenue (P & S)";
                 document.querySelector('#revenueproducts2').innerHTML = "Revenue (P & S)";
+                document.querySelector('#revenueproducts3').innerHTML = "Revenue (P & S)";
                 const placeholders = document.querySelectorAll('.phrevenuep');
                 const services = document.querySelectorAll('.mergehide2');
 
@@ -557,6 +857,61 @@ display: none;
                 document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
                 document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
 
+                //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2a').innerHTML = "Row 009 in Balance Sheet";
+                document.querySelector('#tt3a').innerHTML = "Row 005 in Balance Sheet";
+                document.querySelector('#tt4a').innerHTML = "Row 006 in Balance Sheet";
+                document.querySelector('#tt5a').innerHTML = "Row 008 in Balance Sheet";
+                document.querySelector('#tt6a').innerHTML = "Accruals (within Assets section) => Row 010 in Balance Sheet";
+                document.querySelector('#tt7a').innerHTML = "Row 046 in Balance Sheet";
+                document.querySelector('#tt8a').innerHTML = "Row 041 in Balance Sheet";
+                document.querySelector('#tt8aRB').innerHTML = "Row 042 in Balance Sheet";
+                //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt10a').innerHTML = "Row 013 in Balance Sheet";
+                document.querySelector('#tt11a').innerHTML = "Row 017 in Balance Sheet";
+                document.querySelector('#tt12a').innerHTML = "Row 96 in Form 30";
+                document.querySelector('#tt13a').innerHTML = "Row 96 in Form 30";
+                //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+                document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
+                document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
+                //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
+                document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
+                document.querySelector('#tt19a').innerHTML = "Row 25 in Form 20";
+                document.querySelector('#tt20a').innerHTML = "Row 45 in Form 20";
+                document.querySelector('#tt21a').innerHTML = "Row 56 in Form 20";
+                document.querySelector('#tt22a').innerHTML = "Profit for the accounting period before tax => Row 64 in Form 20";
+                document.querySelector('#tt22aRB').innerHTML = "Loss for the accounting period before tax => Row 65 in Form 20";
+                document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
+                document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
+
+                //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2b').innerHTML = "Row 009 in Balance Sheet";
+                document.querySelector('#tt3b').innerHTML = "Row 005 in Balance Sheet";
+                document.querySelector('#tt4b').innerHTML = "Row 006 in Balance Sheet";
+                document.querySelector('#tt5b').innerHTML = "Row 008 in Balance Sheet";
+                document.querySelector('#tt6b').innerHTML = "Accruals (within Assets section) => Row 010 in Balance Sheet";
+                document.querySelector('#tt7b').innerHTML = "Row 046 in Balance Sheet";
+                document.querySelector('#tt8b').innerHTML = "Row 041 in Balance Sheet";
+                document.querySelector('#tt8bRB').innerHTML = "Row 042 in Balance Sheet";
+                //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt10b').innerHTML = "Row 013 in Balance Sheet";
+                document.querySelector('#tt11b').innerHTML = "Row 017 in Balance Sheet";
+                document.querySelector('#tt12b').innerHTML = "Row 96 in Form 30";
+                document.querySelector('#tt13b').innerHTML = "Row 96 in Form 30";
+                //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+                document.querySelector('#tt15b').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
+                document.querySelector('#tt16b').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
+                //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
+                document.querySelector('#tt18b').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
+                document.querySelector('#tt19b').innerHTML = "Row 25 in Form 20";
+                document.querySelector('#tt20b').innerHTML = "Row 45 in Form 20";
+                document.querySelector('#tt21b').innerHTML = "Row 56 in Form 20";
+                document.querySelector('#tt22b').innerHTML = "Profit for the accounting period before tax => Row 64 in Form 20";
+                document.querySelector('#tt22bRB').innerHTML = "Loss for the accounting period before tax => Row 65 in Form 20";
+                document.querySelector('#tt23b').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
+                document.querySelector('#tt23bRB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
+
+
                 document.querySelector('#tt24').innerHTML = "Row 001 in Balance Sheet";
                 document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 002 in Balance Sheet";
                 document.querySelector('#tt26').innerHTML = "Row 003 in Balance Sheet";
@@ -568,6 +923,7 @@ display: none;
               } else {
                 document.querySelector('#provis').innerHTML = "Short-term Provisions";
                 document.querySelector('#provis2').innerHTML = "Short-term Provisions";
+                document.querySelector('#provis3').innerHTML = "Short-term Provisions";
               }
 
             if(document.querySelector('#countryselect').value == "Croatia") {
@@ -1706,12 +2062,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
-            <label>Accruals/Deferrals (A)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+            <label id="adl">Accruals/Deferrals (A)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
             <span class="tooltiptext" id="tt6">Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet</span>
             </div>
                 <input
                   type="number"
-                  className="mf-input "
+                  className="mf-input phadl"
                   id="mf-input-text-13c1826"
                   name="ad-total"
                   placeholder="${ parent.decodeEntities(`Accruals/Deferrals (A)`) } "
@@ -1741,13 +2097,13 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Accruals/Deferrals (A)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label id="adl2">Accruals/Deferrals (A)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext" id="tt6a">Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet</span>
           </div>
 
           <input
           type="number"
-          className="mf-input "
+          className="mf-input phadl"
           id="mf-input-text-13c1826"
           name="ad-total2"
           placeholder="${ parent.decodeEntities(`Accruals/Deferrals (A)`) } "
@@ -1775,12 +2131,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
         <br class="mobile" />   <div class="tt1">
-        <label>Accruals/Deferrals (A)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+        <label id="adl3">Accruals/Deferrals (A)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
         <span class="tooltiptext" id="tt6b">Accruals/Deferrals (within Assets section) => Row 074 in Balance Sheet</span>
         </div>
         <input
         type="number"
-        className="mf-input "
+        className="mf-input phadl"
         id="mf-input-text-13c1826"
         name="ad-total1"
         placeholder="${ parent.decodeEntities(`Accruals/Deferrals (A)`) } "
@@ -1798,6 +2154,132 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 </div>
         </div>
                     </div>
+
+
+
+
+
+                    <div className="elementor-container elementor-column-gap-default">
+                    <div className="adlhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                    <div className="elementor-widget-wrap elementor-element-populated">
+                    <!-- IMPORTANT -->
+                        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                    <div className="elementor-widget-container">
+                      <div className="tablet mf-input-wrapper">
+                      <br class="mobile" />
+
+                      <div class="tt1">
+                      <label>Deferrals (A)</label>
+                      <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                      </div>
+                      <input
+                        type="number"
+                        className="mf-input"
+                        id="mf-input-text-13c1826"
+                        tabindex="7"
+                        name="ad-totalR"
+                        placeholder="${ parent.decodeEntities(`Deferrals (A)`) } "
+                                  onInput=${parent.handleChange}
+                          aria-invalid=${validation.errors['ad-totalR'] ? 'true' : 'false'}
+                          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                />
+
+                              <${validation.ErrorMessage}
+                          errors=${validation.errors}
+                          name="ad-totalR"
+                          as=${html`<span className="mf-error-message"></span>`}
+                          />
+
+                          </div>
+
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div className="adlhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                    <div className="elementor-widget-wrap elementor-element-populated">
+                    <!-- IMPORTANT -->
+                            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                    <div className="elementor-widget-container">
+
+                      <div className="tablet mf-input-wrapper">
+                      <br class="mobile" />
+
+                      <div class="tt1">
+                      <label>Deferrals (A)</label>
+                      <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                      </div>
+                      <input
+                        type="number"
+                        className="mf-input"
+                        id="mf-input-text-13c1826"
+                        tabindex="7"
+                        name="ad-total2R"
+                        placeholder="${ parent.decodeEntities(`Deferrals (A)`) } "
+                                  onInput=${parent.handleChange}
+                          aria-invalid=${validation.errors['ad-total2R'] ? 'true' : 'false'}
+                          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                />
+
+                              <${validation.ErrorMessage}
+                          errors=${validation.errors}
+                          name="ad-total2R"
+                          as=${html`<span className="mf-error-message"></span>`}
+                          />
+
+                          </div>
+
+                    </div>
+                    </div>
+                      </div>
+                    </div>
+
+                    <div className="adlhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                    <div className="elementor-widget-wrap elementor-element-populated">
+                    <!-- IMPORTANT -->
+                        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                    <div className="elementor-widget-container">
+
+                      <div className="tablet mf-input-wrapper">
+                      <br class="mobile" />
+
+                      <div class="tt1">
+                      <label>Deferrals (A)</label>
+                      <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                      </div>
+                      <input
+                        type="number"
+                        className="mf-input"
+                        id="mf-input-text-13c1826"
+                        tabindex="7"
+                        name="ad-total3R"
+                        placeholder="${ parent.decodeEntities(`Deferrals (A)`) } "
+                                  onInput=${parent.handleChange}
+                          aria-invalid=${validation.errors['ad-total3R'] ? 'true' : 'false'}
+                          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                />
+
+                              <${validation.ErrorMessage}
+                          errors=${validation.errors}
+                          name="ad-total3R"
+                          as=${html`<span className="mf-error-message"></span>`}
+                          />
+
+                          </div>
+
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                      </div>
+
+
+
+
+
+
+
 
 
                     <div className="elementor-container elementor-column-gap-default">
@@ -1911,12 +2393,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <div className="tablet mf-input-wrapper">
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Net Profit/Loss of Previous Years </label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                <label id="profitlosslab">Net Profit/Loss of Previous Years </label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                 <span class="tooltiptext" id="tt8">Row 097 in Balance Sheet</span>
                 </div>
               <input
                 type="number"
-                className="mf-input "
+                className="mf-input phprofitloss"
                 id="mf-input-text-d5f534d"
                 name="net-profit-loss"
                 placeholder="${ parent.decodeEntities(`Net Profit/Loss of Previous Years `) } "
@@ -1946,13 +2428,13 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Net Profit/Loss of Previous Years </label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+              <label id="profitlosslab2">Net Profit/Loss of Previous Years </label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext" id="tt8a">Row 097 in Balance Sheet</span>
               </div>
 
               <input
               type="number"
-              className="mf-input "
+              className="mf-input phprofitloss"
               id="mf-input-text-13c1826"
               name="net-profit-loss2"
               placeholder="${ parent.decodeEntities(`Net Profit/Loss of Previous Years `) } "
@@ -1980,12 +2462,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
             <br class="mobile" />   <div class="tt1">
-            <label>Net Profit/Loss of Previous Years </label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+            <label id="profitlosslab3">Net Profit/Loss of Previous Years </label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
             <span class="tooltiptext" id="tt8b">Row 097 in Balance Sheet</span>
             </div>
           <input
             type="number"
-            className="mf-input "
+            className="mf-input phprofitloss"
             id="mf-input-text-d5f534d"
             name="net-profit-loss1"
             placeholder="${ parent.decodeEntities(`Net Profit/Loss of Previous Years `) } "
@@ -2003,6 +2485,134 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     </div>
             </div>
                         </div>
+
+
+
+
+
+                        <div className="elementor-container elementor-column-gap-default">
+                        <div className="profitlosshide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <!-- IMPORTANT -->
+                            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                        <div className="elementor-widget-container">
+                          <div className="mf-input-wrapper">
+
+
+                          <br class="mobile" />
+
+                          <div class="tt1">
+                          <label>Net Loss of Previous Years</label>
+                          <span class="tooltiptext" id="tt8RB">Row 097 in Balance Sheet</span>
+                          </div>
+                          <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          name="net-profit-lossRB"
+                          tabindex="9"
+                          placeholder="${ parent.decodeEntities(`Net Loss`) } "
+                                    onInput=${parent.handleChange}
+                            aria-invalid=${validation.errors['net-profit-lossRB'] ? 'true' : 'false'}
+                            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                  />
+
+                                <${validation.ErrorMessage}
+                            errors=${validation.errors}
+                            name="net-profit-lossRB"
+                            as=${html`<span className="mf-error-message"></span>`}
+                            />
+
+                              </div>
+
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div className="profitlosshide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <!-- IMPORTANT -->
+                                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                        <div className="elementor-widget-container">
+
+                          <div className="mf-input-wrapper">
+
+
+                          <br class="mobile" />
+
+                          <div class="tt1">
+                          <label>Net Loss of Previous Years</label>
+                          <span class="tooltiptext" id="tt8aRB">Row 097 in Balance Sheet</span>
+                          </div>
+                          <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          name="net-profit-loss2RB"
+                          tabindex="9"
+                          placeholder="${ parent.decodeEntities(`Net Loss`) } "
+                                    onInput=${parent.handleChange}
+                            aria-invalid=${validation.errors['net-profit-loss2RB'] ? 'true' : 'false'}
+                            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                  />
+
+                                <${validation.ErrorMessage}
+                            errors=${validation.errors}
+                            name="net-profit-loss2RB"
+                            as=${html`<span className="mf-error-message"></span>`}
+                            />
+
+                              </div>
+
+                        </div>
+                        </div>
+                          </div>
+                        </div>
+
+                        <div className="profitlosshide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <!-- IMPORTANT -->
+                            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                        <div className="elementor-widget-container">
+
+                          <div className="mf-input-wrapper">
+
+
+                          <br class="mobile" />
+
+                          <div class="tt1">
+                          <label>Net Loss of Previous Years</label>
+                          <span class="tooltiptext" id="tt8bRB">Row 097 in Balance Sheet</span>
+                          </div>
+                          <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          name="net-profit-loss3RB"
+                          tabindex="9"
+                          placeholder="${ parent.decodeEntities(`Net Loss`) } "
+                                    onInput=${parent.handleChange}
+                            aria-invalid=${validation.errors['net-profit-loss3RB'] ? 'true' : 'false'}
+                            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                  />
+
+                                <${validation.ErrorMessage}
+                            errors=${validation.errors}
+                            name="net-profit-loss3RB"
+                            as=${html`<span className="mf-error-message"></span>`}
+                            />
+
+                              </div>
+
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                          </div>
+
+
+
 
 
                         <div className="elementor-container elementor-column-gap-default">
@@ -2530,12 +3140,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           <div className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
-            <label>Accruals/Deferrals (L & E)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+            <label id="adlel">Accruals/Deferrals (L & E)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
             <span class="tooltiptext" id="tt14">Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet</span>
             </div>
           <input
             type="number"
-            className="mf-input "
+            className="mf-input phadle"
             id="mf-input-text-d5f534d"
             name="ad"
             placeholder="${ parent.decodeEntities(`Accruals/Deferrals (L & E)`) } "
@@ -2565,13 +3175,13 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Accruals/Deferrals (L & E)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label id="adlel2">Accruals/Deferrals (L & E)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext" id="tt14a">Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet</span>
           </div>
 
           <input
           type="number"
-          className="mf-input "
+          className="mf-input phadle"
           id="mf-input-text-13c1826"
           name="ad2"
           placeholder="${ parent.decodeEntities(`Accruals/Deferrals (L & E)`) } "
@@ -2599,12 +3209,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Accruals/Deferrals (L & E)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+          <label id="adlel3">Accruals/Deferrals (L & E)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
           <span class="tooltiptext" id="tt14b">Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet</span>
           </div>
           <input
           type="number"
-          className="mf-input "
+          className="mf-input phadle"
           id="mf-input-text-d5f534d"
           name="ad1"
           placeholder="${ parent.decodeEntities(`Accruals/Deferrals (L & E)`) } "
@@ -2622,6 +3232,128 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           </div>
           </div>
             </div>
+
+
+
+
+
+            <div className="elementor-container elementor-column-gap-default">
+            <div className="hidle elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+            <div className="elementor-widget-wrap elementor-element-populated">
+            <!-- IMPORTANT -->
+                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="elementor-widget-container">
+              <div className="mf-input-wrapper">
+                  <br class="mobile" />
+                <div class="tt1">
+                <label>Deferrals (L & E)</label>
+                <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                </div>
+              <input
+                type="number"
+                className="mf-input "
+                id="mf-input-text-d5f534d"
+                name="adB"
+                tabindex="15"
+                placeholder="${ parent.decodeEntities(`Deferrals (L & E)`) } "
+                          onInput=${parent.handleChange}
+                  aria-invalid=${validation.errors['adB'] ? 'true' : 'false'}
+                  ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                        />
+
+                      <${validation.ErrorMessage}
+                  errors=${validation.errors}
+                  name="adB"
+                  as=${html`<span className="mf-error-message"></span>`}
+                  />
+
+              </div>
+
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div className="hidle elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+            <div className="elementor-widget-wrap elementor-element-populated">
+            <!-- IMPORTANT -->
+                    <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="elementor-widget-container">
+
+              <div className="mf-input-wrapper">
+                  <br class="mobile" />
+                <div class="tt1">
+                <label>Deferrals (L & E)</label>
+                <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                </div>
+              <input
+                type="number"
+                className="mf-input "
+                id="mf-input-text-d5f534d"
+                name="ad2B"
+                tabindex="15"
+                placeholder="${ parent.decodeEntities(`Deferrals (L & E)`) } "
+                          onInput=${parent.handleChange}
+                  aria-invalid=${validation.errors['ad2B'] ? 'true' : 'false'}
+                  ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                        />
+
+                      <${validation.ErrorMessage}
+                  errors=${validation.errors}
+                  name="ad2B"
+                  as=${html`<span className="mf-error-message"></span>`}
+                  />
+
+              </div>
+
+            </div>
+            </div>
+              </div>
+            </div>
+
+            <div className="hidle elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+            <div className="elementor-widget-wrap elementor-element-populated">
+            <!-- IMPORTANT -->
+                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="elementor-widget-container">
+
+              <div className="mf-input-wrapper">
+                  <br class="mobile" />
+                <div class="tt1">
+                <label>Deferrals (L & E)</label>
+                <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                </div>
+              <input
+                type="number"
+                className="mf-input "
+                id="mf-input-text-d5f534d"
+                name="ad3B"
+                tabindex="15"
+                placeholder="${ parent.decodeEntities(`Deferrals (L & E)`) } "
+                          onInput=${parent.handleChange}
+                  aria-invalid=${validation.errors['ad3B'] ? 'true' : 'false'}
+                  ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                        />
+
+                      <${validation.ErrorMessage}
+                  errors=${validation.errors}
+                  name="ad3B"
+                  as=${html`<span className="mf-error-message"></span>`}
+                  />
+
+              </div>
+
+            </div>
+            </div>
+            </div>
+            </div>
+              </div>
+
+
+
+
+
+
 
             <div className="elementor-container elementor-column-gap-default">
             <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
@@ -2713,19 +3445,19 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
 
-          <div className="mergehide elementor-container elementor-column-gap-default">
-          <div  className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+          <div className="elementor-container elementor-column-gap-default">
+          <div  className="mergehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
           <div className="elementor-widget-wrap elementor-element-populated">
           <!-- IMPORTANT -->
           <div  className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
           <div className="elementor-widget-container">
-          <div id="mergehide" className="tablet mf-input-wrapper">
+          <div className="tablet mf-input-wrapper">
 
             <br class="mobile" />   <div class="tt1">
-            <label>Revenue (Products)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+            <label id="revenueproducts">Revenue (Products)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
             <span class="tooltiptext" id="tt16">Revenue from the sale of own products => Row 04 in Income Statement</span>
             </div>
-          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          <input type="number"  defaultValue="" className="mf-input phrevenuep" id="mf-input-email-094f2a0" name="revenue-p" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
 
@@ -2737,7 +3469,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           </div>
           </div>
 
-          <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+          <div className="mergehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
           <div className="elementor-widget-wrap elementor-element-populated">
           <!-- IMPORTANT -->
                   <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -2749,10 +3481,10 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Revenue (Products)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+          <label id="revenueproducts2">Revenue (Products)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
           <span class="tooltiptext" id="tt16a">Revenue from the sale of own products => Row 04 in Income Statement</span>
           </div>
-        <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p2" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+        <input type="number"  defaultValue="" className="mf-input phrevenuep" id="mf-input-email-094f2a0" name="revenue-p2" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
         />
 
 
@@ -2764,20 +3496,20 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             </div>
           </div>
 
-          <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+          <div className="mergehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
           <div className="elementor-widget-wrap elementor-element-populated">
           <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
           <div className="elementor-widget-container">
 
-          <div id="mergehide3" className="mf-input-wrapper">
+          <div className="mf-input-wrapper">
 
 
           <br class="mobile" />   <div class="tt1">
-          <label>Revenue (Products)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+          <label id="revenueproducts3">Revenue (Products)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
           <span class="tooltiptext" id="tt16b">Revenue from the sale of own products => Row 04 in Income Statement</span>
           </div>
-          <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="revenue-p1" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          <input type="number"  defaultValue="" className="mf-input phrevenuep" id="mf-input-email-094f2a0" name="revenue-p1" placeholder="${ parent.decodeEntities(`Revenue (Products)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['revenue-p1'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
           />
 
 
@@ -2793,8 +3525,8 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
 
-            <div className="mergehide2 elementor-container elementor-column-gap-default">
-            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+            <div className="elementor-container elementor-column-gap-default">
+            <div className="mergehide2 elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
             <div className="elementor-widget-wrap elementor-element-populated">
             <!-- IMPORTANT -->
                 <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -2817,7 +3549,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             </div>
             </div>
 
-            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+            <div className="mergehide2 elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
             <div className="elementor-widget-wrap elementor-element-populated">
             <!-- IMPORTANT -->
                     <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -2844,7 +3576,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               </div>
             </div>
 
-            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+            <div className="mergehide2 elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
             <div className="elementor-widget-wrap elementor-element-populated">
             <!-- IMPORTANT -->
                 <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -3287,12 +4019,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     <div className="tablet mf-input-wrapper">
 
                       <br class="mobile" />   <div class="tt1">
-                      <label>Profit/Loss Before Tax</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                      <label id="beforetaxlab">Profit/Loss Before Tax</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                       <span class="tooltiptext" id="tt22">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
                       </div>
                       <input
                         type="number"
-                        className="mf-input "
+                        className="mf-input phbeforetax"
                         id="mf-input-text-d5f534d"
                         name="profit-loss-before-tax"
                         placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "
@@ -3322,10 +4054,10 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                     <br class="mobile" />   <div class="tt1">
-                    <label>Profit/Loss Before Tax</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                    <label id="beforetaxlab2">Profit/Loss Before Tax</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                     <span class="tooltiptext" id="tt22a">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
                     </div>
-                  <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="profit-loss-before-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-before-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+                  <input type="number"  defaultValue="" className="mf-input phbeforetax" id="mf-input-email-094f2a0" name="profit-loss-before-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-before-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                   />
 
 
@@ -3347,12 +4079,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                     <br class="mobile" />   <div class="tt1">
-                    <label>Profit/Loss Before Tax</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                    <label id="beforetaxlab3">Profit/Loss Before Tax</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                     <span class="tooltiptext" id="tt22b">Profit/loss for the accounting period before tax => Row 56 in Income Statement</span>
                     </div>
                     <input
                       type="number"
-                      className="mf-input "
+                      className="mf-input phbeforetax"
                       id="mf-input-text-d5f534d"
                       name="profit-loss-before-tax1"
                       placeholder="${ parent.decodeEntities(`Profit/Loss Before Tax`) } "
@@ -3371,6 +4103,120 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     </div>
                       </div>
 
+
+
+
+
+                      <div className="elementor-container elementor-column-gap-default">
+                      <div className="beforetaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                      <!-- IMPORTANT -->
+                          <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                            <div className="mf-input-wrapper">
+                            <br class="mobile" />
+                            <div class="tt1">
+                            <label>Loss Before Tax</label>
+                            <span class="tooltiptext" id="tt22RB">Loss for the accounting period before tax => Row 56 in Income Statement</span>
+                            </div>
+                            <input
+                              type="number"
+                              className="mf-input "
+                              id="mf-input-text-d5f534d"
+                              tabindex="23"
+                              name="profit-loss-before-taxRB"
+                              placeholder="${ parent.decodeEntities(`Loss Before Tax`) } "
+                              onInput=${parent.handleChange}
+                              aria-invalid=${validation.errors['profit-loss-before-taxRB'] ? 'true' : 'false'}
+                              ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                    />
+                                  <${validation.ErrorMessage}
+                              errors=${validation.errors}
+                              name="profit-loss-before-taxRB"
+                              as=${html`<span className="mf-error-message"></span>`}
+                              />
+                              </div>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div className="beforetaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                      <!-- IMPORTANT -->
+                              <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                      <div className="elementor-widget-container">
+
+                        <div className="mf-input-wrapper">
+                        <br class="mobile" />
+                        <div class="tt1">
+                        <label>Loss Before Tax</label>
+                        <span class="tooltiptext" id="tt22aRB">Loss for the accounting period before tax => Row 56 in Income Statement</span>
+                        </div>
+                        <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          tabindex="23"
+                          name="profit-loss-before-tax2RB"
+                          placeholder="${ parent.decodeEntities(`Loss Before Tax`) } "
+                          onInput=${parent.handleChange}
+                          aria-invalid=${validation.errors['profit-loss-before-tax2RB'] ? 'true' : 'false'}
+                          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                />
+                              <${validation.ErrorMessage}
+                          errors=${validation.errors}
+                          name="profit-loss-before-tax2RB"
+                          as=${html`<span className="mf-error-message"></span>`}
+                          />
+                          </div>
+
+                      </div>
+                      </div>
+                        </div>
+                      </div>
+
+                      <div className="beforetaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                      <!-- IMPORTANT -->
+                          <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                      <div className="elementor-widget-container">
+
+                        <div className="mf-input-wrapper">
+                        <br class="mobile" />
+                        <div class="tt1">
+                        <label>Loss Before Tax</label>
+                        <span class="tooltiptext" id="tt22bRB">Loss for the accounting period before tax => Row 56 in Income Statement</span>
+                        </div>
+                        <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          tabindex="23"
+                          name="profit-loss-before-tax3RB"
+                          placeholder="${ parent.decodeEntities(`Loss Before Tax`) } "
+                          onInput=${parent.handleChange}
+                          aria-invalid=${validation.errors['profit-loss-before-tax3RB'] ? 'true' : 'false'}
+                          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                />
+                              <${validation.ErrorMessage}
+                          errors=${validation.errors}
+                          name="profit-loss-before-tax3RB"
+                          as=${html`<span className="mf-error-message"></span>`}
+                          />
+                          </div>
+
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                        </div>
+
+
+
+
+
+
+
+
                       <div className="elementor-container elementor-column-gap-default">
                       <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
                       <div className="elementor-widget-wrap elementor-element-populated">
@@ -3380,12 +4226,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                       <div className="tablet mf-input-wrapper">
 
                         <br class="mobile" />   <div class="tt1">
-                        <label>Profit/Loss After Tax</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                        <label id="aftertaxlab">Profit/Loss After Tax</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                         <span class="tooltiptext" id="tt23">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
                         </div>
                       <input
                         type="number"
-                        className="mf-input "
+                        className="mf-input phaftertax"
                         id="mf-input-text-d5f534d"
                         name="profit-loss-after-tax"
                         placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "
@@ -3414,10 +4260,10 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                       <br class="mobile" />   <div class="tt1">
-                      <label>Profit/Loss After Tax</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                      <label id="aftertaxlab2">Profit/Loss After Tax</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                       <span class="tooltiptext" id="tt23a">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
                       </div>
-                    <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="profit-loss-after-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-after-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+                    <input type="number"  defaultValue="" className="mf-input phaftertax" id="mf-input-email-094f2a0" name="profit-loss-after-tax2" placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['profit-loss-after-tax2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
                     />
 
 
@@ -3439,12 +4285,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                       <br class="mobile" />   <div class="tt1">
-                      <label>Profit/Loss After Tax</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                      <label id="aftertaxlab3">Profit/Loss After Tax</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                       <span class="tooltiptext" id="tt23b">Profit/loss for the accounting period after tax => Row 61 in Income Statement</span>
                       </div>
                       <input
                       type="number"
-                      className="mf-input "
+                      className="mf-input phaftertax"
                       id="mf-input-text-d5f534d"
                       name="profit-loss-after-tax1"
                       placeholder="${ parent.decodeEntities(`Profit/Loss After Tax`) } "
@@ -3462,6 +4308,123 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                       </div>
                       </div>
                         </div>
+
+
+
+                        <div className="elementor-container elementor-column-gap-default">
+                        <div className="aftertaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <!-- IMPORTANT -->
+                            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                        <div className="elementor-widget-container">
+                          <div className="mf-input-wrapper">
+                          <br class="mobile" />
+
+                          <div class="tt1">
+                          <label>Loss After Tax</label>
+                          <span class="tooltiptext" id="tt23RB">Loss for the accounting period after tax => Row 61 in Income Statement</span>
+                          </div>
+                          <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          tabindex="24"
+                          name="profit-loss-after-taxRB"
+                          placeholder="${ parent.decodeEntities(`Loss After Tax`) } "
+                                    onInput=${parent.handleChange}
+                            aria-invalid=${validation.errors['profit-loss-after-taxRB'] ? 'true' : 'false'}
+                            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                  />
+
+                                <${validation.ErrorMessage}
+                            errors=${validation.errors}
+                            name="profit-loss-after-taxRB"
+                            as=${html`<span className="mf-error-message"></span>`}
+                            />
+
+                          </div>
+
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div className="aftertaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <!-- IMPORTANT -->
+                                <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                        <div className="elementor-widget-container">
+
+                          <div className="mf-input-wrapper">
+                          <br class="mobile" />
+
+                          <div class="tt1">
+                          <label>Loss After Tax</label>
+                          <span class="tooltiptext" id="tt23aRB">Loss for the accounting period after tax => Row 61 in Income Statement</span>
+                          </div>
+                          <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          tabindex="24"
+                          name="profit-loss-after-tax2RB"
+                          placeholder="${ parent.decodeEntities(`Loss After Tax`) } "
+                                    onInput=${parent.handleChange}
+                            aria-invalid=${validation.errors['profit-loss-after-tax2RB'] ? 'true' : 'false'}
+                            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                  />
+
+                                <${validation.ErrorMessage}
+                            errors=${validation.errors}
+                            name="profit-loss-after-tax2RB"
+                            as=${html`<span className="mf-error-message"></span>`}
+                            />
+
+                          </div>
+
+                        </div>
+                        </div>
+                          </div>
+                        </div>
+
+                        <div className="aftertaxhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <!-- IMPORTANT -->
+                            <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+                        <div className="elementor-widget-container">
+
+                          <div className="mf-input-wrapper">
+                          <br class="mobile" />
+
+                          <div class="tt1">
+                          <label>Loss After Tax</label>
+                          <span class="tooltiptext" id="tt23bRB">Loss for the accounting period after tax => Row 61 in Income Statement</span>
+                          </div>
+                          <input
+                          type="number"
+                          className="mf-input "
+                          id="mf-input-text-d5f534d"
+                          tabindex="24"
+                          name="profit-loss-after-tax2RB"
+                          placeholder="${ parent.decodeEntities(`Loss After Tax`) } "
+                                    onInput=${parent.handleChange}
+                            aria-invalid=${validation.errors['profit-loss-after-tax2RB'] ? 'true' : 'false'}
+                            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                                  />
+
+                                <${validation.ErrorMessage}
+                            errors=${validation.errors}
+                            name="profit-loss-after-tax2RB"
+                            as=${html`<span className="mf-error-message"></span>`}
+                            />
+
+                          </div>
+
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                          </div>
     <!-- DONT COPY DOWN FURTHER -->
   </section>
 
