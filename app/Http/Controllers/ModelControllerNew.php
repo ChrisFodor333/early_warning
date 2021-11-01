@@ -107,7 +107,6 @@ class ModelControllerNew extends Controller
 
   // DATA FROM THE FORM - CURRENT YEAR
   $b2 = request()->get('total-assets');
-  $b22 = request()->get('revenue-merch');
   $b25 = request()->get('amortization');
   $b29 = request()->get('profit-loss-before-tax');
   if($country == "Romania" || $country == "Bosnia and Herzegovina") {
@@ -116,8 +115,20 @@ class ModelControllerNew extends Controller
   $b14 = request()->get('provisions');
 
   $b6 = request()->get('current-assets');
-  // IF CURRENT YEAR < 2014 THEN 0
+
+  $b22 = request()->get('revenue-merch');
   $b23_1 = request()->get('revenue-p');
+  $b23_2 = request()->get('revenue-s');
+  if($country == "Hungary" || $country == "Croatia") {
+    $b23_1 = 0;
+    $b23_2 = 0;
+  }
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $b23_2 = 0;
+  }
+
+
   $b30 = request()->get('profit-loss-after-tax');
   if($country == "Romania" || $country == "Bosnia and Herzegovina") {
       $b30 = request()->get('profit-loss-after-tax') + request()->get('profit-loss-after-taxRB');
@@ -125,7 +136,7 @@ class ModelControllerNew extends Controller
   $b16 = request()->get('current-liabilities');
 
   $b7 = request()->get('inventory');
-  $b23_2 = request()->get('revenue-s');
+
   $b11 = request()->get('equity');
   $b20 = request()->get('ad');
   if($country == "Bosnia and Herzegovina") {
@@ -143,9 +154,9 @@ class ModelControllerNew extends Controller
   $b17 = request()->get('financial-assistance');
   $b19 = request()->get('current-bank-loans');
   $b26 = request()->get('ncia');
-  $b10 = request()->get('ad-total') + request()->get('ad-totalR');
+  $b10 = request()->get('ad-total');
   if($country == "Romania") {
-    $b10 = request()->get('ad-total');
+    $b10 = request()->get('ad-total') + request()->get('ad-totalR');
   }
 
   $b28 = request()->get('interest-expense');
@@ -157,6 +168,16 @@ class ModelControllerNew extends Controller
   $c18= request()->get('long-term-bank-loans2');
   $c23_1= request()->get('revenue-p2');
   $c23_2= request()->get('revenue-s2');
+
+  if($country == "Hungary" || $country == "Croatia") {
+    $c23_1 = 0;
+    $c23_2 = 0;
+  }
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $c23_2 = 0;
+  }
+
   $c26= request()->get('ncia2');
 
   $c27 = request()->get('securities-shares2');

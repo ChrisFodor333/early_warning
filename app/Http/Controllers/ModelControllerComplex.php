@@ -129,27 +129,57 @@ class ModelControllerComplex extends Controller
   $bs22 = request()->get('revenue-merch');
   $bs25 = request()->get('amortization');
   $bs29 = request()->get('profit-loss-before-tax');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $bs29 = request()->get('profit-loss-before-tax') + request()->get('profit-loss-before-taxRB');
+  }
   $bs14 = request()->get('provisions');
 
   $bs6 = request()->get('current-assets');
   $bs26 = request()->get('revenue-sale');
   $bs30 = request()->get('profit-loss-after-tax');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $bs30 = request()->get('profit-loss-after-tax') + request()->get('profit-loss-after-taxRB');
+  }
+
   $bs16 = request()->get('current-liabilities');
 
   $bs7= request()->get('inventory');
   $bs23_1 = request()->get('revenue-p');
   $bs23_2 = request()->get('revenue-s');
+  if($country == "Hungary" || $country == "Croatia") {
+    $bs23_1 = 0;
+    $bs23_2 = 0;
+  }
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $bs23_2 = 0;
+  }
+
   $bs11 = request()->get('equity');
   $bs20 = request()->get('ad');
+
+  if($country == "Bosnia and Herzegovina") {
+  $bs20 = request()->get('ad') + request()->get('adB');
+  }
 
   $bs9 = request()->get('financial-accounts');
   $bs27 = request()->get('securities-shares');
 
   $bs10 = request()->get('ad-total');
+
+  if($country == "Romania") {
+    $bs10 = request()->get('ad-total') + request()->get('ad-totalR');
+  }
+
   $bs28 = request()->get('interest-expense');
   $bs13 = request()->get('liabilities');
 
   $bs12 = request()->get('net-profit-loss');
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $bs12 = request()->get('net-profit-loss') + request()->get('net-profit-lossRB');
+  }
+
   $bs8 = request()->get('current-receivables');
   $bs17 = request()->get('financial-assistance');
   $bs19 = request()->get('current-bank-loans');
@@ -159,17 +189,39 @@ class ModelControllerComplex extends Controller
   $cs7= request()->get('inventory2');
   $cs23_1 = request()->get('revenue-p2');
   $cs23_2 = request()->get('revenue-s2');
+  if($country == "Hungary" || $country == "Croatia") {
+    $cs23_1 = 0;
+    $cs23_2 = 0;
+  }
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $cs23_2 = 0;
+  }
+
   $cs26 = request()->get('revenue-sale2');
   $cs29 = request()->get('profit-loss-before-tax2');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $cs29 = request()->get('profit-loss-before-tax2') + request()->get('profit-loss-before-tax2RB');
+  }
   $cs14 = request()->get('provisions2');
 
   $cs3 = request()->get('intangible-assets2');
   $cs9 = request()->get('financial-accounts2');
   $cs30 = request()->get('profit-loss-after-tax2');
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $cs30 = request()->get('profit-loss-after-tax2') + request()->get('profit-loss-after-tax2RB');
+  }
+
   $cs15 = request()->get('non-current-liabilities-2');
 
   $cs4 = request()->get('ppe2');
   $cs10 = request()->get('ad-total2');
+
+  if($country == "Romania") {
+    $cs10 = request()->get('ad-total2') + request()->get('ad-total2R');
+  }
+
   $cs11 = request()->get('equity2');
   $cs16 = request()->get('current-liabilities2');
 
@@ -185,7 +237,16 @@ class ModelControllerComplex extends Controller
   $cs13 = request()->get('liabilities2');
   $cs20 = request()->get('ad2');
 
+  if($country == "Bosnia and Herzegovina") {
+  $cs20 = request()->get('ad2') + request()->get('a2dB');
+  }
+
   $cs12 = request()->get('net-profit-loss2');
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $cs12 = request()->get('net-profit-loss2') + request()->get('net-profit-loss2RB');
+  }
+
   $cs8 = request()->get('current-receivables2');
   $cs17 = request()->get('financial-assistance2');
   $cs19 = request()->get('current-bank-loans2');
@@ -196,28 +257,61 @@ class ModelControllerComplex extends Controller
   $ds22 = request()->get('revenue-merch1');
   $ds25 = request()->get('amortization1');
   $ds29 = request()->get('profit-loss-before-tax1');
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $ds29 = request()->get('profit-loss-before-tax1') + request()->get('profit-loss-before-tax3RB');
+  }
   $ds14 = request()->get('provisions1');
 
   $ds6 = request()->get('current-assets1');
   $ds26 = request()->get('revenue-sale1');
   $ds30 = request()->get('profit-loss-after-tax1');
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+      $ds30 = request()->get('profit-loss-after-tax1') + request()->get('profit-loss-after-tax3RB');
+  }
+
   $ds16 = request()->get('current-liabilities1');
 
   $ds7= request()->get('inventory1');
   $ds23_1 = request()->get('revenue-p1');
   $ds23_2 = request()->get('revenue-s1');
+  if($country == "Hungary" || $country == "Croatia") {
+    $ds23_1 = 0;
+    $ds23_2 = 0;
+  }
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $ds23_2 = 0;
+  }
+
+
   $ds11 = request()->get('equity1');
   $ds20 = request()->get('ad1');
+
+  if($country == "Bosnia and Herzegovina") {
+  $ds20 = request()->get('ad1') + request()->get('ad3B');
+  }
 
   $ds9 = request()->get('financial-accounts1');
   $isf9 = request()->get('internal-inventory1');
   $ds27 = request()->get('securities-shares1');
 
   $ds10 = request()->get('ad-total1');
+
+  if($country == "Romania") {
+    $ds10 = request()->get('ad-total1') + request()->get('ad-total3R');
+  }
+
+
   $ds28 = request()->get('interest-expense1');
   $ds13 = request()->get('liabilities1');
 
   $ds12 = request()->get('net-profit-loss1');
+
+  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+    $ds12 = request()->get('net-profit-loss1') + request()->get('net-profit-loss3RB');
+  }
+
   $ds8 = request()->get('current-receivables1');
   $ds17 = request()->get('financial-assistance1');
   $ds19 = request()->get('current-bank-loans1');

@@ -407,6 +407,19 @@ h6 {
              field.style.display = "block";
           });
 
+          const mywraps = document.querySelectorAll('.mywrap');
+
+          mywraps.forEach(function(mywrap) {
+             mywrap.style.paddingLeft = "8px";
+             mywrap.style.marginRight = "-8px";
+          });
+
+          const mywraps2 = document.querySelectorAll('.mywrap2');
+
+          mywraps2.forEach(function(mywrap) {
+             mywrap.style.width = "250px";
+          });
+
 
 
 
@@ -573,6 +586,19 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Bosnia and Herzegovina") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
+
+          const mywraps = document.querySelectorAll('.mywrap');
+
+          mywraps.forEach(function(mywrap) {
+             mywrap.style.paddingLeft = "8px";
+             mywrap.style.marginRight = "-8px";
+          });
+
+          const mywraps2 = document.querySelectorAll('.mywrap2');
+
+          mywraps2.forEach(function(mywrap) {
+             mywrap.style.width = "250px";
+          });
 
           //Profit/Loss Before Tax
           document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
