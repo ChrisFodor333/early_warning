@@ -1,0 +1,182 @@
+id_basic,country,current_year,altman,in05,quicktest,bonity,taffler,binkert,result,ratio,percentage
+1,Slovakia,2017,1.56,-2.27,16,-7.94,0.19,-0.77,Second Degree Financial Distress,-1.6795,100
+2,Slovakia,2020,1.74,-0.59,16,-3.89,-0.16,-4.23,Second Degree Financial Distress,-0.5675,100
+3,Slovakia,2017,2948.49,3400.12,3,166.87,51.25,1.6,No Financial Distress,1313.41,100
+4,Slovakia,2020,2.62,1.88,7,0.9,0.56,0.98,No Financial Distress,1.22057,75
+5,Slovakia,2020,53.9,7.65,10,5.8,2,1.17,No Financial Distress,13.89,80
+6,Slovakia,2020,5.23,9.22,17,-5.08,81.66,2.1,First Degree Financial Distress,18.2178,83.33
+7,Slovakia,2016,9.66,17.43,12,-2.41,0.38,1.73,First Degree Financial Distress,5.02867,57.14
+8,Slovakia,2020,292.03,22.32,11,-286.56,98.82,67.22,First Degree Financial Distress,25.3402,87.5
+9,Slovakia,2018,14.35,3.07,8,11.1,0.75,N/A,No Financial Distress,5.879,55.56
+10,Slovakia,2017,13.59,-3.36,13,-0.4,-5.52,-24.23,Second Degree Financial Distress,0.877385,30
+11,Slovakia,2017,-0.7,-2.31,16,-8.42,0.03,349.49,Third Degree Financial Distress,-2.2675,9.09
+12,Slovakia,2018,-0.58,0.16,12,-8.16,0.3,399.62,Second Degree Financial Distress,-1.63933,25
+13,Slovakia,2016,-11.47,-14.42,16,-44.61,0.91,9.95,Second Degree Financial Distress,-13.9055,7.69
+14,Slovakia,2017,-6.54,89.09,4,73.05,8.78,8.65,First Degree Financial Distress,32.926,92.86
+15,Slovakia,2018,74.72,-0.4,16,-8.6,37.1,N/A,Second Degree Financial Distress,20.5765,80
+16,Slovakia,2019,-1.09,-1.92,12,-5.01,-0.15,384.47,Second Degree Financial Distress,-1.61733,31.25
+17,Slovakia,2017,18.13,48.13,8,1.79,15.16,-7.61,First Degree Financial Distress,16.667,70.59
+18,Slovakia,2020,1.16,1.32,15,0.63,0.49,16.93,First Degree Financial Distress,0.733333,38.89
+19,Slovakia,2018,1.75,2.67,12,-2.34,0.16,1.2,First Degree Financial Distress,0.464667,36.84
+20,Slovakia,2017,634.13,488.1,16,-20.36,16.2,3.32,First Degree Financial Distress,223.626,95
+21,Slovakia,2018,-2117.85,-2063.45,16,-5689.68,-218.15,-34.56,Third Degree Financial Distress,-2017.81,4.76
+22,Slovakia,2017,740.97,-281.63,12,-1284.14,-44.45,1.71,Second Degree Financial Distress,-173.833,9.09
+23,Slovakia,2016,-311.42,0.87,13,-0.8,25.36,380.77,First Degree Financial Distress,-57.1826,13.04
+24,Slovakia,2017,-1280.01,-2556.36,16,-6829.91,-363.68,10.17,Third Degree Financial Distress,-2205.98,4.17
+25,Slovakia,2017,1744.69,228.73,8,224.34,141.43,2.56,No Financial Distress,467.863,96
+26,Slovakia,2020,71.72,116.13,6,333.22,9.57,93.63,No Financial Distress,106.161,88.46
+27,Slovakia,2016,35.65,56.79,16,-14.09,0.6,5.18,First Degree Financial Distress,15.8025,66.67
+28,Slovakia,2020,0.86,-1.06,16,-28.54,0.06,-1.45,Third Degree Financial Distress,-5.7235,21.43
+29,Slovakia,2020,-105.9,-177.45,16,-556.03,-26.25,N/A,Third Degree Financial Distress,-173.113,13.79
+30,Slovakia,2018,1195.09,785.55,4,1837.23,93.61,0.17,No Financial Distress,782.346,96.67
+31,Slovakia,2020,1.16,1.32,15,0.63,0.49,16.93,First Degree Financial Distress,0.733333,46.67
+32,Slovakia,2021,N/A,N/A,12,N/A,N/A,6.8,No Financial Distress,0.0166667,41.94
+33,Slovakia,2020,1.78,0.9,10,0.5,0.46,4.36,No Financial Distress,0.748,50
+34,Slovakia,2020,173.6,315.95,8,1174.62,10.31,0.72,No Financial Distress,334.921,90.91
+35,Slovakia,2016,1.69,1.06,11,1.21,0.48,4.83,No Financial Distress,0.906182,52.94
+36,Slovakia,2017,844.99,-11.42,12,-29.78,110.23,N/A,First Degree Financial Distress,182.821,85.71
+37,Slovakia,2017,-1.53,0.24,15,1.08,0.25,-1.59,First Degree Financial Distress,0.0213333,38.89
+38,Slovakia,2020,258.92,139.15,8,-1363.38,93.84,37.63,First Degree Financial Distress,-174.269,8.11
+39,Slovakia,2017,1014.81,112.15,8,131.11,58.12,-7.11,First Degree Financial Distress,263.263,89.47
+40,Slovakia,2020,587.96,338.52,5,919.98,78.78,0.67,No Financial Distress,385.088,92.31
+41,Slovakia,2020,459.56,316.42,5,845.71,79.07,1.04,No Financial Distress,340.192,90
+42,Slovakia,2015,134.74,73.28,10,0.89,39.49,371.9,No Financial Distress,49.7,75.61
+43,Slovakia,2017,1909.4,1510.66,12,-1999.3,109.15,N/A,First Degree Financial Distress,305.999,85.71
+44,Slovakia,2017,0.83,0.61,14,0.47,0.32,504.9,First Degree Financial Distress,0.460286,37.21
+45,Slovakia,2015,868.17,102.28,12,-227.74,230.19,16.42,First Degree Financial Distress,194.597,79.55
+46,Slovakia,2016,0.02,0.45,14,15.46,0.24,8.47,First Degree Financial Distress,3.24829,51.11
+47,Slovakia,2020,-185.18,-230.34,12,-624.88,42.7,134.49,Second Degree Financial Distress,-199.523,6.52
+48,Slovakia,2020,2612.26,3068.73,6,628.53,94.97,1.8,No Financial Distress,1280.93,97.87
+49,Slovakia,2020,-133.58,-26.55,16,-111.63,5.07,9.79,Second Degree Financial Distress,-53.3255,16.67
+50,Slovakia,2018,1488.2,1835.38,4,4167.51,229.93,5.58,No Financial Distress,1544.25,100
+51,Slovakia,2018,37.96,8.41,11,5.02,3.94,-48.43,First Degree Financial Distress,11.0842,56
+52,Slovakia,2017,-4.4,14.63,16,-26.97,-505.8,253.63,Second Degree Financial Distress,-104.495,13.73
+53,Slovakia,2018,0.54,5.1,12,-6.93,0.28,1.38,First Degree Financial Distress,-0.185333,32.69
+54,Slovakia,2016,-170.06,-374.96,11,N/A,56.38,2.21,First Degree Financial Distress,-97.7098,15.09
+55,Slovakia,2020,306.6,134.12,4,132.97,14.17,20.58,No Financial Distress,117.622,75.93
+56,Slovakia,2018,95.78,117.16,8,228.82,152.16,39.77,No Financial Distress,118.809,76.36
+57,Slovakia,2019,119.91,-6.35,16,-11.63,0.49,N/A,Second Degree Financial Distress,20.4965,64.29
+58,Slovakia,2018,37.96,8.41,11,5.02,3.94,-48.43,First Degree Financial Distress,11.0842,55.36
+59,Slovakia,2017,155.88,188.18,4,441.43,11.74,-17.76,First Degree Financial Distress,159.496,77.19
+60,Slovakia,2015,-701.72,-698.86,16,-1921.75,238.62,-1.7,Second Degree Financial Distress,-616.729,5.17
+61,Slovakia,2020,1.74,-0.59,16,-3.89,-0.16,-4.23,Second Degree Financial Distress,-0.5675,31.03
+62,Slovakia,2018,0.12,12.16,16,-5.99,0.22,17.38,Second Degree Financial Distress,1.3145,49.15
+63,Slovakia,2016,-83.8,-9.92,12,-18.4,0.56,-1.07,Second Degree Financial Distress,-22.2953,20
+64,Slovakia,2016,5.12,2.17,10,1.9,1.34,-112.94,First Degree Financial Distress,2.126,50.82
+65,Slovakia,2016,-0.68,-0.66,16,-4.14,0.3,-0.8,Second Degree Financial Distress,-1.0235,30.65
+66,Slovakia,2019,-1436.12,-649.03,12,-1709.43,181.63,7.8,Second Degree Financial Distress,-722.573,4.76
+67,Slovakia,2020,521.91,394.89,8,1025.62,66.18,-63.04,First Degree Financial Distress,401.745,92.19
+68,Slovakia,2020,7.54,-24.63,12,-93.57,21.63,0.51,First Degree Financial Distress,-17.7893,21.54
+69,Slovakia,2020,-0.75,-0.59,14,-11.49,-0.1,-1.1,Second Degree Financial Distress,-2.57171,25.76
+70,Slovakia,2017,-0.04,-0.63,12,-0.22,0.34,-1.31,First Degree Financial Distress,-0.0933333,37.31
+71,Slovakia,2017,3.41,4.88,8,13.15,3.31,1.17,No Financial Distress,4.975,55.88
+72,Slovakia,2020,-0.14,0.64,15,2.09,0.26,0.34,First Degree Financial Distress,0.583333,43.48
+73,Slovakia,2019,-35.05,-76.56,16,-225.61,-95.01,-10.58,Third Degree Financial Distress,-86.4335,15.71
+74,Slovakia,2018,72.19,103.91,11,0.5,1.02,-0.15,No Financial Distress,35.5422,73.24
+75,Slovakia,2017,740.97,-281.63,12,-1284.14,-44.45,1.71,Second Degree Financial Distress,-173.833,9.86
+76,Slovakia,2020,7.11,-10.41,9,-6.34,5.34,0.44,First Degree Financial Distress,-0.837778,33.33
+77,Slovakia,2018,988.55,953,8,-36.93,83.42,-0.1,First Degree Financial Distress,397.633,91.78
+78,Slovakia,2020,521.91,394.89,8,1025.62,66.18,-63.04,First Degree Financial Distress,401.745,93.15
+79,Slovakia,2020,-61.79,-227.63,10,-584.66,-136.83,0.12,Second Degree Financial Distress,-202.162,6.76
+80,Slovakia,2020,354.35,-31.49,11,-410.68,184,0.16,First Degree Financial Distress,19.2542,66.67
+81,Slovakia,2015,868.17,102.28,12,-227.74,230.19,16.42,First Degree Financial Distress,194.597,82.67
+82,Slovakia,2018,-0.18,0.2,16,-0.13,0.5,N/A,Second Degree Financial Distress,0.0905,40.79
+83,Slovakia,2017,-80.48,-28.04,16,-211.82,91.67,-23.48,Third Degree Financial Distress,-45.7215,19.48
+84,Slovakia,2016,-582.07,-413.84,16,-1163.63,169.01,-1.1,Second Degree Financial Distress,-398.094,6.41
+85,Slovakia,2020,-5.87,-5.27,16,-300.29,-0.18,0.32,Third Degree Financial Distress,-62.3095,17.72
+86,Slovakia,2020,-5.87,-5.27,16,-300.29,-0.18,0.32,Third Degree Financial Distress,-62.3095,17.72
+87,Slovakia,2020,4.09,4.4,12,-0.16,0.57,55.25,No Financial Distress,1.79667,55
+88,Slovakia,2016,40.31,-8.74,12,-11.7,1.14,12.69,First Degree Financial Distress,4.21867,58.02
+89,Slovakia,2016,677.62,97.2,15,24.13,33.86,28.52,No Financial Distress,166.575,81.71
+90,Slovakia,2020,642.97,966.77,4,2680.25,83.53,13.74,No Financial Distress,874.754,96.39
+91,Slovakia,2017,-193.99,127.39,8,1.84,85.56,507.5,First Degree Financial Distress,4.185,55.95
+92,Slovakia,2016,131.06,-19.21,16,-58.07,3.01,-99.33,Second Degree Financial Distress,11.3705,62.35
+93,Slovakia,2020,-230.62,-14.49,13,-42.72,80.11,2.13,Second Degree Financial Distress,-41.5286,20.93
+94,Slovakia,2020,93.85,14.63,5,2.23,0.42,40.98,No Financial Distress,22.266,71.26
+95,Slovakia,2020,1.19,0.91,11,1.86,0.47,1.07,First Degree Financial Distress,0.904182,47.73
+96,Slovakia,2020,173.6,315.95,8,1174.62,10.31,0.72,No Financial Distress,334.921,88.64
+97,Slovakia,2016,158.53,168.22,7,332.21,32.42,68.39,No Financial Distress,138.305,79.78
+98,Slovakia,2018,1488.2,1835.38,4,4167.51,229.93,5.58,No Financial Distress,1544.25,100
+99,Slovakia,2020,27.27,23.66,11,-26.31,-1.73,6.81,First Degree Financial Distress,4.59618,56.67
+100,Slovakia,2020,-0.89,0.85,10,-0.15,0.27,N/A,First Degree Financial Distress,0.036,38.46
+101,Slovakia,2018,0.12,12.16,16,-5.99,0.22,17.38,Second Degree Financial Distress,1.3145,50.55
+102,Slovakia,2015,868.17,102.28,12,-227.74,230.19,16.42,First Degree Financial Distress,194.597,84.62
+103,Slovakia,2020,-133.58,-26.55,16,-111.63,5.07,9.79,Second Degree Financial Distress,-53.3255,17.58
+104,Slovakia,2020,5.61,29.83,4,147.06,6.74,31.61,No Financial Distress,37.898,75
+105,Slovakia,2016,1.59,3.61,8,2.64,2.86,N/A,No Financial Distress,2.165,52.69
+106,Slovakia,2017,-135.53,-44.35,12,-124.79,-4.61,57.38,Second Degree Financial Distress,-61.8393,15.96
+107,Slovakia,2015,222.49,10.61,8,28.46,8.54,0.66,No Financial Distress,54.045,76.84
+108,Slovakia,2016,0.99,0.25,11,12.69,0.32,N/A,First Degree Financial Distress,2.86818,53.13
+109,Slovakia,2016,-2.35,-4.34,16,-15.96,2.22,-0.62,Second Degree Financial Distress,-4.0735,24.74
+110,Slovakia,2020,-0.89,0.85,10,-0.15,0.27,N/A,First Degree Financial Distress,0.036,38.14
+111,Slovakia,2020,-4.42,-1.82,16,-12.17,0.29,0.28,Second Degree Financial Distress,-3.6115,25.51
+112,Slovakia,2020,213.37,-56.84,9,-266.91,129.15,3.01,First Degree Financial Distress,3.77622,55.56
+113,Slovakia,2019,193.9,-39.11,16,-133.39,6.42,-67.82,Second Degree Financial Distress,5.5765,61
+114,Slovakia,2016,-15.39,-34.47,12,18.28,1.43,-3.72,First Degree Financial Distress,-6.01333,22.77
+115,Slovakia,2020,7.54,-24.63,12,-93.57,21.63,0.51,First Degree Financial Distress,-17.7893,20.79
+116,Slovakia,2020,-1.39,0.01,16,-5.4,-0.31,-0.25,Third Degree Financial Distress,-1.4055,31.37
+117,Slovakia,2019,-7.3,2.88,8,-0.52,0.74,-32.41,First Degree Financial Distress,-0.815,33.98
+118,Slovakia,2020,7.11,-10.41,9,-6.34,5.34,0.44,First Degree Financial Distress,-0.837778,33.01
+119,Slovakia,2019,467.6,414.88,4,269.09,-36.97,N/A,First Degree Financial Distress,222.97,86.54
+120,Slovakia,2020,76.73,4.85,4,237.71,3.04,147.89,No Financial Distress,64.516,78.1
+121,Slovakia,2016,-157.73,-545.33,16,-1426.99,-214.06,20.95,Third Degree Financial Distress,-468.81,4.72
+122,Slovakia,2017,390.48,211.38,8,36.66,38.84,0.54,No Financial Distress,135.497,81.31
+123,Slovakia,2018,988.55,953,8,-36.93,83.42,-0.1,First Degree Financial Distress,397.633,93.46
+124,Slovakia,2020,-106.43,-106.94,14,-300.71,111.73,1.89,Second Degree Financial Distress,-80.4557,13.89
+125,Slovakia,2018,42.01,72.4,7,5.05,7.14,0.15,No Financial Distress,25.3486,72.48
+126,Slovakia,2020,-1.39,0.01,16,-5.4,-0.31,-0.25,Third Degree Financial Distress,-1.4055,31.19
+127,Slovakia,2015,96.83,207.54,8,-302.09,31.62,-2.07,First Degree Financial Distress,6.805,61.82
+128,Slovakia,2020,-106.43,-106.94,14,-300.71,111.73,1.89,Second Degree Financial Distress,-80.4557,13.64
+129,Slovakia,2018,72.19,103.91,11,0.5,1.02,-0.15,No Financial Distress,35.5422,74.55
+130,Slovakia,2018,-13.43,-1.12,17,-0.84,0.42,-42.75,Second Degree Financial Distress,-2.98224,26.13
+131,Slovakia,2015,-0.7,-1.39,16,-6.37,0.12,2.57,Third Degree Financial Distress,-1.6555,29.46
+132,Slovakia,2016,423.32,-839.44,16,-2636.11,-82.25,3.36,Second Degree Financial Distress,-626.883,3.54
+133,Slovakia,2020,1.86,0.96,12,-148.28,0.07,N/A,First Degree Financial Distress,-29.0613,20.18
+134,Slovakia,2020,N/A,574.06,4,1329.38,93.74,15.99,No Financial Distress,399.486,93.91
+135,Slovakia,2018,-223.87,-239.06,16,-895.95,-77.95,-3.21,Third Degree Financial Distress,-287.353,6.9
+136,Slovakia,2020,213.37,-56.84,9,-266.91,129.15,3.01,First Degree Financial Distress,3.77622,56.03
+137,Slovakia,2019,193.9,-39.11,16,-133.39,6.42,-67.82,Second Degree Financial Distress,5.5765,61.21
+138,Slovakia,2017,-1.39,-0.78,16,-2.56,0.29,-0.94,Second Degree Financial Distress,-0.8755,35.04
+139,Slovakia,2020,-52.42,-166.67,12,-587.36,-460.08,13.03,Second Degree Financial Distress,-253.289,7.63
+140,Slovakia,2018,4.56,1.28,5,2.19,0.62,4.11,No Financial Distress,1.77,52.1
+141,Slovakia,2016,-8.13,-6.59,16,-22.08,1.03,N/A,Second Degree Financial Distress,-7.1415,24.17
+142,Slovakia,2018,2.77,1.24,15,1.14,0.68,2.55,No Financial Distress,1.17933,50.41
+143,Slovakia,2020,20.97,92.48,18,-2245.64,-155.15,337.07,Second Degree Financial Distress,-457.457,5.74
+144,Slovakia,2020,33.77,7.27,9,-100.74,46.9,-6.63,First Degree Financial Distress,-2.53778,30.08
+145,Slovakia,2020,1.4,-0.01,12,-12.85,-0.01,N/A,Second Degree Financial Distress,-2.27733,30.65
+146,Slovakia,2020,20.97,92.48,18,-2245.64,-155.15,337.07,Second Degree Financial Distress,-457.457,5.65
+147,Slovakia,2020,152.88,243.26,6,438.75,99.57,7.3,No Financial Distress,186.925,86.4
+148,Slovakia,2020,-480.72,-71.04,12,-224.3,-60.98,-10.5,Third Degree Financial Distress,-167.391,12.7
+149,Slovakia,2020,110.85,129.47,6,335.29,166.92,11.89,No Financial Distress,148.539,83.46
+150,Slovakia,2020,1.3,0.73,7,5.35,0.06,0.84,First Degree Financial Distress,1.51657,53.13
+151,Slovakia,2020,130.49,-8.97,10,-34.3,-32.64,-1.7,Second Degree Financial Distress,10.936,65.12
+152,Slovakia,2020,-105.14,197.03,4,392.02,169.31,8.86,First Degree Financial Distress,130.694,81.54
+153,Slovakia,2016,255.88,33.69,8,3.37,3.76,59.04,No Financial Distress,59.365,77.86
+154,Slovakia,2016,0.37,0.03,16,-1.07,0.3,442.39,Second Degree Financial Distress,-0.0615,40.15
+155,Slovakia,2020,3.59,25.25,15,0.68,24.27,5.05,No Financial Distress,10.7713,63.91
+156,Slovakia,2020,-49.38,-65.33,11,-192.86,-31.8,33.67,Second Degree Financial Distress,-67.8558,15.67
+157,Slovakia,2020,2536.11,887.9,4,1830.01,164.03,0.57,No Financial Distress,1083.66,97.78
+158,Slovakia,2017,-134.21,-152.54,16,-455.67,-19.43,-0.86,Third Degree Financial Distress,-152.357,12.5
+159,Slovakia,2016,89.93,69.3,8,3.51,3.98,-9.44,First Degree Financial Distress,33.369,74.45
+160,Slovakia,2018,-41.36,-59.12,12,-247.87,-93.74,-0.12,Second Degree Financial Distress,-88.4013,14.49
+161,Slovakia,2020,169.97,-145.85,12,-647.82,-27.86,12.87,Second Degree Financial Distress,-130.295,12.95
+162,Slovakia,2020,-1.95,0.7,15,2.51,0.19,-6.8,Second Degree Financial Distress,0.303333,44.29
+163,Slovakia,2016,1952.53,2472.98,12,-201.03,4.93,-1.48,First Degree Financial Distress,845.899,96.45
+164,Slovakia,2018,0.09,-2.94,18,-12.96,-0.11,N/A,Third Degree Financial Distress,-3.17289,28.17
+165,Slovakia,2016,-1151.59,-50.98,16,-151.42,45.28,-55.25,Third Degree Financial Distress,-261.729,6.99
+166,Slovakia,2017,-1352.9,-971.45,16,-2567.9,149.32,-0.88,Second Degree Financial Distress,-948.573,2.08
+167,Slovakia,2019,N/A,460.52,4,866.58,42.57,6.5,No Financial Distress,273.984,89.66
+168,Slovakia,2020,130.49,-8.97,10,-34.3,-32.64,-1.7,Second Degree Financial Distress,10.936,64.83
+169,Slovakia,2016,423.32,-839.44,16,-2636.11,-82.25,3.36,Second Degree Financial Distress,-626.883,3.45
+170,Slovakia,2016,-0.29,109.35,14,-0.01,57.24,N/A,First Degree Financial Distress,33.2723,73.97
+171,Slovakia,2020,152.88,243.26,6,438.75,99.57,7.3,No Financial Distress,186.925,86.3
+172,Slovakia,2015,-0.7,-1.39,16,-6.37,0.12,2.57,Third Degree Financial Distress,-1.6555,33.56
+173,Slovakia,2020,250.87,184.28,5,315.16,187.13,1.31,No Financial Distress,187.528,86.39
+174,Slovakia,2016,-295,-137.02,12,-547.17,98.48,1.37,Second Degree Financial Distress,-176.125,10.14
+175,Slovakia,2020,-480.72,-71.04,12,-224.3,-60.98,-10.5,Third Degree Financial Distress,-167.391,12.84
+176,Slovakia,2019,6.6,6.41,9,-4.77,-1.94,3.31,First Degree Financial Distress,1.28222,51.68
+177,Slovakia,2020,470.69,74.68,8,86.6,83.96,70.5,No Financial Distress,143.211,82.67
+178,Slovakia,2020,786.79,692.43,4,2029.41,269.63,1.13,No Financial Distress,755.702,95.36
+179,Slovakia,2015,-3.13,-6.79,12,-131.14,-25.01,N/A,Second Degree Financial Distress,-33.1973,22.37
+180,Slovakia,2018,-41.36,-59.12,12,-247.87,-93.74,-0.12,Second Degree Financial Distress,-88.4013,15.79
+181,Slovakia,2018,42.01,72.4,7,5.05,7.14,0.15,No Financial Distress,25.3486,71.71
