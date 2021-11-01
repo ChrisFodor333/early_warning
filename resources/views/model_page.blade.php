@@ -2614,7 +2614,7 @@ h6 {
         </div>
         </div>
         </div>
-        <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="mywrap elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -2626,7 +2626,7 @@ h6 {
           <label>Revenue (Other Sale)</label>
           <span class="tooltiptext" id="tt18a">Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement</span>
           </div>
-          <input type="number" tabindex="36" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="ncia2" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          <input type="number" tabindex="36" defaultValue="" className="mf-input mywrap3" id="mf-input-email-094f2a0" name="ncia2" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
           />
 
             <${validation.ErrorMessage} errors=${validation.errors} name="ncia2" as=${html`<span className="mf-error-message"></span>`}
