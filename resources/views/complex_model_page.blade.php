@@ -2830,7 +2830,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 className="mf-input "
                 id="mf-input-text-13c1826"
                 name="provisions"
-                placeholder="${ parent.decodeEntities(`Short-term Provisions`) } "
+                placeholder="${ parent.decodeEntities(`Provisions`) } "
                   onInput=${parent.handleChange}
                 aria-invalid=${validation.errors['provisions'] ? 'true' : 'false'}
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -2860,7 +2860,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               <label id="provis2">Short-term Provisions</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
               <span class="tooltiptext" id="tt11a">Row 136 in Balance Sheet</span>
               </div>
-            <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="provisions2" placeholder="${ parent.decodeEntities(`Short-term Provisions`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="provisions2" placeholder="${ parent.decodeEntities(`Provisions`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['provisions2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />
 
 
@@ -2891,7 +2891,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
               className="mf-input "
               id="mf-input-text-13c1826"
               name="provisions1"
-              placeholder="${ parent.decodeEntities(`Short-term Provisions`) } "
+              placeholder="${ parent.decodeEntities(`Provisions`) } "
               onInput=${parent.handleChange}
               aria-invalid=${validation.errors['provisions1'] ? 'true' : 'false'}
               ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
