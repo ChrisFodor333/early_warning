@@ -689,29 +689,47 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $data['percentage'] = $percentage;
 
 
-
-  // CALL MACHINE LEARNING
-  /*
-  $process = new Process(['py', app_path(). "\http\controllers\machinelearning.py"]);
-  $process->run();
-
-    // executes after the command finishes
-    if (!$process->isSuccessful()) {
-        throw new ProcessFailedException($process);
-    }
-
-echo $process->getOutput();
-*/
-$string = "Henlo";
 $result = shell_exec("py " . app_path(). "\http\controllers\machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " .
 escapeshellarg($quicktest) . " " . escapeshellarg($bonity) . " ". escapeshellarg($taffler) . " ". escapeshellarg($binkert));
-echo $result;
+//echo $result;
+$something = explode("]", $result);
+$classification = $something[0];
+$classification = str_replace("[", "", $classification);
+$classification = str_replace("'", "", $classification);
+if($classification == "First Degree Financial Distress") {
+  $classification = "in the financial distress of the I. degree.";
+}
+if($classification == "Second Degree Financial Distress") {
+  $classification = "in the financial distress of the II. degree.";
+}
+if($classification == "Third Degree Financial Distress") {
+  $classification = "in the financial distress of the III. degree.";
+}
+
+if($classification == "No Financial Distress") {
+  $classification = "out of danger.";
+}
+
+$accuracy = $something[1];
+$accuracy = str_replace("[[", "", $accuracy);
+$accuracy_exp = explode(".",$accuracy);
+$accuracy1 = $accuracy_exp[0];
+$accuracy2 = $accuracy_exp[1];
+$accuracy3 = $accuracy_exp[2];
+$accuracy4 = $accuracy_exp[3];
+
+$data['classification'] = $classification;
+$data['accuracy1'] = $accuracy1;
+$data['accuracy2'] = $accuracy2;
+$data['accuracy3'] = $accuracy3;
+$data['accuracy4'] = $accuracy4;
+
 
 
   // RETURN VIEW
   //return view('results',$data);
   // ALTERNATIVE
-  //return view('results2',$data);
+  return view('results2',$data);
   }
 
 }
