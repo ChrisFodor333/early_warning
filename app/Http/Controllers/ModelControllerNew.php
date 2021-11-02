@@ -8,6 +8,8 @@ use App\Models\Basic;
 use App\Models\Complex;
 use DB;
 
+
+
 class ModelControllerNew extends Controller
 {
 
@@ -688,10 +690,28 @@ $data['quicktestcolor'] =  $quicktestcolor;
 
 
 
+  // CALL MACHINE LEARNING
+  /*
+  $process = new Process(['py', app_path(). "\http\controllers\machinelearning.py"]);
+  $process->run();
+
+    // executes after the command finishes
+    if (!$process->isSuccessful()) {
+        throw new ProcessFailedException($process);
+    }
+
+echo $process->getOutput();
+*/
+$string = "Henlo";
+$result = shell_exec("py " . app_path(). "\http\controllers\machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " .
+escapeshellarg($quicktest) . " " . escapeshellarg($bonity) . " ". escapeshellarg($taffler) . " ". escapeshellarg($binkert));
+echo $result;
+
+
   // RETURN VIEW
   //return view('results',$data);
   // ALTERNATIVE
-  return view('results2',$data);
+  //return view('results2',$data);
   }
 
 }
