@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
         "spatie/crawler": "^7.0",
+        "symfony/process": "^5.3",
         "yajra/laravel-datatables-oracle": "^9.18"
     },
     "require-dev": {

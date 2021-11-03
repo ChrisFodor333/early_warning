@@ -689,9 +689,65 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $data['percentage'] = $percentage;
 
 
-$result = shell_exec("py " . app_path(). "\http\controllers\machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " .
+$result = shell_exec("py " . app_path(). "/Http/Controllers/machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " .
 escapeshellarg($quicktest) . " " . escapeshellarg($bonity) . " ". escapeshellarg($taffler) . " ". escapeshellarg($binkert));
 //echo $result;
+
+
+
+//$result = shell_exec($command);
+//echo $result;
+/*
+$descriptorspec = array(
+   0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
+   1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
+   2 => array("file", "/tmp/error-output.txt", "a") // stderr is a file to write to
+);
+
+$cwd = '/tmp';
+$env = array('some_option' => 'aeiou');
+
+$process = proc_open('python', $descriptorspec, $pipes, $cwd, $env);
+
+if (is_resource($process)) {
+    // $pipes now looks like this:
+    // 0 => writeable handle connected to child stdin
+    // 1 => readable handle connected to child stdout
+    // Any error output will be appended to /tmp/error-output.txt
+
+    fwrite($pipes[0], '<?php print_r($_ENV); ?>');
+    fclose($pipes[0]);
+
+    echo stream_get_contents($pipes[1]);
+    fclose($pipes[1]);
+
+    // It is important that you close any pipes before calling
+    // proc_close in order to avoid a deadlock
+    $return_value = proc_close($process);
+
+    echo "command returned $return_value\n";
+}
+*/
+
+
+/*$process = new Process(['ls -l']);
+$process->run();
+
+// executes after the command finishes
+if (!$process->isSuccessful()) {
+    throw new ProcessFailedException($process);
+}
+
+echo $process->getOutput();
+*/
+
+
+/*ob_start();
+passthru($command2);
+$output = ob_get_clean();
+*/
+
+
 $something = explode("]", $result);
 $classification = $something[0];
 $classification = str_replace("[", "", $classification);
@@ -710,19 +766,27 @@ if($classification == "No Financial Distress") {
   $classification = "out of danger.";
 }
 
-$accuracy = $something[1];
+if($classification == "") {
+  $classification = "in a situation, where the model is not able to determine its status based on the parameters";
+}
+
+
+/*$accuracy = $something[1];
 $accuracy = str_replace("[[", "", $accuracy);
 $accuracy_exp = explode(".",$accuracy);
 $accuracy1 = $accuracy_exp[0];
 $accuracy2 = $accuracy_exp[1];
 $accuracy3 = $accuracy_exp[2];
 $accuracy4 = $accuracy_exp[3];
+*/
 
 $data['classification'] = $classification;
+/*
 $data['accuracy1'] = $accuracy1;
 $data['accuracy2'] = $accuracy2;
 $data['accuracy3'] = $accuracy3;
 $data['accuracy4'] = $accuracy4;
+*/
 
 
 
