@@ -453,7 +453,7 @@ h6 {
           document.querySelector('#tt11').innerHTML = "Row 017 in Balance Sheet";
           document.querySelector('#tt12').innerHTML = "Row 96 in Form 30";
           document.querySelector('#tt13').innerHTML = "Row 96 in Form 30";
-          //document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 141 in Balance Sheet";
+          document.querySelector('#tt14').innerHTML = "No Tooltip Available";
           document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
           //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
