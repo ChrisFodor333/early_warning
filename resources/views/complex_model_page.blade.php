@@ -830,7 +830,7 @@ display: none;
 
 
 
-                //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt1').innerHTML = "Row 013 + Row 015 in Balance Sheet";
                 document.querySelector('#tt2').innerHTML = "Row 009 in Balance Sheet";
                 document.querySelector('#tt3').innerHTML = "Row 005 in Balance Sheet";
                 document.querySelector('#tt4').innerHTML = "Row 006 in Balance Sheet";
@@ -839,7 +839,7 @@ display: none;
                 document.querySelector('#tt7').innerHTML = "Row 046 in Balance Sheet";
                 document.querySelector('#tt8').innerHTML = "Row 041 in Balance Sheet";
                 document.querySelector('#tt8RB').innerHTML = "Row 042 in Balance Sheet";
-                //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt9').innerHTML = "Row 013 + Row 016 in Balance Sheet";
                 document.querySelector('#tt10').innerHTML = "Row 013 in Balance Sheet";
                 document.querySelector('#tt11').innerHTML = "Row 017 in Balance Sheet";
                 document.querySelector('#tt12').innerHTML = "Row 96 in Form 30";
@@ -857,7 +857,7 @@ display: none;
                 document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
                 document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
 
-                //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt1a').innerHTML = "Row 013 + Row 015 in Balance Sheet";
                 document.querySelector('#tt2a').innerHTML = "Row 009 in Balance Sheet";
                 document.querySelector('#tt3a').innerHTML = "Row 005 in Balance Sheet";
                 document.querySelector('#tt4a').innerHTML = "Row 006 in Balance Sheet";
@@ -866,7 +866,7 @@ display: none;
                 document.querySelector('#tt7a').innerHTML = "Row 046 in Balance Sheet";
                 document.querySelector('#tt8a').innerHTML = "Row 041 in Balance Sheet";
                 document.querySelector('#tt8aRB').innerHTML = "Row 042 in Balance Sheet";
-                //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt9a').innerHTML = "Row 013 + Row 016 in Balance Sheet";
                 document.querySelector('#tt10a').innerHTML = "Row 013 in Balance Sheet";
                 document.querySelector('#tt11a').innerHTML = "Row 017 in Balance Sheet";
                 document.querySelector('#tt12a').innerHTML = "Row 96 in Form 30";
@@ -884,7 +884,7 @@ display: none;
                 document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
                 document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
 
-                //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt1b').innerHTML = "Row 013 + Row 015 in Balance Sheet";
                 document.querySelector('#tt2b').innerHTML = "Row 009 in Balance Sheet";
                 document.querySelector('#tt3b').innerHTML = "Row 005 in Balance Sheet";
                 document.querySelector('#tt4b').innerHTML = "Row 006 in Balance Sheet";
@@ -893,7 +893,7 @@ display: none;
                 document.querySelector('#tt7b').innerHTML = "Row 046 in Balance Sheet";
                 document.querySelector('#tt8b').innerHTML = "Row 041 in Balance Sheet";
                 document.querySelector('#tt8bRB').innerHTML = "Row 042 in Balance Sheet";
-                //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+                document.querySelector('#tt9b').innerHTML = "Row 013 + Row 016 in Balance Sheet";
                 document.querySelector('#tt10b').innerHTML = "Row 013 in Balance Sheet";
                 document.querySelector('#tt11b').innerHTML = "Row 017 in Balance Sheet";
                 document.querySelector('#tt12b').innerHTML = "Row 96 in Form 30";

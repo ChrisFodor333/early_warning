@@ -439,7 +439,7 @@ h6 {
 
 
 
-          //document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+          document.querySelector('#tt1').innerHTML = "Row 013 + Row 015 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 009 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 005 in Balance Sheet";
           document.querySelector('#tt4').innerHTML = "Row 006 in Balance Sheet";
@@ -448,7 +448,7 @@ h6 {
           document.querySelector('#tt7').innerHTML = "Row 046 in Balance Sheet";
           document.querySelector('#tt8').innerHTML = "Row 041 in Balance Sheet";
           document.querySelector('#tt8RB').innerHTML = "Row 042 in Balance Sheet";
-          //document.querySelector('#tt9').innerHTML = "Row 101 in Balance Sheet";
+          document.querySelector('#tt9').innerHTML = "Row 013 + Row 016 in Balance Sheet";
           document.querySelector('#tt10').innerHTML = "Row 013 in Balance Sheet";
           document.querySelector('#tt11').innerHTML = "Row 017 in Balance Sheet";
           document.querySelector('#tt12').innerHTML = "Row 96 in Form 30";
@@ -473,7 +473,7 @@ h6 {
           document.querySelector('#tt28').innerHTML = "Row 99 in Form 30";
           document.querySelector('#tt29').innerHTML = "No Tooltip Available";
 
-          //document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
+          document.querySelector('#tt1a').innerHTML = "Row 013 + Row 015 in Balance Sheet";
           document.querySelector('#tt7a').innerHTML = "Row 080 in Balance Sheet";
           document.querySelector('#tt11a').innerHTML = "Row 046 in Balance Sheet";
           document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
@@ -691,7 +691,6 @@ h6 {
           document.querySelector('#tt14').innerHTML = "Accruals (within Liabilities and Equity section) => Row 162 in Income Statement";
           document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
-          //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 206 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 223 in Income Statement";
           document.querySelector('#tt20').innerHTML = "Row 303 in Income Statement";
@@ -713,7 +712,6 @@ h6 {
           document.querySelector('#tt11a').innerHTML = "Row 144 in Balance Sheet";
           document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 202 in Income Statement";
           document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products and services => Row 206 in Income Statement";
-          //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 002 in Balance Sheet";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 246 in Income Statement";
           document.querySelector('#tt20a').innerHTML = "Row 303 in Income Statement";
           document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 299 in Income Statement";
