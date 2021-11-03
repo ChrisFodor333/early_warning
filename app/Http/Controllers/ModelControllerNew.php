@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 use Requests;
 use App\Models\Basic;
 use App\Models\Complex;
+use App\Models\Machine;
 use DB;
+use Phpml\Classification\KNearestNeighbors;
+use Phpml\Classification\SVC;
+use Phpml\Classification\NaiveBayes;
+use Phpml\SupportVectorMachine\Kernel;
+
 
 
 
@@ -689,69 +695,50 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $data['percentage'] = $percentage;
 
 
-$result = shell_exec("py " . app_path(). "/Http/Controllers/machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " .
-escapeshellarg($quicktest) . " " . escapeshellarg($bonity) . " ". escapeshellarg($taffler) . " ". escapeshellarg($binkert));
+//$result = shell_exec("py " . app_path(). "/Http/Controllers/machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " . escapeshellarg($quicktest) . " " . escapeshellarg($bonity) . " ". escapeshellarg($taffler) . " ". escapeshellarg($binkert));
 //echo $result;
+//$records= Machine::all();
+
+$samples = array();
+$labels = array();
+$classification = "";
 
 
+/*$records->each(function($record) use (&$labels, &$samples)
+{
+    array_push($labels,$record->result);
+    if($record->altman != "N/A" && $record->in05 != "N/A" && $record->quicktest != "N/A" && $record->bonity != "N/A" && $record->taffler != "N/A" && $record->binkert != "N/A") {
+    $features = array(floatval($record->altman), floatval($record->in05), floatval($record->quicktest), floatval($record->bonity), floatval($record->taffler), floatval($record->binkert));
+    //$features = array($record->ratio);
+    array_push($samples,$features);
+    }
 
-//$result = shell_exec($command);
-//echo $result;
-/*
-$descriptorspec = array(
-   0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
-   1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
-   2 => array("file", "/tmp/error-output.txt", "a") // stderr is a file to write to
-);
-
-$cwd = '/tmp';
-$env = array('some_option' => 'aeiou');
-
-$process = proc_open('python', $descriptorspec, $pipes, $cwd, $env);
-
-if (is_resource($process)) {
-    // $pipes now looks like this:
-    // 0 => writeable handle connected to child stdin
-    // 1 => readable handle connected to child stdout
-    // Any error output will be appended to /tmp/error-output.txt
-
-    fwrite($pipes[0], '<?php print_r($_ENV); ?>');
-    fclose($pipes[0]);
-
-    echo stream_get_contents($pipes[1]);
-    fclose($pipes[1]);
-
-    // It is important that you close any pipes before calling
-    // proc_close in order to avoid a deadlock
-    $return_value = proc_close($process);
-
-    echo "command returned $return_value\n";
-}
+});
 */
 
+$classifier = new KNearestNeighbors();
+//$classifier = new NaiveBayes();
 
-/*$process = new Process(['ls -l']);
-$process->run();
-
-// executes after the command finishes
-if (!$process->isSuccessful()) {
-    throw new ProcessFailedException($process);
+$samples = [[1.38, 0.98, 11.00, 2.06, 0.50, 1.26], [-1.01, 0.49, 13.00, 4.67, 0.31, -0.71], [1.16, 0.70, 17.00, 0.53, 0.43, 7.93], [-3.98, -3.76, 16.00, -16.36, 0.18, -1.14]];
+$labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
+$classifier->train($samples, $labels);
+if($altman != "N/A" && $in05 != "N/A" && $quicktest != "N/A" && $bonity != "N/A" && $taffler != "N/A" && $binkert != "N/A") {
+$classification = $classifier->predict([$altman, $in05, $quicktest, $bonity, $taffler, $binkert]);
+} else {
+  $classification = "";
 }
 
-echo $process->getOutput();
-*/
+//$mlp = new MLPClassifier(4, [[2, new PReLU], [2, new Sigmoid]], ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress']);
+//$layer1 = new Layer(2, Neuron::class, new PReLU);
+//$layer2 = new Layer(2, Neuron::class, new Sigmoid);
+//$mlp = new MLPClassifier(4, [$layer1, $layer2], ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress']);
 
+//$mlp->train($samples, $labels);
 
-/*ob_start();
-passthru($command2);
-$output = ob_get_clean();
-*/
-
-
-$something = explode("]", $result);
-$classification = $something[0];
-$classification = str_replace("[", "", $classification);
-$classification = str_replace("'", "", $classification);
+//$something = explode("]", $result);
+//$classification = $something[0];
+//$classification = str_replace("[", "", $classification);
+//$classification = str_replace("'", "", $classification);
 if($classification == "First Degree Financial Distress") {
   $classification = "in the financial distress of the I. degree.";
 }
@@ -788,11 +775,6 @@ $data['accuracy3'] = $accuracy3;
 $data['accuracy4'] = $accuracy4;
 */
 
-
-
-  // RETURN VIEW
-  //return view('results',$data);
-  // ALTERNATIVE
   return view('results2',$data);
   }
 

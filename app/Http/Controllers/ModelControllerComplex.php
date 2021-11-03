@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Requests;
 use App\Models\Complex;
 use DB;
+use Phpml\Classification\KNearestNeighbors;
+use Phpml\Classification\SVC;
+use Phpml\Classification\NaiveBayes;
+use Phpml\SupportVectorMachine\Kernel;
 
 class ModelControllerComplex extends Controller
 {
@@ -1539,6 +1543,40 @@ $nadisplay1 = "none";
               ->update(['percentage' => $percentage]);
   $data['percentage'] = $percentage;
 
+
+
+  $classifier = new KNearestNeighbors();
+  $classification = "";
+
+  $samples = [[1.38, 0.98, 11.00, 2.06, 0.50, 1.26], [-1.01, 0.49, 13.00, 4.67, 0.31, -0.71], [1.16, 0.70, 17.00, 0.53, 0.43, 7.93], [-3.98, -3.76, 16.00, -16.36, 0.18, -1.14]];
+  $labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
+  $classifier->train($samples, $labels);
+  if($quickt1 != "N/A" && $alt1 != "N/A" && $ind1 != "N/A" && $bon1 != "N/A" && $taff1 != "N/A" && $binkert != "N/A") {
+  $classification = $classifier->predict([$alt1, $ind1, $quickt1, $bon1, $taff1, $binkert]);
+} else {
+  $classification = "";
+}
+
+  if($classification == "First Degree Financial Distress") {
+    $classification = "in the financial distress of the I. degree.";
+  }
+  if($classification == "Second Degree Financial Distress") {
+    $classification = "in the financial distress of the II. degree.";
+  }
+  if($classification == "Third Degree Financial Distress") {
+    $classification = "in the financial distress of the III. degree.";
+  }
+
+  if($classification == "No Financial Distress") {
+    $classification = "out of danger.";
+  }
+
+  if($classification == "") {
+    $classification = "in a situation, where the model is not able to determine its status based on the parameters";
+  }
+
+
+  $data['classification'] = $classification;
 
   // RETURN VIEW
   //return view('results',$data);
