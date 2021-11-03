@@ -267,7 +267,6 @@ onclick="window.print();">
   <p><i class="fa fa-warning"></i>
   According to the information provided, your company is in <b> the financial distress of the I. degree</b> in the year of <?php echo $currentyear; ?>. <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
-  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
   </p>
 </div>
 
@@ -275,7 +274,6 @@ onclick="window.print();">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist; ?></b> in the year of <?php echo $currentyear; ?>. <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>;
-  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </p>
 </div>
 
@@ -299,7 +297,6 @@ onclick="window.print();">
   <p><i class="fa fa-warning"></i>
   According to the information provided, your company is in <b> the financial distress of the I. degree</b> in the year of <?php echo $currentyear-1; ?>. <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
-  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
   </p>
 </div>
 
@@ -307,7 +304,6 @@ onclick="window.print();">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist2; ?></b> in the year of <?php echo $currentyear-1; ?>. <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress2; ?></b> <?php echo $distress2_2; ?>
-  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </p>
 </div>
 
@@ -333,7 +329,6 @@ onclick="window.print();">
   <p><i class="fa fa-warning"></i>
   According to the information provided, your company is in <b> the financial distress of the I. degree</b> in the year of <?php echo $currentyear-2; ?>. <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b>the financial distress of the first degree – low risk of bankruptcy</b> (maximum 2 of the six prediction models detected risk of bankruptcy or financial distress).
-  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
   </p>
 </div>
 
@@ -341,7 +336,6 @@ onclick="window.print();">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist1; ?></b> in the year of <?php echo $currentyear-2; ?>. <br />
   Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress1; ?></b> <?php echo $distress1_2; ?>;
-  <br />  <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </p>
 </div>
 
@@ -350,7 +344,14 @@ onclick="window.print();">
   Not all information has been filled in when sending the data or an index cannot be calculated, which can result in lower accuracy of the model.
 </div>
 
+<div class="warning-msg">
+<i class="fa fa-warning"></i>
+<?php echo $help; ?> <b><?php echo $help2; ?></b>
+</div>
+
+
 <br /> <br />
+<!--
 <div style="width:1100px; margin:0 auto;">
 <button type="button" class="collapsible">Machine Learning Model</button>
 <div class="content">
@@ -359,7 +360,7 @@ onclick="window.print();">
 </div>
 
 <br> <br>
-
+-->
 
 
 <script>
