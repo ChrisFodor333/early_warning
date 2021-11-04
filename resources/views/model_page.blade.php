@@ -768,7 +768,7 @@ h6 {
           document.querySelector('#tt12').innerHTML = "Row 109 in Balance Sheet";
           document.querySelector('#tt13').innerHTML = "Row 109 in Balance Sheet";
           document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 122 in Balance Sheet";
-          document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 127 in Income Statement";
+          document.querySelector('#tt15').innerHTML = "Row 127 in Income Statement";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 127 in Income Statement";
           document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 127 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 154 in Income Statement";
@@ -788,7 +788,7 @@ h6 {
           document.querySelector('#tt1a').innerHTML = "Row 065 in Balance Sheet";
           document.querySelector('#tt7a').innerHTML = "Row 067 in Balance Sheet";
           document.querySelector('#tt11a').innerHTML = "Row 088 in Balance Sheet";
-          document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 127 in Income Statement";
+          document.querySelector('#tt15a').innerHTML = "Row 127 in Income Statement";
           document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 127 in Income Statement";
           document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 127 in Income Statement";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 154 in Income Statement";
