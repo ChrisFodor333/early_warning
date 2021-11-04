@@ -524,6 +524,7 @@ onclick="window.print();">
     </div>
   </div>
 
+<!--
 <div style="width:1100px; margin:0 auto;">
 <button type="button" class="collapsible">Machine Learning Model</button>
 <div class="content">
@@ -551,6 +552,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
+-->
 
 
 

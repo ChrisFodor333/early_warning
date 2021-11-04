@@ -16,7 +16,6 @@
         "laravelcollective/html": "^6.2",
         "php-ai/php-ml": "^0.4.1",
         "spatie/crawler": "^7.0",
-        "symfony/process": "^5.3",
         "yajra/laravel-datatables-oracle": "^9.18"
     },
     "require-dev": {
