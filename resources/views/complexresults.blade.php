@@ -351,7 +351,7 @@ onclick="window.print();">
 
 
 <br /> <br />
-<!--
+
 <div style="width:1100px; margin:0 auto;">
 <button type="button" class="collapsible">Machine Learning Model</button>
 <div class="content">
@@ -360,7 +360,7 @@ onclick="window.print();">
 </div>
 
 <br> <br>
--->
+
 
 
 <script>

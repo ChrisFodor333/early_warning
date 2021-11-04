@@ -665,6 +665,7 @@ $data['quicktestcolor'] =  $quicktestcolor;
   $ratio = (floatval($altman) + floatval($in05) + floatval((1/$quicktest)) + floatval($bonity) + floatval($taffler)) / 5;
   }
   $basic->ratio = $ratio;
+
   $basic->save();
 
 
@@ -697,14 +698,16 @@ $data['quicktestcolor'] =  $quicktestcolor;
 
 //$result = shell_exec("py " . app_path(). "/Http/Controllers/machinelearning.py " . escapeshellarg($altman) . " ". escapeshellarg($in05) . " " . escapeshellarg($quicktest) . " " . escapeshellarg($bonity) . " ". escapeshellarg($taffler) . " ". escapeshellarg($binkert));
 //echo $result;
-//$records= Machine::all();
+$records= Machine::all();
 
 $samples = array();
 $labels = array();
 $classification = "";
+$classification2 = "";
 
 
-/*$records->each(function($record) use (&$labels, &$samples)
+
+$records->each(function($record) use (&$labels, &$samples)
 {
     array_push($labels,$record->result);
     if($record->altman != "N/A" && $record->in05 != "N/A" && $record->quicktest != "N/A" && $record->bonity != "N/A" && $record->taffler != "N/A" && $record->binkert != "N/A") {
@@ -714,18 +717,21 @@ $classification = "";
     }
 
 });
-*/
+
 
 $classifier = new KNearestNeighbors();
-//$classifier = new NaiveBayes();
+$classifier2 = new NaiveBayes();
 
-$samples = [[1.38, 0.98, 11.00, 2.06, 0.50, 1.26], [-1.01, 0.49, 13.00, 4.67, 0.31, -0.71], [1.16, 0.70, 17.00, 0.53, 0.43, 7.93], [-3.98, -3.76, 16.00, -16.36, 0.18, -1.14]];
-$labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
+//$samples = [[1.38, 0.98, 11.00, 2.06, 0.50, 1.26], [-1.01, 0.49, 13.00, 4.67, 0.31, -0.71], [1.16, 0.70, 17.00, 0.53, 0.43, 7.93], [-3.98, -3.76, 16.00, -16.36, 0.18, -1.14]];
+//$labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
 $classifier->train($samples, $labels);
+$classifier2->train($samples, $labels);
 if($altman != "N/A" && $in05 != "N/A" && $quicktest != "N/A" && $bonity != "N/A" && $taffler != "N/A" && $binkert != "N/A") {
 $classification = $classifier->predict([$altman, $in05, $quicktest, $bonity, $taffler, $binkert]);
+$classification2 = $classifier2->predict([$altman, $in05, $quicktest, $bonity, $taffler, $binkert]);
 } else {
   $classification = "";
+  $classification2 = "";
 }
 
 //$mlp = new MLPClassifier(4, [[2, new PReLU], [2, new Sigmoid]], ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress']);
@@ -739,24 +745,51 @@ $classification = $classifier->predict([$altman, $in05, $quicktest, $bonity, $ta
 //$classification = $something[0];
 //$classification = str_replace("[", "", $classification);
 //$classification = str_replace("'", "", $classification);
+
+$value = 0;
+
 if($classification == "First Degree Financial Distress") {
-  $classification = "in the financial distress of the I. degree.";
+  $value = $value + 1;
 }
 if($classification == "Second Degree Financial Distress") {
-  $classification = "in the financial distress of the II. degree.";
+  $value = $value + 2;
 }
 if($classification == "Third Degree Financial Distress") {
-  $classification = "in the financial distress of the III. degree.";
+    $value = $value + 3;
 }
 
-if($classification == "No Financial Distress") {
-  $classification = "out of danger.";
+if($classification2 == "First Degree Financial Distress") {
+  $value = $value + 1;
+}
+if($classification2 == "Second Degree Financial Distress") {
+  $value = $value + 2;
+}
+if($classification2 == "Third Degree Financial Distress") {
+    $value = $value + 3;
 }
 
 if($classification == "") {
+  $value = 999;
+}
+
+if($value <= 2) {
+  $classification = "in the financial distress of the I. degree.";
+}
+if($value > 2 && $value < 5) {
+  $classification = "in the financial distress of the II. degree.";
+}
+if($value >= 5 && $value < 999) {
+  $classification = "in the financial distress of the III. degree.";
+}
+
+if($value >= 999) {
   $classification = "in a situation, where the model is not able to determine its status based on the parameters";
 }
 
+
+if($value < 1) {
+  $classification = "out of danger.";
+}
 
 /*$accuracy = $something[1];
 $accuracy = str_replace("[[", "", $accuracy);
@@ -768,6 +801,7 @@ $accuracy4 = $accuracy_exp[3];
 */
 
 $data['classification'] = $classification;
+
 /*
 $data['accuracy1'] = $accuracy1;
 $data['accuracy2'] = $accuracy2;

@@ -10,6 +10,7 @@ use Phpml\Classification\KNearestNeighbors;
 use Phpml\Classification\SVC;
 use Phpml\Classification\NaiveBayes;
 use Phpml\SupportVectorMachine\Kernel;
+use App\Models\Machine;
 
 class ModelControllerComplex extends Controller
 {
@@ -1546,34 +1547,80 @@ $nadisplay1 = "none";
 
 
   $classifier = new KNearestNeighbors();
+  $classifier2 = new NaiveBayes();
   $classification = "";
+  $classification2 = "";
+  $records= Machine::all();
+  $samples = array();
+  $labels = array();
 
-  $samples = [[1.38, 0.98, 11.00, 2.06, 0.50, 1.26], [-1.01, 0.49, 13.00, 4.67, 0.31, -0.71], [1.16, 0.70, 17.00, 0.53, 0.43, 7.93], [-3.98, -3.76, 16.00, -16.36, 0.18, -1.14]];
-  $labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
+  $records->each(function($record) use (&$labels, &$samples)
+  {
+      array_push($labels,$record->result);
+      if($record->altman != "N/A" && $record->in05 != "N/A" && $record->quicktest != "N/A" && $record->bonity != "N/A" && $record->taffler != "N/A" && $record->binkert != "N/A") {
+      $features = array(floatval($record->altman), floatval($record->in05), floatval($record->quicktest), floatval($record->bonity), floatval($record->taffler), floatval($record->binkert));
+      //$features = array($record->ratio);
+      array_push($samples,$features);
+      }
+
+  });
+
+  //$samples = [[1.38, 0.98, 11.00, 2.06, 0.50, 1.26], [-1.01, 0.49, 13.00, 4.67, 0.31, -0.71], [1.16, 0.70, 17.00, 0.53, 0.43, 7.93], [-3.98, -3.76, 16.00, -16.36, 0.18, -1.14]];
+  //$labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
   $classifier->train($samples, $labels);
+  $classifier2->train($samples, $labels);
   if($quickt1 != "N/A" && $alt1 != "N/A" && $ind1 != "N/A" && $bon1 != "N/A" && $taff1 != "N/A" && $binkert != "N/A") {
   $classification = $classifier->predict([$alt1, $ind1, $quickt1, $bon1, $taff1, $binkert]);
+  $classification2 = $classifier2->predict([$alt1, $ind1, $quickt1, $bon1, $taff1, $binkert]);
 } else {
   $classification = "";
+  $classification2 = "";
 }
 
-  if($classification == "First Degree Financial Distress") {
-    $classification = "in the financial distress of the I. degree.";
-  }
-  if($classification == "Second Degree Financial Distress") {
-    $classification = "in the financial distress of the II. degree.";
-  }
-  if($classification == "Third Degree Financial Distress") {
-    $classification = "in the financial distress of the III. degree.";
-  }
+$value = 0;
 
-  if($classification == "No Financial Distress") {
-    $classification = "out of danger.";
-  }
+if($classification == "First Degree Financial Distress") {
+  $value = $value + 1;
+}
+if($classification == "Second Degree Financial Distress") {
+  $value = $value + 2;
+}
+if($classification == "Third Degree Financial Distress") {
+    $value = $value + 3;
+}
 
-  if($classification == "") {
-    $classification = "in a situation, where the model is not able to determine its status based on the parameters";
-  }
+if($classification2 == "First Degree Financial Distress") {
+  $value = $value + 1;
+}
+if($classification2 == "Second Degree Financial Distress") {
+  $value = $value + 2;
+}
+if($classification2 == "Third Degree Financial Distress") {
+    $value = $value + 3;
+}
+
+if($classification == "") {
+  $value = 999;
+}
+
+if($value <= 2) {
+  $classification = "in the financial distress of the I. degree.";
+}
+if($value > 2 && $value < 5) {
+  $classification = "in the financial distress of the II. degree.";
+}
+if($value >= 5 && $value < 999) {
+  $classification = "in the financial distress of the III. degree.";
+}
+
+if($value >= 999) {
+  $classification = "in a situation, where the model is not able to determine its status based on the parameters";
+}
+
+
+if($value < 1) {
+  $classification = "out of danger.";
+}
 
 
   $data['classification'] = $classification;
