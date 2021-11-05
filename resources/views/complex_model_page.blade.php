@@ -930,6 +930,8 @@ display: none;
                 document.querySelector('#countryimage').src = "/early_warning/assets/inc/cro.png";
                 document.querySelector('#revchange').innerHTML = "Income from Sales";
                 document.querySelector('#revchange2').innerHTML = "Income from Sales";
+                document.querySelector('#revchange3').innerHTML = "Income from Sales";
+                
                 const placeholders = document.querySelectorAll('.tt15input');
                 const products = document.querySelectorAll('.mergehide');
                 const services = document.querySelectorAll('.mergehide2');
