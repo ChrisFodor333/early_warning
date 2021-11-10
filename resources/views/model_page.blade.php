@@ -24,6 +24,10 @@ document.onkeypress = stopRKey;
     font-size: 12px;
   }
 
+  #sas {
+    font-size: 11px;
+  }
+
 
 
   #siz3 {
@@ -232,6 +236,7 @@ h6 {
       document.querySelector('#profitlosslab').innerHTML = "Net Profit/Loss of Previous Year";
 
       document.querySelector('#profitlosslab').style.fontSize = "12px";
+      document.querySelector('#sas').style.fontSize = "11px";
 
       const phprofitloss = document.querySelectorAll('.phprofitloss');
 
@@ -315,7 +320,7 @@ h6 {
           document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
           document.querySelector('#tt19').innerHTML = "Row 21 in Income Statement";
-          document.querySelector('#tt20').innerHTML = "Row 46 in Income Statement";
+          document.querySelector('#tt20').innerHTML = "Row 30 in Income Statement";
           document.querySelector('#tt21').innerHTML = "Row 49 in Income Statement";
           document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
           document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
@@ -334,7 +339,7 @@ h6 {
           document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 04 in Income Statement";
           document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
-          document.querySelector('#tt20a').innerHTML = "Row 46 in Income Statement";
+          document.querySelector('#tt20a').innerHTML = "Row 30 in Income Statement";
           document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
 
           document.querySelector('#tt2b').innerHTML = "Row 033 in Balance Sheet";
@@ -350,6 +355,7 @@ h6 {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/rom.png";
           document.querySelector('#provis').innerHTML = "Provisions";
           document.querySelector('#provis2').innerHTML = "Provisions";
+          document.querySelector('#sas').style.fontSize = "14px";
 
           document.querySelector('#adl').innerHTML = "Accruals (A)";
           const phadl = document.querySelectorAll('.phadl');
@@ -496,6 +502,7 @@ h6 {
 
           document.querySelector('#revchange').innerHTML = "Income from Sales";
           document.querySelector('#revchange2').innerHTML = "Income from Sales";
+          document.querySelector('#sas').style.fontSize = "14px";
           const placeholders = document.querySelectorAll('.tt15input');
 
           const mywraps = document.querySelectorAll('.mywrap');
@@ -586,6 +593,7 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Bosnia and Herzegovina") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/bos.png";
+          document.querySelector('#sas').style.fontSize = "14px";
 
           const mywraps = document.querySelectorAll('.mywrap');
 
@@ -725,6 +733,7 @@ h6 {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/cro.png";
           document.querySelector('#revchange').innerHTML = "Income from Sales";
           document.querySelector('#revchange2').innerHTML = "Income from Sales";
+          document.querySelector('#sas').style.fontSize = "14px";
           const placeholders = document.querySelectorAll('.tt15input');
           const products = document.querySelectorAll('.mergehide');
           const services = document.querySelectorAll('.mergehide2');
@@ -1947,8 +1956,8 @@ h6 {
                       <br class="mobile" />
 
                       <div class="tt1">
-                      <label>Securities and Shares Sold</label>
-                      <span class="tooltiptext" id="tt20">Row 46 in Income Statement</span>
+                      <label id="sas">Revenue (Securities and Shares)</label>
+                      <span class="tooltiptext" id="tt20">Row 30 in Income Statement</span>
                       </div>
                     <input
                       type="number"
@@ -2681,8 +2690,8 @@ h6 {
           <div className="mf-input-wrapper">
             <br class="mobile" />
             <div class="tt1">
-            <label>Securities and Shares Sold</label>
-            <span class="tooltiptext" id="tt20a">Row 46 in Income Statement</span>
+            <label id="sas">Revenue (Securities and Shares)</label>
+            <span class="tooltiptext" id="tt20a">Row 30 in Income Statement</span>
             </div>
             <input type="number" tabindex="38" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="securities-shares2" placeholder="${ parent.decodeEntities(`Securities and Shares`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['securities-shares2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
             />

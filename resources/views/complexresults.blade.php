@@ -273,7 +273,7 @@ onclick="window.print();">
 <div class="error-msg" style="display: <?php echo $redwarning;?>;">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist; ?></b> in the year of <?php echo $currentyear; ?>. <br />
-  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress2; ?>;
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress_2; ?>;
 </p>
 </div>
 

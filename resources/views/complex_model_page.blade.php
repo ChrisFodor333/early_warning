@@ -375,7 +375,7 @@ display: none;
             document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
             document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
             document.querySelector('#tt19').innerHTML = "Row 21 in Income Statement";
-            document.querySelector('#tt20').innerHTML = "Row 46 in Income Statement";
+            document.querySelector('#tt20').innerHTML = "Row 30 in Income Statement";
             document.querySelector('#tt21').innerHTML = "Row 49 in Income Statement";
             document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
             document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
@@ -399,7 +399,7 @@ display: none;
             document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
             document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
             document.querySelector('#tt19a').innerHTML = "Row 21 in Income Statement";
-            document.querySelector('#tt20a').innerHTML = "Row 46 in Income Statement";
+            document.querySelector('#tt20a').innerHTML = "Row 30 in Income Statement";
             document.querySelector('#tt21a').innerHTML = "Row 49 in Income Statement";
             document.querySelector('#tt22a').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
             document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
@@ -423,7 +423,7 @@ display: none;
             document.querySelector('#tt17b').innerHTML = "Revenue from the sale of own services => Row 05 in Income Statement";
             document.querySelector('#tt18b').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement";
             document.querySelector('#tt19b').innerHTML = "Row 21 in Income Statement";
-            document.querySelector('#tt20b').innerHTML = "Row 46 in Income Statement";
+            document.querySelector('#tt20b').innerHTML = "Row 30 in Income Statement";
             document.querySelector('#tt21b').innerHTML = "Row 49 in Income Statement";
             document.querySelector('#tt22b').innerHTML = "Profit/loss for the accounting period before tax => Row 56 in Income Statement";
             document.querySelector('#tt23b').innerHTML = "Profit/loss for the accounting period after tax => Row 61 in Income Statement";
@@ -931,7 +931,7 @@ display: none;
                 document.querySelector('#revchange').innerHTML = "Income from Sales";
                 document.querySelector('#revchange2').innerHTML = "Income from Sales";
                 document.querySelector('#revchange3').innerHTML = "Income from Sales";
-                
+
                 const placeholders = document.querySelectorAll('.tt15input');
                 const products = document.querySelectorAll('.mergehide');
                 const services = document.querySelectorAll('.mergehide2');
@@ -3807,15 +3807,15 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Securities and Shares Sold</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
-                  <span class="tooltiptext" id="tt20">Row 46 in Income Statement</span>
+                  <label>Revenue (Securities and Shares)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <span class="tooltiptext" id="tt20">Row 30 in Income Statement</span>
                   </div>
                 <input
                   type="number"
                   className="mf-input "
                   id="mf-input-text-d5f534d"
                   name="securities-shares"
-                  placeholder="${ parent.decodeEntities(`Securities and Shares Sold`) } "
+                  placeholder="${ parent.decodeEntities(`Revenue (Securities and Shares)`) } "
                             onInput=${parent.handleChange}
                     aria-invalid=${validation.errors['securities-shares'] ? 'true' : 'false'}
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -3842,8 +3842,8 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Securities and Shares Sold</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
-                <span class="tooltiptext" id="tt20a">Row 46 in Income Statement</span>
+                <label>Revenue (Securities and Shares)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <span class="tooltiptext" id="tt20a">Row 30 in Income Statement</span>
                 </div>
 
                 <input
@@ -3851,7 +3851,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 className="mf-input "
                 id="mf-input-text-13c1826"
                 name="securities-shares2"
-                placeholder="${ parent.decodeEntities(`Securities and Shares Sold`) } "
+                placeholder="${ parent.decodeEntities(`Revenue (Securities and Shares)`) } "
                   onInput=${parent.handleChange}
                 aria-invalid=${validation.errors['securities-shares2'] ? 'true' : 'false'}
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -3876,15 +3876,15 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Securities and Shares Sold</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
-                <span class="tooltiptext" id="tt20b">Row 46 in Income Statement</span>
+                <label>Revenue (Securities and Shares)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                <span class="tooltiptext" id="tt20b">Row 30 in Income Statement</span>
                 </div>
                 <input
                 type="number"
                 className="mf-input "
                 id="mf-input-text-d5f534d"
                 name="securities-shares1"
-                placeholder="${ parent.decodeEntities(`Securities and Shares Sold`) } "
+                placeholder="${ parent.decodeEntities(`Revenue (Securities and Shares)`) } "
                           onInput=${parent.handleChange}
                   aria-invalid=${validation.errors['securities-shares1'] ? 'true' : 'false'}
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
