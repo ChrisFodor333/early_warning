@@ -273,7 +273,7 @@ onclick="window.print();">
 <div class="error-msg" style="display: <?php echo $redwarning;?>;">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist; ?></b> in the year of <?php echo $currentyear; ?>. <br />
-  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress_2; ?>;
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress; ?></b> <?php echo $distress_2; ?>
 </p>
 </div>
 
@@ -335,7 +335,7 @@ onclick="window.print();">
 <div class="error-msg" style="display: <?php echo $redwarning1;?>;">
   <p><i class="fa fa-times-circle"></i>
   According to the information provided, your company is in the <b><?php echo $dist1; ?></b> in the year of <?php echo $currentyear-2; ?>. <br />
-  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress1; ?></b> <?php echo $distress1_2; ?>;
+  Using the methodology of selected prediction models and company’s financial statements, the company is facing <b><?php echo $distress1; ?></b> <?php echo $distress1_2; ?>
 </p>
 </div>
 
@@ -349,7 +349,7 @@ onclick="window.print();">
 <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </div>
 
-
+<!--
 <br /> <br />
 
 <div style="width:1100px; margin:0 auto;">
@@ -358,6 +358,7 @@ onclick="window.print();">
   <p>According to our machine learning model, your company might be <b><?php echo $classification; ?><b/></p>
 </div>
 </div>
+-->
 
 <br> <br>
 
