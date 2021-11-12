@@ -160,6 +160,10 @@ class ModelControllerNew extends Controller
 
   $b8 = request()->get('current-receivables');
   $b17 = request()->get('financial-assistance');
+  if($country == "Croatia") {
+    $b17 = 0;
+  }
+
   $b19 = request()->get('current-bank-loans');
   $b26 = request()->get('ncia');
   $b10 = request()->get('ad-total');

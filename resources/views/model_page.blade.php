@@ -184,6 +184,10 @@ h6 {
       const placeholders = document.querySelectorAll('.tt15input');
       const products = document.querySelectorAll('.mergehide');
       const services = document.querySelectorAll('.mergehide2');
+      const assistances = document.querySelectorAll('.finhide');
+      assistances.forEach(function(assist) {
+         assist.style.display = "block";
+      });
 
       products.forEach(function(product) {
          product.style.display = "block";
@@ -297,6 +301,12 @@ h6 {
          mywrap.style.width = "200px";
       });
 
+      document.querySelector('#bankloanslab').innerHTML = "Current Bank Loans";
+
+      const phbanks = document.querySelectorAll('.phbank');
+      phbanks.forEach(function(ph) {
+         ph.placeholder = "Current Bank Loans";
+      });
 
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
@@ -733,10 +743,20 @@ h6 {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/cro.png";
           document.querySelector('#revchange').innerHTML = "Income from Sales";
           document.querySelector('#revchange2').innerHTML = "Income from Sales";
+          document.querySelector('#bankloanslab').innerHTML = "Current Loans";
           document.querySelector('#sas').style.fontSize = "14px";
           const placeholders = document.querySelectorAll('.tt15input');
           const products = document.querySelectorAll('.mergehide');
           const services = document.querySelectorAll('.mergehide2');
+          const assistances = document.querySelectorAll('.finhide');
+          assistances.forEach(function(assist) {
+             assist.style.display = "none";
+          });
+
+          const phbanks = document.querySelectorAll('.phbank');
+          phbanks.forEach(function(ph) {
+             ph.placeholder = "Current Loans";
+          });
 
           const mywraps = document.querySelectorAll('.mywrap');
 
@@ -1458,7 +1478,7 @@ h6 {
             <br class="mobile" />
 
             <div class="tt1">
-            <label id="profitlosslab">Net Profit/Loss of Previous Years</label>
+            <label id="profitlosslab">Net Profit/Loss of Previous Year</label>
             <span class="tooltiptext" id="tt8">Row 097 in Balance Sheet</span>
             </div>
             <input
@@ -1497,7 +1517,7 @@ h6 {
             <br class="mobile" />
 
             <div class="tt1">
-            <label id="profitlosslab2">Net Loss of Previous Years</label>
+            <label id="profitlosslab2">Net Loss of Previous Year</label>
             <span class="tooltiptext" id="tt8RB">Row 097 in Balance Sheet</span>
             </div>
             <input
@@ -1654,12 +1674,12 @@ h6 {
                         <div className="mf-input-wrapper">
                             <br class="mobile" />
                           <div class="tt1">
-                          <label>Current Bank Loans</label>
+                          <label id="bankloanslab">Current Bank Loans</label>
                           <span class="tooltiptext" id="tt12">Row 139 in Balance Sheet</span>
                           </div>
                         <input
                           type="number"
-                          className="mf-input "
+                          className="mf-input phbank"
                           id="mf-input-text-d5f534d"
                           name="current-bank-loans"
                           tabindex="13"
@@ -1681,7 +1701,7 @@ h6 {
                 </div>
               </div>
 
-              <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+              <div className="finhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
               <div className="elementor-widget-wrap elementor-element-populated">
               <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">

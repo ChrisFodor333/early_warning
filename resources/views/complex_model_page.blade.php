@@ -1,15 +1,7 @@
 @include('header')
 
 <!-- Page Title -->
-
-
-
 <style>
-
-
-
-
-
 
     @media (min-width: 880px) {
       #contentmain {
@@ -55,10 +47,6 @@
     }
   }
 
-
-
-
-
   @media (min-width: 1025px) {
     #contentmain {
     margin-left: 0px;
@@ -89,8 +77,6 @@
       text-align: center;
     }
   }
-
-
 
 
  label {
@@ -350,6 +336,20 @@ display: none;
         const show_aftertax = document.querySelectorAll('.aftertaxhide');
         show_aftertax.forEach(function(field) {
            field.style.display = "none";
+        });
+
+        document.querySelector('#bankloanslab').innerHTML = "Current Bank Loans";
+        document.querySelector('#bankloanslab2').innerHTML = "Current Bank Loans";
+        document.querySelector('#bankloanslab3').innerHTML = "Current Bank Loans";
+
+        const phbanks = document.querySelectorAll('.phbank');
+        phbanks.forEach(function(ph) {
+           ph.placeholder = "Current Bank Loans";
+        });
+
+        const assistances = document.querySelectorAll('.finhide');
+        assistances.forEach(function(assist) {
+           assist.style.display = "block";
         });
 
 
@@ -931,6 +931,20 @@ display: none;
                 document.querySelector('#revchange').innerHTML = "Income from Sales";
                 document.querySelector('#revchange2').innerHTML = "Income from Sales";
                 document.querySelector('#revchange3').innerHTML = "Income from Sales";
+
+                document.querySelector('#bankloanslab').innerHTML = "Current Loans";
+                document.querySelector('#bankloanslab2').innerHTML = "Current Loans";
+                document.querySelector('#bankloanslab3').innerHTML = "Current Loans";
+
+                const assistances = document.querySelectorAll('.finhide');
+                assistances.forEach(function(assist) {
+                   assist.style.display = "none";
+                });
+
+                const phbanks = document.querySelectorAll('.phbank');
+                phbanks.forEach(function(ph) {
+                   ph.placeholder = "Current Loans";
+                });
 
                 const placeholders = document.querySelectorAll('.tt15input');
                 const products = document.querySelectorAll('.mergehide');
@@ -2920,12 +2934,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Current Bank Loans</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <label id="bankloanslab">Current Bank Loans</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                   <span class="tooltiptext" id="tt12">Row 139 in Balance Sheet</span>
                   </div>
                 <input
                   type="number"
-                  className="mf-input "
+                  className="mf-input phbank"
                   id="mf-input-text-d5f534d"
                   name="current-bank-loans"
                   placeholder="${ parent.decodeEntities(`Current Bank Loans`) } "
@@ -2955,13 +2969,13 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Current Bank Loans</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <label id="bankloanslab2">Current Bank Loans</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                 <span class="tooltiptext" id="tt12a">Row 139 in Balance Sheet</span>
                 </div>
 
                 <input
                 type="number"
-                className="mf-input "
+                className="mf-input phbank"
                 id="mf-input-text-13c1826"
                 name="current-bank-loans2"
                 placeholder="${ parent.decodeEntities(`Current Bank Loans`) } "
@@ -2989,12 +3003,12 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Current Bank Loans</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                <label id="bankloanslab3">Current Bank Loans</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                 <span class="tooltiptext" id="tt12b">Row 139 in Balance Sheet</span>
                 </div>
                 <input
                 type="number"
-                className="mf-input "
+                className="mf-input phbank"
                 id="mf-input-text-d5f534d"
                 name="current-bank-loans1"
                 placeholder="${ parent.decodeEntities(`Current Bank Loans`) } "
@@ -3019,7 +3033,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                   <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+                  <div className="finhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
                   <div className="elementor-widget-wrap elementor-element-populated">
                   <!-- IMPORTANT -->
                       <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -3050,7 +3064,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   </div>
                   </div>
 
-                  <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                  <div className="finhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                   <div className="elementor-widget-wrap elementor-element-populated">
                   <!-- IMPORTANT -->
                           <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -3086,7 +3100,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                     </div>
                   </div>
 
-                  <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+                  <div className="finhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
                   <div className="elementor-widget-wrap elementor-element-populated">
                   <!-- IMPORTANT -->
                       <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">

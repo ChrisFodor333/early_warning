@@ -187,6 +187,9 @@ class ModelControllerComplex extends Controller
 
   $bs8 = request()->get('current-receivables');
   $bs17 = request()->get('financial-assistance');
+  if($country == "Croatia") {
+    $bs17 = 0;
+  }
   $bs19 = request()->get('current-bank-loans');
 
   // LAST YEAR
@@ -254,6 +257,9 @@ class ModelControllerComplex extends Controller
 
   $cs8 = request()->get('current-receivables2');
   $cs17 = request()->get('financial-assistance2');
+  if($country == "Croatia") {
+    $cs17 = 0;
+  }
   $cs19 = request()->get('current-bank-loans2');
 
   // THE YEAR BEFORE
@@ -319,6 +325,9 @@ class ModelControllerComplex extends Controller
 
   $ds8 = request()->get('current-receivables1');
   $ds17 = request()->get('financial-assistance1');
+  if($country == "Croatia") {
+    $ds17 = 0;
+  }
   $ds19 = request()->get('current-bank-loans1');
 
 
