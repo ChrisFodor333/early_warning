@@ -4723,7 +4723,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <label id="ownperformancehu">Own Performance Capitalized</label>
             <span class="tooltiptext">Row II. in Income Statement</span>
             </div>
-            <input type="number" tabindex="36" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-performance2" placeholder="${ parent.decodeEntities(`Own Performance`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-performance2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            <input type="number"  defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-performance2" placeholder="${ parent.decodeEntities(`Own Performance`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-performance2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
               <${validation.ErrorMessage} errors=${validation.errors} name="own-performance2" as=${html`<span className="mf-error-message"></span>`}
@@ -4747,7 +4747,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
             <label>Material Costs</label>
             <span class="tooltiptext">Row IV. in Income Statement</span>
             </div>
-            <input type="number" tabindex="36" defaultValue="" className="mf-input" id="mf-input-email-094f2a0" name="materialcosts2" placeholder="${ parent.decodeEntities(`Material Costs`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['materialcosts2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            <input type="number"  defaultValue="" className="mf-input" id="mf-input-email-094f2a0" name="materialcosts2" placeholder="${ parent.decodeEntities(`Material Costs`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['materialcosts2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
             />
 
               <${validation.ErrorMessage} errors=${validation.errors} name="materialcosts2" as=${html`<span className="mf-error-message"></span>`}

@@ -373,6 +373,7 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Slovenia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/slove.png";
+          
         }
 
       if(document.querySelector('#countryselect').value == "Romania") {
@@ -918,7 +919,6 @@ h6 {
 
         if(document.querySelector('#countryselect').value == "Ukraine" ||
            document.querySelector('#countryselect').value == "Austria" ||
-           document.querySelector('#countryselect').value == "Slovenia" ||
            document.querySelector('#countryselect').value == "Serbia" ||
            document.querySelector('#countryselect').value == "Moldova") {
             const tooltips = document.querySelectorAll('.tooltiptext');
