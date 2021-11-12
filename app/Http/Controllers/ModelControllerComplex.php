@@ -236,6 +236,9 @@ class ModelControllerComplex extends Controller
   $cs5 = request()->get('financial-assets2');
   $cs22 = request()->get('revenue-merch2');
   $cs24 = request()->get('added-value2');
+  if($country == "Hungary") {
+    $cs24 = request()->get('revenue-merch2') + request()->get('own-performance2') - request()->get('materialcosts2');
+  }
   $cs27 = request()->get('securities-shares2');
   $cs18 = request()->get('bank-loans2');
 

@@ -83,7 +83,7 @@
    cursor: help;
  }
 
- .adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide {
+ .adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide, .perfhide {
  display: none;
  }
 
@@ -352,6 +352,16 @@ display: none;
            assist.style.display = "block";
         });
 
+        const addedvaluehide = document.querySelectorAll('.addedvaluehide');
+        addedvaluehide.forEach(function(addedvalue) {
+           addedvalue.style.display = "block";
+        });
+
+        const perfhide = document.querySelectorAll('.perfhide');
+        perfhide.forEach(function(perf) {
+           perf.style.display = "none";
+        });
+
 
         if(document.querySelector('#countryselect').value == "Slovakia") {
             document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
@@ -459,6 +469,11 @@ display: none;
               });
               */
 
+              const perfhide = document.querySelectorAll('.perfhide');
+              perfhide.forEach(function(perf) {
+                 perf.style.display = "block";
+              });
+
               const products = document.querySelectorAll('.mergehide');
               const services = document.querySelectorAll('.mergehide2');
 
@@ -475,6 +490,10 @@ display: none;
                  ph.placeholder = "Income from Sales";
               });
 
+              const addedvaluehide = document.querySelectorAll('.addedvaluehide');
+              addedvaluehide.forEach(function(addedvalue) {
+                 addedvalue.style.display = "none";
+              });
 
 
               document.querySelector('#tt1').innerHTML = "Row 052 in Balance Sheet";
@@ -4654,7 +4673,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           </div>
           </div>
 
-          <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+          <div className="addedvaluehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
           <div className="elementor-widget-wrap elementor-element-populated">
           <!-- IMPORTANT -->
               <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
@@ -4690,6 +4709,61 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
           </div>
           </div>
           </div>
+
+
+          <div className="perfhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+          <div className="elementor-widget-wrap elementor-element-populated">
+          <!-- IMPORTANT -->
+          <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="mf-input-wrapper ">
+
+            <br class="mobile" />
+
+            <div class="tt1">
+            <label id="ownperformancehu">Own Performance Capitalized</label>
+            <span class="tooltiptext">Row II. in Income Statement</span>
+            </div>
+            <input type="number" tabindex="36" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-performance2" placeholder="${ parent.decodeEntities(`Own Performance`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-performance2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            />
+
+              <${validation.ErrorMessage} errors=${validation.errors} name="own-performance2" as=${html`<span className="mf-error-message"></span>`}
+            />
+
+            </div>
+
+          </div>
+          </div>
+          </div>
+
+          <div className="perfhide mywrap elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+          <div className="elementor-widget-wrap elementor-element-populated">
+          <!-- IMPORTANT -->
+          <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+            <div className="mf-input-wrapper ">
+
+            <br class="mobile" />
+
+            <div class="tt1">
+            <label>Material Costs</label>
+            <span class="tooltiptext">Row IV. in Income Statement</span>
+            </div>
+            <input type="number" tabindex="36" defaultValue="" className="mf-input" id="mf-input-email-094f2a0" name="materialcosts2" placeholder="${ parent.decodeEntities(`Material Costs`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['materialcosts2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+            />
+
+              <${validation.ErrorMessage} errors=${validation.errors} name="materialcosts2" as=${html`<span className="mf-error-message"></span>`}
+            />
+
+            </div>
+
+
+
+
+          </div>
+          </div>
+          </div>
+
+
+
 
 
 

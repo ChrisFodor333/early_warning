@@ -202,6 +202,9 @@ class ModelControllerNew extends Controller
   $c2 = request()->get('totalassets2');
   $c14 = request()->get('provisions2');
   $c24 = request()->get('addedvalue2');
+  if($country == "Hungary") {
+    $c24 = request()->get('revenue-merch2') + request()->get('own-performance2') - request()->get('materialcosts2');
+  }
   $c3 = request()->get('noncurrentassets2');
   $c15 = request()->get('noncurrentliabilities2');
 

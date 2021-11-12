@@ -28,6 +28,10 @@ document.onkeypress = stopRKey;
     font-size: 11px;
   }
 
+  #ownperformancehu {
+    font-size: 13px;
+  }
+
 
 
   #siz3 {
@@ -97,7 +101,7 @@ transition: opacity 1s;
 display: none;
 }
 
-.adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide {
+.adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide, .perfhide {
 display: none;
 }
 
@@ -306,6 +310,16 @@ h6 {
       const phbanks = document.querySelectorAll('.phbank');
       phbanks.forEach(function(ph) {
          ph.placeholder = "Current Bank Loans";
+      });
+
+      const addedvaluehide = document.querySelectorAll('.addedvaluehide');
+      addedvaluehide.forEach(function(addedvalue) {
+         addedvalue.style.display = "block";
+      });
+
+      const perfhide = document.querySelectorAll('.perfhide');
+      perfhide.forEach(function(perf) {
+         perf.style.display = "none";
       });
 
       if(document.querySelector('#countryselect').value == "Slovakia") {
@@ -530,8 +544,20 @@ h6 {
 
 
 
+
+
           const products = document.querySelectorAll('.mergehide');
           const services = document.querySelectorAll('.mergehide2');
+
+          const addedvaluehide = document.querySelectorAll('.addedvaluehide');
+          addedvaluehide.forEach(function(addedvalue) {
+             addedvalue.style.display = "none";
+          });
+
+          const perfhide = document.querySelectorAll('.perfhide');
+          perfhide.forEach(function(perf) {
+             perf.style.display = "block";
+          });
 
           products.forEach(function(product) {
              product.style.display = "none";
@@ -1914,7 +1940,7 @@ h6 {
                     <label>Revenue (Other Sale)</label>
                     <span class="tooltiptext" id="tt18">Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement</span>
                     </div>
-                    <input type="number" tabindex="19" defaultValue="" className="mf-input mywrap2" id="mf-input-email-094f2a0" name="ncia" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+                    <input type="number" tabindex="19" defaultValue="" className="mf-input" id="mf-input-email-094f2a0" name="ncia" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
                     />
 
                       <${validation.ErrorMessage} errors=${validation.errors} name="ncia" as=${html`<span className="mf-error-message"></span>`}
@@ -2486,7 +2512,7 @@ h6 {
           <label>Long-term Bank Loans</label>
           <span class="tooltiptext" id="tt28">Row 121 in Balance Sheet</span>
           </div>
-          <input type="number" tabindex="31" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loan`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+          <input type="number" tabindex="31" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="long-term-bank-loans2" placeholder="${ parent.decodeEntities(`Long-term Bank Loans`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['long-term-bank-loans2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
           />
 
           <${validation.ErrorMessage} errors=${validation.errors} name="long-term-bank-loans2" as=${html`<span className="mf-error-message"></span>`}
@@ -2602,6 +2628,34 @@ h6 {
         </div>
         </div>
         </div>
+
+        <div className="perfhide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="elementor-widget-wrap elementor-element-populated">
+        <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div className="mf-input-wrapper ">
+
+          <br class="mobile" />
+
+          <div class="tt1">
+          <label id="ownperformancehu">Own Performance Capitalized</label>
+          <span class="tooltiptext">Row II. in Income Statement</span>
+          </div>
+          <input type="number" tabindex="36" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="own-performance2" placeholder="${ parent.decodeEntities(`Own Performance`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['own-performance2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          />
+
+            <${validation.ErrorMessage} errors=${validation.errors} name="own-performance2" as=${html`<span className="mf-error-message"></span>`}
+          />
+
+          </div>
+
+
+
+
+        </div>
+        </div>
+        </div>
+
         </div>
         <div className="elementor-container elementor-column-gap-default">
         <div className="mergehide2 elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
@@ -2639,8 +2693,12 @@ h6 {
 
 
         </div>
+
+
         </div>
         </div>
+
+
         <div className="mywrap elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
@@ -2653,7 +2711,7 @@ h6 {
           <label>Revenue (Other Sale)</label>
           <span class="tooltiptext" id="tt18a">Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 08 in Income Statement</span>
           </div>
-          <input type="number" tabindex="36" defaultValue="" className="mf-input mywrap3" id="mf-input-email-094f2a0" name="ncia2" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          <input type="number" tabindex="36" defaultValue="" className="mf-input" id="mf-input-email-094f2a0" name="ncia2" placeholder="${ parent.decodeEntities(`Revenue (Other Sale)`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['ncia2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
           />
 
             <${validation.ErrorMessage} errors=${validation.errors} name="ncia2" as=${html`<span className="mf-error-message"></span>`}
@@ -2668,7 +2726,35 @@ h6 {
         </div>
         </div>
 
-        <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+
+        <div className="perfhide mywrap elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="elementor-widget-wrap elementor-element-populated">
+        <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div className="mf-input-wrapper ">
+
+          <br class="mobile" />
+
+          <div class="tt1">
+          <label>Material Costs</label>
+          <span class="tooltiptext">Row IV. in Income Statement</span>
+          </div>
+          <input type="number" tabindex="36" defaultValue="" className="mf-input" id="mf-input-email-094f2a0" name="materialcosts2" placeholder="${ parent.decodeEntities(`Material Costs`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['materialcosts2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
+          />
+
+            <${validation.ErrorMessage} errors=${validation.errors} name="materialcosts2" as=${html`<span className="mf-error-message"></span>`}
+          />
+
+          </div>
+
+
+
+
+        </div>
+        </div>
+        </div>
+
+        <div className="addedvaluehide elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">
         <!-- IMPORTANT -->
         <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
