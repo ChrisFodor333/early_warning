@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Basic;
+use App\Models\Machine;
 use App\Models\Basic_old;
 use App\Models\Complex;
 use App\Models\Complex_old;
@@ -250,7 +251,8 @@ class RobotController extends Controller
                               $b23_2 = intval(str_replace(' ', '', $sorted_income_statement[4]));
                               $b26 = intval(str_replace(' ', '', $sorted_income_statement[7]));
                               $b25 = intval(str_replace(' ', '', $sorted_income_statement[20]));
-                              $b27 = intval(str_replace(' ', '', $sorted_income_statement[45]));
+
+                              $b27 = intval(str_replace(' ', '', $sorted_income_statement[29]));
 
                               $b28 = intval(str_replace(' ', '', $sorted_income_statement[48]));
                               $b29 = intval(str_replace(' ', '', $sorted_income_statement[55]));
@@ -360,7 +362,7 @@ class RobotController extends Controller
                                       $c23_2= intval(str_replace(' ', '', $sorted_income_statement_2[4]));
                                       $c26 = intval(str_replace(' ', '', $sorted_income_statement_2[7]));
                                       $c24 = intval(str_replace(' ', '', $sorted_income_statement_2[27]));
-                                      $c27 = intval(str_replace(' ', '', $sorted_income_statement_2[45]));
+                                      $c27 = intval(str_replace(' ', '', $sorted_income_statement_2[29]));
                                       $c30 = intval(str_replace(' ', '', $sorted_income_statement_2[60]));
 
                               // YEAR BEFORE
