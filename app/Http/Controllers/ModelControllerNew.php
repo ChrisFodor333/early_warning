@@ -117,7 +117,7 @@ class ModelControllerNew extends Controller
   $b2 = request()->get('total-assets');
   $b25 = request()->get('amortization');
   $b29 = request()->get('profit-loss-before-tax');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
       if(request()->get('profit-loss-before-taxRB') != 0) {
       $b29 = request()->get('profit-loss-before-tax') / request()->get('profit-loss-before-taxRB');
       }
@@ -143,7 +143,7 @@ class ModelControllerNew extends Controller
 
 
   $b30 = request()->get('profit-loss-after-tax');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
       if(request()->get('profit-loss-after-taxRB') != 0) {
       $b30 = request()->get('profit-loss-after-tax') / request()->get('profit-loss-after-taxRB');
         }
@@ -166,10 +166,14 @@ class ModelControllerNew extends Controller
       }
   }
 
+  if($country == "Slovenia") {
+      $b20 = request()->get('ad') + request()->get('adB');
+  }
+
   $b9 = request()->get('financial-accounts');
   $b27 = request()->get('securities-shares');
   $b12 = request()->get('net-profit-loss');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
     if(request()->get('net-profit-lossRB') != 0) {
       $b12 = request()->get('net-profit-loss') / request()->get('net-profit-lossRB');
     }
@@ -196,8 +200,15 @@ class ModelControllerNew extends Controller
     }
   }
 
+  if($country == "Slovenia") {
+      $b10 = request()->get('ad-total') + request()->get('ad-totalR');
+  }
+
   $b28 = request()->get('interest-expense');
   $b13 = request()->get('liabilities');
+  if($country == "Slovenia") {
+      $b13 = request()->get('liabilities') + request()->get('current-liabilities');
+  }
 
   // LAST YEAR
   $c4= request()->get('ppe2');

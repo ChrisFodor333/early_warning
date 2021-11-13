@@ -349,7 +349,7 @@ onclick="window.print();">
 <?php echo $help; ?> <b><?php echo $help2; ?></b>
 </div>
 
-<!--
+
 <br /> <br />
 
 <div style="width:1100px; margin:0 auto;">
@@ -358,7 +358,7 @@ onclick="window.print();">
   <p>According to our machine learning model, your company might be <b><?php echo $classification; ?><b/></p>
 </div>
 </div>
--->
+
 
 <br> <br>
 
