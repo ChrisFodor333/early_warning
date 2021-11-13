@@ -118,7 +118,12 @@ class ModelControllerNew extends Controller
   $b25 = request()->get('amortization');
   $b29 = request()->get('profit-loss-before-tax');
   if($country == "Romania" || $country == "Bosnia and Herzegovina") {
-      $b29 = request()->get('profit-loss-before-tax') + request()->get('profit-loss-before-taxRB');
+      if(request()->get('profit-loss-before-taxRB') != 0) {
+      $b29 = request()->get('profit-loss-before-tax') / request()->get('profit-loss-before-taxRB');
+      }
+      else {
+      $b29 = 0;
+      }
   }
   $b14 = request()->get('provisions');
 
@@ -139,7 +144,12 @@ class ModelControllerNew extends Controller
 
   $b30 = request()->get('profit-loss-after-tax');
   if($country == "Romania" || $country == "Bosnia and Herzegovina") {
-      $b30 = request()->get('profit-loss-after-tax') + request()->get('profit-loss-after-taxRB');
+      if(request()->get('profit-loss-after-taxRB') != 0) {
+      $b30 = request()->get('profit-loss-after-tax') / request()->get('profit-loss-after-taxRB');
+        }
+      else {
+      $b30 = 0;
+      }
   }
   $b16 = request()->get('current-liabilities');
 
@@ -148,14 +158,24 @@ class ModelControllerNew extends Controller
   $b11 = request()->get('equity');
   $b20 = request()->get('ad');
   if($country == "Bosnia and Herzegovina") {
-  $b20 = request()->get('ad') + request()->get('adB');
+    if(request()->get('adB') != 0) {
+      $b20 = request()->get('ad') / request()->get('adB');
+        }
+      else {
+      $b20 = 0;
+      }
   }
 
   $b9 = request()->get('financial-accounts');
   $b27 = request()->get('securities-shares');
   $b12 = request()->get('net-profit-loss');
   if($country == "Romania" || $country == "Bosnia and Herzegovina") {
-    $b12 = request()->get('net-profit-loss') + request()->get('net-profit-lossRB');
+    if(request()->get('net-profit-lossRB') != 0) {
+      $b12 = request()->get('net-profit-loss') / request()->get('net-profit-lossRB');
+    }
+    else {
+      $b12 = 0;
+    }
   }
 
   $b8 = request()->get('current-receivables');
@@ -168,7 +188,12 @@ class ModelControllerNew extends Controller
   $b26 = request()->get('ncia');
   $b10 = request()->get('ad-total');
   if($country == "Romania") {
-    $b10 = request()->get('ad-total') + request()->get('ad-totalR');
+    if(request()->get('ad-totalR') != 0) {
+      $b10 = request()->get('ad-total') / request()->get('ad-totalR');
+    }
+    else {
+      $b10 = 0;
+    }
   }
 
   $b28 = request()->get('interest-expense');
@@ -196,7 +221,12 @@ class ModelControllerNew extends Controller
   $c5 = request()->get('non-current-assets2');
   $c30 = request()->get('profit-loss-after-tax2');
   if($country == "Romania" || $country == "Bosnia and Herzegovina") {
-      $c30 = request()->get('profit-loss-after-tax2') + request()->get('profit-loss-after-tax2RB');
+      if(request()->get('profit-loss-after-tax2RB') != 0) {
+      $c30 = request()->get('profit-loss-after-tax2') / request()->get('profit-loss-after-tax2RB');
+      }
+      else {
+      $c30 = 0;
+      }
   }
   $c11 = request()->get('equity2');
   $c2 = request()->get('totalassets2');

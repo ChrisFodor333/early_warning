@@ -577,9 +577,204 @@ display: none;
 
             }
 
-        if(document.querySelector('#countryselect').value == "Slovenia") {
-            document.querySelector('#countryimage').src = "/early_warning/assets/inc/slove.png";
-          }
+            if(document.querySelector('#countryselect').value == "Slovenia") {
+                document.querySelector('#countryimage').src = "/early_warning/assets/inc/slove.png";
+                document.querySelector('#provis').innerHTML = "Provisions";
+                document.querySelector('#provis2').innerHTML = "Provisions";
+                document.querySelector('#provis3').innerHTML = "Provisions";
+                document.querySelector('#liabslove').innerHTML = "Non-current Liabilities";
+                document.querySelector('#liabslove2').innerHTML = "Non-current Liabilities";
+                document.querySelector('#liabslove3').innerHTML = "Non-current Liabilities";
+                document.querySelector('#sas').innerHTML = "Financial Revenues from Shares";
+                document.querySelector('#sas2').innerHTML = "Financial Revenues from Shares";
+                document.querySelector('#sas3').innerHTML = "Financial Revenues from Shares";
+
+
+                const phliab = document.querySelectorAll('.phliab');
+
+                phliab.forEach(function(ph) {
+                   ph.placeholder = "Non-current Liabilities";
+                });
+
+                const phsas = document.querySelectorAll('.phsas');
+
+                phsas.forEach(function(ph) {
+                   ph.placeholder = "Revenues - Shares";
+                });
+
+                document.querySelector('#adl').innerHTML = "Accruals (A)";
+                document.querySelector('#adl2').innerHTML = "Accruals (A)";
+                document.querySelector('#adl3').innerHTML = "Accruals (A)";
+                const phadl = document.querySelectorAll('.phadl');
+
+                phadl.forEach(function(ph) {
+                   ph.placeholder = "Accruals (A)";
+                });
+
+                const show_deferrals = document.querySelectorAll('.adlhide');
+                show_deferrals.forEach(function(deferral) {
+                   deferral.style.display = "block";
+                });
+
+                document.querySelector('#adlel').innerHTML = "Accruals (L & E)";
+                document.querySelector('#adlel2').innerHTML = "Accruals (L & E)";
+                document.querySelector('#adlel3').innerHTML = "Accruals (L & E)";
+                const phadle = document.querySelectorAll('.phadle');
+
+                phadle.forEach(function(ph) {
+                   ph.placeholder = "Accruals (L & E)";
+                });
+
+                const show_deferrals2 = document.querySelectorAll('.hidle');
+                show_deferrals2.forEach(function(deferral) {
+                   deferral.style.display = "block";
+                });
+
+                // Net Profit/Loss of Previous Year
+                document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
+                document.querySelector('#profitlosslab2').innerHTML = "Net Profit of Previous Year";
+                document.querySelector('#profitlosslab3').innerHTML = "Net Profit of Previous Year";
+
+
+                const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+                phprofitloss.forEach(function(ph) {
+                   ph.placeholder = "Net Profit";
+                });
+
+                const show_profitloss = document.querySelectorAll('.profitlosshide');
+                show_profitloss.forEach(function(profitloss) {
+                   profitloss.style.display = "block";
+                });
+
+                //Profit/Loss Before Tax
+                document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
+                document.querySelector('#beforetaxlab2').innerHTML = "Profit Before Tax";
+                document.querySelector('#beforetaxlab3').innerHTML = "Profit Before Tax";
+                const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+                phbeforetax.forEach(function(ph) {
+                   ph.placeholder = "Profit Before Tax";
+                });
+
+                const show_beforetax = document.querySelectorAll('.beforetaxhide');
+                show_beforetax.forEach(function(field) {
+                   field.style.display = "block";
+                });
+
+                //Profit/Loss After Tax
+                document.querySelector('#aftertaxlab').innerHTML = "Profit After Tax";
+                document.querySelector('#aftertaxlab2').innerHTML = "Profit After Tax";
+                document.querySelector('#aftertaxlab3').innerHTML = "Profit After Tax";
+                const phaftertax = document.querySelectorAll('.phaftertax');
+
+                phaftertax.forEach(function(ph) {
+                   ph.placeholder = "Profit After Tax";
+                });
+
+                const show_aftertax = document.querySelectorAll('.aftertaxhide');
+                show_aftertax.forEach(function(field) {
+                   field.style.display = "block";
+                });
+
+
+
+                document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2').innerHTML = "Row 032 in Balance Sheet";
+                document.querySelector('#tt3').innerHTML = "Row 034 in Balance Sheet";
+                document.querySelector('#tt4').innerHTML = "Row 048 in Balance Sheet";
+                document.querySelector('#tt5').innerHTML = "Row 052 in Balance Sheet";
+                document.querySelector('#tt6').innerHTML = "Accruals (within Assets section) => Row 009 in Balance Sheet";
+                document.querySelector('#defa').innerHTML = "Deferrals (within Assets section) => Row 053 in Balance Sheet";
+                document.querySelector('#tt7').innerHTML = "Row 056 in Balance Sheet";
+                document.querySelector('#tt8').innerHTML = "Row 068 in Balance Sheet";
+                document.querySelector('#tt8RB').innerHTML = "Row 069 in Balance Sheet";
+                document.querySelector('#tt9').innerHTML = "Row 075 in Balance Sheet";
+                document.querySelector('#tt10').innerHTML = "Row 085 in Balance Sheet";
+                document.querySelector('#tt11').innerHTML = "Row 073 in Balance Sheet";
+                document.querySelector('#tt12').innerHTML = "Row 089 in Balance Sheet";
+                document.querySelector('#tt13').innerHTML = "Row 090 in Balance Sheet";
+                document.querySelector('#tt14').innerHTML = "Accruals (within Liabilities and Equity section) => Row 074 in Balance Sheet";
+                document.querySelector('#defle').innerHTML = "Deferrals ((within Liabilities and Equity section) => Row 095 in Balance Sheet";
+                document.querySelector('#tt15').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 112 in Income Statement";
+                document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 113 in Income Statement";
+                document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 125 in Income Statement";
+                document.querySelector('#tt19').innerHTML = "Row 144 in Income Statement";
+                document.querySelector('#tt20').innerHTML = "Row 155 in Income Statement";
+                document.querySelector('#tt21').innerHTML = "Row 169 in Income Statement";
+                document.querySelector('#tt22').innerHTML = "Profit for the accounting period before tax => Row 182 in Income Statement";
+                document.querySelector('#tt22RB').innerHTML = "Loss for the accounting period before tax => Row 183 in Income Statement";
+                document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 186 in Income Statement";
+                document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 187 in Income Statement";
+
+                document.querySelector('#tt24').innerHTML = "Row 004 in Balance Sheet";
+                document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 010 in Balance Sheet";
+                document.querySelector('#tt26').innerHTML = "Row 019 in Balance Sheet";
+                document.querySelector('#tt27').innerHTML = "Row 075 in Balance Sheet";
+                document.querySelector('#tt28').innerHTML = "Row 078 in Balance Sheet";
+                document.querySelector('#tt29').innerHTML = "No Tooltip Available";
+
+
+                document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2a').innerHTML = "Row 032 in Balance Sheet";
+                document.querySelector('#tt3a').innerHTML = "Row 034 in Balance Sheet";
+                document.querySelector('#tt4a').innerHTML = "Row 048 in Balance Sheet";
+                document.querySelector('#tt5a').innerHTML = "Row 052 in Balance Sheet";
+                document.querySelector('#tt6a').innerHTML = "Accruals (within Assets section) => Row 009 in Balance Sheet";
+                document.querySelector('#defa2').innerHTML = "Deferrals (within Assets section) => Row 053 in Balance Sheet";
+                document.querySelector('#tt7a').innerHTML = "Row 056 in Balance Sheet";
+                document.querySelector('#tt8a').innerHTML = "Row 068 in Balance Sheet";
+                document.querySelector('#tt8aRB').innerHTML = "Row 069 in Balance Sheet";
+                document.querySelector('#tt9a').innerHTML = "Row 075 in Balance Sheet";
+                document.querySelector('#tt10a').innerHTML = "Row 085 in Balance Sheet";
+                document.querySelector('#tt11a').innerHTML = "Row 073 in Balance Sheet";
+                document.querySelector('#tt12a').innerHTML = "Row 089 in Balance Sheet";
+                document.querySelector('#tt13a').innerHTML = "Row 090 in Balance Sheet";
+                document.querySelector('#tt14a').innerHTML = "Accruals (within Liabilities and Equity section) => Row 074 in Balance Sheet";
+                document.querySelector('#defle2').innerHTML = "Deferrals ((within Liabilities and Equity section) => Row 095 in Balance Sheet";
+                document.querySelector('#tt15a').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 112 in Income Statement";
+                document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 113 in Income Statement";
+                document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 125 in Income Statement";
+                document.querySelector('#tt19a').innerHTML = "Row 144 in Income Statement";
+                document.querySelector('#tt20a').innerHTML = "Row 155 in Income Statement";
+                document.querySelector('#tt21a').innerHTML = "Row 169 in Income Statement";
+                document.querySelector('#tt22a').innerHTML = "Profit for the accounting period before tax => Row 182 in Income Statement";
+                document.querySelector('#tt22aRB').innerHTML = "Loss for the accounting period before tax => Row 183 in Income Statement";
+                document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 186 in Income Statement";
+                document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 187 in Income Statement";
+
+                document.querySelector('#tt1b').innerHTML = "Row 001 in Balance Sheet";
+                document.querySelector('#tt2b').innerHTML = "Row 032 in Balance Sheet";
+                document.querySelector('#tt3b').innerHTML = "Row 034 in Balance Sheet";
+                document.querySelector('#tt4b').innerHTML = "Row 048 in Balance Sheet";
+                document.querySelector('#tt5b').innerHTML = "Row 052 in Balance Sheet";
+                document.querySelector('#tt6b').innerHTML = "Accruals (within Assets section) => Row 009 in Balance Sheet";
+                document.querySelector('#defa3').innerHTML = "Deferrals (within Assets section) => Row 053 in Balance Sheet";
+                document.querySelector('#tt7b').innerHTML = "Row 056 in Balance Sheet";
+                document.querySelector('#tt8b').innerHTML = "Row 068 in Balance Sheet";
+                document.querySelector('#tt8bRB').innerHTML = "Row 069 in Balance Sheet";
+                document.querySelector('#tt9b').innerHTML = "Row 075 in Balance Sheet";
+                document.querySelector('#tt10b').innerHTML = "Row 085 in Balance Sheet";
+                document.querySelector('#tt11b').innerHTML = "Row 073 in Balance Sheet";
+                document.querySelector('#tt12b').innerHTML = "Row 089 in Balance Sheet";
+                document.querySelector('#tt13b').innerHTML = "Row 090 in Balance Sheet";
+                document.querySelector('#tt14b').innerHTML = "Accruals (within Liabilities and Equity section) => Row 074 in Balance Sheet";
+                document.querySelector('#defle3').innerHTML = "Deferrals ((within Liabilities and Equity section) => Row 095 in Balance Sheet";
+                document.querySelector('#tt15b').innerHTML = "No Tooltip Available";
+                document.querySelector('#tt16b').innerHTML = "Revenue from the sale of own products => Row 112 in Income Statement";
+                document.querySelector('#tt17b').innerHTML = "Revenue from the sale of own services => Row 113 in Income Statement";
+                document.querySelector('#tt18b').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 125 in Income Statement";
+                document.querySelector('#tt19b').innerHTML = "Row 144 in Income Statement";
+                document.querySelector('#tt20b').innerHTML = "Row 155 in Income Statement";
+                document.querySelector('#tt21b').innerHTML = "Row 169 in Income Statement";
+                document.querySelector('#tt22b').innerHTML = "Profit for the accounting period before tax => Row 182 in Income Statement";
+                document.querySelector('#tt22bRB').innerHTML = "Loss for the accounting period before tax => Row 183 in Income Statement";
+                document.querySelector('#tt23b').innerHTML = "Profit for the accounting period after tax => Row 186 in Income Statement";
+                document.querySelector('#tt23bRB').innerHTML = "Loss for the accounting period after tax => Row 187 in Income Statement";
+
+              }
 
           if(document.querySelector('#countryselect').value == "Austria") {
               document.querySelector('#countryimage').src = "/early_warning/assets/inc/aus.png";
@@ -1177,7 +1372,6 @@ display: none;
 
               if(document.querySelector('#countryselect').value == "Ukraine" ||
                  document.querySelector('#countryselect').value == "Austria" ||
-                 document.querySelector('#countryselect').value == "Slovenia" ||
                  document.querySelector('#countryselect').value == "Serbia" ||
                  document.querySelector('#countryselect').value == "Moldova") {
                   const tooltips = document.querySelectorAll('.tooltiptext');
@@ -2205,7 +2399,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
                       <div class="tt1">
                       <label>Deferrals (A)</label>
-                      <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                      <span class="tooltiptext" id="defa">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
                       </div>
                       <input
                         type="number"
@@ -2242,7 +2436,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
                       <div class="tt1">
                       <label>Deferrals (A)</label>
-                      <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                      <span class="tooltiptext" id="defa2">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
                       </div>
                       <input
                         type="number"
@@ -2279,7 +2473,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
                       <div class="tt1">
                       <label>Deferrals (A)</label>
-                      <span class="tooltiptext">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                      <span class="tooltiptext" id="defa3">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
                       </div>
                       <input
                         type="number"
@@ -2653,7 +2847,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Liabilities</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <label id="liabslove">Liabilities</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                   <span class="tooltiptext" id="tt9">Row 101 in Balance Sheet</span>
                   </div>
                 <input
@@ -2687,7 +2881,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Liabilities</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <label id="liabslove2">Liabilities</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                 <span class="tooltiptext" id="tt9a">Row 101 in Balance Sheet</span>
                 </div>
 
@@ -2721,7 +2915,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
               <br class="mobile" />   <div class="tt1">
-              <label>Liabilities</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+              <label id="liabslove3">Liabilities</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
               <span class="tooltiptext" id="tt9b">Row 101 in Balance Sheet</span>
               </div>
               <input
@@ -3276,7 +3470,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <br class="mobile" />
                 <div class="tt1">
                 <label>Deferrals (L & E)</label>
-                <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                <span class="tooltiptext" id="defle">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
                 </div>
               <input
                 type="number"
@@ -3312,7 +3506,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <br class="mobile" />
                 <div class="tt1">
                 <label>Deferrals (L & E)</label>
-                <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                <span class="tooltiptext" id="defle2">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
                 </div>
               <input
                 type="number"
@@ -3348,7 +3542,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   <br class="mobile" />
                 <div class="tt1">
                 <label>Deferrals (L & E)</label>
-                <span class="tooltiptext">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
+                <span class="tooltiptext" id="defle3">Deferrals (within Liabilities and Equity section) => Row 163 in Balance Sheet</span>
                 </div>
               <input
                 type="number"
@@ -3840,7 +4034,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 <div className="tablet mf-input-wrapper">
 
                   <br class="mobile" />   <div class="tt1">
-                  <label>Revenue (Securities and Shares)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
+                  <label id="sas">Revenue (Securities and Shares)</label> <label class="yearlabel"> (<?php echo date('Y'); ?>)</label>
                   <span class="tooltiptext" id="tt20">Row 30 in Income Statement</span>
                   </div>
                 <input
@@ -3848,7 +4042,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                   className="mf-input "
                   id="mf-input-text-d5f534d"
                   name="securities-shares"
-                  placeholder="${ parent.decodeEntities(`Revenue (Securities and Shares)`) } "
+                  placeholder="${ parent.decodeEntities(`Securities and Shares`) } "
                             onInput=${parent.handleChange}
                     aria-invalid=${validation.errors['securities-shares'] ? 'true' : 'false'}
                     ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
@@ -3875,7 +4069,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Revenue (Securities and Shares)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
+                <label id="sas2">Revenue (Securities and Shares)</label> <label class="yearlabel2"> (<?php echo date('Y', strtotime(' -1 years')); ?>)</label>
                 <span class="tooltiptext" id="tt20a">Row 30 in Income Statement</span>
                 </div>
 
@@ -3884,7 +4078,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 className="mf-input "
                 id="mf-input-text-13c1826"
                 name="securities-shares2"
-                placeholder="${ parent.decodeEntities(`Revenue (Securities and Shares)`) } "
+                placeholder="${ parent.decodeEntities(`Securities and Shares`) } "
                   onInput=${parent.handleChange}
                 aria-invalid=${validation.errors['securities-shares2'] ? 'true' : 'false'}
                 ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
@@ -3909,7 +4103,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
 
 
                 <br class="mobile" />   <div class="tt1">
-                <label>Revenue (Securities and Shares)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
+                <label id="sas3">Revenue (Securities and Shares)</label> <label class="yearlabel1"> (<?php echo date('Y', strtotime(' -2 years')); ?>)</label>
                 <span class="tooltiptext" id="tt20b">Row 30 in Income Statement</span>
                 </div>
                 <input
@@ -3917,7 +4111,7 @@ placeholder="${ parent.decodeEntities(`Total Assets`) } "
                 className="mf-input "
                 id="mf-input-text-d5f534d"
                 name="securities-shares1"
-                placeholder="${ parent.decodeEntities(`Revenue (Securities and Shares)`) } "
+                placeholder="${ parent.decodeEntities(`Securities and Shares`) } "
                           onInput=${parent.handleChange}
                   aria-invalid=${validation.errors['securities-shares1'] ? 'true' : 'false'}
                   ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":true,"expression":"null"}, el)}
