@@ -101,7 +101,7 @@ transition: opacity 1s;
 display: none;
 }
 
-.adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide, .perfhide {
+.adlhide, .hidle, .profitlosshide, .beforetaxhide, .aftertaxhide, .perfhide, .slovenianrow {
 display: none;
 }
 
@@ -334,10 +334,23 @@ h6 {
       document.querySelector('#sas').innerHTML = "Securities and Shares sold";
       document.querySelector('#sas').style.fontSize = "14px";
 
+      document.querySelector('#sas2').innerHTML = "Securities and Shares sold";
+      document.querySelector('#sas2').style.fontSize = "12px";
+
+      const slovenianrowhide = document.querySelectorAll('.slovenianrow');
+      slovenianrowhide.forEach(function(slovenianrow) {
+         slovenianrow.style.display = "none";
+      });
+
+      document.querySelector('#liabslove').style.fontSize = "14px";
+
       if(document.querySelector('#countryselect').value == "Slovakia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/sk2.png";
           document.querySelector('#sas').innerHTML = "Revenue (Securities and Shares)";
           document.querySelector('#sas').style.fontSize = "11px";
+
+          document.querySelector('#sas2').innerHTML = "Revenue (Securities and Shares)";
+          document.querySelector('#sas2').style.fontSize = "11px";
 
           document.querySelector('#tt1').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt2').innerHTML = "Row 033 in Balance Sheet";
@@ -394,8 +407,20 @@ h6 {
           document.querySelector('#sas').innerHTML = "Financial Revenues from Shares";
           document.querySelector('#sas').style.fontSize = "11px";
           document.querySelector('#sas2').innerHTML = "Financial Revenues from Shares";
-          document.querySelector('#sas2').style.fontSize = "9px";
+          document.querySelector('#sas2').style.fontSize = "12px";
           document.querySelector('#revchange').style.fontSize = "12px";
+
+
+          const addedvaluehide = document.querySelectorAll('.addedvaluehide');
+          addedvaluehide.forEach(function(addedvalue) {
+             addedvalue.style.display = "none";
+          });
+
+          const slovenianrowhide = document.querySelectorAll('.slovenianrow');
+          slovenianrowhide.forEach(function(slovenianrow) {
+             slovenianrow.style.display = "block";
+          });
+
 
 
           const finan = document.querySelectorAll('.finan');
@@ -502,7 +527,7 @@ h6 {
           document.querySelector('#tt13').innerHTML = "Row 090 in Balance Sheet";
           document.querySelector('#tt14').innerHTML = "Accruals (within Liabilities and Equity section) => Row 074 in Balance Sheet";
           document.querySelector('#defle').innerHTML = "Deferrals ((within Liabilities and Equity section) => Row 095 in Balance Sheet";
-          document.querySelector('#tt15').innerHTML = "No Tooltip Available";
+          document.querySelector('#tt15').innerHTML = "Sum of Row 114 + 117 + 120 in Income Statement";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 112 in Income Statement";
           document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 113 in Income Statement";
           document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 125 in Income Statement";
@@ -525,7 +550,7 @@ h6 {
           document.querySelector('#tt1a').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt7a').innerHTML = "Row 056 in Balance Sheet";
           document.querySelector('#tt11a').innerHTML = "Row 073 in Balance Sheet";
-          document.querySelector('#tt15a').innerHTML = "No Tooltip Available";
+          document.querySelector('#tt15a').innerHTML = "Sum of Row 114 + 117 + 120 in Income Statement";
           document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 112 in Income Statement";
           document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 113 in Income Statement";
           document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 125 in Income Statement";
@@ -1068,6 +1093,100 @@ h6 {
 
       if(document.querySelector('#countryselect').value == "Serbia") {
           document.querySelector('#countryimage').src = "/early_warning/assets/inc/serb.png";
+
+          // Net Profit/Loss of Previous Year
+          document.querySelector('#profitlosslab').innerHTML = "Net Profit of Previous Year";
+
+          document.querySelector('#profitlosslab').style.fontSize = "10px";
+          document.querySelector('#profitlosslab2').style.fontSize = "10px";
+
+          const phprofitloss = document.querySelectorAll('.phprofitloss');
+
+          phprofitloss.forEach(function(ph) {
+             ph.placeholder = "Net Profit";
+          });
+
+          const show_profitloss = document.querySelectorAll('.profitlosshide');
+          show_profitloss.forEach(function(profitloss) {
+             profitloss.style.display = "block";
+          });
+
+          //Profit/Loss Before Tax
+          document.querySelector('#beforetaxlab').innerHTML = "Profit Before Tax";
+          const phbeforetax = document.querySelectorAll('.phbeforetax');
+
+          phbeforetax.forEach(function(ph) {
+             ph.placeholder = "Profit Before Tax";
+          });
+
+          const show_beforetax = document.querySelectorAll('.beforetaxhide');
+          show_beforetax.forEach(function(field) {
+             field.style.display = "block";
+          });
+
+          //Profit/Loss After Tax
+          document.querySelector('#aftertaxlab').innerHTML = "Profit After Tax";
+          document.querySelector('#aftertaxlab2').innerHTML = "Profit After Tax";
+          const phaftertax = document.querySelectorAll('.phaftertax');
+
+          phaftertax.forEach(function(ph) {
+             ph.placeholder = "Profit After Tax";
+          });
+
+          const show_aftertax = document.querySelectorAll('.aftertaxhide');
+          show_aftertax.forEach(function(field) {
+             field.style.display = "block";
+          });
+
+
+          document.querySelector('#tt1').innerHTML = "Row 071 in Balance Sheet";
+          document.querySelector('#tt2').innerHTML = "Row 043 in Balance Sheet";
+          document.querySelector('#tt3').innerHTML = "Row 044 in Balance Sheet";
+          document.querySelector('#tt4').innerHTML = "Row 051 in Balance Sheet";
+          document.querySelector('#tt5').innerHTML = "Row 068 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Accruals/Deferrals (within Assets section) => Row 070 in Balance Sheet";
+          document.querySelector('#tt7').innerHTML = "Row 401 in Balance Sheet";
+          document.querySelector('#tt8').innerHTML = "Row 418 in Balance Sheet";
+          document.querySelector('#tt8RB').innerHTML = "Row 422 in Balance Sheet";
+          document.querySelector('#tt9').innerHTML = "Row 424 in Balance Sheet";
+          document.querySelector('#tt10').innerHTML = "Row 451 in Balance Sheet";
+          document.querySelector('#tt11').innerHTML = "Row 442 in Balance Sheet";
+          document.querySelector('#tt12').innerHTML = "Row 447 in Balance Sheet";
+          document.querySelector('#tt13').innerHTML = "Row 459 in Balance Sheet";
+          document.querySelector('#tt14').innerHTML = "Accruals/Deferrals (within Liabilities and Equity section) => Row 462 in Balance Sheet";
+          document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 1002 in Income Statement";
+          document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products => Row 1009 in Income Statement";
+          document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 1016 in Income Statement";
+          document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 1017 in Income Statement";
+          document.querySelector('#tt19').innerHTML = "Row 1027 in Income Statement";
+          document.querySelector('#tt20').innerHTML = "Row 1037 in Income Statement";
+          document.querySelector('#tt21').innerHTML = "Row 1046 in Income Statement";
+          document.querySelector('#tt22').innerHTML = "Profit/loss for the accounting period before tax => Row 1058 in Income Statement";
+          document.querySelector('#tt22RB').innerHTML = "Profit/loss for the accounting period before tax => Row 1059 in Income Statement";
+          document.querySelector('#tt23').innerHTML = "Profit/loss for the accounting period after tax => Row 1064 in Income Statement";
+          document.querySelector('#tt23RB').innerHTML = "Profit/loss for the accounting period after tax => Row 1065 in Income Statement";
+
+          document.querySelector('#tt24').innerHTML = "Row 003 in Balance Sheet";
+          document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 010 in Balance Sheet";
+          document.querySelector('#tt26').innerHTML = "Row 033 in Balance Sheet";
+          document.querySelector('#tt27').innerHTML = "Row 432 in Balance Sheet";
+          document.querySelector('#tt28').innerHTML = "Row 437 in Balance Sheet";
+          document.querySelector('#tt29').innerHTML = "Row 1016 in Income Statement";
+
+          document.querySelector('#tt1a').innerHTML = "Row 071 in Balance Sheet";
+          document.querySelector('#tt7a').innerHTML = "Row 401 in Balance Sheet";
+          document.querySelector('#tt11a').innerHTML = "Row 442 in Balance Sheet";
+          document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 1002 in Income Statement";
+          document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products => Row 1009 in Income Statement";
+          document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 1016 in Income Statement";
+          document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 1017 in Income Statement";
+          document.querySelector('#tt20a').innerHTML = "Row 1037 in Income Statement";
+          document.querySelector('#tt23a').innerHTML = "Profit/loss for the accounting period after tax => Row 1064 in Income Statement";
+          document.querySelector('#tt23aRB').innerHTML = "Profit/loss for the accounting period after tax => Row 1065 in Income Statement";
+
+          document.querySelector('#tt2b').innerHTML = "Row 043 in Balance Sheet";
+          document.querySelector('#tt10b').innerHTML = "Row 451 in Balance Sheet";
+
         }
 
       if(document.querySelector('#countryselect').value == "Ukraine") {
@@ -1078,7 +1197,6 @@ h6 {
 
         if(document.querySelector('#countryselect').value == "Ukraine" ||
            document.querySelector('#countryselect').value == "Austria" ||
-           document.querySelector('#countryselect').value == "Serbia" ||
            document.querySelector('#countryselect').value == "Moldova") {
             const tooltips = document.querySelectorAll('.tooltiptext');
             const labels = document.querySelectorAll('label');
@@ -2985,7 +3103,7 @@ h6 {
 
             <input
             type="number"
-            className="mf-input "
+            className="mf-input phaftertax"
             id="mf-input-text-13c1826"
             name="profit-loss-after-tax2"
             tabindex="39"
@@ -3040,6 +3158,129 @@ h6 {
         </div>
         </div>
         </div>
+
+
+        <div className="elementor-container elementor-column-gap-default">
+        <div className="slovenianrow elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
+        <div className="elementor-widget-wrap elementor-element-populated">
+        <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+
+          <div className="tablet mf-input-wrapper">
+          <br class="mobile" />
+          <div class="tt1">
+          <label>Operating Income</label>
+          <span class="tooltiptext">Row 126 in Income Statement</span>
+          </div>
+
+          <input
+          type="number"
+          className="mergeinput2 mf-input "
+          id="mf-input-text-13c1826"
+          name="operating-income2"
+          tabindex="39"
+          placeholder="${ parent.decodeEntities(`Operating Income`) } "
+                onInput=${parent.handleChange}
+          aria-invalid=${validation.errors['operating-income2'] ? 'true' : 'false'}
+          ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+              />
+
+            <${validation.ErrorMessage}
+          errors=${validation.errors}
+          name="operating-income2"
+          as=${html`<span className="mf-error-message"></span>`}
+          />
+
+          </div>
+
+
+
+        </div>
+
+
+        </div>
+        </div>
+
+
+
+
+        <div className="slovenianrow elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="elementor-widget-wrap elementor-element-populated">
+        <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div className="mf-input-wrapper">
+            <br class="mobile" />
+            <div class="tt1">
+            <label>Costs</label>
+            <span class="tooltiptext">Costs of goods, materials and services => Row 128 in Income Statement</span>
+            </div>
+            <input type="number" tabindex="39" defaultValue="" className="mf-input " id="mf-input-email-094f2a0" name="costs2" placeholder="${ parent.decodeEntities(`Costs`) } "  onInput=${parent.handleChange} aria-invalid=${validation.errors['costs2'] ? 'true' : 'false' } ref=${el=> parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
+            <${validation.ErrorMessage} errors=${validation.errors} name="costs2" as=${html`<span className="mf-error-message"></span>`}
+            />
+
+            </div>
+
+
+
+        </div>
+        </div>
+        </div>
+
+        <div className="slovenianrow elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f9010d0" data-id="f9010d0" data-element_type="column">
+        <div className="elementor-widget-wrap elementor-element-populated">
+        <!-- IMPORTANT -->
+        <div className="elementor-element elementor-element-13c1826 elementor-widget elementor-widget-mf-text" data-id="13c1826" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}" data-widget_type="mf-text.default">
+          <div className="mf-input-wrapper">
+            <br class="mobile" />
+            <div class="tt1">
+            <label>Other Operating Costs</label>
+            <span class="tooltiptext">Row 148 in Income Statement</span>
+            </div>
+
+            <input
+            type="number"
+            className="mf-input "
+            id="mf-input-text-13c1826"
+            name="operating-costs2"
+            tabindex="39"
+            placeholder="${ parent.decodeEntities(`Other Operating Costs`) } "
+              onInput=${parent.handleChange}
+            aria-invalid=${validation.errors['operating-costs2'] ? 'true' : 'false'}
+            ref=${el => parent.activateValidation({"message":"This field is required.","minLength":0,"maxLength":99999999,"type":"by_character_length","required":false,"expression":"null"}, el)}
+            />
+
+            <${validation.ErrorMessage}
+            errors=${validation.errors}
+            name="operating-costs2"
+            as=${html`<span className="mf-error-message"></span>`}
+            />
+
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="elementor-container elementor-column-gap-default">
         <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5036749" data-id="5036749" data-element_type="column">
         <div className="elementor-widget-wrap elementor-element-populated">

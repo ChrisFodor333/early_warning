@@ -134,7 +134,7 @@ class ModelControllerComplex extends Controller
   $bs22 = request()->get('revenue-merch');
   $bs25 = request()->get('amortization');
   $bs29 = request()->get('profit-loss-before-tax');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
       if(request()->get('profit-loss-before-taxRB') != 0) {
       $bs29 = request()->get('profit-loss-before-tax') / request()->get('profit-loss-before-taxRB');
         }
@@ -147,7 +147,7 @@ class ModelControllerComplex extends Controller
   $bs6 = request()->get('current-assets');
   $bs26 = request()->get('revenue-sale');
   $bs30 = request()->get('profit-loss-after-tax');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
       if(request()->get('profit-loss-after-taxRB') != 0) {
       $bs30 = request()->get('profit-loss-after-tax') / request()->get('profit-loss-after-taxRB');
         }
@@ -212,7 +212,7 @@ class ModelControllerComplex extends Controller
 
   $bs12 = request()->get('net-profit-loss');
 
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
     if(request()->get('net-profit-lossRB') != 0) {
       $bs12 = request()->get('net-profit-loss') / request()->get('net-profit-lossRB');
         }
@@ -244,7 +244,7 @@ class ModelControllerComplex extends Controller
 
   $cs26 = request()->get('revenue-sale2');
   $cs29 = request()->get('profit-loss-before-tax2');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
       if(request()->get('profit-loss-before-tax2RB') != 0) {
       $cs29 = request()->get('profit-loss-before-tax2') / request()->get('profit-loss-before-tax2RB');
       }
@@ -258,7 +258,7 @@ class ModelControllerComplex extends Controller
   $cs9 = request()->get('financial-accounts2');
   $cs30 = request()->get('profit-loss-after-tax2');
 
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
       if(request()->get('profit-loss-after-tax2RB') != 0) {
       $cs30 = request()->get('profit-loss-after-tax2') / request()->get('profit-loss-after-tax2RB');
       }
@@ -294,6 +294,12 @@ class ModelControllerComplex extends Controller
   if($country == "Hungary") {
     $cs24 = request()->get('revenue-merch2') + request()->get('own-performance2') - request()->get('materialcosts2');
   }
+
+  if($country == "Slovenia") {
+    $cs24 = request()->get('operating-income2') - request()->get('costs2') - request()->get('operating-costs2');
+  }
+
+
   $cs27 = request()->get('securities-shares2');
   $cs18 = request()->get('bank-loans2');
 
@@ -323,7 +329,7 @@ class ModelControllerComplex extends Controller
 
   $cs12 = request()->get('net-profit-loss2');
 
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
     if(request()->get('net-profit-loss2RB') != 0) {
       $cs12 = request()->get('net-profit-loss2') / request()->get('net-profit-loss2RB');
       }
@@ -345,7 +351,7 @@ class ModelControllerComplex extends Controller
   $ds22 = request()->get('revenue-merch1');
   $ds25 = request()->get('amortization1');
   $ds29 = request()->get('profit-loss-before-tax1');
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
       if(request()->get('profit-loss-before-tax3RB') != 0) {
       $ds29 = request()->get('profit-loss-before-tax1') / request()->get('profit-loss-before-tax3RB');
         }
@@ -359,7 +365,7 @@ class ModelControllerComplex extends Controller
   $ds26 = request()->get('revenue-sale1');
   $ds30 = request()->get('profit-loss-after-tax1');
 
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
       if(request()->get('profit-loss-after-tax3RB') != 0) {
       $ds30 = request()->get('profit-loss-after-tax1') / request()->get('profit-loss-after-tax3RB');
       }
@@ -429,7 +435,7 @@ class ModelControllerComplex extends Controller
 
   $ds12 = request()->get('net-profit-loss1');
 
-  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia") {
+  if($country == "Romania" || $country == "Bosnia and Herzegovina" || $country == "Slovenia" || $country == "Serbia") {
     if(request()->get('net-profit-loss3RB') != 0) {
       $ds12 = request()->get('net-profit-loss1') / request()->get('net-profit-loss3RB');
       }
@@ -1653,6 +1659,7 @@ $nadisplay1 = "none";
   $my_id = $complex->id_complex;
   // NUMBER OF ROWS
   $number_of_rows = $complex->where('country',$country)->distinct('ratio')->count('ratio');
+  $data['totalrows'] = $number_of_rows;
 
   $position = DB::table('complex')
                    ->select('id_complex',

@@ -281,7 +281,7 @@ onclick="window.print();">
 			<h2 class="elementor-heading-title elementor-size-default">Here you can find the results of the model based on the values from the input form.</h2>
 
     	</div>
-        <h3>Your company is more successful than <?php echo $percentage; ?>% of the tested companies in <?php echo $country; ?></h3>
+        <h3>Your company is more successful than <?php echo $percentage; ?>% of the <?php echo $totalrows; ?> tested companies in <?php echo $country; ?></h3>
 				</div>
 
 					</div>
