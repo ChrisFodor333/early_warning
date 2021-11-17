@@ -1681,6 +1681,13 @@ $nadisplay1 = "none";
   $classifier2 = new NaiveBayes();
   $classification = "";
   $classification2 = "";
+
+  $classification_2 = "";
+  $classification2_2 = "";
+
+  $classification_3 = "";
+  $classification3_2 = "";
+
   $records= Machine::all();
   $samples = array();
   $labels = array();
@@ -1688,8 +1695,8 @@ $nadisplay1 = "none";
   $records->each(function($record) use (&$labels, &$samples)
   {
       array_push($labels,$record->result);
-      if($record->altman != "N/A" && $record->in05 != "N/A" && $record->quicktest != "N/A" && $record->bonity != "N/A" && $record->taffler != "N/A" && $record->binkert != "N/A") {
-      $features = array(floatval($record->altman), floatval($record->in05), floatval($record->quicktest), floatval($record->bonity), floatval($record->taffler), floatval($record->binkert));
+      if($record->altman != "N/A" && $record->in05 != "N/A" && $record->quicktest != "N/A" && $record->bonity != "N/A" && $record->taffler != "N/A") {
+      $features = array(floatval($record->altman), floatval($record->in05), floatval($record->quicktest), floatval($record->bonity), floatval($record->taffler));
       //$features = array($record->ratio);
       array_push($samples,$features);
       }
@@ -1700,15 +1707,38 @@ $nadisplay1 = "none";
   //$labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
   $classifier->train($samples, $labels);
   $classifier2->train($samples, $labels);
-  if($quickt1 != "N/A" && $alt1 != "N/A" && $ind1 != "N/A" && $bon1 != "N/A" && $taff1 != "N/A" && $binkert != "N/A") {
-  $classification = $classifier->predict([$alt1, $ind1, $quickt1, $bon1, $taff1, $binkert]);
-  $classification2 = $classifier2->predict([$alt1, $ind1, $quickt1, $bon1, $taff1, $binkert]);
+
+  if($quickt1 != "N/A" && $alt1 != "N/A" && $ind1 != "N/A" && $bon1 != "N/A" && $taff1 != "N/A") {
+  $classification = $classifier->predict([$alt1, $ind1, $quickt1, $bon1, $taff1]);
+  $classification2 = $classifier2->predict([$alt1, $ind1, $quickt1, $bon1, $taff1]);
 } else {
   $classification = "";
   $classification2 = "";
 }
 
+
+  if($quickt2 != "N/A" && $alt2 != "N/A" && $ind2 != "N/A" && $bon2 != "N/A" && $taff2 != "N/A") {
+  $classification_2 = $classifier->predict([$alt2, $ind2, $quickt2, $bon2, $taff2]);
+  $classification2_2 = $classifier2->predict([$alt2, $ind2, $quickt2, $bon2, $taff2]);
+  } else {
+  $classification_2 = "";
+  $classification2_2 = "";
+  }
+
+  if($quickt3 != "N/A" && $alt3 != "N/A" && $ind3 != "N/A" && $bon3 != "N/A" && $taff3 != "N/A") {
+  $classification_3 = $classifier->predict([$alt3, $ind3, $quickt3, $bon3, $taff3]);
+  $classification3_2 = $classifier2->predict([$alt3, $ind3, $quickt3, $bon3, $taff3]);
+  } else {
+  $classification_3 = "";
+  $classification3_2 = "";
+  }
+
 $value = 0;
+$value2 = 0;
+$value3 = 0;
+
+
+
 
 if($classification == "First Degree Financial Distress") {
   $value = $value + 1;
@@ -1735,13 +1765,13 @@ if($classification == "") {
 }
 
 if($value <= 2) {
-  $classification = "in the financial distress of the I. degree.";
+  $classification = "in the financial distress of the I. degree";
 }
 if($value > 2 && $value < 5) {
-  $classification = "in the financial distress of the II. degree.";
+  $classification = "in the financial distress of the II. degree";
 }
 if($value >= 5 && $value < 999) {
-  $classification = "in the financial distress of the III. degree.";
+  $classification = "in the financial distress of the III. degree";
 }
 
 if($value >= 999) {
@@ -1750,11 +1780,112 @@ if($value >= 999) {
 
 
 if($value < 1) {
-  $classification = "out of danger.";
+  $classification = "out of danger";
 }
 
 
+if($classification_2 == "First Degree Financial Distress") {
+  $value2 = $value2 + 1;
+}
+if($classification_2 == "Second Degree Financial Distress") {
+  $value2 = $value2 + 2;
+}
+if($classification_2 == "Third Degree Financial Distress") {
+    $value2 = $value2 + 3;
+}
+
+if($classification2_2 == "First Degree Financial Distress") {
+  $value2 = $value2 + 1;
+}
+if($classification2_2 == "Second Degree Financial Distress") {
+  $value2 = $value2 + 2;
+}
+if($classification2_2 == "Third Degree Financial Distress") {
+    $value2 = $value2 + 3;
+}
+
+if($classification_2 == "") {
+  $value2 = 999;
+}
+
+if($value2 <= 2) {
+  $classification_2 = "in the financial distress of the I. degree";
+}
+if($value2 > 2 && $value2 < 5) {
+  $classification_2 = "in the financial distress of the II. degree";
+}
+if($value2 >= 5 && $value2 < 999) {
+  $classification_2 = "in the financial distress of the III. degree";
+}
+
+if($value2 >= 999) {
+  $classification_2 = "in a situation, where the model is not able to determine its status based on the parameters";
+}
+
+
+if($value2 < 1) {
+  $classification_2 = "out of danger";
+}
+
+
+
+
+
+
+
+
+
+
+if($classification_3 == "First Degree Financial Distress") {
+  $value3 = $value3 + 1;
+}
+if($classification_3 == "Second Degree Financial Distress") {
+  $value3 = $value3 + 2;
+}
+if($classification_3 == "Third Degree Financial Distress") {
+    $value3 = $value3 + 3;
+}
+
+if($classification3_2 == "First Degree Financial Distress") {
+  $value3 = $value3 + 1;
+}
+if($classification3_2 == "Second Degree Financial Distress") {
+  $value3 = $value3 + 2;
+}
+if($classification3_2 == "Third Degree Financial Distress") {
+    $value3 = $value3 + 3;
+}
+
+if($classification3_2 == "") {
+  $value3 = 999;
+}
+
+if($value3 <= 2) {
+  $classification_3 = "in the financial distress of the I. degree";
+}
+if($value3 > 2 && $value3 < 5) {
+  $classification_3 = "in the financial distress of the II. degree";
+}
+if($value3 >= 5 && $value3 < 999) {
+  $classification_3 = "in the financial distress of the III. degree";
+}
+
+if($value3 >= 999) {
+  $classification_3 = "in a situation, where the model is not able to determine its status based on the parameters";
+}
+
+
+if($value3 < 1) {
+  $classification_3 = "out of danger";
+}
+
+
+
+
+
   $data['classification'] = $classification;
+  $data['classification2'] = $classification_2;
+  $data['classification3'] = $classification_3;
 
   // RETURN VIEW
   //return view('results',$data);

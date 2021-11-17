@@ -766,7 +766,7 @@ $records->each(function($record) use (&$labels, &$samples)
 {
     array_push($labels,$record->result);
     if($record->altman != "N/A" && $record->in05 != "N/A" && $record->quicktest != "N/A" && $record->bonity != "N/A" && $record->taffler != "N/A" && $record->binkert != "N/A") {
-    $features = array(floatval($record->altman), floatval($record->in05), floatval($record->quicktest), floatval($record->bonity), floatval($record->taffler), floatval($record->binkert));
+    $features = array(floatval($record->altman), floatval($record->in05), floatval($record->quicktest), floatval($record->bonity), floatval($record->taffler));
     //$features = array($record->ratio);
     array_push($samples,$features);
     }
@@ -781,9 +781,9 @@ $classifier2 = new NaiveBayes();
 //$labels = ['No Financial Distress', 'First Degree Financial Distress', 'Second Degree Financial Distress', 'Third Degree Financial Distress'];
 $classifier->train($samples, $labels);
 $classifier2->train($samples, $labels);
-if($altman != "N/A" && $in05 != "N/A" && $quicktest != "N/A" && $bonity != "N/A" && $taffler != "N/A" && $binkert != "N/A") {
-$classification = $classifier->predict([$altman, $in05, $quicktest, $bonity, $taffler, $binkert]);
-$classification2 = $classifier2->predict([$altman, $in05, $quicktest, $bonity, $taffler, $binkert]);
+if($altman != "N/A" && $in05 != "N/A" && $quicktest != "N/A" && $bonity != "N/A" && $taffler != "N/A") {
+$classification = $classifier->predict([$altman, $in05, $quicktest, $bonity, $taffler]);
+$classification2 = $classifier2->predict([$altman, $in05, $quicktest, $bonity, $taffler]);
 } else {
   $classification = "";
   $classification2 = "";
