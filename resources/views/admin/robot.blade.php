@@ -1,7 +1,11 @@
 @include('admin/header')
 @include('admin/navigation')
 
-
+<style media="screen">
+input[type="month"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+</style>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -31,7 +35,7 @@
         </section>
 
         <section class="content">
-              <h5>Upload a .csv file of companies exported from FinStat and click submit to start the process</h5>
+              <h5>Fill out the filter and click start to add data to the model database</h5>
             <div class="row">
                 <div class="col-md-3">
                     <div class="box box-default">
@@ -42,16 +46,49 @@
                             <form method="post" action="{{  action('App\\Http\\Controllers\RegisterController@sendrobot')}}" enctype="multipart/form-data">
 
 
-
+                                <label>Changed from</label>
                                 <div class="input-group mb-3" >
+                                  <input type="month" class="form-control" name="date">
 
-                                  <input type="file" class="form-control" name="file" style="height: 45px;" accept=".csv">
+                                </div>
+                                </div>
+
+                                <label>Maximum Records</label>
+                                <div class="input-group mb-3" >
+                                  <input type="number" class="form-control" name="maxrecords" min="1" value="1000" max="10000">
                                   <div class="input-group-append">
                                     <div class="input-group-text">
-                                      <span class="fas fa-file-csv"></span>
+                                      <span class="fas fa-database"></span>
                                     </div>
                                   </div>
                                 </div>
+
+                                <label>Current Year</label>
+                                <div class="input-group mb-3" >
+
+                                  <select name="currentyear" class="form-control">
+                                  <?php foreach($years as $year) : ?>
+                                    <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                  <?php endforeach; ?>
+                                </select>
+
+                                  <div class="input-group-append">
+                                    <div class="input-group-text">
+                                      <span class="fas fa-calendar-alt"></span>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <label>City</label>
+                                <div class="input-group mb-3" >
+                                  <input type="text" class="form-control" name="city" placeholder="Not specified">
+                                  <div class="input-group-append">
+                                    <div class="input-group-text">
+                                      <span class="fas fa-city"></span>
+                                    </div>
+                                  </div>
+                                </div>
+
 
 
 

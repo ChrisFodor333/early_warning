@@ -30,7 +30,18 @@ class RegisterController extends Controller
 
     public function sendrobot(Request $request) {
 
-      SendRobot::dispatch();
+      $city = request()->get('city');
+      $currentyear = request()->get('currentyear');
+      $maxrecords = request()->get('maxrecords');
+      $date = request()->get('date');
+      if($date == null ) {
+        $date = date("Y-m");
+      }
+      if($currentyear == "Not specified") {
+        $currentyear = null;
+      }
+
+      SendRobot::dispatch($city, $currentyear, $maxrecords, $date);
       return Redirect::to('/pro-admin/robot')->with('status', "The robot will now work in the background");
 
 

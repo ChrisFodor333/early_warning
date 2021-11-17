@@ -28,14 +28,22 @@ class SendRobot implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    public $city = null;
+    public $year = null;
+    public $maxrecords = 1000;
+    public $changed_from = null;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($city, $year, $maxrecords, $changed_from)
     {
-        //
+        $this->city = $city;
+        $this->year = $year;
+        $this->maxrecords = $maxrecords;
+        $this->changed_from = $changed_from;
     }
 
     /**
@@ -45,7 +53,8 @@ class SendRobot implements ShouldQueue
      */
     public function handle()
     {
-      $url = file_get_contents('https://www.registeruz.sk/cruz-public/api/uctovne-vykazy?zmenene-od=2021-01-01&pokracovat-za-id=6881166&max-zaznamov=10000');
+      $url = file_get_contents('https://www.registeruz.sk/cruz-public/api/uctovne-vykazy?zmenene-od='.$this->changed_from.'-01&pokracovat-za-id=6881166&max-zaznamov='.$this->maxrecords);
+      //$url = file_get_contents('https://www.registeruz.sk/cruz-public/api/uctovne-vykazy?zmenene-od=2020-01-01&pokracovat-za-id=6881166&max-zaznamov=10000');
       $obj = json_decode($url);
       $myids = $obj->id;
       $testid = "6881167";
@@ -160,6 +169,18 @@ class SendRobot implements ShouldQueue
 
       if($json->obsah->titulnaStrana->obdobieOd ?? null) {
       $currentyear = substr($json->obsah->titulnaStrana->obdobieOd,0,4);
+      }
+
+      if($this->year != null && $this->year != $currentyear) {
+        continue;
+      }
+        // Bratislava in Bratislava - nové mesto
+      if($this->city != null) {
+      if(strpos($mesto, $this->city) !== false){
+        // word found
+      } else {
+        continue;
+      }
       }
 
       $country = "Slovakia";
@@ -565,6 +586,7 @@ class SendRobot implements ShouldQueue
         $basic->taffler = $taffler;
         $basic->binkert = $binkert;
         $basic->result = $result;
+        $basic->company_name = $mesto;
 
         if($quicktest != "N/A") {
         $ratio = (floatval($altman) + floatval($in05) + floatval((1/$quicktest)) + floatval($bonity) + floatval($taffler)) / 5;

@@ -1387,6 +1387,9 @@ class AdminController extends Controller
               if(session()->has('admin')) {
               $user = User::where("id_user","=",session()->get('userID'))->first();
               $data['users'] = $user;
+              $years = range(strftime("%Y", time()),2016);
+              array_unshift($years,"Not specified");
+              $data['years'] = $years;
               return view('admin/robot',$data);
             } else {   return view('admin/login'); }
           }
