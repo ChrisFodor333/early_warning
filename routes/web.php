@@ -32,7 +32,7 @@ Route::post('/pro-admin/profile/edit/',[  'as' => 'updates',
     'uses' =>'App\\Http\\Controllers\AdminController@changepass']);
 
 Route::post('/pro-admin/robot/send/',[  'as' => 'sends',
-        'uses' =>'App\\Http\\Controllers\RobotController@sendrobot']);
+        'uses' =>'App\\Http\\Controllers\RegisterController@sendrobot']);
 
 Route::get('/pro-admin/addadmin/','App\\Http\\Controllers\AdminController@showaddAdmin');
 Route::post('/pro-admin/addadmin/',[  'as' => 'updates',

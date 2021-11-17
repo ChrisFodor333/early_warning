@@ -39,7 +39,7 @@
 
                         </div>
                         <div class="box-body">
-                            <form method="post" action="{{  action('App\\Http\\Controllers\RobotController@sendrobot')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{  action('App\\Http\\Controllers\RegisterController@sendrobot')}}" enctype="multipart/form-data">
 
 
 
