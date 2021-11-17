@@ -56,15 +56,15 @@
 
 
                                 <div class="box-footer">
-                                    <button type="submit" name="submit" value="submit" class="btn btn-default">Upload</button>
+                                    <button type="submit" name="submit" value="submit" class="btn btn-default">Start</button>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <br />   <br />
                                     <h5 class="text-red">
                                         {{ $errors->first('file') }}
                                     </h5>
-                                    <h5 class="text-white">
+                                    <h6 class="text-white">
                                         {{ session('status') }}
-                                    </h5>
+                                    </h6>
                                 </div>
                             </form>
                         </div>

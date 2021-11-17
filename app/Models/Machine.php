@@ -14,7 +14,7 @@ class Machine extends Model
 
 
     protected $fillable = [
-        'company_name', 'country', 'current_year','altman','in05','quicktest','bonity','taffler', 'binkert', 'result','ratio', 'percentage'
+        'company_name', 'country', 'current_year','altman','in05','quicktest','bonity','taffler', 'binkert', 'result','ratio', 'percentage', 'id_vykaz'
     ];
 
 
