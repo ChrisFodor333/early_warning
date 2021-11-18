@@ -53,7 +53,7 @@ class SendRobot implements ShouldQueue
      */
     public function handle()
     {
-      $url = file_get_contents('https://www.registeruz.sk/cruz-public/api/uctovne-vykazy?zmenene-od='.$this->changed_from.'-01&pokracovat-za-id=6881166&max-zaznamov='.$this->maxrecords);
+      $url = file_get_contents('https://www.registeruz.sk/cruz-public/api/uctovne-vykazy?zmenene-od='.$this->changed_from.'-01&max-zaznamov='.$this->maxrecords);
       //$url = file_get_contents('https://www.registeruz.sk/cruz-public/api/uctovne-vykazy?zmenene-od=2020-01-01&pokracovat-za-id=6881166&max-zaznamov=10000');
       $obj = json_decode($url);
       $myids = $obj->id;
