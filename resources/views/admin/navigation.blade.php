@@ -103,6 +103,12 @@
                 <p>Complex Historical Data</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="<?php echo url('/pro-admin/machinetable'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Automatic Table</p>
+              </a>
+            </li>
 
           </ul>
           <li class="nav-item">

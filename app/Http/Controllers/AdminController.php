@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Basic;
+use App\Models\Machine;
 use App\Models\Basic_old;
 use App\Models\Complex;
 use App\Models\Complex_old;
@@ -103,6 +104,21 @@ class AdminController extends Controller
         }
     }
 
+    public function deletemachine($id) {
+
+        if(session()->has('admin')) {
+            if ($id == null) {
+                return abort(404);
+            }
+            $user = Machine::find($id);
+
+            $user->delete();
+            return redirect('/pro-admin/machinetable');
+        } else {
+            return view('admin/login');
+        }
+    }
+
 
 
 
@@ -167,6 +183,24 @@ class AdminController extends Controller
               ->rawColumns(['delete' => 'delete','overview' => 'overview'])
               ->make(true);
           }
+
+
+          public function machinetable()
+            {
+                $basic = Machine::select('*');
+                return Datatables::of($basic)
+                ->addColumn('date', function ($row) {
+                    return substr($row->created_at->format('d/m/Y'),0,10);
+                })
+                ->addColumn('overview', function($row) {
+                    return '<a  href="'. url('/pro-admin/'). '/overviewmachine/'. $row->id_basic .'" class="mybutton">Overview</a>';
+                })
+                ->addColumn('delete', function ($row) {
+                    return '<a href="'. url('/pro-admin/'). '/deletemachine/'. $row->id_basic .'" class="mybutton">Delete</a>';
+                })
+                ->rawColumns(['delete' => 'delete','overview' => 'overview'])
+                ->make(true);
+            }
 
 
           public function historicaltable()
@@ -242,6 +276,368 @@ class AdminController extends Controller
               }
 
              $basic = Basic::find($id);
+             $altman = $basic->altman;
+             $in05 =   $basic->in05;
+             $quicktest = $basic->quicktest;
+             $bonity = $basic->bonity;
+             $taffler = $basic->taffler;
+             $binkert = $basic->binkert;
+             $result = $basic->result;
+             $percentage = $basic->percentage;
+             $country = $basic->country;
+
+             $help = "";
+             $help2 = "";
+
+             switch ($country) {
+               case 'Slovakia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://uksk.sk/";
+                 break;
+
+               case 'Hungary':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://ifka.hu/ or https://www.pbn.hu/";
+                 break;
+
+               case 'Germany':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.steinbeis-europa.de/";
+                 break;
+
+               case 'Romania':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.utcluj.ro/";
+                 break;
+
+
+               case 'Austria':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.zsi.at/";
+                 break;
+
+
+               case 'Croatia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "http://www.czposijek.hr/";
+                 break;
+
+
+               case 'Slovenia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.p-tech.si/";
+                 break;
+
+               case 'Bosnia and Herzegovina':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.rars-msp.org/";
+                 break;
+
+
+               case 'Serbia':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://pks.rs/";
+                 break;
+
+
+               case 'Moldova':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://www.odimm.md/";
+                 break;
+
+
+               case 'Ukraine':
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "http://www.impeer.od.ua/";
+                 break;
+
+
+               default:
+                 $help = "For financial support in ".$country. " contact our partners at ";
+                 $help2 = "https://uksk.sk/";
+                 break;
+             }
+
+
+             $data['help'] =  $help;
+             $data['help2'] =  $help2;
+
+
+
+
+
+             $percentage = "The company was more successful than " . $percentage . "% of the tested companies in ". $country;
+             $data['percentage'] = $percentage;
+
+             $year = $basic->current_year;
+
+
+
+
+             $data['currentyear'] = $year;
+
+
+             $nacount = 0;
+
+             $data['altman'] = $altman;
+             $data['in05'] = $in05;
+             $data['quicktest'] = $quicktest;
+             $data['bonity'] = $bonity;
+             $data['taffler'] = $taffler;
+             $data['binkert'] = $binkert;
+             $data['result'] = $result;
+
+             $altmancolor = "";
+             $in05color = "";
+             $tafflercolor = "";
+             $quicktestcolor = "";
+             $bonitycolor = "";
+             $binkertcolor = "";
+
+
+             $red = 0; $orange = 0; $green = 0;
+
+             if($altman < 1.2) {
+                 $altmancolor = "red";
+                 $red++;
+               }
+             if($altman > 2.9) {
+                 $altmancolor = "#00c373";
+                 $green++;
+               }
+             if($altman >= 1.2 && $altman <= 2.9) {
+                 $altmancolor = "orange";
+                 $orange++;
+               }
+             if($altman == "N/A") {
+                 $altmancolor = "orange";
+                 $nacount++;
+               }
+
+             if($in05 < 0.9) {
+                     $in05color = "red";
+                     $red++;
+                   }
+             if($in05 > 1.6) {
+                     $in05color = "#00c373";
+                     $green++;
+                   }
+             if($in05 >= 0.9 && $in05 <= 1.6) {
+                     $in05color = "orange";
+                     $orange++;
+                   }
+             if($in05 == "N/A") {
+               $in05color = "orange";
+               $nacount++;
+             }
+
+
+             if($taffler < 0.2) {
+                 $tafflercolor = "red";
+                 $red++;
+               }
+             if($taffler > 0.3) {
+                 $tafflercolor = "#00c373";
+                 $green++;
+               }
+             if($taffler >= 0.2 && $taffler <= 0.3) {
+                 $tafflercolor = "orange";
+                 $orange++;
+               }
+
+             if($taffler == "N/A") {
+                 $tafflercolor = "orange";
+                 $nacount++;
+               }
+
+
+             if($quicktest < 9.0) {
+                 $quicktestcolor = "#00c373";
+                 $green++;
+               }
+             if($quicktest > 15.0) {
+                 $quicktestcolor = "red";
+                 $red++;
+               }
+             if($quicktest >= 9.0 && $quicktest <= 15.0) {
+                 $quicktestcolor = "orange";
+                 $orange++;
+               }
+
+             if($quicktest == "N/A") {
+                 $quicktestcolor = "orange";
+                 $nacount++;
+               }
+
+
+             if($bonity < -1.0) {
+                 $bonitycolor = "red";
+                 $red++;
+               }
+             if($bonity > 1.0) {
+                 $bonitycolor = "#00c373";
+                 $green++;
+               }
+             if($bonity >= -1.0 && $bonity <= 1.0) {
+                 $bonitycolor = "orange";
+                 $orange++;
+               }
+
+             if($bonity == "N/A") {
+               $bonitycolor = "orange";
+               $nacount++;
+                  }
+
+               if($binkert > 4.35) {
+                 $binkertcolor = "#00c373";
+                 $green++;
+               }
+
+               if($binkert < -4.35) {
+                 $binkertcolor = "red";
+                 $red++;
+               }
+
+               if($binkert < 4.35 && $binkert > -4.35) {
+                 $binkertcolor = "orange";
+                 $orange++;
+               }
+
+               if($binkert == "N/A") {
+                   $binkertcolor = "orange";
+                   $nacount++;
+                 }
+
+
+               $data['altmancolor'] = $altmancolor;
+               $data['in05color'] = $in05color;
+               $data['tafflercolor'] = $tafflercolor;
+               $data['quicktestcolor'] = $quicktestcolor;
+               $data['bonitycolor'] = $bonitycolor;
+               $data['binkertcolor'] = $binkertcolor;
+
+
+               $greenwarning = "none";
+               $orangewarning = "none";
+               $redwarning = "none";
+               $dist = "";
+               $distress = "";
+               $distress2 = "";
+
+               $result = "";
+
+                 if($red != 0 && $red <= 2) {
+                   $orangewarning = "block";
+                   $redwarning = "none";
+                   $result = "First Degree Financial Distress";
+                 }
+                 if($red > 2 && $red <= 4) {
+                   $dist = "the financial distress of the II. degree";
+                   $distress = "the financial distress of the second degree – medium risk of bankruptcy";
+                   $distress2 = " (maximum 4 of the six prediction models detected risk of bankruptcy or financial distress).";
+                   $redwarning = "block";
+                   $orangewarning = "none";
+                   $result = "Second Degree Financial Distress";
+                 }
+                 if($red > 4) {
+                   $dist = "the financial distress of the III. degree";
+                   $distress = "the financial distress of the third degree – high risk of bankruptcy";
+                   $distress2 = " (at least 5 of the six prediction models detected risk of bankruptcy or financial distress).";
+                   $redwarning = "block";
+                   $orangewarning = "none";
+                   $result = "Third Degree Financial Distress";
+                 }
+
+
+               if($red == 0 && $green > 0) {
+                   $greenwarning = "block";
+                   $orangewarning = "none";
+                   $redwarning = "none";
+                   $result = "No Financial Distress";
+               }
+
+               if($nacount == 6) {
+                 $greenwarning = "none";
+                 $orangewarning = "none";
+                 $redwarning = "none";
+                 $result = "Invalid Data";
+               }
+
+
+               $nadisplay = "none";
+               if($nacount > 0) {
+                 $nadisplay = "block";
+               } else {
+                 $nadisplay = "none";
+               }
+
+               if($altmancolor == "#00c373")
+                 $altmancolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                 $altmancolor2 = "/early_warning/assets/content/uploads/2020/11/".$altmancolor.".jpg";
+
+               if($in05color == "#00c373")
+                   $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $indexcolor2 = "/early_warning/assets/content/uploads/2020/11/".$in05color.".jpg";
+
+
+
+               if($tafflercolor == "#00c373")
+                   $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $tafflercolor2 = "/early_warning/assets/content/uploads/2020/11/".$tafflercolor.".jpg";
+
+               if($bonitycolor == "#00c373")
+                   $bonitycolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $bonitycolor2 = "/early_warning/assets/content/uploads/2020/11/".$bonitycolor.".jpg";
+
+               if($quicktestcolor == "#00c373")
+                   $quicktestcolor2= "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $quicktestcolor2 = "/early_warning/assets/content/uploads/2020/11/".$quicktestcolor.".jpg";
+
+               if($binkertcolor == "#00c373")
+                   $binkertcolor2 = "/early_warning/assets/content/uploads/2020/11/green.jpg";
+               else
+                   $binkertcolor2 = "/early_warning/assets/content/uploads/2020/11/".$binkertcolor.".jpg";
+
+
+
+               $data['altmancolor2'] = $altmancolor2;
+               $data['indexcolor2'] = $indexcolor2;
+               $data['tafflercolor2'] = $tafflercolor2;
+               $data['bonitycolor2'] = $bonitycolor2;
+               $data['quicktestcolor2'] = $quicktestcolor2;
+               $data['binkertcolor2'] = $binkertcolor2;
+
+               $data['greenwarning'] = $greenwarning;
+               $data['orangewarning'] = $orangewarning;
+               $data['redwarning'] = $redwarning;
+               $data['distress'] = $distress;
+               $data['distress2'] = $distress2;
+               $data['dist'] = $dist;
+               $data['nadisplay'] = $nadisplay;
+
+
+               return view('admin/overview',$data);
+
+
+          } //session
+           else {
+              return view('admin/login');
+          }
+        }
+
+
+        public function overviewmachine($id) {
+          if(session()->has('admin')) {
+              if ($id == null) {
+                  return abort(404);
+              }
+
+             $basic = Machine::find($id);
              $altman = $basic->altman;
              $in05 =   $basic->in05;
              $quicktest = $basic->quicktest;
@@ -1442,6 +1838,14 @@ class AdminController extends Controller
       public function basic_index() {
           if(session()->has('admin')) {
               return view('admin/basictable');
+          } else {
+              return view('admin/login');
+          }
+      }
+
+      public function machine_index() {
+          if(session()->has('admin')) {
+              return view('admin/machinetable');
           } else {
               return view('admin/login');
           }

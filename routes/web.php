@@ -50,6 +50,10 @@ Route::get('/pro-admin/deletebasic/{id}', [
     'as' => 'deletebasic', 'uses' => 'App\\Http\\Controllers\AdminController@deletebasic'
 ]);
 
+Route::get('/pro-admin/deletemachine/{id}', [
+    'as' => 'deletemachine', 'uses' => 'App\\Http\\Controllers\AdminController@deletemachine'
+]);
+
 Route::get('/pro-admin/deletehistorical/{id}', [
     'as' => 'deletehistorical', 'uses' => 'App\\Http\\Controllers\HistoryController@deletehistorical'
 ]);
@@ -70,6 +74,10 @@ Route::get('/pro-admin/overviewbasic/{id}', [
     'as' => 'overviewbasic', 'uses' => 'App\\Http\\Controllers\AdminController@overviewbasic'
 ]);
 
+Route::get('/pro-admin/overviewmachine/{id}', [
+    'as' => 'overviewmachine', 'uses' => 'App\\Http\\Controllers\AdminController@overviewmachine'
+]);
+
 Route::get('/pro-admin/overviewhistorical/{id}', [
     'as' => 'overviewhistorical', 'uses' => 'App\\Http\\Controllers\HistoryController@overviewhistorical'
 ]);
@@ -87,6 +95,9 @@ Route::post('/pro-admin/edited/',[  'as' => 'updates',
 
 Route::get('/pro-admin/basictable', 'App\\Http\\Controllers\AdminController@basic_index');
 Route::get('/pro-admin/basictable/data', 'App\\Http\\Controllers\AdminController@basictable');
+
+Route::get('/pro-admin/machinetable', 'App\\Http\\Controllers\AdminController@machine_index');
+Route::get('/pro-admin/machinetable/data', 'App\\Http\\Controllers\AdminController@machinetable');
 
 Route::get('/pro-admin/historicaltable', 'App\\Http\\Controllers\AdminController@historical_index');
 Route::get('/pro-admin/historicaltable/data', 'App\\Http\\Controllers\AdminController@historicaltable');
