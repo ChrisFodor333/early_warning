@@ -657,53 +657,54 @@ h6 {
 
 
 
-          document.querySelector('#tt1').innerHTML = "Row 013 + Row 015 in Balance Sheet";
-          document.querySelector('#tt2').innerHTML = "Row 009 in Balance Sheet";
+          document.querySelector('#tt1').innerHTML = "Row 015 + Row 017 in Balance Sheet";
+          document.querySelector('#tt2').innerHTML = "Row 011 in Balance Sheet";
           document.querySelector('#tt3').innerHTML = "Row 005 in Balance Sheet";
           document.querySelector('#tt4').innerHTML = "Row 006 in Balance Sheet";
-          document.querySelector('#tt5').innerHTML = "Row 008 in Balance Sheet";
-          document.querySelector('#tt6').innerHTML = "Accruals (within Assets section) => Row 010 in Balance Sheet";
-          document.querySelector('#tt7').innerHTML = "Row 046 in Balance Sheet";
-          document.querySelector('#tt8').innerHTML = "Row 041 in Balance Sheet";
-          document.querySelector('#tt8RB').innerHTML = "Row 042 in Balance Sheet";
-          document.querySelector('#tt9').innerHTML = "Row 013 + Row 016 in Balance Sheet";
-          document.querySelector('#tt10').innerHTML = "Row 013 in Balance Sheet";
-          document.querySelector('#tt11').innerHTML = "Row 017 in Balance Sheet";
-          document.querySelector('#tt12').innerHTML = "Row 96 in Form 30";
-          document.querySelector('#tt13').innerHTML = "Row 96 in Form 30";
+          document.querySelector('#tt5').innerHTML = "Row 010 in Balance Sheet";
+          document.querySelector('#tt6').innerHTML = "Accruals (within Assets section) => Row 012 in Balance Sheet";
+          document.querySelector('#defa').innerHTML = "Deferrals (within Assets section) => Row 020 in Balance Sheet";
+          document.querySelector('#tt7').innerHTML = "Row 048 in Balance Sheet";
+          document.querySelector('#tt8').innerHTML = "Row 043 in Balance Sheet";
+          document.querySelector('#tt8RB').innerHTML = "Row 044 in Balance Sheet";
+          document.querySelector('#tt9').innerHTML = "Row 015 + Row 018 in Balance Sheet";
+          document.querySelector('#tt10').innerHTML = "Row 015 in Balance Sheet";
+          document.querySelector('#tt11').innerHTML = "Row 019 in Balance Sheet";
+          document.querySelector('#tt12').innerHTML = "Row 110 in Form 30";
+          document.querySelector('#tt13').innerHTML = "Row 110 in Form 30";
           document.querySelector('#tt14').innerHTML = "No Tooltip Available";
           document.querySelector('#tt15').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
           document.querySelector('#tt16').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
           //document.querySelector('#tt17').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
-          document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
-          document.querySelector('#tt19').innerHTML = "Row 25 in Form 20";
-          document.querySelector('#tt20').innerHTML = "Row 45 in Form 20";
-          document.querySelector('#tt21').innerHTML = "Row 56 in Form 20";
-          document.querySelector('#tt22').innerHTML = "Profit for the accounting period before tax => Row 64 in Form 20";
-          document.querySelector('#tt22RB').innerHTML = "Loss for the accounting period before tax => Row 65 in Form 20";
-          document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
-          document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
+          document.querySelector('#tt18').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 12 in Form 20";
+          document.querySelector('#tt19').innerHTML = "Row 24 in Form 20";
+          document.querySelector('#tt20').innerHTML = "Row 43 in Form 20";
+          document.querySelector('#tt21').innerHTML = "Row 54 in Form 20";
+          document.querySelector('#tt22').innerHTML = "Profit for the accounting period before tax => Row 63 in Form 20";
+          document.querySelector('#tt22RB').innerHTML = "Loss for the accounting period before tax => Row 64 in Form 20";
+          document.querySelector('#tt23').innerHTML = "Profit for the accounting period after tax => Row 67 in Form 20";
+          document.querySelector('#tt23RB').innerHTML = "Loss for the accounting period after tax => Row 68 in Form 20";
 
           document.querySelector('#tt24').innerHTML = "Row 001 in Balance Sheet";
           document.querySelector('#tt25').innerHTML = "Property, Plant and Equipment (total) => Row 002 in Balance Sheet";
           document.querySelector('#tt26').innerHTML = "Row 003 in Balance Sheet";
           document.querySelector('#tt27').innerHTML = "No Tooltip Available";
-          document.querySelector('#tt28').innerHTML = "Row 99 in Form 30";
+          document.querySelector('#tt28').innerHTML = "Row 113 in Form 30";
           document.querySelector('#tt29').innerHTML = "No Tooltip Available";
 
-          document.querySelector('#tt1a').innerHTML = "Row 013 + Row 015 in Balance Sheet";
-          document.querySelector('#tt7a').innerHTML = "Row 080 in Balance Sheet";
-          document.querySelector('#tt11a').innerHTML = "Row 046 in Balance Sheet";
+          document.querySelector('#tt1a').innerHTML = "Row 015 + Row 017 in Balance Sheet";
+          document.querySelector('#tt7a').innerHTML = "Row 048 in Balance Sheet";
+          document.querySelector('#tt11a').innerHTML = "Row 019 in Balance Sheet";
           document.querySelector('#tt15a').innerHTML = "Revenue from the sale of merchandise => Row 03 in Form 20";
           document.querySelector('#tt16a').innerHTML = "Revenue from the sale of own products and services => Row 02 in Form 20";
           //document.querySelector('#tt17a').innerHTML = "Revenue from the sale of own services => Row 02 in Form 20";
-          document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 13 in Form 20";
-          document.querySelector('#tt20a').innerHTML = "Row 45 in Form 20";
-          document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 69 in Form 20";
-          document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 70 in Form 20";
+          document.querySelector('#tt18a').innerHTML = "Revenue from the sale of non-current intangible assets, property, plant and equipment, and raw materials => Row 12 in Form 20";
+          document.querySelector('#tt20a').innerHTML = "Row 43 in Form 20";
+          document.querySelector('#tt23a').innerHTML = "Profit for the accounting period after tax => Row 67 in Form 20";
+          document.querySelector('#tt23aRB').innerHTML = "Loss for the accounting period after tax => Row 68 in Form 20";
 
-          document.querySelector('#tt2b').innerHTML = "Row 009 in Balance Sheet";
-          document.querySelector('#tt10b').innerHTML = "Row 013 in Balance Sheet";
+          document.querySelector('#tt2b').innerHTML = "Row 011 in Balance Sheet";
+          document.querySelector('#tt10b').innerHTML = "Row 015 in Balance Sheet";
         }
 
       if(document.querySelector('#countryselect').value == "Hungary") {
@@ -1707,7 +1708,7 @@ h6 {
 
                   <div class="tt1">
                   <label id="adl2">Deferrals (A)</label>
-                  <span class="tooltiptext" id="defa">Deferrals (within Assets section) => Row 018 in Balance Sheet</span>
+                  <span class="tooltiptext" id="defa">Deferrals (within Assets section) => Row 053 in Balance Sheet</span>
                   </div>
                   <input
                     type="number"
