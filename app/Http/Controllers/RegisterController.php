@@ -20,6 +20,7 @@ use DB;
 use Lava;
 use Illuminate\Support\Facades\Hash;
 use App\Jobs\SendRobot;
+use Artisan;
 
 
 
@@ -46,7 +47,7 @@ class RegisterController extends Controller
       if($max == null) {
         $max = 0;
       }
-
+      //$exitCode = Artisan::call('queue:work');
       SendRobot::dispatch($city, $currentyear, $maxrecords, $date, $max);
       return Redirect::to('/pro-admin/robot')->with('status', "The robot will now work in the background");
 
