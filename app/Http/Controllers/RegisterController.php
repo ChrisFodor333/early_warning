@@ -41,7 +41,13 @@ class RegisterController extends Controller
         $currentyear = null;
       }
 
-      SendRobot::dispatch($city, $currentyear, $maxrecords, $date);
+      $machine =  new Machine;
+      $max = $machine->where('query',$date)->max('id_vykaz');
+      if($max == null) {
+        $max = 0;
+      }
+
+      SendRobot::dispatch($city, $currentyear, $maxrecords, $date, $max);
       return Redirect::to('/pro-admin/robot')->with('status', "The robot will now work in the background");
 
 
