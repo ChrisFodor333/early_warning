@@ -35,6 +35,9 @@ class Complex extends Model
         'binkert',
         'result',
         'ratio',
+        'rat1',
+        'rat2',
+        'rat3',
         'percentage'
     ];
 

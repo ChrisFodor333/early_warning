@@ -11,6 +11,7 @@ use Phpml\Classification\SVC;
 use Phpml\Classification\NaiveBayes;
 use Phpml\SupportVectorMachine\Kernel;
 use App\Models\Machine;
+use Lava;
 
 class ModelControllerComplex extends Controller
 {
@@ -1653,6 +1654,16 @@ $nadisplay1 = "none";
   $ratio = $ratio1 + $ratio2 + $ratio3  / 15;
   $complex->ratio = $ratio;
 
+  $rat1 = $ratio1 / 5;
+  $rat2 = $ratio2 / 5;
+  $rat3 = $ratio3 / 5;
+
+
+  $complex->rat1 = $ratio1 / 5;
+  $complex->rat2 = $ratio2 / 5;
+  $complex->rat3 = $ratio3 / 5;
+
+
   $complex->save();
 
   // LAST ID
@@ -1674,6 +1685,25 @@ $nadisplay1 = "none";
               ->where('id_complex', $my_id)
               ->update(['percentage' => $percentage]);
   $data['percentage'] = $percentage;
+
+
+  $ratios = Lava::DataTable();
+
+  $ratios->addStringColumn('Years')
+               ->addNumberColumn('Current Situation')
+               ->addRow([$currentyear-2,  $rat3])
+               ->addRow([$currentyear-1,  $rat2])
+               ->addRow([$currentyear,  $rat1])
+               ;
+
+  Lava::LineChart('Temps', $ratios, [
+      'title' => 'Financial Situation for Each Year',
+      'width'=>1065,
+      'legend' => [
+        'position' => 'top'
+    ]
+  ]);
+
 
 
 
@@ -1779,7 +1809,7 @@ if($value >= 999) {
 }
 
 
-if($value < 1) {
+if($value <= 1) {
   $classification = "out of danger";
 }
 
@@ -1826,14 +1856,6 @@ if($value2 >= 999) {
 if($value2 < 1) {
   $classification_2 = "out of danger";
 }
-
-
-
-
-
-
-
-
 
 
 if($classification_3 == "First Degree Financial Distress") {

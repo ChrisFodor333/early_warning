@@ -37,6 +37,8 @@
   font-size: 15px;
 }
 
+
+
 .active, .collapsible:hover {
   background-color: #555;
 }
@@ -355,9 +357,12 @@ onclick="window.print();">
 <div style="width:1100px; margin:0 auto;">
 <button type="button" class="collapsible">Machine Learning Model</button>
 <div class="content">
-  <p>According to our machine learning model, your company might be <b><?php echo $classification; ?></b> for the year of <?php echo $currentyear; ?>
+  <p>According to our machine learning model, your company might be <b><?php echo $classification3; ?></b> for the year of <?php echo $currentyear; ?>
   , <b><?php echo $classification2; ?></b> for the year of <?php echo $currentyear-1; ?>
-    and <b><?php echo $classification3; ?></b> for the year of <?php echo $currentyear-2; ?></p>
+    and <b><?php echo $classification; ?></b> for the year of <?php echo $currentyear-2; ?></p>
+    <div id="are_div" style="width: 1100px;"></div>
+     <?= Lava::render('LineChart', 'Temps', 'are_div') ?>
+     <br>
 </div>
 </div>
 
