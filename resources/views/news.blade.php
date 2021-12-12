@@ -85,7 +85,7 @@
 
 			</div><!-- /.wrap-entry-title -->
 		</div>
-		<div class="featured-post"><a href="/early_warning/wp-test/why-your-sales-forecast-is-off/"><img width="741" height="367" src="/early_warning/assets/content/uploads/2020/09/blog1-1-14.jpg" class="attachment-themesflat-blog size-themesflat-blog wp-post-image" alt="" loading="lazy" /></a></div>
+		<div class="featured-post"><img width="741" height="367" src="/early_warning/assets/content/uploads/2020/09/blog1-1-14.jpg" class="attachment-themesflat-blog size-themesflat-blog wp-post-image" alt="" loading="lazy" /></div>
 		<div class="entry-content" style="text-align: justify;">
 
 <p>
